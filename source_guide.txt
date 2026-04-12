@@ -35,17 +35,16 @@ CCTV-卫生健康
 CCTV-央视台球
 CCTV-央视文化精品
 CCTV-央视足球
-CGTN英语	CGTN(中)
-CGTN英文记录	CGTN英文纪录(中)
+CGTN英语	CGTN(国)
+CGTN英文记录	CGTN英文纪录(国)
 CGTN阿拉伯语
-CGTN俄语
+CGTN俄语	CGTN俄语(国)
 CGTN法语
 CGTN西班牙语
 湖南卫视
 浙江卫视
 浙江卫视4K
 北京卫视4K
-安徽卫视
 湖南卫视4K
 吉林延边卫视
 湖北卫视
@@ -150,83 +149,83 @@ TVB星河
 爱大剧
 爱电影
 爱综艺
-LiTV中視	中視(LiTV)
-中視新聞台
-LiTV 華視	華視(LiTV)
-LiTV華視新聞	華視新聞(LiTV)
-公視戲劇
-LiTV民視	民視(LiTV)
-LiTV 民視台灣台	民視台灣台(LiTV)
-LiTV民視第一台	民視第一台(LiTV)
-FTV旅遊	民視旅遊
-FTV戲劇	民視戲劇
-FTV綜藝	民視綜藝
-民視新聞台
-LiTV台視	台視(LiTV)
-台視財經台
-台視新聞台
-龍華電影台
-龍華經典台
-龍華卡通台
-龍華偶像台
-龍華日韓台
-龍華戲劇台
-龍華洋片台
-東森新聞台
-東森財經新聞
-東森購物1台
-東森購物2台
-東森購物測試頻道
+LiTV中視	中视(LiTV)
+中視新聞台	中视新闻台(B)
+LiTV 華視	华视(LiTV)
+LiTV華視新聞	华视新闻(LiTV)
+公視戲劇	公视戏剧(B)
+LiTV民視	民视(LiTV)
+LiTV 民視台灣台	民视台湾台(LiTV)
+LiTV民視第一台	民视第一台(LiTV)
+FTV旅遊	民视旅游台(B)
+FTV戲劇	民视戏剧台(B)
+FTV綜藝	民视综艺台(B)
+民視新聞台	民视新闻台(B)
+LiTV台視	台视(LiTV)
+台視財經台	台视财经台(B)
+台視新聞台	台视新闻台(B)
+龍華電影台	龙华电影台(B)
+龍華經典台	龙华戏剧台(B)
+龍華卡通台	龙华卡通台(B)
+龍華偶像台	龙华偶像台(B)
+龍華日韓台	龙华日韩台(B)
+龍華戲劇台	龙华戏剧台(B)
+龍華洋片台	龙华洋片台(B)
+東森新聞台	东森新闻台(B)
+東森財經新聞	东森财经新闻(B)
+東森購物1台	东森购物1台(B)
+東森購物2台	东森购物2台(B)
+東森購物測試頻道 东森购物测试频道
 博斯高球1台	博斯高球1台(pl)
 博斯高球2台	博斯高球2台(pl)
-博斯魅力網
-博斯網球台
-博斯無限台	博斯無限1台
-博斯無限2台
-博斯運動二台
-博斯運動一台
-八大精彩台
-八大綜藝台
-中天新聞台
-中天亞洲台
-愛爾達娛樂
-影迷數位電影台
-影迷數位紀實台
-國會頻道1台
-國會頻道2台
-寰宇財經台
-寰宇新聞台灣台
-寰宇新聞一台
+博斯魅力網	博斯魅力网
+博斯網球台	博斯网球台
+博斯無限台	博斯无限1台(B)
+博斯無限2台	博斯无限2台(B)
+博斯運動二台	博斯运动2台(B)
+博斯運動一台	博斯运动1台(B)
+八大精彩台	八大精彩台(B)
+八大綜藝台	八大综艺台(B)
+中天新聞台	中天新闻台(B)
+中天亞洲台	中天亚洲台(C)
+愛爾達娛樂	爱尔达娱乐(B)
+影迷數位電影台	影迷数位电影台(B)
+影迷數位紀實台	影迷数位纪实台(B)
+國會頻道1台	国会频道1台(B)
+國會頻道2台	国会频道2台(B)
+寰宇財經台	寰宇财经台(B)
+寰宇新聞台灣台	寰宇新闻台湾台(B)
+寰宇新聞一台	寰宇新闻1台(B)
 GOOD TV	好消息台
 GOOD TV 2台	好消息2台
-靖天電影
-靖天國際台
+靖天電影	靖天电影台(B)
+靖天國際台	靖天国际台(B)
 靖天卡通台	靖天卡通台(pl)
 靖天日本台	靖天日本台(pl)
-靖天戲劇
-靖天映畫台
-靖天育樂
-靖天資訊
-靖天綜合台
-靖洋戲劇台
+靖天戲劇	靖天戏剧台(B)
+靖天映畫台	靖天映画台(B)
+靖天育樂	靖天育乐台(B)
+靖天資訊	靖天资讯台(B)
+靖天綜合台	靖天综合台(B)
+靖洋戲劇台	靖洋戏剧台(B)
 SETiNEWS	三立iNEWS
-非凡商業台
-非凡新聞台
-采昌影劇
-亞洲旅遊台
-台灣戲劇台
-智林體育台
+非凡商業台	非凡商业台(B)
+非凡新聞台	非凡新闻台(B)
+采昌影劇	采昌影剧台(B)
+亞洲旅遊台	亚洲旅游台(B)
+台灣戲劇台	台湾戏剧台(B)
+智林體育台	智林体育台(B)
 HakkaTV
 KMTV HD
-MCE 我的歐洲電影
-寵物頻道
-第1商業
-黃金八點檔
-倪珍播新聞
-ELTV英語學習台
-Focus風采戲劇台
-Focus歡樂綜合台
-豬哥亮歌廳秀
+MCE 我的歐洲電影	MCE我的欧洲电影
+寵物頻道	宠物频道(B)
+第1商業	第一商业(B)
+黃金八點檔	黄金八点档(B)
+倪珍播新聞	倪珍播新闻(B)
+ELTV英語學習台	ELTV英语学习台(B)
+Focus風采戲劇台	Focus风采戏剧台(B)
+Focus歡樂綜合台	Focus欢乐综合台(B)
+豬哥亮歌廳秀	猪哥亮歌厅秀(B)
 ARIRANG TV
 CLASSICA
 CNEX Doc
@@ -237,7 +236,7 @@ GINX
 Mezzo Live
 Nice Bingo
 Nice TV
-Smart知識台
+Smart知識台	Smart知识台(B)
 TRACEsport
 TRACEUrban	TRACEUrban(pl)
 
@@ -283,12 +282,87 @@ cctv女性时尚	CCTV-女性时尚(swepg)
 cctv世界地理	CCTV-世界地理(swepg)
 cctv台球	CCTV-台球
 cctv卫生健康	CCTV-卫生健康(swepg)
-中学生	CCTV-中学生
 中央电视台新闻频道香港	CCTV-13香港
 中央电视台综合频道 (港澳版) (免费)	CCTV-1 (港澳版)
 中国中央电视台戏曲频道 (免费)	CCTV-戏曲
 中国中央电视台娱乐频道 (免费)	CCTV-娱乐
+CGTN	CGTN(英1)
+CGTN (中国环球电视网)记录频道 (免费)	CGTN-英文纪录(swepg1)
+CGTN (中国环球电视网)英语频道 (免费)	CGTN(swepg2)
+CGTN_Documentary	CGTN-英文纪录(swepg2)
+CGTN Documentary	CGTN-英文纪录(swepg3)
+cgtn阿拉伯语	CGTN阿拉伯语(swepg)
+cgtn俄语	CGTN俄语(国2)
+cgtn法语	CGTN法语(swepg)
+cgtn西班牙语	CGTN西班牙语(swepg)
+北京卫视
+甘肃卫视
+兵团卫视
 重庆卫视
+安徽卫视
+河北卫视
+贵州卫视
+四川卫视
+辽宁卫视
+江西卫视
+海南卫视
+深圳卫视
+深圳卫视国际频道 (免费)	深圳国际频道
+深圳卫视香港
+金色学堂
+金鹰卡通
+河北经济
+河北都市
+河北公共	河北文旅公共
+河北影视剧
+河北农民	河北三农
+河北少儿科教
+河北杂技频道	河北杂技
+安徽广播电视台国际频道 (免费)	安徽国际频道
+保定公共频道
+保定生活健康
+保定新闻综合
+澳门葡萄牙
+澳门体育
+澳门卫星
+澳门资讯
+澳门综艺
+澳视澳门
+TVB_Classic_HD	TVB 经典Classic HD(英)
+TVB_Entertainment_News_HD	TVB-娱乐新闻(英)
+TVB_Jade	TVB-翡翠台(马来 英)
+TVB Plus (免费)	TVB Plus
+TVB_Xing_He_HD	TVB-星河(英)
+TVBS 新闻台	TVBS-新闻台
+TVBS欢乐台	TVBS-欢乐台
+TVBS精采台	TVBS-精采台(swepg)
+TVBS精采台HD	TVBS-精采台HD
+TVBS看板人物-FastTV飞速看
+TVBS食尚玩家	TVBS-食尚玩家
+TVBS台剧台	TVBS-台剧台
+TVBS新闻	TVBS-新闻
+TVBS新闻HD	TVBS-新闻HD
+TVBS新闻台	TVBS-新闻台(swepg)
+TVBS亚洲新加坡	TVBS-亚洲_新加坡_英
+TVBS综艺台	TVBS-综艺台
+TVB翡翠剧集台(TVB Drama)	TVB-翡翠剧集台(TVB Drama)
+翡翠台	TVB-翡翠台(香港 中)
+TVB翡翠娱乐台(TVBe)	TVB-翡翠娱乐台(TVBe)
+TVB翡翠综合台(TVBJ1)	TVB-翡翠综合台(TVBJ1)
+TVB功夫台	TVB-功夫台
+TVB明珠剧集台(TVB Pearl Drama)	TVB-明珠剧集台(TVB Pearl Drama)
+TVB生活台	TVB-生活台
+TVB无线新闻台(TVB News)	TVB-无线新闻台(TVB News)
+TVB新闻新加坡	TVB-新闻新加坡
+TVB星河	TVB-星河
+TVB星河新加坡	TVB-星河_新加坡_英(swepg)
+TVB粤语片	TVB-粤语片
+tvN	tvN(swepg)
+tvN HD	tvN HD(国)
+tvN_HD	tvN HD(英)
+tvN Movies	tvN Movies(英)
+tvN香港
+tvN有线
 8TV
 AMC 电影台
 AMC电影
@@ -314,7 +388,6 @@ Arirang TV HD	Arirang TV(swepg)
 Asian Food Network 亚洲美食频道	Asian Food Network(MY 中)
 Asianet
 Asianet Movies
-AsianFoodNetwork亚洲美食频道	Asian Food Network(MY 中2)
 ASMR行车纪录
 Astro_AEC	Astro AEC
 Astro_Arena_2	Astro Arena 2
@@ -348,13 +421,13 @@ AXN_HD	AXN HD(英)
 AXN香港
 BAYU	BAYU(swepg)
 BBC_Brit_HD	BBC Brit HD
-BBC EARTH	BBC EARTH(中)
+BBC EARTH	BBC EARTH(国)
 BBC_Earth	BBC Earth(swepg)
 BBC Earth	BBC Earth(英)
 BBC Earth HD
 BBC Earth香港
 BBC_First_HD	BBC First HD
-BBC LIFESTYLE	BBC LIFESTYLE(中)
+BBC LIFESTYLE	BBC LIFESTYLE(国)
 BBC Lifestyle HD	BBC Lifestyle HD(swepg英)
 BBC_Lifestyle_HD	BBC Lifestyle HD(swepg英2)
 BBC Lifestyle香港
@@ -364,9 +437,9 @@ BBC NEWS HD	BBC NEWS HD(swepg2)
 BBC_News_HD	BBC News HD(swepg3)
 BBC News香港
 BBC World News
-BBCEarth
-BBCLifestyle
-BBCNEWS
+BBCEarth	BBC Earth(国1)
+BBCLifestyle	BBC Lifestyle(国1)
+BBCNEWS	BBC NEWS(国1)
 bb快报
 beIN_SPORTS_1	beIN SPORTS 1(swepg1)
 beIN Sports 1	beIN Sports 1(swepg2)
@@ -415,15 +488,6 @@ CCM	天映经典电影_印尼
 Celebrities TV
 Celestial_Classic_Movies	天映经典电影_英(swepg)
 Celestial Movies	天映电影(英)
-CGTN	CGTN(swepg1)
-CGTN (中国环球电视网)记录频道 (免费)	CGTN-英文纪录(swepg1)
-CGTN (中国环球电视网)英语频道 (免费)	CGTN(swepg2)
-CGTN_Documentary	CGTN-英文纪录(swepg2)
-CGTN Documentary	CGTN-英文纪录(swepg3)
-cgtn阿拉伯语	CGTN阿拉伯语(swepg)
-cgtn俄语	CGTN俄语(swepg)
-cgtn法语	CGTN法语(swepg)
-cgtn西班牙语	CGTN西班牙语(swepg)
 Channel 5
 Channel 8
 Channel News Asia	Channel News Asia(swepg)
@@ -509,7 +573,7 @@ DMAX香港
 DMAX有线
 Docsville (免费)	Docsville
 DreamWorks	DreamWorks(英)
-DreamWorks HD	DreamWorks(中)
+DreamWorks HD	DreamWorks(国)
 Dubai One
 DW	DW(swepg)
 DW (English)香港
@@ -539,9 +603,9 @@ era news 年代新闻
 ETtoday综合台
 EURONEWS
 euronews香港
-Eurosoprt HD
-Eurosport
-EUROSPORT HD
+Eurosoprt HD	Eurosport HD
+Eurosport	Eurosport(国)
+EUROSPORT HD	EUROSPORT HD(英)
 EVE HD
 EVE有线
 EYE TV旅游台HD
@@ -578,16 +642,13 @@ Galaxy
 Galaxy Premium
 GINX Esports TV
 GinxTV电竞频道
-Global Trekker
-Global Trekker HD
-Global Trekker探索世界频道
-GlobalTrekker	Global Trekker(swepg)
+Global Trekker探索世界频道	Global Trekker(英)
+GlobalTrekker	Global Trekker(国)
 GlobalTrekker(免费)
 Globetrotter (免费)	Globetrotter
 GLOBLTREKKER探索世界
 GMA Life T
 GMA Pinoy TV
-GoGoTaiwan-FastTV飞速看
 GOLD	GOLD(swepg)
 Golden 强片台
 Golden影迷台
@@ -602,12 +663,9 @@ Hami体育2台
 Hami体育3台
 Hami体育3台(免费)
 Hanacaraka TV
-HAPPY
 HAPPY频道
 HBLTV1台
-HBLTV1台(免费)
 HBLTV2台
-HBLTV2台(免费)
 HBO	HBO(swepg)
 HBO Family	HBO Family(swepg)
 HBO Family香港
@@ -619,7 +677,7 @@ HBO Signature香港
 HBO香港
 HGTV_HD	HGTV HD(英)
 HGTV HD新加坡	HGTV HD新加坡(英)
-HGTV居家乐活频道	HGTV居家乐活频道(中)
+HGTV居家乐活频道	HGTV居家乐活频道(国)
 History	History(swepg)
 History_HD	History HD
 HISTORY HD新加坡
@@ -627,7 +685,7 @@ History 历史频道
 History 历史频道有线
 HISTORY香港
 HITS	HITS(swepg)
-HITS HD	HITS HD(中)
+HITS HD	HITS HD(国)
 HITS_HD	HITS HD(英)
 HITS HD新加坡
 HITS MOVIES
@@ -694,7 +752,6 @@ KBS World香港
 KBS韩国国际综合高清频道
 KENYALANG	KENYALANG(swepg)
 Kids TV
-Kids TV HD
 KIX
 KIX电影台
 kix非洲
@@ -713,7 +770,7 @@ K频道
 LIFE
 Lifeime
 Lifetime	Lifetime(swepg)
-Lifetime HD	Lifetime HD(中)
+Lifetime HD	Lifetime HD(国)
 Lifetime_HD	Lifetime HD(英)
 Lifetime HD新加坡
 Lifetime 娱乐频道
@@ -721,9 +778,9 @@ Lifetime香港
 lifetime娱乐频道有线
 LITE_FM	LITE FM(swepg)
 LiveABC互动英语频道
-Love Nature	Love Nature(中)
+Love Nature	Love Nature(国)
 Love_Nature	Love Nature(英)
-Love Nature 4K	LOVE NATURE 4K(中)
+Love Nature 4K	LOVE NATURE 4K(国)
 Love_Nature_4K	Love Nature 4K(英)
 Love Nature HD
 Love Nature香港
@@ -732,7 +789,6 @@ LOVENATURE
 LS TIME电影台
 Lucky 688
 LUXE TV Channel
-LUXE TV HD
 MagellanTV频道 (麦哲伦频道) 
 MasterChef
 MBC
@@ -752,19 +808,14 @@ Metro TV
 meWATCH LIVE 1
 meWATCH LIVE 2
 meWATCH LIVE 5
-MezzoLive	Mezzo Live(中)
+MezzoLive	Mezzo Live(国)
 MIX_FM	MIX FM(swepg)
 MNCTV
 MNCTV HD
-momo 1台
-MOMO1台
-momo1台HD
-momo2台
-momo2台HD
-MOMO亲子精选-FastTV飞速看
+momo1台HD	Momo1台
+momo2台HD	Momo2台
 MOMO亲子台	MOMO亲子台(swepg1)
 momo亲子台	momo亲子台(swepg2)
-momo亲子台(免费)	momo亲子台(swepg3)
 MOMO综合台	MOMO综合台(swepg1)
 momo综合台	momo综合台(swepg2)
 momo综合台HD
@@ -778,7 +829,6 @@ MTV综合电视台
 MTV综合台HD
 MUCH TV
 Music TV
-Music TV HD
 Muslim TV
 MUTV香港
 My Cinema Europe HD 我的欧洲电影
@@ -850,15 +900,15 @@ Now Sports 英超TV
 Now Sports 英超TV1
 Now 高尔夫2
 Now 高尔夫3
-now 剧集
+now 剧集	NOW剧集
 nowjeli
-now报价
+now报价	NOW报价
 Now爆谷星影台
-now财经
-now体育
-now体育4k
-now新闻
-now直播 	now直播
+now财经	NOW财经
+now体育	NOW体育
+now体育4k	NOW体育4k
+now新闻	NOW新闻
+now直播 	NOW直播
 ONE	ONE TV(英)
 ONE (Malay)	ONE TV(Malay)(英)
 ONE HD	ONE HD(swepg)
@@ -873,11 +923,9 @@ OUTtv HD
 Panda TV
 Pandora潘朵啦高画质粉红台
 Pandora潘朵啦高画质玩美台
-PET CLUB TV HD	PET CLUB TV宠物频道
-PETCLUBTV
+PETCLUBTV	PET CLUB TV(国)
 Premier_Sports	Premier Sports
 RCTI
-RCTI HD
 Rialto Classic Movies (RCM) (免费)	Rialto Classic Movies (RCM)
 River Monsters
 ROCK ACTION	ROCK ACTION(中1)
@@ -886,12 +934,12 @@ Rock_Action	Rock Action(英)
 ROCK Action HD
 ROCK ACTION 摇滚电影
 ROCK Entertainme
-ROCK ENTERTAINMENT	ROCK Entertainment(中)
+ROCK ENTERTAINMENT	ROCK Entertainment(国)
 Rock Entertainment
 ROCK Entertainment HD新加坡
 ROCK Entertainment香港
 ROCK Extreme
-ROCK X Stream	ROCK X Stream(中)
+ROCK X Stream	ROCK X Stream(国)
 Rock_X_Stream	Rock X Stream(英)
 ROCK Xstream摇滚极限频道
 ROCKAction
@@ -909,7 +957,6 @@ SBS life
 SBS plus
 SBS sport
 SCTV
-SCTV HD
 SEA TODAY
 SiCAR爱车酷
 SINAR_FM	SINAR FM(swepg)
@@ -917,13 +964,11 @@ Sindo News TV
 Sindo News TV HD
 Sky News HD新加坡
 Sky News香港
-Smart 知识HD
 Smart知识台
 Smithsonian_Channel	Smithsonian Channel
 Soccer Channel
-Soccer Channel HD
 Sony Entertainment Televis新加坡
-Sony MAX	Sony MAX(swepg1)
+Sony MAX	SONY MAX(swepg1)
 SONY MAX	SONY MAX(swepg2)
 Sony SAB
 Sony TV (India)
@@ -931,25 +976,19 @@ SPL-CH01
 SPL-CH02
 Sportstars
 Sportstars 2
-Sportstars 2 HD
 Sportstars 3
-sportstars 3 HD
 Sportstars 4
-Sportstars 4 HD
-Sportstars HD
 SPOTV
 SPOTV   2	SPOTV 2(swepg1)
 SPOTV 2	SPOTV 2(swepg2)
 SPOTV 2 HD
 SPOTV HD
-SPY X FAMILY 间谍家家酒
-SPY X FAMILY 间谍家家酒(中文版)
+SPY X FAMILY 间谍家家酒(国)
 Star Bharat
 Star Gold
 STAR PLUS
 Star_Vijay_HD	Star Vijay HD(swepg)
 Studio Universal
-Studio Universal HD
 Sun Music
 Sun TV
 SUPER FREE (免费)	SUPER FREE
@@ -957,7 +996,6 @@ SUPER Kids Channel
 SUPER Music (免费)	SUPER Music
 SUPER Sports (免费)	SUPER Sports
 Superrix
-Superrix HD
 SUPER煲剧 (免费)	SUPER煲剧
 SUPER单元剧 (免费)	SUPER单元剧
 SUPER奖门人 (免费)	SUPER奖门人
@@ -971,9 +1009,9 @@ Tawaf TV
 TBC台中生活台
 TFC	TFC(swepg)
 TG Junior
-that's 70s (免费)	that's 70s
-that's 80s (免费)	that's 80s
-that's 90s00s (免费)	that's 90s00s
+that's 70s (免费)	That's 70s
+that's 80s (免费)	That's 80s
+that's 90s00s (免费)	That's 90s00s
 that's Rock (免费)	that's Rock
 The Filipino Channel HD	TFC(The Filipino Channel)
 THR_GEGAR	THR GEGAR(swepg)
@@ -984,10 +1022,10 @@ TLC 旅游生活频道
 TLC旅游生活频道香港
 TRACE Sport Stars (免费)	TRACE Sport Stars(英1)
 TRACE Sport Stars	TRACE Sport Stars(swepg2)
-TRACE Sport Stars HD	TRACE Sport Stars(中)
+TRACE Sport Stars HD	TRACE Sport Stars(国)
 trace sport star运动明星
 TRACE Urban (免费)	TRACE Urban(英)
-TRACE Urban	TRACE Urban(中)
+TRACE Urban	TRACE Urban(国)
 TRACESportStars	TRACE SportStars
 Trans 7
 Trans TV
@@ -1000,44 +1038,6 @@ TV5MONDE ASIE
 TV5MONDE Style
 TV5MONDE STYLE HD 生活时尚
 TV5Monde 法国TV5
-TVB_Classic_HD	TVB 经典Classic HD(英)
-TVB_Entertainment_News_HD	TVB-娱乐新闻(英)
-TVB_Jade	TVB-翡翠台(马来 英)
-TVB Plus (免费)	TVB Plus
-TVB_Xing_He_HD	TVB-星河(英)
-TVBS	TVBS(swepg)
-TVBS HD
-TVBS 新闻台	TVBS-新闻台
-TVBS欢乐HD	TVBS-欢乐HD
-TVBS欢乐台	TVBS-欢乐台(swepg)
-TVBS精采台	TVBS-精采台(swepg)
-TVBS精采台HD	TVBS-精采台HD
-TVBS看板人物-FastTV飞速看
-TVBS食尚玩家	TVBS-食尚玩家
-TVBS台剧台	TVBS-台剧台
-TVBS新闻	TVBS-新闻
-TVBS新闻HD	TVBS-新闻HD
-TVBS新闻台	TVBS-新闻台(swepg)
-TVBS亚洲新加坡	TVBS-亚洲_新加坡_英
-TVBS综艺台	TVBS-综艺台
-TVB翡翠剧集台(TVB Drama)	TVB-翡翠剧集台(TVB Drama)
-翡翠台	TVB-翡翠台(香港 中)
-TVB翡翠娱乐台(TVBe)	TVB-翡翠娱乐台(TVBe)
-TVB翡翠综合台(TVBJ1)	TVB-翡翠综合台(TVBJ1)
-TVB功夫台	TVB-功夫台
-TVB明珠剧集台(TVB Pearl Drama)	TVB-明珠剧集台(TVB Pearl Drama)
-TVB生活台	TVB-生活台
-TVB无线新闻台(TVB News)	TVB-无线新闻台(TVB News)
-TVB新闻新加坡	TVB-新闻新加坡
-TVB星河	TVB-星河
-TVB星河新加坡	TVB-星河_新加坡_英(swepg)
-TVB粤语片	TVB-粤语片
-tvN	tvN(swepg)
-tvN HD	tvN HD(中)
-tvN_HD	tvN HD(英)
-tvN Movies	tvN Movies(英)
-tvN香港
-tvN有线
 tvOne
 TVRI
 UNIQUES
@@ -1046,18 +1046,14 @@ Vannathirai
 video express rentnow
 Vijay TV HD
 Vision Prime
-Vision Prime HD
 Viu 频道
 viu6
 ViuTV	Viu TV(A)
 ViVa 1台
 Warner TV
-wedotv Movies
-wedotv Movies HD
+wedotv Movies HD	Wedotv Movies
 Wild Stuff (免费)	Wild Stuff
 W-Sport
-WTO姐妹会
-WTO姐妹会-FastTV飞速看
 Yes娱乐
 ZAYAN	ZAYAN(swepg)
 Zee Bioskop
@@ -1068,7 +1064,7 @@ Zee Tamil HD
 Zee Thirai
 Zee TV
 Zee TV HD
-ZooMoo	ZooMoo(中)
+ZooMoo	ZooMoo(国)
 Zoomoo	Zoomoo(英)
 Z频道	Z频道(swepg)
 爱尔达日韩台
@@ -1082,25 +1078,13 @@ Z频道	Z频道(swepg)
 爱尔达体育MAX3台
 爱尔达体育MAX4台
 爱尔达影剧台
-爱尔达影剧台HD
 爱尔达娱乐台
 爱尔达综合台
-爱尔达综合台HD
-安徽广播电视台国际频道 (免费)	安徽国际频道
-安徽卫视	安徽卫视(swepg)
-澳门葡萄牙
-澳门体育
-澳门卫星
-澳门资讯
-澳门综艺
-澳视澳门
 八大第一HD	八大第一
 八大精彩台	八大精彩台(swepg)
 八大戏剧HD	八大戏剧
 八大优频道
 八大娱乐台	八大娱乐台(swepg)
-八大综合HD
-八大综合台	八大综合台(swepg)
 八大综艺台
 白发
 白雪公主非死不可
@@ -1109,16 +1093,11 @@ Z频道	Z频道(swepg)
 半岛国际新闻台	Al Jazeera English 半岛英语新闻台
 半岛英语新闻台Al Jazeera English HD	Al Jazeera English HD半岛英语新闻台
 宝岛文化
-保定公共频道
-保定生活健康
-保定新闻综合
 爆谷台
-北京卫视	北京卫视
 别打扰我种田-FastTV飞速看
 包青天-FastTV飞速看
 爸妈囧很大-FastTV飞速看
 冰火频道
-兵团卫视
 脖子解说 Mr. Neck
 博靖天育乐台
 博斯高球二台
@@ -1254,7 +1233,7 @@ Z频道	Z频道(swepg)
 非凡新闻台	非凡新闻台(swepg)
 翡翠台 (免费)	TVB翡翠台
 翡翠台(国际版)	TVB-翡翠台(国际版)
-翡翠一台(TVB1)
+翡翠一台(TVB1)	TVB-翡翠一台(TVB1)
 凤凰卫视香港台
 凤凰卫视中文台
 凤凰卫视资讯台
@@ -1262,10 +1241,7 @@ Z频道	Z频道(swepg)
 佛山顺德	佛山顺德(swepg)
 佛山综合	佛山综合(swepg)
 佛卫电视慈悲台	佛卫慈悲台(swepg)
-富立电视台
-富立电视台HD
-甘肃卫视
-钢之炼金术师
+富立电视台HD		富立电视台
 高点电视台
 高点育乐台	高点育乐台(swepg)
 高清生活时光
@@ -1349,41 +1325,56 @@ CHC 家庭影院	CHC家庭影院
 上海教育
 上海新闻综合
 上视东方影视
-四川卫视
+河南电视剧
+河南都市
+河南法制
+河南公共
+河南欢腾购物
+河南梨园戏曲
+河南梨园戏曲	河南梨园频道
+河南民生
+河南晴彩中原
+河南卫视	河南卫视(swepg)
+河南文物宝库	河南文物宝库
+河南武术
+河南乡村
+河南象世界
+河南新闻
+溧水新闻综合
+连云港新闻综合
+江门综合	江门综合(swepg)
+江苏城市频道
+江苏公共新闻频道
+江苏教育
+江苏体育休闲频道
+江苏卫视	江苏卫视(swepg)
+江苏影视频道
+江苏综艺频道
+江阴新闻综合
+揭阳生活	揭阳生活(swepg)
+揭阳综合	揭阳综合(swepg)
 韶关新闻综合	韶关新闻综合(swepg)
 深圳宝安	深圳宝安(swepg)
 深圳电视剧	深圳电视剧(swepg)
 深圳都市	深圳都市(swepg)
 深圳龙岗	深圳龙岗(swepg)
 深圳少儿	深圳少儿(swepg)
-深圳卫视
-深圳卫视国际频道 (免费)	深圳国际频道
-深圳卫视香港
-贵州卫视
+邯郸公共
+邯郸科技教育
+邯郸新闻综合
 滚动力 rollor
 滚动力 rollor有线
 滚动力rollor
 鬼话连篇
-国会频道1
-国会频道1HD
 国会频道1台
-国会频道2
-国会频道2HD
 国会频道2台
 国际大小事
-国民大会
-国色芳华
 国外电影精选-FastTV飞速看
 国兴卫视	国兴卫视(swepg)
 国学频道	国学频道(swepg)
 国学时代界
 哈哈炫动	炫动卡通
-海南卫视
-海派甜心
 海豚综合台	海豚综合台(swepg)
-邯郸公共
-邯郸科技教育
-邯郸新闻综合
 韩国阿里郎
 韩国娱乐KMTV
 韩国娱乐台
@@ -1401,29 +1392,6 @@ CHC 家庭影院	CHC家庭影院
 好消息二台HD
 好消息卫星电视台
 浩克慢游-FastTV飞速看
-河北卫视
-河北经济
-河北都市
-河北公共	河北文旅公共
-河北影视剧
-河北农民	河北三农
-河北少儿科教
-河北杂技频道	河北杂技
-河南电视剧
-河南都市
-河南法制
-河南公共
-河南欢腾购物
-河南梨园戏曲
-河南梨园戏曲	河南梨园频道
-河南民生
-河南晴彩中原
-河南卫视	河南卫视(swepg)
-河南文物宝库	河南文物宝库
-河南武术
-河南乡村
-河南象世界
-河南新闻
 贺岁电影推荐-FastTV飞速看
 黑龙江卫视
 衡水经济科教
@@ -1446,8 +1414,7 @@ CHC 家庭影院	CHC家庭影院
 华视新闻资讯台
 华视主频
 华艺MBC综合台有线
-华艺台湾台
-华艺台湾台 HD
+华艺台湾台 HD	华艺台湾台
 华艺影剧台
 华艺中文台
 华语剧台
@@ -1458,7 +1425,6 @@ CHC 家庭影院	CHC家庭影院
 环宇财经
 环宇新闻台湾台
 寰宇HD综合	寰宇HD综合(swepg)
-寰宇财经HD
 寰宇财经台
 寰宇全视界
 寰宇新闻	寰宇新闻(swepg)
@@ -1477,23 +1443,7 @@ CHC 家庭影院	CHC家庭影院
 嘉佳卡通	嘉佳卡通(swepg)
 健康2.0
 健康问良医
-江门综合	江门综合(swepg)
-江苏城市频道
-江苏电视台国际频道 (免费)	江苏电视台国际频道
-江苏公共新闻频道
-江苏国际
-江苏教育
-江苏体育休闲频道
-江苏卫视	江苏卫视(swepg)
-江苏影视频道
-江苏综艺频道
-江西卫视
-江阴新闻综合
-揭阳生活	揭阳生活(swepg)
-揭阳综合	揭阳综合(swepg)
 金光布袋戏
-金色学堂
-金鹰卡通
 进击的台湾
 劲爆体育
 经典电影台
@@ -1564,14 +1514,8 @@ CHC 家庭影院	CHC家庭影院
 乐游
 历史高清频道
 历史频道HD
-溧水新闻综合
-连云港新闻综合
-辽宁卫视
 疗愈下雨声
-劣人传之诡计
-龙华电影	龙华电影(swepg)
-龙华电影HD
-龙华电影台
+龙华电影
 龙华动画HD
 龙华经典HD
 龙华经典台
@@ -1590,7 +1534,6 @@ CHC 家庭影院	CHC家庭影院
 落花时节又逢君
 旅游频道香港
 旅游生活
-麻醉风暴
 麦卡贝网路电视
 麦卡贝综艺
 麦哲伦频道
@@ -1624,8 +1567,7 @@ CHC 家庭影院	CHC家庭影院
 民视异言堂
 民视影剧台
 民视综艺台
-民视综艺台(免费)
-明珠台 (免费)	明珠台(swepg)
+明珠台 (免费)	TVB-明珠台(swepg)
 木曜4超玩 一日系列
 南京新闻综合
 南京教科频道
@@ -1649,17 +1591,12 @@ CHC 家庭影院	CHC家庭影院
 秦皇岛民生
 秦皇岛新闻综合
 青海卫视
-清远新闻综合	清远新闻综合(swepg)
-请叫我总监
-请问今晚住谁家
 球迷台
 球王台
 去有风的地方
 去有风的地方-FastTV飞速看
 全大电视台	全大电视台(swepg)
 全家有智慧-FastTV飞速看
-全民星攻略
-全民星攻略 知识开箱
 全能歌手-FastTV飞速看
 全球财经网频道
 人间卫视	人间卫视(swepg)
@@ -1668,22 +1605,15 @@ CHC 家庭影院	CHC家庭影院
 三立iNEWS	三立iNEWS(swepg)
 三立财经新闻台	三立财经新闻台(swepg)
 三立财经新闻台HD
-三立都会HD
-三立都会台	三立都会台(swepg)
+三立都会台
 三立国际台
-三立台湾HD
-三立台湾台	三立台湾台(swepg)
+三立台湾台
 三立戏剧台HD
 三立新闻HD
 三立新闻iNEWS
 三立新闻台	三立新闻台(swepg)
-三立综合台	三立综合台(swepg)
-三立综合台HD
-三沙卫视香港
+三立综合台HD	三立综合台
 三圣电视台
-韶华若锦
-少康战情室
-社会NOW什么
 生活时尚
 生命的赢家
 生命电视台
@@ -1778,8 +1708,8 @@ CHC 家庭影院	CHC家庭影院
 我们这一家
 无线卫星新闻台
 无线卫星亚洲台
-无线新闻(国际版)
-无线新闻台 (免费)	无线新闻台
+无线新闻(国际版)	TVB-无线新闻(国际版)
+无线新闻台 (免费)	TVB-无线新闻台
 无职转生，到了异世界就拿出真本事
 五星体育
 武媚娘传奇
@@ -1840,7 +1770,7 @@ CHC 家庭影院	CHC家庭影院
 影迷数位纪实台
 优漫卡通频道
 游戏风云
-娱乐新闻台 (免费)	TVB-娱乐新闻台(中)
+娱乐新闻台 (免费)	TVB-娱乐新闻台(国)
 原住民族电视HD
 原住民族电视台
 原住民族频道
@@ -1964,9 +1894,8 @@ CCTV4欧洲	CCTV4欧洲(CN)
 CCTV4美洲	CCTV4美洲(CN)
 CGTN西语	CGTN西语(CN)
 CGTN法语	CGTN法语(CN)
-CGTN俄语	CGTN俄语(CN)
 CGTN阿语	CGTN阿语(CN)
-CGTN	CGTN(CN)
+CGTN	CGTN(国)
 CCTV4K	CCTV4K(CN)
 CCTV8K	CCTV8K(CN)
 CGTN纪录	CGTN纪录(CN)
@@ -1980,7 +1909,6 @@ CGTN纪录	CGTN纪录(CN)
 天津卫视	天津卫视(CN)
 湖北卫视	湖北卫视(CN)
 辽宁卫视	辽宁卫视(CN)
-安徽卫视	安徽卫视(CN)
 浙江卫视	浙江卫视(CN)
 山东卫视	山东卫视(CN)
 北京卫视	北京卫视(CN)
@@ -2292,7 +2220,7 @@ CHC影迷电影	CHC影迷电影(CN)
 4K美食	4K美食(CN)
 卫生健康	卫生健康(CN)
 电视指南	电视指南(CN)
-中学生	中学生(CN)
+中学生	CCTV-中学生
 藏语卫视	藏语卫视(CN)
 西藏影视文化	西藏影视文化(CN)
 哈萨克语新闻综合	哈萨克语新闻综合(CN)
@@ -2302,8 +2230,8 @@ CHC影迷电影	CHC影迷电影(CN)
 宁夏经济	宁夏经济(CN)
 宁夏文旅	宁夏文旅(CN)
 宁夏少儿	宁夏少儿(CN)
-汉语经济生活	汉语经济生活(CN)
-星空卫视	星空卫视(CN)
+汉语经济生活	新疆汉语经济生活
+星空卫视
 澳视澳门	澳视澳门(CN)
 超级体育	超级体育(CN)
 欧美电影	欧美电影(CN)
@@ -2406,12 +2334,11 @@ iHOT爱旅行	iHOT爱旅行(CN)
 
 
 http://epg.51zmt.top:8000/e2.xml.gz
+296	CGTN Documentary
 1797	中视经典
 1832	爱尔达体育1
 1815	爱尔达体育2
 1833	爱尔达体育3
-1824	爱尔达影剧
-1838	爱尔达综合
 1481	八大戏剧台
 1822	八大优
 1554	八大娱乐台
@@ -2443,7 +2370,7 @@ http://epg.51zmt.top:8000/e2.xml.gz
 1462	动物星球
 1529	非凡商业台
 1498	非凡新闻台
-120	TVB-翡翠台(中)
+120	TVB-翡翠台(国)
 2055	凤凰电影
 143	凤凰香港
 141	凤凰中文
@@ -2465,7 +2392,6 @@ http://epg.51zmt.top:8000/e2.xml.gz
 1845	华艺影剧
 1778	华艺中文
 1819	寰宇HD综合
-1827	寰宇财经
 1591	寰宇新闻
 1791	靖天电影台
 1811	靖天国际
@@ -2480,7 +2406,6 @@ http://epg.51zmt.top:8000/e2.xml.gz
 1611	靖洋卡通台
 1523	靖洋戏剧台
 1458	客家电视台
-1762	龙华电影
 1812	龙华动画
 1764	龙华经典
 1760	龙华偶像
@@ -2503,11 +2428,8 @@ http://epg.51zmt.top:8000/e2.xml.gz
 1528	全大电视台
 1452	人间卫视
 1530	三立财经新闻台
-1470	三立都会台
-1469	三立台湾台
 1840	三立戏剧
 1494	三立新闻台
-1637	三立综合台
 1540	十方法界
 1449	台视
 1565	台视财经台
@@ -2520,7 +2442,7 @@ http://epg.51zmt.top:8000/e2.xml.gz
 1517	纬来日本台
 1512	纬来体育台
 1483	纬来戏剧台
-123	无线新闻
+123	TVB-无线新闻
 1541	信大频道
 1559	幸福空间居家台
 1592	亚洲旅游台
@@ -2542,8 +2464,7 @@ http://epg.51zmt.top:8000/e2.xml.gz
 1561	BloombergTV
 1577	BlueAntEntertainment
 1828	CatchPlay电影
-1607	CBeebies(中)
-296	CGTN Documentary
+1607	CBeebies(国)
 1560	Channel News Asia
 1803	CI
 287	cinemaworld
@@ -2607,7 +2528,7 @@ http://epg.51zmt.top:8000/e2.xml.gz
 1495	TVBS新闻台
 122	TVB经典台
 1580	tvN
-187	ViuTV
+187	Viu TV
 1570	Warner TV HD
 
 
@@ -2645,6 +2566,7 @@ ChangeTimezone=Y
 3784	Astro Rania HD
 2384	Astro Ria HD(MY)
 517641	Astro Showtime
+399483	Astro Showcase
 397402	Astro Sports Plus
 524198	Astro Sports Plus 2
 535447	Astro Sports Plus 3
@@ -2744,7 +2666,6 @@ ChangeTimezone=Y
 522380	Sample EPG
 510886	Sandakan FM
 411256	Selangor FM
-399483	Astro Showcase
 4057	SHOWCASE MOVIES
 702	SINAR FM
 478717	Snap
@@ -2863,7 +2784,7 @@ ChangeTimezone=Y
 535585	DW (English)(新加坡)
 412178	DW English HD(新加坡)
 369806	e-Le (HD)(新加坡)
-491151	东森亚洲卫视 (中)(新加坡)
+491151	东森亚洲卫视 (国)(新加坡)
 492856	东森亚洲卫视 (英)(新加坡)
 535568	东森亚洲新闻 HD (新加坡)
 412122	Euronews HD(新加坡)
@@ -3029,7 +2950,7 @@ ChangeTimezone=Y
 492453	TVBS-新闻_新加坡_中
 535512	tvN HD(新加坡)
 369754	tvN HD (Malay)(新加坡)
-369818	tvN HD(中)(新加坡)
+369818	tvN HD(国)(新加坡)
 535582	tvN Movies On Demand(新加坡)
 412097	Vannathirai(新加坡)
 492817	Channel Vasantham_新加坡_英
@@ -3039,17 +2960,17 @@ ChangeTimezone=Y
 412141	Vijay TV HD(新加坡)
 501126	WION(新加坡)
 492880	W-Sport(新加坡)
+501125	北京国际频道
+522556	湖南国际频道
+512070	上海东方国际(新加坡)
+492883	中天亚洲台(英)(新加坡)
+369789	中天亚洲台(国)(新加坡)
 412185	Zee Cinema(新加坡)
 412115	Zee Tamil(新加坡)
 535594	Zee Tamil HD(新加坡)
 516580	Zee Thirai(新加坡)
 369828	ZEE TV(新加坡)
 522558	Zoom TV(新加坡)
-501125	北京国际频道
-522556	湖南国际频道
-512070	上海东方国际(新加坡)
-492883	中天亚洲台(英)(新加坡)
-369789	中天亚洲台(中)(新加坡)
 
 
 
@@ -3824,7 +3745,6 @@ https://raw.githubusercontent.com/kiekostui/pluto_tv_it/refs/heads/main/epg_plut
 67c832cc9b53325ee16fb899	Wicked Tuna
 61fbd3f0733df400076c9a2d	Il Testimone
 6093f9ed2c75660007322bb7	Catfish
-619263ee9541940007d20d60	Geordie Shore
 67e3b0d2443f0671bc8a1297	Pluto TV Shore
 60940a07d88ba90007b9cb71	16 Anni e Incinta
 62e7fc8c0d061100083946a9	Teen Mom
@@ -3868,6 +3788,7 @@ https://raw.githubusercontent.com/kiekostui/pluto_tv_it/refs/heads/main/epg_plut
 
 
 https://raw.githubusercontent.com/kiekostui/rakuten_tv_it/refs/heads/main/epg_rakuten_it.xml
+cgtn	CGTN(英)
 filmrise-sci-fi-it	Filmrise Sci Fi (It)
 filmrise-relic-hunter-ita	Filmrise Relic Hunter (It)A
 serially-crime-ita	Serially Crime (It)A
@@ -3881,7 +3802,7 @@ sport-italia	Sport Italia
 pfl-mma	Pfl Mma
 racer-international	Racer International
 golf-tv	Golf TV
-red-bull-tv-en	Red Bull TV En
+red-bull-tv-en	Red Bull TV English
 motorvision-tv	Motorvision TV
 motoretro	Motoretro
 tennis-plus	Tennis Plus
@@ -3915,6 +3836,5 @@ class-cnbc	Class CNBC
 bloomberg-originals-new	Bloomberg Originals New
 bloomberg-tv-plus	Bloomberg TV Plus
 africanews-eng	Africanews English
-cgtn	CGTN(英)
 newsworld-ita	Newsworld (It)
 france-24-en	France 24 English(A)

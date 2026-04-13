@@ -295,6 +295,7 @@ cgtn阿拉伯语	CGTN阿拉伯语(swepg)
 cgtn俄语	CGTN俄语(国2)
 cgtn法语	CGTN法语(swepg)
 cgtn西班牙语	CGTN西班牙语(swepg)
+CHC 家庭影院
 北京卫视
 甘肃卫视
 兵团卫视
@@ -494,7 +495,6 @@ Channel News Asia	Channel News Asia(swepg)
 Channel Suria
 Channel U
 Channel Vasantham
-CHC 家庭影院
 CI 罪案侦查频道
 CINEEDGE
 CINEEDGE HD

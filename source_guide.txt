@@ -5,7 +5,7 @@ CCTV-1 综合	CCTV1
 CCTV-2 财经	CCTV2
 CCTV-3 综艺	CCTV3
 CCTV-4 中文国际	CCTV4
-CCTV-4 中文国际欧洲	CCTV4EUO
+CCTV-4 中文国际欧洲	CCTV4欧洲
 CCTV-5 体育	CCTV5
 CCTV-5+ 体育赛事	CCTV5+
 CCTV-6 电影	CCTV6
@@ -15,6 +15,7 @@ CCTV-9 记录	CCTV9
 CCTV-10 科教	CCTV10
 CCTV-11 戏曲	CCTV11
 CCTV-12 社会与法	CCTV12
+CCTV-13 新闻	CCTV13
 CCTV-14 少儿	CCTV14
 CCTV-15 音乐	CCTV15
 CCTV-16 奥林匹克	CCTV16
@@ -43,22 +44,19 @@ CGTN西班牙语
 浙江卫视
 浙江卫视4K
 北京卫视4K
-湖南卫视4K
 吉林延边卫视
 湖北卫视
 山西卫视
 三沙卫视
 厦门卫视	福建厦门卫视
-广东卫视
-广东卫视4K
-广东4K
+广东卫视4K	广东卫视
+广东4K	
 大湾区卫视	广东大湾区卫视
 深圳卫视	广东深圳卫视
 东方卫视	上海东方卫视
 山东教育
 山东卫视4K
 内蒙古卫视
-宁夏卫视
 东南卫视	福建东南卫视
 河南卫视
 江苏卫视
@@ -79,14 +77,14 @@ CGTN西班牙语
 国学	国学频道
 汽摩
 快乐垂钓
-老故事
+老故事	CCTV-老故事(PL)
 金鹰纪实
 天元围棋
 早期教育
 求索纪录
 经典电影
 热播剧场
-现代教育
+现代教育	广东现代教育
 广东民生
 广东少儿
 广东新闻
@@ -238,39 +236,19 @@ TRACEUrban	TRACEUrban(pl)
 
 https://raw.githubusercontent.com/zzq1234567890/epg/refs/heads/main/swepg.xml.gz
 ChangeTimezone=Y
-cctv1	CCTV-1(swepg)
-cctv10	CCTV-10(swepg)
-cctv11	CCTV-11(swepg)
-cctv12	CCTV-12(swepg)
-cctv13	CCTV13
-cctv14	CCTV-14(swepg)
-cctv15	CCTV-15(swepg)
-cctv16	CCTV-16(swepg)
-cctv17	CCTV-17(swepg)
 CCTV-1香港
-cctv2	CCTV-2(swepg)
-cctv3	CCTV-3(swepg)
-CCCTV4	CCTV-4(swepg)
 CCTV-4	CCTV-4(英)
-cctv4k	CCTV4K
-CCTV4美洲	CCTV-4美洲
-CCTV4欧洲	CCTV-4欧洲
 CCTV-4香港
 cctv4亚洲	CCTV-4亚洲
-cctv5	CCTV-5(swepg)
-cctv5+	CCTV-5+(swepg)
-cctv6	CCTV-6(swepg)
-CCTV6 电影频道	CCTV-6 电影频道
-cctv7	CCTV-7(swepg)
-cctv8	CCTV-8(swepg)
+CCTV4美洲	CCTV-4美洲
+CCTV4欧洲	CCTV-4欧洲
 cctv8k	CCTV-8k
-cctv9	CCTV-9(swepg)
+cctv4k	CCTV4K
 cctv电视指南	CCTV-电视指南(swepg)
 cctv风云剧场	CCTV-风云剧场(swepg)
 cctv风云音乐	CCTV-风云音乐(swepg)
 cctv风云足球	CCTV-风云足球
 cctv高尔夫	CCTV-高尔夫
-cctv怀旧剧场	CCTV-怀旧剧场(swepg)
 老故事	CCTV-老故事
 cctv女性时尚	CCTV-女性时尚(swepg)
 cctv世界地理	CCTV-世界地理(swepg)
@@ -281,25 +259,19 @@ cctv卫生健康	CCTV-卫生健康(swepg)
 中国中央电视台戏曲频道 (免费)	CCTV-戏曲
 中国中央电视台娱乐频道 (免费)	CCTV-娱乐
 CGTN	CGTN(英1)
-CGTN (中国环球电视网)记录频道 (免费)	CGTN-英文纪录_中
+中国环球电视网香港	CGTN香港
 CGTN (中国环球电视网)英语频道 (免费)	CGTN(swepg2)
+CGTN (中国环球电视网)记录频道 (免费)	CGTN-英文纪录_中
 CGTN_Documentary	CGTN-英文纪录_英
 cgtn阿拉伯语	CGTN阿拉伯语
 cgtn俄语	CGTN俄语(国)
 cgtn西班牙语	CGTN西班牙语(swepg)
-中国环球电视网香港
-CHC 家庭影院	CHC家庭影院2
 CHC 家庭影院	CHC家庭影院
-中国教育电视台-1	CETV-1(swepg)
-中国教育-2	CETV-2(swepg)
-中国教育-4	CETV-4(swepg)
 河北卫视
 北京卫视
 山东卫视
-山西卫视	山西卫视(swepg)
-河南卫视	河南卫视(swepg)
 天津卫视
-东南卫视
+东南卫视	福建东南卫视(swepg)
 海峡卫视	福建海峡卫视
 福建海峡卫视国际频道 (免费)	福建海峡卫视国际频道
 重庆卫视
@@ -309,41 +281,27 @@ CHC 家庭影院	CHC家庭影院
 四川卫视
 辽宁卫视
 江西卫视
-江苏卫视	江苏卫视(swepg)
 海南卫视
 吉林卫视
 陕西卫视
-陕西农林	陕西农林卫视
-中国农林卫视
+中国农林卫视	陕西农林卫视
 浙江卫视	浙江卫视(swepg)
 浙江国际
 东方卫视国际频道 (免费)	东方国际频道(中)
 东方卫视国际版		东方国际频道(英)
-广东卫视	广东卫视(swepg)
-广东大湾区卫视	广东大湾区卫视(swepg)
-广东广播电视台大湾区卫视频道 (免费)	广东大湾区卫视频道
 大湾区卫视香港	广东大湾区卫视_香港
 青海卫视
 甘肃卫视
-宁夏卫视	宁夏卫视(swepg)
-新疆卫视	新疆卫视(swepg)
-兵团卫视
-优漫卡通频道
+宁夏卫视
 深圳卫视
 深圳卫视国际频道 (免费)	深圳国际频道
 深圳卫视香港	深圳卫视_香港
-广西卫视	广西卫视(swepg)
 云南卫视
 云南澜湄国际卫视 (免费)	云南澜湄国际
 黑龙江卫视
-湖北卫视	湖北卫视(swepg)
-湖南卫视	湖南卫视(swepg)
-内蒙古卫视	内蒙古卫视(swepg)
-西藏卫视	西藏卫视(swepg)
 金色学堂
 金鹰卡通
 哈哈炫动	炫动卡通
-北京卡酷少儿(swepg)
 车迷TV
 欢笑剧场
 动漫秀场
@@ -405,12 +363,10 @@ CHC 家庭影院	CHC家庭影院
 东方影视
 五星体育
 乐游
-第1财经
 第一财经
 第一财经直播
 都市剧场
 都市频道	上海都市频道(C)
-国学频道	国学频道(swepg)
 看看新闻直播
 #浙江
 浙江好易购
@@ -424,8 +380,6 @@ CHC 家庭影院	CHC家庭影院
 #广东
 广东民生	广东民生(swepg)
 广东体育
-广东现代教育
-广东珠江	广东珠江(swepg)
 广东综艺
 广州综合	广州综合(swepg)
 广州新闻	广州新闻(swepg)
@@ -466,7 +420,6 @@ CHC 家庭影院	CHC家庭影院
 广西国际频道	广西国际
 广西乐思购频道
 广西新闻频道	广西新闻
-广西影视频道	广西影视
 广西综艺旅游频道	广西综艺旅游
 #江苏
 淮安新闻综合
@@ -1699,24 +1652,6 @@ http://epg.51zmt.top:8000/e.xml.gz
 
 
 https://liliu.serv00.net/epg/cn.xml.gz
-CCTV1	CCTV1(CN)
-CCTV2	CCTV2(CN)
-CCTV3	CCTV3(CN)
-CCTV4	CCTV4(CN)
-CCTV5	CCTV5(CN)
-CCTV5+	CCTV5+(CN)
-CCTV6	CCTV6(CN)
-CCTV7	CCTV7(CN)
-CCTV8	CCTV8(CN)
-CCTV9	CCTV9(CN)
-CCTV10	CCTV10(CN)
-CCTV11	CCTV11(CN)
-CCTV12	CCTV12(CN)
-CCTV13	CCTV13(CN)
-CCTV14	CCTV14(CN)
-CCTV15	CCTV15(CN)
-CCTV16	CCTV16(CN)
-CCTV17	CCTV17(CN)
 CCTV4欧洲	CCTV4欧洲(CN)
 CCTV4美洲	CCTV4美洲(CN)
 CGTN西语	CGTN西语(CN)
@@ -1724,67 +1659,35 @@ CGTN	CGTN(国)
 CCTV4K	CCTV4K(CN)
 CCTV8K	CCTV8K(CN)
 CGTN纪录	CGTN纪录(CN)
-重庆卫视	重庆卫视(CN)
-四川卫视	四川卫视(CN)
-贵州卫视	贵州卫视(CN)
-湖南卫视	湖南卫视(CN)
-广东卫视	广东卫视(CN)
-深圳卫视	深圳卫视(CN)
-天津卫视	天津卫视(CN)
-湖北卫视	湖北卫视(CN)
+CETV1	CETV1(CN)
+CETV2	CETV2(CN)
+CETV3	CETV3(CN)
+CETV4	CETV4(CN)
 辽宁卫视	辽宁卫视(CN)
-浙江卫视	浙江卫视(CN)
-山东卫视	山东卫视(CN)
-北京卫视	北京卫视(CN)
-江苏卫视	江苏卫视(CN)
-黑龙江卫视	黑龙江卫视(CN)
-河北卫视	河北卫视(CN)
-云南卫视	云南卫视(CN)
-江西卫视	江西卫视(CN)
-东南卫视	东南卫视(CN)
-海南卫视	海南卫视(CN)
-吉林卫视	吉林卫视(CN)
-甘肃卫视	甘肃卫视(CN)
-河南卫视	河南卫视(CN)
-内蒙古卫视	内蒙古卫视(CN)
-陕西卫视	陕西卫视(CN)
-广西卫视	广西卫视(CN)
-青海卫视	青海卫视(CN)
-新疆卫视	新疆卫视(CN)
-西藏卫视	西藏卫视(CN)
-宁夏卫视	宁夏卫视(CN)
-山西卫视	山西卫视(CN)
-兵团卫视	兵团卫视(CN)
-康巴卫视	康巴卫视(CN)
-延边卫视	延边卫视(CN)
-农林卫视	农林卫视(CN)
-中华特产	中华特产(CN)
-四川经济	四川经济(CN)
-四川文化旅游	四川文化旅游(CN)
-四川新闻	四川新闻(CN)
-四川影视文艺	四川影视文艺(CN)
-四川妇女儿童	四川妇女儿童(CN)
-四川科教	四川科教(CN)
-四川乡村	四川乡村(CN)
-精彩影视	精彩影视(CN)
-重庆新闻	重庆新闻(CN)
-重庆红叶	重庆红叶(CN)
-重庆影视剧	重庆影视剧(CN)
-重庆文体娱乐	重庆文体娱乐(CN)
-重庆少儿	重庆少儿(CN)
-重庆红岩文化	重庆红岩文化(CN)
-重庆社会与法	重庆社会与法(CN)
-重庆新农村	重庆新农村(CN)
-重庆移动	重庆移动(CN)
-北京新闻	北京新闻(CN)
-北京影视	北京影视(CN)
-北京文艺	北京文艺(CN)
-北京财经	北京财经(CN)
-北京生活	北京生活(CN)
-卡酷少儿	卡酷少儿(CN)
-北京体育休闲	北京体育休闲(CN)
-风云剧场	CCTV-风云剧场(CN)
-怀旧剧场	怀旧剧场(CN)
+中华特产
+四川经济
+四川文化旅游
+四川新闻
+四川影视文艺
+四川妇女儿童
+四川科教
+四川乡村
+精彩影视
+重庆新闻
+重庆红叶
+重庆影视剧
+重庆文体娱乐
+重庆少儿
+重庆红岩文化
+重庆社会与法
+重庆新农村
+重庆移动
+北京新闻
+北京影视
+北京文艺
+北京财经
+北京生活
+北京体育休闲
 世界地理	世界地理(CN)
 风云音乐	风云音乐(CN)
 高尔夫网球	高尔夫网球(CN)
@@ -1793,11 +1696,12 @@ CGTN纪录	CGTN纪录(CN)
 央视台球	央视台球(CN)
 求索纪录	求索纪录(CN)
 求索科学	求索科学(CN)
-CETV1	CETV1(CN)
-CETV2	CETV2(CN)
-CETV3	CETV3(CN)
-CETV4	CETV4(CN)
-广东珠江	广东珠江(CN)
+江苏卫视4K	江苏卫视4K(CN)
+深圳卫视4K	深圳卫视4K(CN)
+浙江卫视4K	浙江卫视4K(CN)
+山东卫视4K	山东卫视4K(CN)
+四川卫视4K	四川卫视4K(CN)
+北京卫视4K	北京卫视4K(CN)
 广东体育	广东体育(CN)
 广东公共	广东公共
 广东国际	广东国际频道
@@ -1808,8 +1712,6 @@ CETV4	CETV4(CN)
 东方财经	东方财经(CN)
 动漫秀场	动漫秀场(CN)
 劲爆体育	劲爆体育(CN)
-都市剧场	都市剧场(CN)
-乐游	乐游(CN)
 CHC动作电影	CHC动作电影(CN)
 CHC家庭影院	CHC家庭影院(CN)
 CHC影迷电影	CHC影迷电影(CN)
@@ -1827,13 +1729,9 @@ CHC影迷电影	CHC影迷电影(CN)
 浙江教科影视	浙江教科影视(CN)
 浙江民生休闲	浙江民生休闲(CN)
 浙江新闻	浙江新闻(CN)
-浙江国际	浙江国际(CN)
-之江纪录	之江纪录(CN)
-优漫卡通	优漫卡通(CN)
-哈哈炫动	哈哈炫动(CN)
+之江纪录	浙江之江纪录
 广西都市	广西都市(CN)
-广西影视	广西影视(CN)
-广西新闻	广西新闻(CN)
+广西影视	广西影视
 江苏城市	江苏城市(CN)
 江苏国际	江苏国际(CN)
 江苏教育	江苏教育(CN)
@@ -1842,21 +1740,14 @@ CHC影迷电影	CHC影迷电影(CN)
 江苏新闻	江苏新闻(CN)
 江苏体育休闲	江苏体育休闲(CN)
 山东教育卫视	山东教育卫视(CN)
-游戏风云	游戏风云(CN)
-老故事	老故事(CN)
 文物宝库	文物宝库(CN)
 早期教育	早期教育(CN)
 武术世界	武术世界(CN)
 梨园频道	梨园频道(CN)
 4K电影	4K电影(CN)
-汽摩	汽摩(CN)
-环球奇观	环球奇观(CN)
-现代女性	现代女性(CN)
-天元围棋	天元围棋(CN)
-国学	国学(CN)
-发现之旅	发现之旅(CN)
+现代女性
+发现之旅
 环球旅游	环球旅游(CN)
-书画	书画(CN)
 安徽经济生活	安徽经济生活(CN)
 安徽影视	安徽影视(CN)
 安徽农业科教	安徽农业科教(CN)
@@ -2076,7 +1967,6 @@ IPTV法治	IPTV法治(CN)
 财富天下	财富天下(CN)
 黑莓影视	黑莓影视(CN)
 纪实科教	纪实科教(CN)
-现代教育	现代教育(CN)
 淘Baby	淘Baby(CN)
 淘剧场	淘剧场(CN)
 淘电影	淘电影(CN)
@@ -2086,14 +1976,6 @@ IPTV3+	IPTV3+(CN)
 IPTV5+	IPTV5+(CN)
 IPTV6+	IPTV6+(CN)
 IPTV8+	IPTV8+(CN)
-湖南卫视4K	湖南卫视4K(CN)
-广东卫视4K	广东卫视4K(CN)
-江苏卫视4K	江苏卫视4K(CN)
-深圳卫视4K	深圳卫视4K(CN)
-浙江卫视4K	浙江卫视4K(CN)
-山东卫视4K	山东卫视4K(CN)
-四川卫视4K	四川卫视4K(CN)
-北京卫视4K	北京卫视4K(CN)
 欧美影院	欧美影院(CN)
 亚洲影院	亚洲影院(CN)
 探索纪实	探索纪实(CN)

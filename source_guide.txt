@@ -2046,7 +2046,6 @@ ChangeTimezone=Y
 2652	K-Plus HD
 4183	KTV(MY)
 411253	Labuan FM
-478718	Lead
 3968	Lifetime HD(MY)
 531	LITE FM
 4196	Love Nature(MY)
@@ -2072,7 +2071,6 @@ ChangeTimezone=Y
 411240	Red FM
 517640	Rock Action
 521957	ROLL
-411255	SabahV FM
 522380	Sample EPG
 510886	Sandakan FM
 411256	Selangor FM
@@ -2169,8 +2167,7 @@ ChangeTimezone=Y
 369813	CNBC Asia(新加坡)
 492893	CNBC HD(新加坡)
 412201	CNN HD(新加坡)
-535567	CNN International(新加坡)-
-491157	CNN International (HD)(新加坡)
+491157	CNN International(新加坡)
 492904	COLORS(新加坡)
 430462	Cricbuzz(新加坡)
 524990	Cricbuzz 2(新加坡)
@@ -2179,14 +2176,11 @@ ChangeTimezone=Y
 495473	Deal or No Deal(新加坡)
 369766	Deutsche Welle (English)(新加坡)
 535552	Discovery Asia (HD)(新加坡)-
-535551	Discovery Ch (HD)(新加坡)-
 369744	Discovery Channel (HD)(新加坡)
 492867	Discovery HD(新加坡)
 412142	Dragon TV(新加坡)
 369824	Drama Channel(新加坡)
-535575	DreamWorks (HD)(新加坡)-
 412095	DreamWorks Channel HD(新加坡)
-535585	DW (English)(新加坡)-
 412178	DW English HD(新加坡)
 369806	e-Le (HD)(新加坡)
 491151	东森亚洲卫视 (国)(新加坡)
@@ -2199,7 +2193,7 @@ ChangeTimezone=Y
 369827	Fight Sports (HD)(新加坡)
 412165	FIGHT SPORTS HD(新加坡)
 535515	Food Network (HD)(新加坡)-
-492858	FoodON(新加坡)
+492858	Food ON(新加坡)
 412132	Fox News Channel(新加坡)
 492833	Fox News Channel HD(新加坡)
 369726	France 24 English_新加坡
@@ -2207,12 +2201,10 @@ ChangeTimezone=Y
 412190	France 24(新加坡)
 491154	GMA Life TV
 491164	GMA News TV(新加坡)
-535514	GMA News TV Intl(新加坡)-
 491168	GMA Pinoy TV(新加坡)
 369786	HBO Family (HD)(新加坡)
 412195	HBO Family HD(新加坡)
-535571	HBO HD(新加坡)-
-412088	HBO HD(B)(新加坡)
+412088	HBO HD(新加坡)
 369840	HBO Hits (HD)(新加坡)
 412093	HBO Hits HD(新加坡)
 369758	HBO Signature (HD)(新加坡)
@@ -2220,12 +2212,10 @@ ChangeTimezone=Y
 412153	HGTV(新加坡)
 369779	HGTV (HD)(新加坡-英)
 492861	HGTV HD(新加坡 英)
-535554	HISTORY (HD)(新加坡)-
 412172	HISTORY HD(新加坡)
 369765	HISTORY™ (HD)(新加坡)
 369851	HITS (HD)(新加坡)
 412194	Hits HD(新加坡)
-535479	HITS MOVIES (HD)(新加坡)-
 369770	HITS Movies HD(MY)
 369740	HITS NOW (HD)(新加坡)
 485760	HITS NOW(新加坡)
@@ -2252,17 +2242,14 @@ ChangeTimezone=Y
 520018	LIVE 5(新加坡)-
 451933	maa movies(新加坡)
 507899	Master Chef(新加坡)
-535546	mio Sports(新加坡)-
 369773	mio Sports (HD)(新加坡)
-535547	mio Sports 2(新加坡)-
-369717	mio Sports 2 (HD)(新加坡)
-369802	mio Sports 3 (HD)(新加坡)
+369717	mio Sports 2(新加坡)
+369802	mio Sports 3(新加坡)
 535487	MOLA Sport(新加坡)-
 369804	MTV India(新加坡)
 535533	MTV LIVE HD(新加坡)-
-535563	NHK World - Japan(新加坡)-
-369836	NHK World - Japan (HD)(新加坡)
-412179	NHK WORLD - JAPAN HD(新加坡)
+369836	NHK World - Japan(新加坡)
+412179	NHK World - JAPAN HD(新加坡)
 369722	NHK World Premium(新加坡)
 412130	NHK World Premium HD(新加坡)
 412136	Nick Jr(新加坡)
@@ -2276,7 +2263,6 @@ ChangeTimezone=Y
 521905	Oktolidays(新加坡)-
 492870	ONE (Malay)(新加坡)
 369728	ONE HD (中英)(新马)
-535490	Outdoor Channel(HD)(新加坡)-
 484245	Outdoor Channel(新加坡)
 429564	Pesona HD(新加坡)
 369783	Phoenix Info News(新加坡)
@@ -2286,7 +2272,6 @@ ChangeTimezone=Y
 412148	Preview Channel(新加坡)
 492900	River Monsters(新加坡)
 369727	ROCK Action (HD)(新加坡)
-535587	ROCK ENT (HD)(新加坡)-
 412091	ROCK Entertainment(新加坡)
 369719	ROCK Entertainment (HD)(新加坡)
 369849	SAB TV(新加坡)
@@ -2296,7 +2281,6 @@ ChangeTimezone=Y
 412170	Sony Entertainment Television(新加坡)
 369846	SONY MAX(A)(新加坡)
 412138	SONY MAX(B)(新加坡)
-535581	Sony YAY(新加坡)-
 369811	Sony YAY!(新加坡)
 492860	SPL CH01(新加坡)
 412181	SPOTV(新加坡)
@@ -2309,7 +2293,6 @@ ChangeTimezone=Y
 369844	STAR Plus(新加坡)
 459681	StarHub(新加坡)
 412094	Sun Music(新加坡)
-535506	Sun Music HD(新加坡)-
 412128	Sun TV(新加坡)
 492901	Suria(新加坡)
 516581	TechStorm (HD)(新加坡)
@@ -2319,12 +2302,10 @@ ChangeTimezone=Y
 535445	That's 70s(新加坡)
 535443	That's 80s(新加坡)
 535444	That's Rock(新加坡)
-535513	TFC (The Filipino Ch HD)(新加坡)-
 455314	TFC (The Filipino Channel)(新加坡)
 522557	Times Now(新加坡)
 369720	TLC (新加坡)
 492896	TRACE Sport Stars(新加坡-中)
-535517	TRACE Sport Stars HD(新加坡)-
 369737	TRACE Sport Stars HD(新加坡2)
 412120	Travelxp HD(新加坡)
 412183	TV5MONDE HD(新加坡)
@@ -2334,7 +2315,6 @@ ChangeTimezone=Y
 369796	TVB-星河台_新加坡_中英
 491163	TVBS-亚洲_新加坡_中
 492453	TVBS-新闻_新加坡_中
-535512	tvN HD(新加坡)-
 369818	tvN HD(国)(新加坡)
 535582	tvN Movies On Demand(新加坡)-
 412097	Vannathirai(新加坡)
@@ -2351,7 +2331,6 @@ ChangeTimezone=Y
 369789	中天亚洲台(国)(新加坡)
 412185	Zee Cinema(新加坡)
 412115	Zee Tamil(新加坡)
-535594	Zee Tamil HD(新加坡)-
 516580	Zee Thirai(新加坡)
 369828	ZEE TV(新加坡)
 522558	Zoom TV(新加坡)
@@ -2846,7 +2825,6 @@ https://epg.pw/xmltv/epg_US.xml
 465018	ReelzChannel HD(US)
 465151	RETRO(US)
 465126	RetroPlex HD(US)
-496603	RevN(US)-
 465207	Revolt HD(US)
 465097	Rewind HD(US)
 496605	Rewind TV(US)
@@ -2854,7 +2832,6 @@ https://epg.pw/xmltv/epg_US.xml
 496599	Right Now TV(US)
 464991	ROAR TV(US)
 465136	ROOT Sports Northwest HD(US)
-465062	Root Sports Northwest Plus(US)-
 465116	RTV International(US)
 483389	Ryz Sports Network(US)
 464891	Saigon Broadcasting Network(US)
@@ -3027,7 +3004,6 @@ https://epg.pw/xmltv/epg_US.xml
 465045	WAPA America(US)
 464933	Weather Nation TV HD(US)
 465010	Willow Cricket HD(US)
-526674	Willow Xtra(US)-
 472382	WORLD Channel(US)
 465358	World Fishing Network HD (US)(US)
 465179	World Harvest Television(US)
@@ -3062,7 +3038,6 @@ https://raw.githubusercontent.com/kiekostui/pluto_tv_it/refs/heads/main/epg_plut
 6911c9704316999535eb21cf	Pluto TV Notti di Passione
 6911c8dd8caba6f046c5c5d5	Pluto TV Notti di Terrore
 6911c92b4316999535eb1e08	Pluto TV Notti di Sangue
-6911c9b88caba6f046c5ca8f	Pluto TV Notti di Crimine
 66a0eea88561260008b1c5d0	Carabinieri
 6245d3792792150007e20634	Settimo Cielo
 67d9836ba1609bdb523f0c9d	Relic Hunter
@@ -3166,7 +3141,6 @@ https://raw.githubusercontent.com/kiekostui/pluto_tv_it/refs/heads/main/epg_plut
 https://raw.githubusercontent.com/kiekostui/rakuten_tv_it/refs/heads/main/epg_rakuten_it.xml
 filmrise-sci-fi-it	Filmrise Sci Fi (It)
 filmrise-relic-hunter-ita	Filmrise Relic Hunter (It)A
-serially-crime-ita	Serially Crime (It)A
 mr-bean-live-action	Mr Bean Live Action
 the-pet-collective-new	The Pet Collective New
 people-are-awesome-new	People Are Awesome New

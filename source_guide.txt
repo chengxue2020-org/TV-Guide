@@ -3018,7 +3018,7 @@ https://epg.pw/xmltv/epg_US.xml
 465070	ZooMoo(US)
 
 
-https://epg.iill.top/epg.xml.gz
+https://epg.yang-1989.eu.org/epg.xml.gz
 明珠台	TVB-明珠台
 BBC Earth
 BBC Lifestyle

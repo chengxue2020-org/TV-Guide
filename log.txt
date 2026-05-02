@@ -1,8 +1,8 @@
 ============================================================
 Guide Merger v2.0 (Flexible Timezone & Alias Support)
 ============================================================
-当前时间: 2026-05-02 17:44:39 (北京时间)
-当前时间: 2026-05-02 09:44:39 (UTC)
+当前时间: 2026-05-02 21:34:45 (北京时间)
+当前时间: 2026-05-02 13:34:45 (UTC)
 
 ✓ 已加载cloudscraper库，支持绕过Cloudflare保护
 ✓ 已加载pypinyin库，支持中文拼音排序
@@ -41,6 +41,7 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
   ✓ 映射: "CCTV-17 农业 农村" → "CCTV17"
   ✓ 映射: "CETV2" → "CETV-2"
   ✓ 映射: "CETV4" → "CETV-4"
+  ✓ 映射: "CCTV-电视指南" → "CCTV-电视指南(X)"
   ✓ 映射: "CGTN英语" → "CGTN(国)"
   ✓ 映射: "CGTN英文记录" → "CGTN英文纪录(国)"
   ✓ 映射: "北京卫视4K" → "北京卫视4K(回看)"
@@ -53,18 +54,18 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
   ✓ 映射: "四川卫视4K" → "四川卫视"
   ✓ 映射: "兵团卫视" → "新疆兵团卫视"
   ✓ 映射: "国学" → "国学频道"
-  ✓ 映射: "老故事" → "CCTV-老故事(PL)"
+  ✓ 映射: "汽摩" → "重庆汽摩"
+  ✓ 映射: "老故事" → "CCTV-老故事"
   ✓ 映射: "现代教育" → "广东现代教育"
   ✓ 映射: "经济科教" → "广东经济科教"
   ✓ 映射: "岭南戏曲" → "广东岭南戏曲"
-  ✓ 映射: "少儿动画" → "少儿动画"
   ✓ 映射: "TVB生活台" → "TVB-生活台"
   ✓ 映射: "TVB星河" → "TVB-星河"
   ✓ 映射: "LiTV中視" → "中视(LiTV)"
   ✓ 映射: "中視新聞台" → "中视新闻台"
   ✓ 映射: "LiTV 華視" → "华视(LiTV)"
   ✓ 映射: "LiTV華視新聞" → "华视新闻(LiTV)"
-  ✓ 映射: "公視戲劇" → "公视戏剧(B)"
+  ✓ 映射: "公視戲劇" → "公视戏剧"
   ✓ 映射: "LiTV民視" → "民视(LiTV)"
   ✓ 映射: "LiTV 民視台灣台" → "民视台湾台(LiTV)"
   ✓ 映射: "LiTV民視第一台" → "民视第一台(LiTV)"
@@ -75,16 +76,16 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
   ✓ 映射: "LiTV台視" → "台视(LiTV)"
   ✓ 映射: "台視財經台" → "台视财经台"
   ✓ 映射: "台視新聞台" → "台视新闻台"
-  ✓ 映射: "龍華電影台" → "龙华电影台(B)"
-  ✓ 映射: "龍華經典台" → "龙华戏剧台(B)"
+  ✓ 映射: "龍華電影台" → "龙华电影台"
+  ✓ 映射: "龍華經典台" → "龙华经典台(Z)"
+  ✓ 映射: "龍華戲劇台" → "龙华戏剧台(C)"
   ✓ 映射: "龍華卡通台" → "龙华卡通台(B)"
   ✓ 映射: "龍華偶像台" → "龙华偶像台(B)"
-  ✓ 映射: "龍華日韓台" → "龙华日韩台(B)"
-  ✓ 映射: "龍華戲劇台" → "龙华戏剧台(B)"
+  ✓ 映射: "龍華日韓台" → "龙华日韩台"
   ✓ 映射: "東森新聞台" → "东森新闻台(B)"
   ✓ 映射: "東森財經新聞" → "东森财经新闻(B)"
-  ✓ 映射: "東森購物1台" → "东森购物1台(B)"
-  ✓ 映射: "東森購物2台" → "东森购物2台(B)"
+  ✓ 映射: "東森購物1台" → "东森购物1台"
+  ✓ 映射: "東森購物2台" → "东森购物2台"
   ✓ 映射: "博斯高球1台" → "博斯高球1台"
   ✓ 映射: "博斯高球2台" → "博斯高球2台"
   ✓ 映射: "博斯魅力網" → "博斯魅力网"
@@ -126,7 +127,7 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
   ✓ 映射: "智林體育台" → "智林体育台"
   ✓ 映射: "HakkaTV" → "客家电视"
   ✓ 映射: "MCE 我的歐洲電影" → "MCE我的欧洲电影"
-  ✓ 映射: "寵物頻道" → "宠物频道(B)"
+  ✓ 映射: "寵物頻道" → "宠物频道(TW)"
   ✓ 映射: "第1商業" → "第一商业(B)"
   ✓ 映射: "黃金八點檔" → "黄金八点档(B)"
   ✓ 映射: "倪珍播新聞" → "倪珍播新闻"
@@ -146,19 +147,14 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
   ✓ 映射: "cctv8k" → "CCTV-8k"
   ✓ 映射: "cctv4k" → "CCTV4K"
   ✓ 映射: "cctv风云剧场" → "CCTV-风云剧场(swepg)"
-  ✓ 映射: "cctv风云音乐" → "CCTV-风云音乐(swepg)"
   ✓ 映射: "cctv风云足球" → "CCTV-风云足球"
-  ✓ 映射: "cctv高尔夫" → "CCTV-高尔夫"
-  ✓ 映射: "老故事" → "CCTV-老故事"
   ✓ 映射: "cctv台球" → "CCTV-台球"
   ✓ 映射: "中央电视台新闻频道香港" → "CCTV-13香港"
   ✓ 映射: "中央电视台综合频道 (港澳版) (免费)" → "CCTV-1 (港澳版)"
   ✓ 映射: "中国中央电视台戏曲频道 (免费)" → "CCTV-戏曲"
   ✓ 映射: "CGTN" → "CGTN(英)"
   ✓ 映射: "中国环球电视网香港" → "CGTN香港"
-  ✓ 映射: "CGTN (中国环球电视网)英语频道 (免费)" → "CGTN(swepg2)"
-  ✓ 映射: "CGTN (中国环球电视网)记录频道 (免费)" → "CGTN-英文纪录_中"
-  ✓ 映射: "CGTN_Documentary" → "CGTN-英文纪录_英"
+  ✓ 映射: "CGTN (中国环球电视网)记录频道 (免费)" → "CGTN英文纪录_中"
   ✓ 映射: "cgtn阿拉伯语" → "CGTN阿拉伯语"
   ✓ 映射: "cgtn俄语" → "CGTN俄语(国)"
   ✓ 映射: "cgtn西班牙语" → "CGTN西班牙语(swepg)"
@@ -169,7 +165,7 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
   ✓ 映射: "安徽广播电视台国际频道 (免费)" → "安徽国际频道"
   ✓ 映射: "中国农林卫视" → "陕西农林卫视"
   ✓ 映射: "浙江卫视" → "浙江卫视4K"
-  ✓ 映射: "东方卫视国际频道 (免费)" → "东方国际频道(中)"
+  ✓ 映射: "东方卫视国际频道 (免费)" → "上海东方国际频道_中"
   ✓ 映射: "大湾区卫视香港" → "广东大湾区卫视_香港"
   ✓ 映射: "深圳卫视国际频道 (免费)" → "深圳国际频道"
   ✓ 映射: "深圳卫视香港" → "深圳卫视_香港"
@@ -180,15 +176,10 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
   ✓ 映射: "河北公共" → "河北文旅公共"
   ✓ 映射: "河北农民" → "河北三农"
   ✓ 映射: "河北杂技频道" → "河北杂技"
-  ✓ 映射: "新闻综合" → "上海新闻综合台"
+  ✓ 映射: "新闻综合" → "上海新闻综合"
   ✓ 映射: "都市频道" → "上海都市频道"
   ✓ 映射: "浙江经济" → "浙江经济生活"
   ✓ 映射: "浙江民生" → "浙江民生休闲"
-  ✓ 映射: "广州综合" → "广州综合(swepg)"
-  ✓ 映射: "广州新闻" → "广州新闻(swepg)"
-  ✓ 映射: "广州南国都市4K" → "广州南国都市4K(swepg)"
-  ✓ 映射: "江门综合" → "江门综合(swepg)"
-  ✓ 映射: "阳江-1" → "阳江-1(swepg)"
   ✓ 映射: "东莞新闻综合" → "东莞新闻综合(swepg)"
   ✓ 映射: "广西都市频道" → "广西都市"
   ✓ 映射: "广西国际频道" → "广西国际"
@@ -230,10 +221,13 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
   ✓ 映射: "TVB新闻新加坡" → "TVB-新闻新加坡"
   ✓ 映射: "TVB粤语片" → "TVB-粤语片"
   ✓ 映射: "紫金国际台" → "NOW紫金国际台"
+  ✓ 映射: "爆谷台" → "NOW爆谷台"
   ✓ 映射: "翡翠台 (免费)" → "TVB-翡翠台_国"
   ✓ 映射: "翡翠台(国际版)" → "TVB-翡翠台(国际版)"
   ✓ 映射: "翡翠一台(TVB1)" → "TVB-翡翠一台(TVB1)"
-  ✓ 映射: "黄金翡翠台 (免费)" → "黄金翡翠台"
+  ✓ 映射: "千禧经典台" → "TVB千禧经典台"
+  ✓ 映射: "黄金华剧台" → "TVB黄金华剧台"
+  ✓ 映射: "黄金翡翠台 (免费)" → "TVB黄金翡翠台"
   ✓ 映射: "tvN HD" → "tvN HD(国)"
   ✓ 映射: "tvN_HD" → "tvN HD(英)"
   ✓ 映射: "tvN Movies" → "tvN Movies(英)"
@@ -241,13 +235,12 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
   ✓ 映射: "EYE TV戏剧台HD" → "EYE TV戏剧台"
   ✓ 映射: "FashionBox" → "Fashion Box"
   ✓ 映射: "FashionTV 时尚频道" → "Fashion TV 时尚频道"
-  ✓ 映射: "HBO" → "HBO(swepg)"
+  ✓ 映射: "HBO" → "HBO_国2"
   ✓ 映射: "HBO Family" → "HBO Family_国"
   ✓ 映射: "HBO HD" → "HBO HD(swepg)"
   ✓ 映射: "HGTV HD新加坡" → "HGTV HD新加坡(英)"
   ✓ 映射: "HGTV居家乐活频道" → "HGTV居家乐活频道(国)"
   ✓ 映射: "History" → "History(swepg)"
-  ✓ 映射: "History_HD" → "History HD"
   ✓ 映射: "HITS" → "HITS(swepg)"
   ✓ 映射: "HITS HD" → "HITS HD(国)"
   ✓ 映射: "HITS_HD" → "HITS HD(英)"
@@ -256,7 +249,7 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
   ✓ 映射: "iQIYI_HD" → "Astro iQIYI(英)"
   ✓ 映射: "JET综合" → "JET综合台"
   ✓ 映射: "KLT-靖天国际台" → "靖天国际台"
-  ✓ 映射: "KTV" → "KTV(swepg)"
+  ✓ 映射: "KTV" → "KTV_印"
   ✓ 映射: "Lifeime" → "Lifetime_国"
   ✓ 映射: "Lifetime" → "Lifetime(swepg)"
   ✓ 映射: "Lifetime HD" → "Lifetime HD(国)"
@@ -270,10 +263,12 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
   ✓ 映射: "Nick Jr" → "Nick Jr(swepg1)"
   ✓ 映射: "Nick Jr." → "Nick Jr.(swepg2)"
   ✓ 映射: "Nickelodeon" → "Nickelodeon(swepg)"
+  ✓ 映射: "Nickelodeon Asia尼克儿童频道" → "Nickelodeon Asia_国2"
   ✓ 映射: "NickJr." → "Nick Jr._国4"
   ✓ 映射: "now 剧集" → "NOW剧集"
   ✓ 映射: "nowjeli" → "NOW Jeli()"
   ✓ 映射: "now报价" → "NOW报价"
+  ✓ 映射: "Now爆谷星影台" → "NOW爆谷星影台"
   ✓ 映射: "now财经" → "NOW财经"
   ✓ 映射: "now体育" → "NOW体育"
   ✓ 映射: "now体育4k" → "NOW体育4k"
@@ -313,7 +308,6 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
   ✓ 映射: "八大精彩台" → "八大精彩台(swepg)"
   ✓ 映射: "八大戏剧HD" → "八大戏剧"
   ✓ 映射: "半岛电视台英语频道" → "Al Jazeera English"
-  ✓ 映射: "半岛电视台英语频道香港" → "Al Jazeera English_香港"
   ✓ 映射: "博靖天育乐台" → "靖天育乐台"
   ✓ 映射: "博斯高球一台" → "博斯高球1台"
   ✓ 映射: "博斯高球一台有线" → "博斯高球1台有线"
@@ -326,18 +320,26 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
   ✓ 映射: "博斯运动一台" → "博斯运动1台(swepg)"
   ✓ 映射: "超视" → "东森超视"
   ✓ 映射: "创世电视 (免费)" → "创世电视"
-  ✓ 映射: "达文西频道" → "达文西频道"
-  ✓ 映射: "大爱二台" → "大爱二台(swepg)"
-  ✓ 映射: "大立电视台" → "大立电视台(swepg)"
+  ✓ 映射: "大爱电视" → "大爱电视台"
   ✓ 映射: "东风卫视" → "东风卫视"
   ✓ 映射: "东森财经新闻台" → "东森财经新闻台(swepg)"
   ✓ 映射: "东森电影台" → "东森电影台(swepg)"
+  ✓ 映射: "东森购物一台" → "东森购物1台(B)"
+  ✓ 映射: "东森购物二台" → "东森购物2台(B)"
+  ✓ 映射: "东森购物3台HD" → "东森购物3台"
+  ✓ 映射: "东森购物三台" → "东森购物3台(B)"
+  ✓ 映射: "东森购物4台HD" → "东森购物4台"
+  ✓ 映射: "东森购物四台" → "东森购物4台(B)"
+  ✓ 映射: "东森购物5台HD" → "东森购物5台"
   ✓ 映射: "东森戏剧台" → "东森戏剧台(swepg)"
-  ✓ 映射: "东森洋片台" → "东森洋片台(swepg)"
+  ✓ 映射: "东森洋片台" → "东森洋片"
   ✓ 映射: "东森幼幼台" → "东森幼幼"
+  ✓ 映射: "公视儿少台HD" → "公视少儿台"
   ✓ 映射: "观众票选-追剧马拉松 (免费)" → "观众票选-追剧马拉松"
+  ✓ 映射: "滚动力 rollor" → "滚动力Rollor"
+  ✓ 映射: "滚动力 rollor有线" → "滚动力Rollor有线"
+  ✓ 映射: "滚动力rollor" → "滚动力Rollor(B)"
   ✓ 映射: "国兴卫视" → "国兴卫视(swepg)"
-  ✓ 映射: "海豚综合台" → "海豚综合台(swepg)"
   ✓ 映射: "华视" → "华视(swepg)"
   ✓ 映射: "华视新闻" → "华视新闻(swepg)"
   ✓ 映射: "华艺台湾台 HD" → "华艺台湾台"
@@ -348,34 +350,43 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
   ✓ 映射: "靖天映画" → "靖天映画(swepg)"
   ✓ 映射: "靖洋卡通台" → "靖洋卡通台(swepg)"
   ✓ 映射: "靖洋戏剧台" → "靖洋戏剧台(swepg)"
+  ✓ 映射: "历史高清频道" → "历史频道高清"
   ✓ 映射: "曼迪日本台HD" → "曼迪日本台"
   ✓ 映射: "美好1台HD" → "美好1台"
   ✓ 映射: "民视" → "民视(swepg)"
   ✓ 映射: "尼克儿童频道" → "尼克儿童频道(中)"
   ✓ 映射: "三立综合台HD" → "三立综合台"
   ✓ 映射: "三立新闻HD" → "三立新闻台"
+  ✓ 映射: "台视主频" → "台视"
   ✓ 映射: "天映经典菲律宾" → "天映经典电影_菲律宾_中"
   ✓ 映射: "天映经典柬埔寨" → "天映经典电影_柬埔寨_中"
   ✓ 映射: "天映经典马来西亚" → "天映经典电影_马来_中"
   ✓ 映射: "天映经典频道" → "天映经典电影_香港(简中)"
   ✓ 映射: "天映经典台新加坡" → "天映经典电影_新加坡(英)"
   ✓ 映射: "天映经典新加坡" → "天映经典电影_新加坡2"
-  ✓ 映射: "千禧经典台(MY)" → "千禧经典电影_(MY)"
+  ✓ 映射: "千禧经典台(MY)" → "TVB千禧经典台_(MY)"
   ✓ 映射: "天映经典香港" → "天映经典电影_香港(简中2)"
   ✓ 映射: "天映经典新加坡" → "天映经典电影_新加坡(简中3)"
-  ✓ 映射: "天映经典印尼" → "天映经典电影_印尼(简中2)"
+  ✓ 映射: "天映经典印尼" → "天映经典电影_印尼_中"
   ✓ 映射: "天映频道马来西亚" → "天映电影_马来西亚_中"
   ✓ 映射: "天映频道新加坡" → "天映电影_新加坡_中2"
   ✓ 映射: "天映频道印尼" → "天映电影_印尼_中"
+  ✓ 映射: "纬来精采HD" → "纬来精采"
+  ✓ 映射: "纬来综合HD" → "纬来综合台"
   ✓ 映射: "无线新闻(国际版)" → "TVB-无线新闻(国际版)"
   ✓ 映射: "无线新闻台 (免费)" → "TVB-无线新闻台"
+  ✓ 映射: "小公视" → "公视小公视"
   ✓ 映射: "新天地民俗台 HD" → "新天地民俗台"
   ✓ 映射: "亚洲新闻台" → "CNA亚洲新闻台"
   ✓ 映射: "原住民族电视台" → "原住民电视"
   ✓ 映射: "中视经典台HD" → "中视经典台"
   ✓ 映射: "中视菁采台HD" → "中视菁采台"
-  ✓ 映射: "中天亚洲台新加坡" → "中天亚洲台_新加坡"
+  ✓ 映射: "中天亚洲台新加坡" → "中天亚洲台_新加坡_英"
   ✓ 映射: "中天娱乐HD" → "中天娱乐"
+  ✓ 映射: "罪案 + 侦缉香港" → "罪案侦缉频道_香港_国"
+  ✓ 映射: "罪案侦查频道" → "罪案侦缉频道_国2"
+  ✓ 映射: "罪案侦缉频道" → "罪案侦缉频道_国"
+  ✓ 映射: "罪案侦辑频道" → "罪案侦缉频道_英"
   ✓ 映射: "Astro_Boo" → "Astro Boo"
   ✓ 映射: "Astro_First_HD" → "Astro First HD"
   ✓ 映射: "Astro_Golf" → "Astro Golf"
@@ -384,33 +395,32 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
   ✓ 映射: "Astro_Sports_Plus_3" → "Astro Sports Plus 3(swepg)"
   ✓ 映射: "Astro_Sports_UHD_805" → "Astro Sports UHD 805"
   ✓ 映射: "Astro_Thangathirai" → "Astro Thangathirai"
-  ✓ 映射: "CCM" → "天映经典电影_印尼"
+  ✓ 映射: "CCM" → "天映经典电影_印尼_英"
   ✓ 映射: "Celestial_Classic_Movies" → "天映经典电影_英(swepg)"
   ✓ 映射: "Celestial Movies" → "天映电影(英)"
   ✓ 映射: "Eurosport" → "Eurosport(国)"
   ✓ 映射: "EUROSPORT HD" → "Eurosport(英)"
+  ✓ 映射: "Food Network香港" → "Food Network美食台_香港(回)"
   ✓ 映射: "Food Travel HD" → "Food Travel"
   ✓ 映射: "France 24 (French)" → "France 24 French"
   ✓ 映射: "FRANCE24 英文台" → "France 24 English 英文台"
   ✓ 映射: "Global Trekker探索世界频道" → "Global Trekker_英"
   ✓ 映射: "GlobalTrekker" → "Global Trekker_国"
-  ✓ 映射: "Globetrotter (免费)" → "GlobeTter"
+  ✓ 映射: "Globetrotter (免费)" → "Globet Trotter"
+  ✓ 映射: "GLOBLTREKKER探索世界" → "Global Trekker探索世界"
   ✓ 映射: "TLC_HD" → "TLC HD(B)"
   ✓ 映射: "TLC 旅游生活频道" → "TLC旅游生活频道"
   ✓ 映射: "TLC旅游生活频道香港" → "TLC旅游生活频道_香港"
-  ✓ 映射: "GOXUAN" → "GOXUAN(swepg)"
   ✓ 映射: "ABC_Australia_HD" → "ABC Australia HD"
   ✓ 映射: "ABC Australia香港" → "ABC Australia(香港)"
   ✓ 映射: "ABC澳大利亚电视台" → "ABC Australia(澳大利亚)"
   ✓ 映射: "ANC" → "ANC(新加坡)"
   ✓ 映射: "ANIMAX" → "ANIMAX(swepg)"
   ✓ 映射: "Animax HD" → "Animax HD(新加坡)"
-  ✓ 映射: "Arirang TV HD" → "Arirang TV(swepg)"
   ✓ 映射: "Asian Food Network 亚洲美食频道" → "Asian Food Network(MY 中)"
   ✓ 映射: "AXN" → "AXN(swepg)"
   ✓ 映射: "AXN HD" → "AXN HD(swepg)"
   ✓ 映射: "AXN_HD" → "AXN HD(英)"
-  ✓ 映射: "BAYU" → "BAYU(swepg)"
   ✓ 映射: "BBC_Brit_HD" → "BBC Brit HD"
   ✓ 映射: "BBC EARTH" → "BBC Earth(国1)"
   ✓ 映射: "BBC_Earth" → "BBC Earth(英swepg)"
@@ -420,47 +430,38 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
   ✓ 映射: "BBC Lifestyle HD" → "BBC Lifestyle HD(swepg英)"
   ✓ 映射: "BBC News HD" → "BBC News HD(swepg1)"
   ✓ 映射: "BBCEarth" → "BBC Earth(国2)"
-  ✓ 映射: "BBCLifestyle" → "BBC Lifestyle(国1)"
   ✓ 映射: "BBCNEWS" → "BBC NEWS(国1)"
-  ✓ 映射: "beIN_SPORTS_1" → "beIN SPORTS 1(swepg1)"
-  ✓ 映射: "beIN Sports 1" → "beIN Sports 1(swepg2)"
   ✓ 映射: "beIN_SPORTS_2" → "beIN SPORTS 2(swepg1)"
   ✓ 映射: "beIN Sports 2" → "beIN Sports 2(swepg2)"
   ✓ 映射: "beIN_SPORTS_3" → "beIN SPORTS 3(swepg1)"
-  ✓ 映射: "beIN Sports 3" → "beIN Sports 3(swepg2)"
-  ✓ 映射: "Bernama_TV" → "Bernama TV"
-  ✓ 映射: "Blippi__amp__Friends" → "Blippi & Friends(swepg)"
+  ✓ 映射: "Bloomberg" → "Bloomberg TV(D)"
   ✓ 映射: "Bloomberg Television香港" → "Bloomberg TV香港"
   ✓ 映射: "Bloomberg_TV_HD" → "Bloomberg TV HD(swepg)"
   ✓ 映射: "BloombergTV" → "Bloomberg TV(swepg)"
-  ✓ 映射: "Cartoon_Network_HD" → "Cartoon Network HD(swepg)"
   ✓ 映射: "Cbeebies" → "Cbeebies(swepg1)"
-  ✓ 映射: "CBeebies" → "CBeebies(swepg2)"
   ✓ 映射: "CBeebies HD" → "CBeebies HD(swepg1)"
-  ✓ 映射: "Cbeebies HD" → "Cbeebies HD(swepg2)"
+  ✓ 映射: "Cbeebies HD" → "Cbeebies HD_国(B)"
   ✓ 映射: "CinemaWorld频道" → "CinemaWorld_新加坡_国"
   ✓ 映射: "CINEMAX HD" → "CINEMAX HD_国"
   ✓ 映射: "CLASSIC_ROCK" → "CLASSIC ROCK"
-  ✓ 映射: "cmplus新加坡" → "CM+_新加坡"
   ✓ 映射: "CNBC HD" → "CNBC HD(新加坡)"
   ✓ 映射: "CNN HD" → "CNN HD(swepg)"
-  ✓ 映射: "CN卡通频道" → "CN卡通频道(swepg)"
+  ✓ 映射: "CN卡通频道" → "CN卡通频道(回)"
   ✓ 映射: "COLORS Tamil HD" → "Colors Tamil HD(MY)"
   ✓ 映射: "Concerto (免费)" → "Concerto"
   ✓ 映射: "daystar" → "Daystar(swepg)"
-  ✓ 映射: "Discovery" → "Discovery(国1)"
-  ✓ 映射: "Discovery Asia" → "Discovery Asia(swepg3)"
-  ✓ 映射: "DiscoveryAsia" → "Discovery Asia(swepg4)"
+  ✓ 映射: "Discovery" → "Discovery_国1)"
+  ✓ 映射: "Discovery Asia" → "Discovery Asia_国3)"
+  ✓ 映射: "DiscoveryAsia" → "Discovery Asia_国4)"
   ✓ 映射: "Discovery Asia HD" → "Discovery Asia HD(国1)"
   ✓ 映射: "Discovery HD新加坡" → "Discovery HD_新加坡_英"
-  ✓ 映射: "Discovery 科学频道" → "Discovery 科学频道_国"
-  ✓ 映射: "Discovery 科学频道香港" → "Discovery 科学频道_香港"
+  ✓ 映射: "Discovery 科学频道" → "Discovery 科学频道_香港_国"
   ✓ 映射: "DiscoveryDMAX" → "Discovery DMAX"
   ✓ 映射: "DiscoveryEVE" → "Discovery EVE"
+  ✓ 映射: "Discovery科学台(Science)" → "Discovery 科学台(Science)"
   ✓ 映射: "Docsville (免费)" → "Docsville"
   ✓ 映射: "DreamWorks" → "DreamWorks(英)"
   ✓ 映射: "DreamWorks HD" → "DreamWorks(国)"
-  ✓ 映射: "DW" → "DW(swepg)"
   ✓ 映射: "DW (English)香港" → "DW English 香港"
   ✓ 映射: "DW_English" → "DW English Europe"
   ✓ 映射: "DW English" → "DW English Africa"
@@ -468,17 +469,19 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
   ✓ 映射: "KBSWorld" → "KBS World(swepg)"
   ✓ 映射: "KBS World HD" → "KBS World HD(MY)"
   ✓ 映射: "KENYALANG" → "KENYALANG(swepg)"
+  ✓ 映射: "mbc action" → "mbc action"
   ✓ 映射: "momo1台HD" → "MOMO1台"
   ✓ 映射: "momo2台HD" → "MOMO2台"
-  ✓ 映射: "momo亲子台" → "MOMO亲子台(swepg2)"
-  ✓ 映射: "MOMO综合台" → "MOMO综合台(swepg)"
+  ✓ 映射: "momo亲子台" → "MOMO亲子台(回看)"
+  ✓ 映射: "MOMO综合台" → "MOMO综合台"
   ✓ 映射: "Moonbug" → "Moonbug(swepg)"
   ✓ 映射: "Moonbug香港" → "Moonbug香港_繁中"
   ✓ 映射: "MTV" → "MTV(swepg)"
+  ✓ 映射: "MTV综合台HD" → "MTV综合(回看)"
   ✓ 映射: "NewsWorld (免费)" → "NewsWorld"
+  ✓ 映射: "NHK" → "NHK_国"
   ✓ 映射: "NHK World" → "NHK World(swepg)"
   ✓ 映射: "NHK WORLD PREMIUM" → "NHK World Premium_国1"
-  ✓ 映射: "NHK_World_Premium" → "NHK World Premium(swepg2)"
   ✓ 映射: "NHK World Premium" → "NHK World Premium(swepg3)"
   ✓ 映射: "NHK World-Japan" → "NHK World-Japan(swepg1)"
   ✓ 映射: "NHK WORLD-JAPAN" → "NHK World-Japan(swepg2)"
@@ -519,9 +522,7 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
   ✓ 映射: "1695" → "四海钓鱼"
   ✓ 映射: "1675" → "河南武术世界"
   ✓ 映射: "1671" → "证券资讯"
-  ✓ 映射: "CCTV4欧洲" → "CCTV4欧洲(CN)"
   ✓ 映射: "CCTV4美洲" → "CCTV4美洲(CN)"
-  ✓ 映射: "CGTN西语" → "CGTN西语(CN)"
   ✓ 映射: "CGTN" → "CGTN(国)"
   ✓ 映射: "CGTN纪录" → "CGTN纪录(CN)"
   ✓ 映射: "CETV3" → "CETV-3"
@@ -530,11 +531,8 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
   ✓ 映射: "淘电影" → "北京IPTV-淘电影"
   ✓ 映射: "淘娱乐" → "北京IPTV-淘娱乐"
   ✓ 映射: "淘4K" → "北京IPTV-淘4K"
-  ✓ 映射: "世界地理" → "世界地理(CN)"
-  ✓ 映射: "风云音乐" → "风云音乐(CN)"
-  ✓ 映射: "高尔夫网球" → "高尔夫网球(CN)"
-  ✓ 映射: "求索纪录" → "求索纪录(CN)"
-  ✓ 映射: "江苏卫视4K" → "江苏卫视4K(CN)"
+  ✓ 映射: "女性时尚" → "CCTV-女性时尚(CN)"
+  ✓ 映射: "求索纪录" → "华数求索纪录"
   ✓ 映射: "北京卫视4K" → "北京卫视4K(预告)"
   ✓ 映射: "广东体育" → "广东体育(CN)"
   ✓ 映射: "广东公共" → "广东公共"
@@ -544,56 +542,42 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
   ✓ 映射: "东方财经" → "东方财经(CN)"
   ✓ 映射: "动漫秀场" → "动漫秀场(CN)"
   ✓ 映射: "多彩文体" → "多彩文体(CN)"
-  ✓ 映射: "法治天地" → "法治天地(CN)"
   ✓ 映射: "光影" → "光影(CN)"
   ✓ 映射: "东方影视" → "东方影视(CN)"
   ✓ 映射: "第一财经" → "第一财经(CN)"
-  ✓ 映射: "上海新闻" → "上海新闻(CN)"
   ✓ 映射: "之江纪录" → "浙江之江纪录"
   ✓ 映射: "广西影视" → "广西影视"
-  ✓ 映射: "江苏城市" → "江苏城市(CN)"
-  ✓ 映射: "江苏国际" → "江苏国际(CN)"
-  ✓ 映射: "江苏教育" → "江苏教育(CN)"
+  ✓ 映射: "江苏国际" → "江苏国际频道"
   ✓ 映射: "江苏影视" → "江苏影视(CN)"
   ✓ 映射: "江苏综艺" → "江苏综艺(CN)"
-  ✓ 映射: "江苏新闻" → "江苏新闻(CN)"
-  ✓ 映射: "江苏体育休闲" → "江苏体育休闲(CN)"
-  ✓ 映射: "武术世界" → "武术世界(CN)"
-  ✓ 映射: "梨园频道" → "梨园频道"
   ✓ 映射: "环球旅游" → "环球旅游(CN)"
   ✓ 映射: "足球" → "足球(CN)"
-  ✓ 映射: "重庆党员教育" → "重庆党员教育(CN)"
   ✓ 映射: "海峡卫视" → "海峡卫视(CN)"
-  ✓ 映射: "海南自贸" → "海南自贸(CN)"
-  ✓ 映射: "海南新闻" → "海南新闻(CN)"
-  ✓ 映射: "海南社会与法" → "海南社会与法(CN)"
-  ✓ 映射: "海南文旅" → "海南文旅(CN)"
-  ✓ 映射: "海南少儿" → "海南少儿(CN)"
   ✓ 映射: "移动戏曲" → "河南移动戏曲"
   ✓ 映射: "动作影院" → "动作影院(CN)"
   ✓ 映射: "纯享4K" → "纯享4K(CN)"
-  ✓ 映射: "维吾尔语新闻综合" → "维吾尔语新闻综合(CN)"
+  ✓ 映射: "维吾尔语新闻综合" → "新疆维吾尔语新闻综合"
   ✓ 映射: "动作电影" → "动作电影(CN)"
-  ✓ 映射: "重温经典" → "重温经典(CN)"
   ✓ 映射: "潮妈辣婆" → "NewTV潮妈辣婆"
   ✓ 映射: "军事评论" → "NewTV军事评论"
   ✓ 映射: "炫舞未来" → "NewTV炫舞未来"
   ✓ 映射: "古装剧场" → "古装剧场(CN)"
   ✓ 映射: "军旅剧场" → "NewTV军旅剧场"
-  ✓ 映射: "明星大片" → "NewTV明星大片"
   ✓ 映射: "惊悚悬疑" → "惊悚悬疑(CN)"
+  ✓ 映射: "明星大片" → "NewTV明星大片"
   ✓ 映射: "金牌综艺" → "NewTV金牌综艺"
   ✓ 映射: "精品纪录" → "NewTV精品纪录"
   ✓ 映射: "精品大剧" → "NewTV精品大剧"
   ✓ 映射: "精品体育" → "NewTV精品体育"
   ✓ 映射: "精品萌宠" → "NewTV精品萌宠"
+  ✓ 映射: "怡伴健康" → "NewTV怡伴健康"
+  ✓ 映射: "中国功夫" → "NewTV中国功夫"
   ✓ 映射: "睛彩青少" → "睛彩青少(CN)"
   ✓ 映射: "睛彩篮球" → "睛彩篮球(CN)"
-  ✓ 映射: "广西综艺旅游" → "广西综艺旅游(CN)"
   ✓ 映射: "湖南国际" → "湖南国际(CN)"
   ✓ 映射: "黄河卫视" → "黄河卫视(CN)"
   ✓ 映射: "环球经典" → "环球经典(CN)"
-  ✓ 映射: "上海教育" → "上海教育(CN)"
+  ✓ 映射: "上海教育" → "上海教育频道"
   ✓ 映射: "峨眉电影" → "峨眉电影(CN)"
   ✓ 映射: "中国交通" → "中国交通频道"
   ✓ 映射: "超级综艺" → "NewTV超级综艺"
@@ -602,7 +586,7 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
   ✓ 映射: "农业致富" → "NewTV农业致富"
   ✓ 映射: "东北热剧" → "NewTV东北热剧"
   ✓ 映射: "欢乐剧场" → "NewTV欢乐剧场"
-  ✓ 映射: "电视指南" → "电视指南(CN)"
+  ✓ 映射: "电视指南" → "CCTV-电视指南"
   ✓ 映射: "中学生" → "CCTV-中学生"
   ✓ 映射: "藏语卫视" → "西藏藏语卫视"
   ✓ 映射: "哈萨克语新闻综合" → "新疆哈萨克语新闻综合"
@@ -616,10 +600,10 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
   ✓ 映射: "哈萨克语综艺" → "新疆哈萨克语综艺"
   ✓ 映射: "维吾尔语经济生活" → "新疆维吾尔语经济生活"
   ✓ 映射: "汉语体育健康" → "新疆汉语体育健康"
-  ✓ 映射: "黄金翡翠台" → "黄金翡翠台(CN)"
+  ✓ 映射: "星影" → "NOW爆谷星影台2"
+  ✓ 映射: "黄金翡翠台" → "TVB黄金翡翠台(CN)"
   ✓ 映射: "海外剧场" → "海外剧场(CN)"
   ✓ 映射: "经典电影" → "经典电影(CN)"
-  ✓ 映射: "城市剧场" → "城市剧场(CN)"
   ✓ 映射: "IPTV足球" → "IPTV足球(CN)"
   ✓ 映射: "IPTV野外" → "IPTV野外(CN)"
   ✓ 映射: "IPTV法治" → "IPTV法治(CN)"
@@ -629,9 +613,7 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
   ✓ 映射: "爱大剧" → "IPTV-爱大剧"
   ✓ 映射: "谍战剧场" → "谍战剧场(CN)"
   ✓ 映射: "家庭影院" → "家庭影院(CN)"
-  ✓ 映射: "少儿动画" → "少儿动画(频道2)"
   ✓ 映射: "动画" → "动画(CN)"
-  ✓ 映射: "财富天下" → "财富天下(CN)"
   ✓ 映射: "纪实科教" → "北京纪实科教"
   ✓ 映射: "IPTV3+" → "IPTV3+(CN)"
   ✓ 映射: "IPTV5+" → "IPTV5+(CN)"
@@ -640,7 +622,7 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
   ✓ 映射: "欧美影院" → "欧美影院(CN)"
   ✓ 映射: "探索纪实" → "探索纪实(CN)"
   ✓ 映射: "精品剧场" → "精品剧场(CN)"
-  ✓ 映射: "凤凰电影" → "凤凰电影(CN)"
+  ✓ 映射: "凤凰电影" → "凤凰电影台"
   ✓ 映射: "296" → "CGTN Documentary"
   ✓ 映射: "1797" → "中视经典"
   ✓ 映射: "1822" → "八大优频道"
@@ -654,19 +636,13 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
   ✓ 映射: "1594" → "博斯运动二台"
   ✓ 映射: "1600" → "博斯运动一台"
   ✓ 映射: "1534" → "诚心电视台"
-  ✓ 映射: "1563" → "大爱二台"
-  ✓ 映射: "1450" → "大爱一台"
   ✓ 映射: "1555" → "大立电视台"
   ✓ 映射: "1497" → "东森财经新闻台"
   ✓ 映射: "1502" → "东森电影台"
   ✓ 映射: "1480" → "东森戏剧台"
   ✓ 映射: "1491" → "东森新闻台"
-  ✓ 映射: "1506" → "东森洋片台"
   ✓ 映射: "1472" → "东森综合台"
   ✓ 映射: "1462" → "动物星球"
-  ✓ 映射: "2055" → "凤凰电影"
-  ✓ 映射: "143" → "凤凰香港"
-  ✓ 映射: "141" → "凤凰中文"
   ✓ 映射: "1551" → "高点育乐台"
   ✓ 映射: "1484" → "高点综合台"
   ✓ 映射: "1454" → "公视"
@@ -692,30 +668,22 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
   ✓ 映射: "1523" → "靖洋戏剧台"
   ✓ 映射: "1812" → "龙华动画"
   ✓ 映射: "1764" → "龙华经典"
-  ✓ 映射: "1760" → "龙华偶像"
-  ✓ 映射: "1761" → "龙华戏剧"
   ✓ 映射: "1765" → "龙华影剧"
-  ✓ 映射: "1504" → "龙祥电影台"
-  ✓ 映射: "1593" → "梅迪奇艺术"
   ✓ 映射: "1836" → "美食星球"
   ✓ 映射: "132" → "美亚高清电影台"
-  ✓ 映射: "121" → "明珠台"
   ✓ 映射: "1478" → "年代MUCH"
   ✓ 映射: "1539" → "霹雳台湾台"
   ✓ 映射: "1528" → "全大电视台"
   ✓ 映射: "1530" → "三立财经新闻台"
   ✓ 映射: "1840" → "三立戏剧"
   ✓ 映射: "1540" → "十方法界"
-  ✓ 映射: "1449" → "台视"
   ✓ 映射: "1566" → "台视综合台"
   ✓ 映射: "1846" → "唯心电视"
   ✓ 映射: "1503" → "纬来电影台"
-  ✓ 映射: "1820" → "纬来精采"
   ✓ 映射: "1517" → "纬来日本台"
   ✓ 映射: "1512" → "纬来体育台"
   ✓ 映射: "1483" → "纬来戏剧台"
   ✓ 映射: "123" → "TVB-无线新闻"
-  ✓ 映射: "1541" → "信大频道"
   ✓ 映射: "1559" → "幸福空间居家台"
   ✓ 映射: "1592" → "亚洲旅游台"
   ✓ 映射: "1589" → "Asian Food Network(国)"
@@ -723,13 +691,13 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
   ✓ 映射: "222" → "壹电视综合台"
   ✓ 映射: "1532" → "运通财经"
   ✓ 映射: "1792" → "AMC"
-  ✓ 映射: "1853" → "Animax"
-  ✓ 映射: "1507" → "AXN"
+  ✓ 映射: "1853" → "Animax_国"
+  ✓ 映射: "1507" → "AXN_国"
   ✓ 映射: "229" → "BBC"
   ✓ 映射: "1609" → "BBC Earth(e2)"
   ✓ 映射: "1568" → "BBC Lifestyle(e2)"
-  ✓ 映射: "1561" → "BloombergTV"
-  ✓ 映射: "1577" → "BlueAntEntertainment"
+  ✓ 映射: "1561" → "Bloomberg TV(E)"
+  ✓ 映射: "1577" → "BlueAnt Entertainment"
   ✓ 映射: "1828" → "CatchPlay电影"
   ✓ 映射: "1607" → "CBeebies(国)"
   ✓ 映射: "1560" → "Channel News Asia"
@@ -739,31 +707,29 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
   ✓ 映射: "232" → "CNBC Hong Kong"
   ✓ 映射: "1804" → "cnex"
   ✓ 映射: "1446" → "CNN"
-  ✓ 映射: "230" → "CN卡通频道"
+  ✓ 映射: "230" → "CN卡通频道(预)"
   ✓ 映射: "1460" → "Discovery"
-  ✓ 映射: "1586" → "Discovery Asia"
-  ✓ 映射: "1585" → "Discovery科学"
-  ✓ 映射: "244" → "DW"
+  ✓ 映射: "1586" → "Discovery Asia_国"
+  ✓ 映射: "1585" → "Discovery 科学"
   ✓ 映射: "1810" → "ELTV"
   ✓ 映射: "1584" → "EVE频道_国"
-  ✓ 映射: "234" → "Fashion TV(B)"
-  ✓ 映射: "1579" → "Food Network美食台"
+  ✓ 映射: "234" → "Fashion TV_国"
+  ✓ 映射: "1579" → "Food Network美食台_香港(预)"
   ✓ 映射: "247" → "France 24"
-  ✓ 映射: "1870" → "globaltrekker"
+  ✓ 映射: "1870" → "Global Trekker_国2"
   ✓ 映射: "1456" → "好消息1台(B)"
   ✓ 映射: "1505" → "HBO"
-  ✓ 映射: "1573" → "HBO HD"
   ✓ 映射: "1574" → "HBO Hits"
-  ✓ 映射: "1575" → "HBO Signature"
+  ✓ 映射: "1575" → "HBO Signature_国"
   ✓ 映射: "1783" → "History"
   ✓ 映射: "321" → "HITS"
   ✓ 映射: "1816" → "LUXETV"
   ✓ 映射: "194" → "Mezzo Live_英"
-  ✓ 映射: "1464" → "MOMO亲子台"
+  ✓ 映射: "1464" → "MOMO亲子台(预告)"
   ✓ 映射: "1536" → "MTV"
-  ✓ 映射: "1813" → "MTV综合"
+  ✓ 映射: "1813" → "MTV综合(预告)"
   ✓ 映射: "1829" → "MCE(My Cinema Europe)"
-  ✓ 映射: "157" → "NHK World"
+  ✓ 映射: "157" → "NHK World_国"
   ✓ 映射: "1604" → "Nickelodeon"
   ✓ 映射: "1605" → "Nick Jr.(国5)"
   ✓ 映射: "164" → "NOW财经台"
@@ -827,29 +793,26 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
   ✓ 映射: "1205" → "AXN HD(MY)"
   ✓ 映射: "854" → "BAYU(MY)"
   ✓ 映射: "4030" → "BBC Earth(MY)"
-  ✓ 映射: "4019" → "BBC Lifestyle HD(MY)"
-  ✓ 映射: "3329" → "BBC News HD(MY)"
+  ✓ 映射: "3329" → "BBC News_新马"
   ✓ 映射: "399482" → "beIN SPORTS 1(MY)"
   ✓ 映射: "4146" → "beIN Sports 2(MY)"
   ✓ 映射: "3118" → "beIN Sports 3(MY)"
   ✓ 映射: "2580" → "beIN Sports HD(MY)"
   ✓ 映射: "370132" → "Berita RTM"
-  ✓ 映射: "1835" → "BERNAMA"
+  ✓ 映射: "1835" → "Bernama TV"
   ✓ 映射: "411236" → "Bintulu FM"
   ✓ 映射: "400446" → "Blippi & Friends"
-  ✓ 映射: "3858" → "Bloomberg TV HD"
   ✓ 映射: "2636" → "BOO HD"
   ✓ 映射: "3403" → "Cartoon Network HD"
   ✓ 映射: "4187" → "CBeebies(MY)"
-  ✓ 映射: "3518" → "CCTV4(英)"
+  ✓ 映射: "3518" → "CCTV4_英"
   ✓ 映射: "2280" → "天映经典电影_马来非新_英"
   ✓ 映射: "1298" → "天映电影_马来非新_英"
-  ✓ 映射: "461591" → "CGTN-英文纪录(英2)"
-  ✓ 映射: "3906" → "CGTN HD"
+  ✓ 映射: "461591" → "CGTN英文纪录(英2)"
   ✓ 映射: "3873" → "CNBC Asia HD"
   ✓ 映射: "3179" → "CNN HD(MY)"
   ✓ 映射: "3325" → "Colors Hindi HD"
-  ✓ 映射: "3885" → "中天亚洲台 HD(英)"
+  ✓ 映射: "3885" → "中天亚洲台_英"
   ✓ 映射: "1358" → "Discovery Asia HD(MY)"
   ✓ 映射: "3437" → "Discovery Channel HD"
   ✓ 映射: "2756" → "DW English(MY)"
@@ -938,10 +901,9 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
   ✓ 映射: "368371" → "天映经典电影_香港"
   ✓ 时区转换开关: ChangeTimezone=Y
   ✓ 映射: "512067" → "CCTV娱乐"
-  ✓ 映射: "502440" → "CGTN-英文纪录(新加坡)"
+  ✓ 映射: "502440" → "CGTN英文纪录(新加坡)"
   ✓ 映射: "369833" → "ABC Australia(新加坡)"
   ✓ 映射: "412157" → "ABC Australia HD(新加坡)"
-  ✓ 映射: "501127" → "ABS-CBN News Channel(新加坡)"
   ✓ 映射: "412123" → "ADITHYA TV(新加坡)"
   ✓ 映射: "369760" → "AFN(新加坡)"
   ✓ 映射: "369785" → "Animal Planet HD(新加坡)"
@@ -954,23 +916,19 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
   ✓ 映射: "492892" → "BBC Earth HD(新加坡)"
   ✓ 映射: "492863" → "BBC Lifestyle HD(新加坡)"
   ✓ 映射: "412089" → "BBC Lifestyle(新加坡)"
-  ✓ 映射: "369729" → "BBC News(新加坡)"
-  ✓ 映射: "492871" → "BBC News HD(新加坡)"
-  ✓ 映射: "412098" → "BBC World News HD(新加坡)"
+  ✓ 映射: "412098" → "BBC World News(新加坡)"
   ✓ 映射: "369750" → "beIN Sports HD(新加坡)"
   ✓ 映射: "412167" → "beIN Sports HD(新加坡2)"
   ✓ 映射: "412129" → "beIN Sports 2 HD(新加坡)"
   ✓ 映射: "524985" → "beIN SPORTS 3 HD(新加坡)"
   ✓ 映射: "524983" → "beIN SPORTS 4 HD(新加坡)"
-  ✓ 映射: "524984" → "beIN SPORTS 5 HD(新加坡)"
   ✓ 映射: "412199" → "Bloomberg Originals(新加坡)"
   ✓ 映射: "369771" → "Bloomberg TV HD(新加坡)"
-  ✓ 映射: "412092" → "Bloomberg TV HD(新加坡2)"
   ✓ 映射: "535553" → "C+I (HD)(新加坡)-"
   ✓ 映射: "492865" → "Cartoon Network(新加坡)"
   ✓ 映射: "369780" → "Cartoon Network (HD)(新加坡)"
-  ✓ 映射: "535492" → "Cartoonito (HD)(新加坡)-"
-  ✓ 映射: "369816" → "CBeebies (HD)(新加坡_英)"
+  ✓ 映射: "535492" → "Cartoonito HD)(新加坡)-"
+  ✓ 映射: "369816" → "CBeebies HD)(新加坡_英)"
   ✓ 映射: "492826" → "CBeebies HD(新加坡_英)"
   ✓ 映射: "369819" → "天映经典电影_非新非马"
   ✓ 映射: "369730" → "天映经典电影_新加坡非马"
@@ -996,20 +954,19 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
   ✓ 映射: "369745" → "Crime + Investigation™ (HD)(新加坡)"
   ✓ 映射: "495473" → "Deal or No Deal(新加坡)"
   ✓ 映射: "369766" → "Deutsche Welle (English)(新加坡)"
-  ✓ 映射: "535552" → "Discovery Asia (HD)(新加坡)-"
-  ✓ 映射: "369744" → "Discovery Channel (HD)(新加坡)"
+  ✓ 映射: "535552" → "Discovery Asia HD)(新加坡)-"
+  ✓ 映射: "369744" → "Discovery Channel HD(新加坡)"
   ✓ 映射: "412142" → "Dragon TV(新加坡)"
   ✓ 映射: "369824" → "Drama Channel(新加坡)"
   ✓ 映射: "412095" → "DreamWorks Channel HD(新加坡)"
   ✓ 映射: "412178" → "DW English HD(新加坡)"
   ✓ 映射: "369806" → "e-Le (HD)(新加坡)"
-  ✓ 映射: "491151" → "东森亚洲卫视 (国)(新加坡)"
-  ✓ 映射: "492856" → "东森亚洲卫视 (英)(新加坡)"
-  ✓ 映射: "535568" → "东森亚洲新闻 HD (新加坡)-"
+  ✓ 映射: "491151" → "东森亚洲卫视_新加坡_ 国"
+  ✓ 映射: "492856" → "东森亚洲卫视_新加坡_ 英"
+  ✓ 映射: "535568" → "东森亚洲新闻HD_新加坡-"
   ✓ 映射: "412122" → "Euronews HD(新加坡)"
-  ✓ 映射: "535488" → "EUROSPORT (HD)(新加坡)-"
+  ✓ 映射: "535488" → "Eurosport HD)(新加坡)-"
   ✓ 映射: "412197" → "Fashion TV HD(新加坡)"
-  ✓ 映射: "495472" → "Fear Factor(新加坡)"
   ✓ 映射: "412165" → "Fight Sports(新加坡)"
   ✓ 映射: "535515" → "Food Network (HD)(新加坡)-"
   ✓ 映射: "492858" → "Food ON(新加坡)"
@@ -1021,14 +978,12 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
   ✓ 映射: "491168" → "GMA Pinoy TV(新加坡)"
   ✓ 映射: "369786" → "HBO Family HD(新加坡)"
   ✓ 映射: "412195" → "HBO Family HD(新加坡2)"
-  ✓ 映射: "412088" → "HBO HD(新加坡)"
-  ✓ 映射: "369840" → "HBO Hits HD(新加坡)"
-  ✓ 映射: "412093" → "HBO Hits HD(新加坡2)"
-  ✓ 映射: "369758" → "HBO Signature HD_国 (新加坡)"
+  ✓ 映射: "412088" → "HBO HD_新加坡_英"
+  ✓ 映射: "369840" → "HBO Hits HD_国(新加坡)"
+  ✓ 映射: "369758" → "HBO Signature HD_英 (新加坡)"
   ✓ 映射: "412112" → "HBO Signature HD(新加坡)"
   ✓ 映射: "412153" → "HGTV(新加坡)"
   ✓ 映射: "369779" → "HGTV HD(新加坡-英)"
-  ✓ 映射: "492861" → "HGTV HD(新加坡 英2)"
   ✓ 映射: "412172" → "HISTORY HD(新加坡)"
   ✓ 映射: "369765" → "HISTORY™ (HD)(新加坡)"
   ✓ 映射: "369851" → "Hits HD(新加坡)"
@@ -1062,12 +1017,11 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
   ✓ 映射: "535487" → "MOLA Sport(新加坡)-"
   ✓ 映射: "369804" → "MTV India"
   ✓ 映射: "535533" → "MTV LIVE HD(新加坡)-"
-  ✓ 映射: "369836" → "NHK World - Japan(新加坡)"
-  ✓ 映射: "369722" → "NHK World Premium(新加坡)"
+  ✓ 映射: "369836" → "NHK World-Japan(新加坡)"
   ✓ 映射: "412130" → "NHK World Premium HD(新加坡)"
   ✓ 映射: "412136" → "Nick Jr.(新加坡)"
   ✓ 映射: "491166" → "Nick Jr.(新加坡2)"
-  ✓ 映射: "492879" → "Nickelodeon Asia HD(新加坡)"
+  ✓ 映射: "492879" → "Nickelodeon Asia HD_英(新加坡)"
   ✓ 映射: "492912" → "NOW 70s(新加坡)-"
   ✓ 映射: "492911" → "NOW 80s(新加坡)-"
   ✓ 映射: "512068" → "NOW Jelli (HD)(新加坡)"
@@ -1077,8 +1031,8 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
   ✓ 映射: "369728" → "ONE HD_新马_ 国英"
   ✓ 映射: "484245" → "Outdoor Channel(新加坡)"
   ✓ 映射: "429564" → "Pesona HD(新加坡)"
-  ✓ 映射: "369783" → "凤凰资讯台(新加坡)"
-  ✓ 映射: "412145" → "凤凰资讯台(新加坡2)"
+  ✓ 映射: "369783" → "凤凰资讯台_新加坡_国"
+  ✓ 映射: "412145" → "凤凰资讯台_新加坡_英"
   ✓ 映射: "369790" → "Premier Sports(A)(新加坡)"
   ✓ 映射: "412148" → "Preview Channel(新加坡)"
   ✓ 映射: "492900" → "River Monsters(新加坡)"
@@ -1135,9 +1089,8 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
   ✓ 映射: "492880" → "W-Sport(新加坡)"
   ✓ 映射: "501125" → "北京国际频道"
   ✓ 映射: "522556" → "湖南国际频道"
-  ✓ 映射: "512070" → "上海东方国际(新加坡)"
-  ✓ 映射: "492883" → "中天亚洲台(英)(新加坡)"
-  ✓ 映射: "369789" → "中天亚洲台(国)(新加坡)"
+  ✓ 映射: "492883" → "中天亚洲台_新加坡_英2"
+  ✓ 映射: "369789" → "中天亚洲台_新加坡_国"
   ✓ 映射: "412185" → "Zee Cinema(新加坡)"
   ✓ 映射: "412115" → "Zee Tamil(新加坡)"
   ✓ 映射: "516580" → "Zee Thirai(新加坡)"
@@ -1153,7 +1106,7 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
   ✓ 映射: "464902" → "ABC National Feed(US)"
   ✓ 映射: "464849" → "ABC National Feed Pacific(US)"
   ✓ 映射: "465150" → "ABC News Live(US)"
-  ✓ 映射: "465161" → "ABS-CBN News Channel(US)"
+  ✓ 映射: "465161" → "ABS-CBN News Channel"
   ✓ 映射: "464879" → "ACC Network(US)"
   ✓ 映射: "465193" → "AccuWeather HD(US)"
   ✓ 映射: "464886" → "ACE TV(US)"
@@ -1210,7 +1163,6 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
   ✓ 映射: "465030" → "BET Soul(US)"
   ✓ 映射: "465073" → "Big Ten Network HD(US)"
   ✓ 映射: "465254" → "Big Ten Network Overflow(US)"
-  ✓ 映射: "465015" → "Big Ten Network Overflow HD(US)"
   ✓ 映射: "465353" → "BINGE-TV(US)"
   ✓ 映射: "496609" → "Biz TV(US)"
   ✓ 映射: "530871" → "Black Voices(US)"
@@ -1219,7 +1171,7 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
   ✓ 映射: "465324" → "Bloomberg HD(US)"
   ✓ 映射: "465083" → "Blossom TV(US)"
   ✓ 映射: "484881" → "Bon Appétit TV(US)"
-  ✓ 映射: "464755" → "Boomerang(US)"
+  ✓ 映射: "464755" → "Boomerang TV(US)(F)"
   ✓ 映射: "465292" → "Bounce TV(US)"
   ✓ 映射: "494592" → "Bowling TV(US)"
   ✓ 映射: "465184" → "Bravo (Pacific)(US)"
@@ -1281,11 +1233,11 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
   ✓ 映射: "465226" → "Court TV(US)"
   ✓ 映射: "464930" → "COZI TV(US)"
   ✓ 映射: "496617" → "Create(US)"
-  ✓ 映射: "465040" → "Crime and Investigation Network HD(US)"
+  ✓ 映射: "465040" → "Crime + Investigation Network HD(US)"
   ✓ 映射: "464835" → "CSPAN(US)"
   ✓ 映射: "465243" → "CSPAN2(US)"
   ✓ 映射: "464828" → "CSPAN3(US)"
-  ✓ 映射: "464936" → "CTI Zhong Tian Channel(US)"
+  ✓ 映射: "464936" → "中天 Channel(US)"
   ✓ 映射: "465175" → "Curiosity Channel HD(US)"
   ✓ 映射: "465140" → "Curiosity NOW(US)"
   ✓ 映射: "465378" → "CuriosityStream(US)"
@@ -1306,8 +1258,6 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
   ✓ 映射: "465005" → "DirecTV GO4IT(US)"
   ✓ 映射: "465405" → "DIRECTV Lifetime(US)"
   ✓ 映射: "464969" → "DirecTV Playboy(US)"
-  ✓ 映射: "465181" → "DirecTV Sports Mix(US)"
-  ✓ 映射: "465195" → "DIRECTV Sports MixHD(US)"
   ✓ 映射: "464862" → "DirecTV VALU(US)"
   ✓ 映射: "465364" → "Discovery Channel HD(US)"
   ✓ 映射: "464797" → "Discovery en Español(US)"
@@ -1361,9 +1311,7 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
   ✓ 映射: "529205" → "FOX SOUL(US)"
   ✓ 映射: "465153" → "Free Speech TV(US)"
   ✓ 映射: "465331" → "Freeform HD(US)"
-  ✓ 映射: "465291" → "FS1 Fox Sports 1 HD(US)"
   ✓ 映射: "465248" → "FS1 HD(US)"
-  ✓ 映射: "465355" → "FS2 Fox Sports 2 HD(US)"
   ✓ 映射: "465280" → "FS2 HD(US)"
   ✓ 映射: "465222" → "Fun Roads(US)"
   ✓ 映射: "465105" → "Fuse HD(US)"
@@ -1551,7 +1499,6 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
   ✓ 映射: "465311" → "NFL Network HD(US)"
   ✓ 映射: "465401" → "NFL RedZone HD(US)"
   ✓ 映射: "465197" → "NFL SUNDAY TICKET RED ZONE(US)"
-  ✓ 映射: "464907" → "NHK 1 HD(US)"
   ✓ 映射: "465327" → "NHK World TV(US)"
   ✓ 映射: "465348" → "NHL Network HD(US)"
   ✓ 映射: "464911" → "Nick Jr HD(US)"
@@ -1811,8 +1758,9 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
   ✓ 映射: "465301" → "Zee TV(US)"
   ✓ 映射: "465165" → "Zona Futbol(US)"
   ✓ 映射: "465070" → "ZooMoo(US)"
-  ✓ 映射: "明珠台" → "TVB-明珠台"
-  ✓ 映射: "BBC Earth" → "BBC Earth(国)"
+  ✓ 映射: "明珠台" → "TVB明珠台"
+  ✓ 映射: "BBC Earth" → "BBC Earth_国4"
+  ✓ 映射: "BBC Lifestyle" → "BBC Lifestyle_国5"
   ✓ 映射: "Now Sports 精選" → "Now Sports精选"
   ✓ 映射: "商業電台 雷霆881" → "商业电台 雷霆881"
   ✓ 映射: "商業電台 AM864" → "商业电台 AM864"
@@ -1964,51 +1912,51 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
   ✓ 映射: "bloomberg-originals-new" → "Bloomberg Originals New"
   ✓ 映射: "bloomberg-tv-plus" → "Bloomberg TV Plus"
   ✓ 映射: "africanews-eng" → "Africanews English"
-  ✓ 映射: "france-24-en" → "France 24 English"
+  ✓ 映射: "france-24-en" → "France 24 English_英"
 ✓ 找到 12 个EPG源
 ✓ 总时间范围: 96 小时
   (过去 48 小时 → 未来 48 小时)
 
   - https://raw.githubusercontent.com/litiande03/epg/refs/heads/master/pl.xml.gz
     时区: 保持原XML时区（可能是未指定或+8时区）
-    频道数量: 223
-    别名映射: 118 个
+    频道数量: 222
+    别名映射: 119 个
   - https://raw.githubusercontent.com/zzq1234567890/epg/refs/heads/main/swepg.xml.gz
     时区处理: 强制转换为北京时间 (+0800)
-    频道数量: 1175
-    别名映射: 369 个
+    频道数量: 1113
+    别名映射: 371 个
   - http://epg.51zmt.top:8000/e.xml.gz
     时区: 保持原XML时区（可能是未指定或+8时区）
     频道数量: 11
     别名映射: 11 个
   - https://liliu.serv00.net/epg/cn.xml.gz
     时区: 保持原XML时区（可能是未指定或+8时区）
-    频道数量: 300
-    别名映射: 122 个
+    频道数量: 287
+    别名映射: 101 个
   - http://epg.51zmt.top:8000/e2.xml.gz
     时区: 保持原XML时区（可能是未指定或+8时区）
-    频道数量: 142
-    别名映射: 142 个
+    频道数量: 126
+    别名映射: 126 个
   - https://epg.pw/xmltv/epg_MY.xml
     时区处理: 强制转换为北京时间 (+0800)
-    频道数量: 150
-    别名映射: 150 个
+    频道数量: 147
+    别名映射: 147 个
   - https://epg.pw/xmltv/epg_HK.xml
     时区处理: 强制转换为北京时间 (+0800)
     频道数量: 1
     别名映射: 1 个
   - https://epg.pw/xmltv/epg_SG.xml
     时区处理: 强制转换为北京时间 (+0800)
-    频道数量: 206
-    别名映射: 206 个
+    频道数量: 196
+    别名映射: 196 个
   - https://epg.pw/xmltv/epg_US.xml
     时区: 保持原XML时区（可能是未指定或+8时区）
-    频道数量: 668
-    别名映射: 668 个
+    频道数量: 662
+    别名映射: 662 个
   - https://epg.yang-1989.eu.org/epg.xml.gz
     时区: 保持原XML时区（可能是未指定或+8时区）
     频道数量: 7
-    别名映射: 6 个
+    别名映射: 7 个
   - https://raw.githubusercontent.com/kiekostui/pluto_tv_it/refs/heads/main/epg_pluto_it.xml
     时区: 保持原XML时区（可能是未指定或+8时区）
     频道数量: 102
@@ -2023,10 +1971,10 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
 
 ------------------------------------------------------------
 📡 源 1/12: https://raw.githubusercontent.com/litiande03/epg/refs/heads/master/pl.xml.gz
-   请求频道: 223 个
-   需要查找: 223 个
+   请求频道: 222 个
+   需要查找: 222 个
     ✓ 下载成功: 1012.64 KB
-    🕐 时间范围: 2026-04-30 09:44 到 2026-05-04 09:44 (UTC)
+    🕐 时间范围: 2026-04-30 13:34 到 2026-05-04 13:34 (UTC)
     📊 包含过去 48 小时 + 未来 48 小时
     📝 频道重命名: "经济科教" → "广东经济科教"
     📝 频道重命名: "大湾区卫视" → "广东大湾区卫视"
@@ -2051,6 +1999,7 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
     📝 频道重命名: "CCTV-15 音乐" → "CCTV15"
     📝 频道重命名: "CCTV-16 奥林匹克" → "CCTV16"
     📝 频道重命名: "CCTV-17 农业 农村" → "CCTV17"
+    📝 频道重命名: "CCTV-电视指南" → "CCTV-电视指南(X)"
     📝 频道重命名: "CGTN英语" → "CGTN(国)"
     📝 频道重命名: "CGTN英文记录" → "CGTN英文纪录(国)"
     📝 频道重命名: "东方卫视" → "上海东方卫视"
@@ -2062,7 +2011,8 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
     📝 频道重命名: "厦门卫视" → "福建厦门卫视"
     📝 频道重命名: "CETV2" → "CETV-2"
     📝 频道重命名: "CETV4" → "CETV-4"
-    📝 频道重命名: "老故事" → "CCTV-老故事(PL)"
+    📝 频道重命名: "汽摩" → "重庆汽摩"
+    📝 频道重命名: "老故事" → "CCTV-老故事"
     📝 频道重命名: "国学" → "国学频道"
     📝 频道重命名: "TVB生活台" → "TVB-生活台"
     📝 频道重命名: "TVB星河" → "TVB-星河"
@@ -2079,7 +2029,7 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
     📝 频道重命名: "博斯網球台" → "博斯网球台"
     📝 频道重命名: "智林體育台" → "智林体育台"
     📝 频道重命名: "亞洲旅遊台" → "亚洲旅游台(B)"
-    📝 频道重命名: "公視戲劇" → "公视戏剧(B)"
+    📝 频道重命名: "公視戲劇" → "公视戏剧"
     📝 频道重命名: "八大精彩台" → "八大精彩台(B)"
     📝 频道重命名: "靖洋戲劇台" → "靖洋戏剧台(B)"
     📝 频道重命名: "影迷數位紀實台" → "影迷数位纪实台"
@@ -2090,8 +2040,8 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
     📝 频道重命名: "GOOD TV" → "好消息台"
     📝 频道重命名: "非凡商業台" → "非凡商业台"
     📝 频道重命名: "寰宇財經台" → "寰宇财经台(B)"
-    📝 频道重命名: "東森購物1台" → "东森购物1台(B)"
-    📝 频道重命名: "東森購物2台" → "东森购物2台(B)"
+    📝 频道重命名: "東森購物1台" → "东森购物1台"
+    📝 频道重命名: "東森購物2台" → "东森购物2台"
     📝 频道重命名: "中視新聞台" → "中视新闻台"
     📝 频道重命名: "台視財經台" → "台视财经台"
     📝 频道重命名: "CLASSICA" → "CLASSICA_繁中"
@@ -2101,14 +2051,14 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
     📝 频道重命名: "SETiNEWS" → "三立iNEWS"
     📝 频道重命名: "台視新聞台" → "台视新闻台"
     📝 频道重命名: "龍華卡通台" → "龙华卡通台(B)"
-    📝 频道重命名: "龍華戲劇台" → "龙华戏剧台(B)"
+    📝 频道重命名: "龍華戲劇台" → "龙华戏剧台(C)"
     📝 频道重命名: "寰宇新聞一台" → "寰宇新闻1台"
     📝 频道重命名: "靖天資訊" → "靖天资讯台(B)"
     📝 频道重命名: "FTV戲劇" → "民视戏剧台"
     📝 频道重命名: "FTV旅遊" → "民视旅游台"
     📝 频道重命名: "FTV綜藝" → "民视综艺台"
     📝 频道重命名: "龍華偶像台" → "龙华偶像台(B)"
-    📝 频道重命名: "龍華日韓台" → "龙华日韩台(B)"
+    📝 频道重命名: "龍華日韓台" → "龙华日韩台"
     📝 频道重命名: "靖天映畫台" → "靖天映画台"
     📝 频道重命名: "靖天戲劇" → "靖天戏剧台(B)"
     📝 频道重命名: "靖天電影" → "靖天电影台(B)"
@@ -2126,15 +2076,16 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
     📝 频道重命名: "LiTV中視" → "中视(LiTV)"
     📝 频道重命名: "LiTV民視第一台" → "民视第一台(LiTV)"
     📝 频道重命名: "LiTV台視" → "台视(LiTV)"
-    📝 频道重命名: "龍華電影台" → "龙华电影台(B)"
+    📝 频道重命名: "龍華電影台" → "龙华电影台"
     📝 频道重命名: "ELTV英語學習台" → "ELTV英语学习台(B)"
     📝 频道重命名: "國會頻道1台" → "国会频道1台"
     📝 频道重命名: "國會頻道2台" → "国会频道2台"
     📝 频道重命名: "第1商業" → "第一商业(B)"
+    📝 频道重命名: "龍華經典台" → "龙华经典台(Z)"
     📝 频道重命名: "GINX" → "GINX电竞频道_国"
     📝 频道重命名: "Smart知識台" → "Smart知识台(B)"
     📝 频道重命名: "台灣戲劇台" → "台湾戏剧台"
-    📝 频道重命名: "寵物頻道" → "宠物频道(B)"
+    📝 频道重命名: "寵物頻道" → "宠物频道(TW)"
     📝 频道重命名: "Focus歡樂綜合台" → "Focus欢乐综合台"
     📝 频道重命名: "Focus風采戲劇台" → "Focus风采戏剧台"
     📝 频道重命名: "黃金八點檔" → "黄金八点档(B)"
@@ -2142,25 +2093,25 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
     📝 频道重命名: "MCE 我的歐洲電影" → "MCE我的欧洲电影"
     🕐 时区处理: 未指定时区，保持原XML时区不变
     📝 别名映射: 修改ID=True, 修改DisplayName=True
-    ⚠ 未找到频道: 揭阳生活
+    ⚠ 未找到频道: 现代教育
     ⚠ 未找到频道: 東森購物測試頻道 东森购物测试频道
     ⚠ 未找到频道: 愛爾達娛樂
-    ⚠ 未找到频道: 现代教育
-    📺 新增频道: 218/223
-    📅 新增节目: 25146/46604
+    ⚠ 未找到频道: 揭阳生活
+    📺 新增频道: 218/222
+    📅 新增节目: 25458/46578
    ✓ 处理成功
 
 ------------------------------------------------------------
 📡 源 2/12: https://raw.githubusercontent.com/zzq1234567890/epg/refs/heads/main/swepg.xml.gz
-   请求频道: 1175 个
-   需要查找: 1173 个
-    ✓ 下载成功: 4.10 MB
-    🕐 时间范围: 2026-04-30 09:44 到 2026-05-04 09:44 (UTC)
+   请求频道: 1113 个
+   需要查找: 1111 个
+    ✓ 下载成功: 4.06 MB
+    🕐 时间范围: 2026-04-30 13:34 到 2026-05-04 13:34 (UTC)
     📊 包含过去 48 小时 + 未来 48 小时
     📝 频道重命名: "KBSWorld" → "KBS World(swepg)"
     📝 频道重命名: "都市频道" → "上海都市频道"
     📝 频道重命名: "哈哈炫动" → "炫动卡通"
-    📝 频道重命名: "新闻综合" → "上海新闻综合台"
+    📝 频道重命名: "新闻综合" → "上海新闻综合"
     📝 频道重命名: "翡翠台" → "TVB-翡翠台(香港 中)"
     📝 频道重命名: "翡翠台(国际版)" → "TVB-翡翠台(国际版)"
     📝 频道重命名: "无线新闻(国际版)" → "TVB-无线新闻(国际版)"
@@ -2170,14 +2121,11 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
     📝 频道重命名: "中国农林卫视" → "陕西农林卫视"
     📝 频道重命名: "CCTV4欧洲" → "CCTV-4欧洲"
     📝 频道重命名: "CCTV4美洲" → "CCTV-4美洲"
-    📝 频道重命名: "老故事" → "CCTV-老故事"
     📝 频道重命名: "cctv4亚洲" → "CCTV-4亚洲"
     📝 频道重命名: "cctv4k" → "CCTV4K"
     📝 频道重命名: "cctv8k" → "CCTV-8k"
     📝 频道重命名: "cctv风云剧场" → "CCTV-风云剧场(swepg)"
-    📝 频道重命名: "cctv风云音乐" → "CCTV-风云音乐(swepg)"
     📝 频道重命名: "cctv风云足球" → "CCTV-风云足球"
-    📝 频道重命名: "cctv高尔夫" → "CCTV-高尔夫"
     📝 频道重命名: "cctv台球" → "CCTV-台球"
     📝 频道重命名: "cgtn俄语" → "CGTN俄语(国)"
     📝 频道重命名: "cgtn阿拉伯语" → "CGTN阿拉伯语"
@@ -2198,24 +2146,24 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
     📝 频道重命名: "TVB翡翠综合台(TVBJ1)" → "TVB-翡翠综合台(TVBJ1)"
     📝 频道重命名: "TVB明珠剧集台(TVB Pearl Drama)" → "TVB-明珠剧集台(TVB Pearl Drama)"
     📝 频道重命名: "民视" → "民视(swepg)"
+    📝 频道重命名: "大爱电视" → "大爱电视台"
     📝 频道重命名: "BBC EARTH" → "BBC Earth(国1)"
+    📝 频道重命名: "纬来综合HD" → "纬来综合台"
     📝 频道重命名: "八大第一HD" → "八大第一"
     📝 频道重命名: "中天娱乐HD" → "中天娱乐"
     📝 频道重命名: "八大戏剧HD" → "八大戏剧"
     📝 频道重命名: "JET综合" → "JET综合台"
     📝 频道重命名: "三立新闻HD" → "三立新闻台"
-    📝 频道重命名: "HBO" → "HBO(swepg)"
-    📝 频道重命名: "东森洋片台" → "东森洋片台(swepg)"
+    📝 频道重命名: "HBO" → "HBO_国2"
+    📝 频道重命名: "东森洋片台" → "东森洋片"
     📝 频道重命名: "AXN" → "AXN(swepg)"
     📝 频道重命名: "CINEMAX HD" → "CINEMAX HD_国"
-    📝 频道重命名: "MOMO综合台" → "MOMO综合台(swepg)"
     📝 频道重命名: "国兴卫视" → "国兴卫视(swepg)"
     📝 频道重命名: "BBC LIFESTYLE" → "BBC Lifestyle(国)"
+    📝 频道重命名: "NHK" → "NHK_国"
     📝 频道重命名: "MTV" → "MTV(swepg)"
-    📝 频道重命名: "海豚综合台" → "海豚综合台(swepg)"
     📝 频道重命名: "佛卫电视慈悲台" → "佛卫慈悲台"
-    📝 频道重命名: "大立电视台" → "大立电视台(swepg)"
-    📝 频道重命名: "大爱二台" → "大爱二台(swepg)"
+    📝 频道重命名: "小公视" → "公视小公视"
     📝 频道重命名: "靖天映画" → "靖天映画(swepg)"
     📝 频道重命名: "靖洋戏剧台" → "靖洋戏剧台(swepg)"
     📝 频道重命名: "TV5MONDE" → "TV5MONDE(swepg)"
@@ -2226,23 +2174,24 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
     📝 频道重命名: "HITS" → "HITS(swepg)"
     📝 频道重命名: "博靖天育乐台" → "靖天育乐台"
     📝 频道重命名: "Lifeime" → "Lifetime_国"
-    📝 频道重命名: "Discovery Asia" → "Discovery Asia(swepg3)"
-    📝 频道重命名: "Discovery 科学频道" → "Discovery 科学频道_国"
+    📝 频道重命名: "罪案侦查频道" → "罪案侦缉频道_国2"
+    📝 频道重命名: "Discovery Asia" → "Discovery Asia_国3)"
+    📝 频道重命名: "Discovery 科学频道" → "Discovery 科学频道_香港_国"
     📝 频道重命名: "博斯高球一台有线" → "博斯高球1台有线"
     📝 频道重命名: "博斯高球二台有线" → "博斯高球2台有线"
+    📝 频道重命名: "Nickelodeon Asia尼克儿童频道" → "Nickelodeon Asia_国2"
     📝 频道重命名: "Cbeebies" → "Cbeebies(swepg1)"
     📝 频道重命名: "靖洋卡通台" → "靖洋卡通台(swepg)"
     📝 频道重命名: "ROCK ENTERTAINMENT" → "ROCK Entertainment_国"
     📝 频道重命名: "天映经典香港" → "天映经典电影_香港(简中2)"
     📝 频道重命名: "天映经典柬埔寨" → "天映经典电影_柬埔寨_中"
-    📝 频道重命名: "天映经典印尼" → "天映经典电影_印尼(简中2)"
+    📝 频道重命名: "天映经典印尼" → "天映经典电影_印尼_中"
     📝 频道重命名: "天映经典马来西亚" → "天映经典电影_马来_中"
     📝 频道重命名: "天映经典菲律宾" → "天映经典电影_菲律宾_中"
     📝 频道重命名: "天映经典新加坡" → "天映经典电影_新加坡(简中3)"
     📝 频道重命名: "天映频道马来西亚" → "天映电影_马来西亚_中"
     📝 频道重命名: "天映频道印尼" → "天映电影_印尼_中"
     📝 频道重命名: "天映频道新加坡" → "天映电影_新加坡_中2"
-    📝 频道重命名: "cmplus新加坡" → "CM+_新加坡"
     📝 频道重命名: "SUPER FREE (免费)" → "SUPER FREE"
     📝 频道重命名: "SUPER奖门人 (免费)" → "SUPER奖门人"
     📝 频道重命名: "观众票选-追剧马拉松 (免费)" → "观众票选-追剧马拉松"
@@ -2250,10 +2199,12 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
     📝 频道重命名: "SUPER Music (免费)" → "SUPER Music"
     📝 频道重命名: "SUPER煲剧 (免费)" → "SUPER煲剧"
     📝 频道重命名: "SUPER Sports (免费)" → "SUPER Sports"
-    📝 频道重命名: "黄金翡翠台 (免费)" → "黄金翡翠台"
+    📝 频道重命名: "黄金翡翠台 (免费)" → "TVB黄金翡翠台"
     📝 频道重命名: "翡翠台 (免费)" → "TVB-翡翠台_国"
     📝 频道重命名: "TVB Plus (免费)" → "TVB Plus"
     📝 频道重命名: "无线新闻台 (免费)" → "TVB-无线新闻台"
+    📝 频道重命名: "千禧经典台" → "TVB千禧经典台"
+    📝 频道重命名: "黄金华剧台" → "TVB黄金华剧台"
     📝 频道重命名: "娱乐新闻台 (免费)" → "TVB-娱乐新闻台(国)"
     📝 频道重命名: "ZooMoo" → "ZooMoo(国)"
     📝 频道重命名: "Nickelodeon" → "Nickelodeon(swepg)"
@@ -2263,7 +2214,7 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
     📝 频道重命名: "Rialto Classic Movies (RCM) (免费)" → "Rialto Classic Movies (RCM)"
     📝 频道重命名: "TRACE Sport Stars (免费)" → "TRACE Sport Stars(英1)"
     📝 频道重命名: "Love Nature 4K" → "Love Nature 4K(国)"
-    📝 频道重命名: "Globetrotter (免费)" → "GlobeTter"
+    📝 频道重命名: "Globetrotter (免费)" → "Globet Trotter"
     📝 频道重命名: "Docsville (免费)" → "Docsville"
     📝 频道重命名: "Wild Stuff (免费)" → "Wild Stuff"
     📝 频道重命名: "ROCK综艺娱乐" → "ROCK Entertainment ROCK综艺娱乐"
@@ -2271,9 +2222,8 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
     📝 频道重命名: "创世电视 (免费)" → "创世电视"
     📝 频道重命名: "FashionBox" → "Fashion Box"
     📝 频道重命名: "中央电视台综合频道 (港澳版) (免费)" → "CCTV-1 (港澳版)"
-    📝 频道重命名: "CGTN (中国环球电视网)记录频道 (免费)" → "CGTN-英文纪录_中"
-    📝 频道重命名: "CGTN (中国环球电视网)英语频道 (免费)" → "CGTN(swepg2)"
-    📝 频道重命名: "东方卫视国际频道 (免费)" → "东方国际频道(中)"
+    📝 频道重命名: "CGTN (中国环球电视网)记录频道 (免费)" → "CGTN英文纪录_中"
+    📝 频道重命名: "东方卫视国际频道 (免费)" → "上海东方国际频道_中"
     📝 频道重命名: "中国中央电视台戏曲频道 (免费)" → "CCTV-戏曲"
     📝 频道重命名: "云南澜湄国际卫视 (免费)" → "云南澜湄国际"
     📝 频道重命名: "安徽广播电视台国际频道 (免费)" → "安徽国际频道"
@@ -2287,22 +2237,23 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
     📝 频道重命名: "TRACE Urban (免费)" → "TRACE Urban(英)"
     📝 频道重命名: "亚洲新闻台" → "CNA亚洲新闻台"
     📝 频道重命名: "半岛电视台英语频道" → "Al Jazeera English"
-    📝 频道重命名: "DW" → "DW(swepg)"
     📝 频道重命名: "NHK World-Japan" → "NHK World-Japan(swepg1)"
     📝 频道重命名: "NewsWorld (免费)" → "NewsWorld"
     📝 频道重命名: "ViuTV" → "Viu TV"
     📝 频道重命名: "now 剧集" → "NOW剧集"
     📝 频道重命名: "nowjeli" → "NOW Jeli()"
-    📝 频道重命名: "Discovery 科学频道香港" → "Discovery 科学频道_香港"
+    📝 频道重命名: "爆谷台" → "NOW爆谷台"
+    📝 频道重命名: "Now爆谷星影台" → "NOW爆谷星影台"
     📝 频道重命名: "TLC旅游生活频道香港" → "TLC旅游生活频道_香港"
+    📝 频道重命名: "罪案 + 侦缉香港" → "罪案侦缉频道_香港_国"
     📝 频道重命名: "Bloomberg Television香港" → "Bloomberg TV香港"
     📝 频道重命名: "DW (English)香港" → "DW English 香港"
-    📝 频道重命名: "半岛电视台英语频道香港" → "Al Jazeera English_香港"
     📝 频道重命名: "中国环球电视网香港" → "CGTN香港"
     📝 频道重命名: "now新闻" → "NOW新闻"
     📝 频道重命名: "now财经" → "NOW财经"
     📝 频道重命名: "now报价" → "NOW报价"
     📝 频道重命名: "Moonbug香港" → "Moonbug香港_繁中"
+    📝 频道重命名: "Food Network香港" → "Food Network美食台_香港(回)"
     📝 频道重命名: "深圳卫视香港" → "深圳卫视_香港"
     📝 频道重命名: "大湾区卫视香港" → "广东大湾区卫视_香港"
     📝 频道重命名: "中央电视台新闻频道香港" → "CCTV-13香港"
@@ -2326,7 +2277,7 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
     📝 频道重命名: "CNBC HD" → "CNBC HD(新加坡)"
     📝 频道重命名: "CNN HD" → "CNN HD(swepg)"
     📝 频道重命名: "COLORS Tamil HD" → "Colors Tamil HD(MY)"
-    📝 频道重命名: "中天亚洲台新加坡" → "中天亚洲台_新加坡"
+    📝 频道重命名: "中天亚洲台新加坡" → "中天亚洲台_新加坡_英"
     📝 频道重命名: "Discovery HD新加坡" → "Discovery HD_新加坡_英"
     📝 频道重命名: "DreamWorks HD" → "DreamWorks(国)"
     📝 频道重命名: "HGTV HD新加坡" → "HGTV HD新加坡(英)"
@@ -2349,7 +2300,9 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
     📝 频道重命名: "广西国际频道" → "广西国际"
     📝 频道重命名: "河北农民" → "河北三农"
     📝 频道重命名: "河北公共" → "河北文旅公共"
-    📝 频道重命名: "Cbeebies HD" → "Cbeebies HD(swepg2)"
+    📝 频道重命名: "公视儿少台HD" → "公视少儿台"
+    📝 频道重命名: "Cbeebies HD" → "Cbeebies HD_国(B)"
+    📝 频道重命名: "MTV综合台HD" → "MTV综合(回看)"
     📝 频道重命名: "博斯高球二台" → "博斯高球2台(B)"
     📝 频道重命名: "博斯无限二台" → "博斯无限2台(swepg)"
     📝 频道重命名: "TRACE Sport Stars HD" → "TRACE Sport Stars(国)"
@@ -2357,25 +2310,30 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
     📝 频道重命名: "EUROSPORT HD" → "Eurosport(英)"
     📝 频道重命名: "Discovery Asia HD" → "Discovery Asia HD(国1)"
     📝 频道重命名: "Lifetime HD" → "Lifetime HD(国)"
+    📝 频道重命名: "滚动力 rollor" → "滚动力Rollor"
     📝 频道重命名: "HGTV居家乐活频道" → "HGTV居家乐活频道(国)"
     📝 频道重命名: "EYE TV旅游台HD" → "EYE TV旅游台"
     📝 频道重命名: "三立综合台HD" → "三立综合台"
     📝 频道重命名: "中视经典台HD" → "中视经典台"
     📝 频道重命名: "中视菁采台HD" → "中视菁采台"
     📝 频道重命名: "TVBS精采台HD" → "TVBS-精采台HD"
+    📝 频道重命名: "纬来精采HD" → "纬来精采"
     📝 频道重命名: "momo2台HD" → "MOMO2台"
+    📝 频道重命名: "东森购物3台HD" → "东森购物3台"
     📝 频道重命名: "EYE TV戏剧台HD" → "EYE TV戏剧台"
     📝 频道重命名: "曼迪日本台HD" → "曼迪日本台"
     📝 频道重命名: "tvN HD" → "tvN HD(国)"
     📝 频道重命名: "momo1台HD" → "MOMO1台"
+    📝 频道重命名: "东森购物4台HD" → "东森购物4台"
     📝 频道重命名: "美好1台HD" → "美好1台"
+    📝 频道重命名: "东森购物5台HD" → "东森购物5台"
+    📝 频道重命名: "Bloomberg" → "Bloomberg TV(D)"
     📝 频道重命名: "wedotv Movies HD" → "Wedotv Movies"
     📝 频道重命名: "HITS HD" → "HITS HD(国)"
     📝 频道重命名: "华艺台湾台 HD" → "华艺台湾台"
     📝 频道重命名: "新天地民俗台 HD" → "新天地民俗台"
-    📝 频道重命名: "Arirang TV HD" → "Arirang TV(swepg)"
     📝 频道重命名: "原住民族电视台" → "原住民电视"
-    📝 频道重命名: "Discovery" → "Discovery(国1)"
+    📝 频道重命名: "Discovery" → "Discovery_国1)"
     📝 频道重命名: "TLC 旅游生活频道" → "TLC旅游生活频道"
     📝 频道重命名: "东森幼幼台" → "东森幼幼"
     📝 频道重命名: "超视" → "东森超视"
@@ -2386,25 +2344,26 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
     📝 频道重命名: "东森电影台" → "东森电影台(swepg)"
     📝 频道重命名: "ANIMAX" → "ANIMAX(swepg)"
     📝 频道重命名: "NHK WORLD PREMIUM" → "NHK World Premium_国1"
+    📝 频道重命名: "GLOBLTREKKER探索世界" → "Global Trekker探索世界"
     📝 频道重命名: "环宇财经" → "寰宇财经台(C)"
     📝 频道重命名: "Asian Food Network 亚洲美食频道" → "Asian Food Network(MY 中)"
+    📝 频道重命名: "滚动力 rollor有线" → "滚动力Rollor有线"
     📝 频道重命名: "Eurosport" → "Eurosport(国)"
     📝 频道重命名: "BBCEarth" → "BBC Earth(国2)"
-    📝 频道重命名: "BBCLifestyle" → "BBC Lifestyle(国1)"
     📝 频道重命名: "BBCNEWS" → "BBC NEWS(国1)"
     📝 频道重命名: "BloombergTV" → "Bloomberg TV(swepg)"
-    📝 频道重命名: "CBeebies" → "CBeebies(swepg2)"
     📝 频道重命名: "CinemaWorld频道" → "CinemaWorld_新加坡_国"
-    📝 频道重命名: "CN卡通频道" → "CN卡通频道(swepg)"
-    📝 频道重命名: "DiscoveryAsia" → "Discovery Asia(swepg4)"
+    📝 频道重命名: "CN卡通频道" → "CN卡通频道(回)"
+    📝 频道重命名: "DiscoveryAsia" → "Discovery Asia_国4)"
     📝 频道重命名: "DiscoveryDMAX" → "Discovery DMAX"
     📝 频道重命名: "DiscoveryEVE" → "Discovery EVE"
+    📝 频道重命名: "Discovery科学台(Science)" → "Discovery 科学台(Science)"
     📝 频道重命名: "DreamWorks" → "DreamWorks(英)"
     📝 频道重命名: "GlobalTrekker" → "Global Trekker_国"
     📝 频道重命名: "History" → "History(swepg)"
     📝 频道重命名: "Lifetime" → "Lifetime(swepg)"
     📝 频道重命名: "LOVENATURE" → "Love Nature"
-    📝 频道重命名: "momo亲子台" → "MOMO亲子台(swepg2)"
+    📝 频道重命名: "momo亲子台" → "MOMO亲子台(回看)"
     📝 频道重命名: "NickJr." → "Nick Jr._国4"
     📝 频道重命名: "PETCLUBTV" → "PET CLUB TV(国)"
     📝 频道重命名: "ROCKAction" → "ROCK Action_国2"
@@ -2417,14 +2376,21 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
     📝 频道重命名: "博斯无限台" → "博斯无限台(swepg)"
     📝 频道重命名: "博斯网球台" → "博斯网球台(swepg)"
     📝 频道重命名: "博斯运动二台" → "博斯运动2台(swepg)"
+    📝 频道重命名: "台视主频" → "台视"
     📝 频道重命名: "尼克儿童频道" → "尼克儿童频道(中)"
+    📝 频道重命名: "罪案侦缉频道" → "罪案侦缉频道_国"
     📝 频道重命名: "华视" → "华视(swepg)"
+    📝 频道重命名: "东森购物四台" → "东森购物4台(B)"
+    📝 频道重命名: "东森购物一台" → "东森购物1台(B)"
     📝 频道重命名: "华视新闻" → "华视新闻(swepg)"
     📝 频道重命名: "TVBS新闻" → "TVBS-新闻台(B)"
     📝 频道重命名: "SBN全球财经台" → "SBN全球财经台(swepg)"
+    📝 频道重命名: "东森购物二台" → "东森购物2台(B)"
     📝 频道重命名: "KLT-靖天国际台" → "靖天国际台"
     📝 频道重命名: "TRACE Urban" → "TRACE Urban(国)"
     📝 频道重命名: "FashionTV 时尚频道" → "Fashion TV 时尚频道"
+    📝 频道重命名: "东森购物三台" → "东森购物3台(B)"
+    📝 频道重命名: "滚动力rollor" → "滚动力Rollor(B)"
     📝 频道重命名: "Love Nature" → "Love Nature(国)"
     📝 频道重命名: "靖天戏剧台" → "靖天戏剧台(swepg)"
     📝 频道重命名: "My Cinema Europe HD 我的欧洲电影" → "MCE(My Cinema Europe HD) 我的欧洲电影"
@@ -2435,25 +2401,22 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
     📝 频道重命名: "TVBS台剧台" → "TVBS-台剧台"
     📝 频道重命名: "紫金国际台" → "NOW紫金国际台"
     📝 频道重命名: "凤凰卫视资讯台" → "凤凰资讯台"
+    📝 频道重命名: "历史高清频道" → "历史频道高清"
     📝 频道重命名: "Global Trekker探索世界频道" → "Global Trekker_英"
+    📝 频道重命名: "罪案侦辑频道" → "罪案侦缉频道_英"
     📝 频道重命名: "ABC澳大利亚电视台" → "ABC Australia(澳大利亚)"
     📝 频道重命名: "凤凰卫视香港台" → "凤凰香港台"
     📝 频道重命名: "daystar" → "Daystar(swepg)"
     📝 频道重命名: "TVBS食尚玩家" → "TVBS-食尚玩家"
     📝 频道重命名: "河北杂技频道" → "河北杂技"
-    📝 频道重命名: "广州综合" → "广州综合(swepg)"
-    📝 频道重命名: "广州新闻" → "广州新闻(swepg)"
     📝 频道重命名: "东莞新闻综合" → "东莞新闻综合(swepg)"
-    📝 频道重命名: "江门综合" → "江门综合(swepg)"
-    📝 频道重命名: "阳江-1" → "阳江-1(swepg)"
     📝 频道重命名: "睛彩篮球" → "睛彩篮球(swepg)"
     📝 频道重命名: "睛彩青少" → "睛彩青少(swepg)"
-    📝 频道重命名: "广州南国都市4K" → "广州南国都市4K(swepg)"
     📝 频道重命名: "BBC_First_HD" → "BBC First"
     📝 频道重命名: "Smithsonian_Channel" → "Smithsonian Channel"
     📝 频道重命名: "BBC_Brit_HD" → "BBC Brit HD"
     📝 频道重命名: "TV_Sarawak" → "TV Sarawak"
-    📝 频道重命名: "KTV" → "KTV(swepg)"
+    📝 频道重命名: "KTV" → "KTV_印"
     📝 频道重命名: "Astro_Thangathirai" → "Astro Thangathirai"
     📝 频道重命名: "iQIYI_HD" → "Astro iQIYI(英)"
     📝 频道重命名: "TVB_Classic_HD" → "TVB 经典Classic HD(英)"
@@ -2462,31 +2425,24 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
     📝 频道重命名: "TVB_Xing_He_HD" → "TVB-星河(英)"
     📝 频道重命名: "Celestial_Classic_Movies" → "天映经典电影_英(swepg)"
     📝 频道重命名: "tvN_HD" → "tvN HD(英)"
-    📝 频道重命名: "NHK_World_Premium" → "NHK World Premium(swepg2)"
     📝 频道重命名: "Astro_Boo" → "Astro Boo"
     📝 频道重命名: "Astro_Showcase" → "Astro Showcase2"
     📝 频道重命名: "Rock_Action" → "Rock Action_英"
     📝 频道重命名: "Rock_X_Stream" → "Rock X Stream_英"
     📝 频道重命名: "Astro_First_HD" → "Astro First HD"
-    📝 频道重命名: "Bernama_TV" → "Bernama TV"
     📝 频道重命名: "Bloomberg_TV_HD" → "Bloomberg TV HD(swepg)"
     📝 频道重命名: "ABC_Australia_HD" → "ABC Australia HD"
     📝 频道重命名: "DW_English" → "DW English Europe"
     📝 频道重命名: "Love_Nature_4K" → "Love Nature 4K(英)"
     📝 频道重命名: "Love_Nature" → "Love Nature(英)"
     📝 频道重命名: "BBC_Earth" → "BBC Earth(英swepg)"
-    📝 频道重命名: "History_HD" → "History HD"
-    📝 频道重命名: "CGTN_Documentary" → "CGTN-英文纪录_英"
-    📝 频道重命名: "Cartoon_Network_HD" → "Cartoon Network HD(swepg)"
     📝 频道重命名: "Moonbug" → "Moonbug(swepg)"
-    📝 频道重命名: "Blippi__amp__Friends" → "Blippi & Friends(swepg)"
     📝 频道重命名: "AXN_HD" → "AXN HD(英)"
     📝 频道重命名: "Lifetime_HD" → "Lifetime HD(英)"
     📝 频道重命名: "HITS_HD" → "HITS HD(英)"
     📝 频道重命名: "TLC_HD" → "TLC HD(B)"
     📝 频道重命名: "Astro_Sports_UHD_805" → "Astro Sports UHD 805"
     📝 频道重命名: "Astro_Premier_League_3" → "Astro Premier League 3"
-    📝 频道重命名: "beIN_SPORTS_1" → "beIN SPORTS 1(swepg1)"
     📝 频道重命名: "beIN_SPORTS_2" → "beIN SPORTS 2(swepg1)"
     📝 频道重命名: "beIN_SPORTS_3" → "beIN SPORTS 3(swepg1)"
     📝 频道重命名: "Astro_Golf" → "Astro Golf"
@@ -2494,15 +2450,11 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
     📝 频道重命名: "THR_RAAGA" → "THR RAAGA(swepg)"
     📝 频道重命名: "CLASSIC_ROCK" → "CLASSIC ROCK"
     📝 频道重命名: "THR_GEGAR" → "THR GEGAR(swepg)"
-    📝 频道重命名: "BAYU" → "BAYU(swepg)"
     📝 频道重命名: "KENYALANG" → "KENYALANG(swepg)"
     📝 频道重命名: "ZAYAN" → "ZAYAN(swepg)"
-    📝 频道重命名: "GOXUAN" → "GOXUAN(swepg)"
     📝 频道重命名: "BBC Earth" → "BBC Earth(英)"
-    📝 频道重命名: "beIN Sports 1" → "beIN Sports 1(swepg2)"
     📝 频道重命名: "beIN Sports 2" → "beIN Sports 2(swepg2)"
-    📝 频道重命名: "beIN Sports 3" → "beIN Sports 3(swepg2)"
-    📝 频道重命名: "CCM" → "天映经典电影_印尼"
+    📝 频道重命名: "CCM" → "天映经典电影_印尼_英"
     📝 频道重命名: "Celestial Movies" → "天映电影(英)"
     📝 频道重命名: "DW English" → "DW English Africa"
     📝 频道重命名: "Food Travel HD" → "Food Travel"
@@ -2514,28 +2466,28 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
     📝 频道重命名: "Zoomoo" → "Zoomoo(英)"
     🕐 时区处理: ChangeTimezone=Y → 强制将时区改为 +0800（时间数值不变）
     📝 别名映射: 修改ID=True, 修改DisplayName=True
-    ⚠ 未找到频道: now直播
-    ⚠ 未找到频道: 亚洲综合HD演唱会直击
-    ⚠ 未找到频道: 南京新闻综合
-    ⚠ 未找到频道: SUPER单元剧 (免费)
-    ⚠ 未找到频道: Hub Sports 1
-    ⚠ 未找到频道: 新哆啦A梦(中文版)2台新年追剧首选-FastTV飞速看
-    ⚠ 未找到频道: SUPER识叹 (免费)
-    ⚠ 未找到频道: Astro_Sports_Plus_3
-    ⚠ 未找到频道: 千禧经典台(MY)
-    ⚠ 未找到频道: SUPER金曲 (免费)
     ⚠ 未找到频道: 1905App 热血影院
-    ⚠ 未找到频道: 茶频道
     ⚠ 未找到频道: Hub 如意
-    ⚠ 未找到频道: Hub Sports 2
+    ⚠ 未找到频道: 亚洲综合HD演唱会直击
+    ⚠ 未找到频道: 茶频道
+    ⚠ 未找到频道: now直播
+    ⚠ 未找到频道: SUPER单元剧 (免费)
+    ⚠ 未找到频道: HITS电影台
+    ⚠ 未找到频道: SUPER金曲 (免费)
+    ⚠ 未找到频道: 新哆啦A梦(中文版)2台新年追剧首选-FastTV飞速看
+    ⚠ 未找到频道: Hub Sports 1
+    ⚠ 未找到频道: 南京新闻综合
+    ⚠ 未找到频道: 千禧经典台(MY)
     ⚠ 未找到频道: TV5Monde 法国TV5
     ⚠ 未找到频道: Nick Jr.
-    ⚠ 未找到频道: SPY X FAMILY 间谍家家酒(国)
-    ⚠ 未找到频道: HITS电影台
-    ⚠ 未找到频道: MagellanTV频道 (麦哲伦频道)
+    ⚠ 未找到频道: Hub Sports 2
     ⚠ 未找到频道: Hub Sports 3
-    📺 新增频道: 1152/1172
-    📅 新增节目: 79841/112276
+    ⚠ 未找到频道: SUPER识叹 (免费)
+    ⚠ 未找到频道: Astro_Sports_Plus_3
+    ⚠ 未找到频道: SPY X FAMILY 间谍家家酒(国)
+    ⚠ 未找到频道: MagellanTV频道 (麦哲伦频道)
+    📺 新增频道: 1090/1110
+    📅 新增节目: 74856/103830
    ✓ 处理成功
 
 ------------------------------------------------------------
@@ -2543,7 +2495,7 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
    请求频道: 11 个
    需要查找: 11 个
     ✓ 下载成功: 98.62 KB
-    🕐 时间范围: 2026-04-30 09:44 到 2026-05-04 09:44 (UTC)
+    🕐 时间范围: 2026-04-30 13:34 到 2026-05-04 13:34 (UTC)
     📊 包含过去 48 小时 + 未来 48 小时
     📝 频道重命名: "65" → "山西黄河卫视"
     📝 频道重命名: "70" → "四川康巴卫视"
@@ -2564,53 +2516,35 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
 
 ------------------------------------------------------------
 📡 源 4/12: https://liliu.serv00.net/epg/cn.xml.gz
-   请求频道: 300 个
-   需要查找: 299 个
+   请求频道: 287 个
+   需要查找: 286 个
     ✓ 下载成功: 257.66 KB
-    🕐 时间范围: 2026-04-30 09:44 到 2026-05-04 09:44 (UTC)
+    🕐 时间范围: 2026-04-30 13:34 到 2026-05-04 13:34 (UTC)
     📊 包含过去 48 小时 + 未来 48 小时
-    📝 频道重命名: "CCTV4欧洲" → "CCTV4欧洲(CN)"
     📝 频道重命名: "CCTV4美洲" → "CCTV4美洲(CN)"
-    📝 频道重命名: "CGTN西语" → "CGTN西语(CN)"
     📝 频道重命名: "CGTN纪录" → "CGTN纪录(CN)"
-    📝 频道重命名: "世界地理" → "世界地理(CN)"
-    📝 频道重命名: "风云音乐" → "风云音乐(CN)"
-    📝 频道重命名: "高尔夫网球" → "高尔夫网球(CN)"
-    📝 频道重命名: "求索纪录" → "求索纪录(CN)"
+    📝 频道重命名: "女性时尚" → "CCTV-女性时尚(CN)"
+    📝 频道重命名: "求索纪录" → "华数求索纪录"
     📝 频道重命名: "CETV3" → "CETV-3"
     📝 频道重命名: "广东体育" → "广东体育(CN)"
     📝 频道重命名: "广东国际" → "广东国际频道"
     📝 频道重命名: "东方财经" → "东方财经(CN)"
     📝 频道重命名: "动漫秀场" → "动漫秀场(CN)"
     📝 频道重命名: "多彩文体" → "多彩文体(CN)"
-    📝 频道重命名: "法治天地" → "法治天地(CN)"
     📝 频道重命名: "光影" → "光影(CN)"
     📝 频道重命名: "东方影视" → "东方影视(CN)"
     📝 频道重命名: "第一财经" → "第一财经(CN)"
-    📝 频道重命名: "上海新闻" → "上海新闻(CN)"
     📝 频道重命名: "之江纪录" → "浙江之江纪录"
-    📝 频道重命名: "江苏城市" → "江苏城市(CN)"
-    📝 频道重命名: "江苏国际" → "江苏国际(CN)"
-    📝 频道重命名: "江苏教育" → "江苏教育(CN)"
+    📝 频道重命名: "江苏国际" → "江苏国际频道"
     📝 频道重命名: "江苏影视" → "江苏影视(CN)"
     📝 频道重命名: "江苏综艺" → "江苏综艺(CN)"
-    📝 频道重命名: "江苏新闻" → "江苏新闻(CN)"
-    📝 频道重命名: "江苏体育休闲" → "江苏体育休闲(CN)"
-    📝 频道重命名: "武术世界" → "武术世界(CN)"
     📝 频道重命名: "环球旅游" → "环球旅游(CN)"
     📝 频道重命名: "足球" → "足球(CN)"
-    📝 频道重命名: "重庆党员教育" → "重庆党员教育(CN)"
     📝 频道重命名: "海峡卫视" → "海峡卫视(CN)"
-    📝 频道重命名: "海南自贸" → "海南自贸(CN)"
-    📝 频道重命名: "海南新闻" → "海南新闻(CN)"
-    📝 频道重命名: "海南社会与法" → "海南社会与法(CN)"
-    📝 频道重命名: "海南文旅" → "海南文旅(CN)"
-    📝 频道重命名: "海南少儿" → "海南少儿(CN)"
     📝 频道重命名: "移动戏曲" → "河南移动戏曲"
     📝 频道重命名: "动作影院" → "动作影院(CN)"
-    📝 频道重命名: "维吾尔语新闻综合" → "维吾尔语新闻综合(CN)"
+    📝 频道重命名: "维吾尔语新闻综合" → "新疆维吾尔语新闻综合"
     📝 频道重命名: "动作电影" → "动作电影(CN)"
-    📝 频道重命名: "重温经典" → "重温经典(CN)"
     📝 频道重命名: "潮妈辣婆" → "NewTV潮妈辣婆"
     📝 频道重命名: "军事评论" → "NewTV军事评论"
     📝 频道重命名: "炫舞未来" → "NewTV炫舞未来"
@@ -2623,13 +2557,14 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
     📝 频道重命名: "精品大剧" → "NewTV精品大剧"
     📝 频道重命名: "精品体育" → "NewTV精品体育"
     📝 频道重命名: "精品萌宠" → "NewTV精品萌宠"
+    📝 频道重命名: "中国功夫" → "NewTV中国功夫"
+    📝 频道重命名: "怡伴健康" → "NewTV怡伴健康"
     📝 频道重命名: "睛彩青少" → "睛彩青少(CN)"
     📝 频道重命名: "睛彩篮球" → "睛彩篮球(CN)"
-    📝 频道重命名: "广西综艺旅游" → "广西综艺旅游(CN)"
     📝 频道重命名: "湖南国际" → "湖南国际(CN)"
     📝 频道重命名: "黄河卫视" → "黄河卫视(CN)"
     📝 频道重命名: "环球经典" → "环球经典(CN)"
-    📝 频道重命名: "上海教育" → "上海教育(CN)"
+    📝 频道重命名: "上海教育" → "上海教育频道"
     📝 频道重命名: "峨眉电影" → "峨眉电影(CN)"
     📝 频道重命名: "中国交通" → "中国交通频道"
     📝 频道重命名: "超级综艺" → "NewTV超级综艺"
@@ -2638,7 +2573,7 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
     📝 频道重命名: "农业致富" → "NewTV农业致富"
     📝 频道重命名: "东北热剧" → "NewTV东北热剧"
     📝 频道重命名: "欢乐剧场" → "NewTV欢乐剧场"
-    📝 频道重命名: "电视指南" → "电视指南(CN)"
+    📝 频道重命名: "电视指南" → "CCTV-电视指南"
     📝 频道重命名: "中学生" → "CCTV-中学生"
     📝 频道重命名: "藏语卫视" → "西藏藏语卫视"
     📝 频道重命名: "哈萨克语新闻综合" → "新疆哈萨克语新闻综合"
@@ -2651,10 +2586,10 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
     📝 频道重命名: "哈萨克语综艺" → "新疆哈萨克语综艺"
     📝 频道重命名: "维吾尔语经济生活" → "新疆维吾尔语经济生活"
     📝 频道重命名: "汉语体育健康" → "新疆汉语体育健康"
-    📝 频道重命名: "黄金翡翠台" → "黄金翡翠台(CN)"
+    📝 频道重命名: "星影" → "NOW爆谷星影台2"
+    📝 频道重命名: "黄金翡翠台" → "TVB黄金翡翠台(CN)"
     📝 频道重命名: "海外剧场" → "海外剧场(CN)"
     📝 频道重命名: "经典电影" → "经典电影(CN)"
-    📝 频道重命名: "城市剧场" → "城市剧场(CN)"
     📝 频道重命名: "IPTV野外" → "IPTV野外(CN)"
     📝 频道重命名: "IPTV法治" → "IPTV法治(CN)"
     📝 频道重命名: "爱综艺" → "IPTV-爱综艺"
@@ -2663,9 +2598,7 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
     📝 频道重命名: "爱大剧" → "IPTV-爱大剧"
     📝 频道重命名: "家庭影院" → "家庭影院(CN)"
     📝 频道重命名: "谍战剧场" → "谍战剧场(CN)"
-    📝 频道重命名: "少儿动画" → "少儿动画(频道2)"
     📝 频道重命名: "动画" → "动画(CN)"
-    📝 频道重命名: "财富天下" → "财富天下(CN)"
     📝 频道重命名: "纪实科教" → "北京纪实科教"
     📝 频道重命名: "淘Baby" → "北京IPTV-淘BABY"
     📝 频道重命名: "淘剧场" → "北京IPTV-淘剧场"
@@ -2676,39 +2609,35 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
     📝 频道重命名: "IPTV5+" → "IPTV5+(CN)"
     📝 频道重命名: "IPTV6+" → "IPTV6+(CN)"
     📝 频道重命名: "IPTV8+" → "IPTV8+(CN)"
-    📝 频道重命名: "江苏卫视4K" → "江苏卫视4K(CN)"
     📝 频道重命名: "北京卫视4K" → "北京卫视4K(预告)"
     📝 频道重命名: "欧美影院" → "欧美影院(CN)"
     📝 频道重命名: "探索纪实" → "探索纪实(CN)"
     📝 频道重命名: "精品剧场" → "精品剧场(CN)"
-    📝 频道重命名: "凤凰电影" → "凤凰电影(CN)"
+    📝 频道重命名: "凤凰电影" → "凤凰电影台"
     🕐 时区处理: 未指定时区，保持原XML时区不变
     📝 别名映射: 修改ID=True, 修改DisplayName=True
-    ⚠ 未找到频道: 纯享4K
-    ⚠ 未找到频道: IPTV足球
-    ⚠ 未找到频道: 福建文体
-    ⚠ 未找到频道: 福建旅游
-    ⚠ 未找到频道: 福建经济
     ⚠ 未找到频道: 福建电视剧
     ⚠ 未找到频道: 福建乡村振兴
-    📺 新增频道: 292/299
-    📅 新增节目: 12018/12165
+    ⚠ 未找到频道: 纯享4K
+    ⚠ 未找到频道: 福建旅游
+    ⚠ 未找到频道: 福建文体
+    ⚠ 未找到频道: IPTV足球
+    ⚠ 未找到频道: 福建经济
+    📺 新增频道: 279/286
+    📅 新增节目: 11607/11660
    ✓ 处理成功
 
 ------------------------------------------------------------
 📡 源 5/12: http://epg.51zmt.top:8000/e2.xml.gz
-   请求频道: 142 个
-   需要查找: 138 个
+   请求频道: 126 个
+   需要查找: 122 个
     ✓ 下载成功: 683.49 KB
-    🕐 时间范围: 2026-04-30 09:44 到 2026-05-04 09:44 (UTC)
+    🕐 时间范围: 2026-04-30 13:34 到 2026-05-04 13:34 (UTC)
     📊 包含过去 48 小时 + 未来 48 小时
-    📝 频道重命名: "121" → "明珠台"
     📝 频道重命名: "122" → "TVB-经典台"
     📝 频道重命名: "123" → "TVB-无线新闻"
     📝 频道重命名: "132" → "美亚高清电影台"
-    📝 频道重命名: "141" → "凤凰中文"
-    📝 频道重命名: "143" → "凤凰香港"
-    📝 频道重命名: "157" → "NHK World"
+    📝 频道重命名: "157" → "NHK World_国"
     📝 频道重命名: "164" → "NOW财经台"
     📝 频道重命名: "190" → "TVB-J2"
     📝 频道重命名: "194" → "Mezzo Live_英"
@@ -2716,10 +2645,9 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
     📝 频道重命名: "217" → "华视新闻"
     📝 频道重命名: "222" → "壹电视综合台"
     📝 频道重命名: "229" → "BBC"
-    📝 频道重命名: "230" → "CN卡通频道"
+    📝 频道重命名: "230" → "CN卡通频道(预)"
     📝 频道重命名: "232" → "CNBC Hong Kong"
-    📝 频道重命名: "234" → "Fashion TV(B)"
-    📝 频道重命名: "244" → "DW"
+    📝 频道重命名: "234" → "Fashion TV_国"
     📝 频道重命名: "245" → "TV5Monde"
     📝 频道重命名: "249" → "Sky News"
     📝 频道重命名: "287" → "cinemaworld_台湾_国"
@@ -2728,14 +2656,12 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
     📝 频道重命名: "311" → "Outdoor"
     📝 频道重命名: "321" → "HITS"
     📝 频道重命名: "1446" → "CNN"
-    📝 频道重命名: "1449" → "台视"
-    📝 频道重命名: "1450" → "大爱一台"
     📝 频道重命名: "1453" → "华视"
     📝 频道重命名: "1454" → "公视"
     📝 频道重命名: "1456" → "好消息1台(B)"
     📝 频道重命名: "1460" → "Discovery"
     📝 频道重命名: "1462" → "动物星球"
-    📝 频道重命名: "1464" → "MOMO亲子台"
+    📝 频道重命名: "1464" → "MOMO亲子台(预告)"
     📝 频道重命名: "1468" → "八大综合台"
     📝 频道重命名: "1472" → "东森综合台"
     📝 频道重命名: "1478" → "年代MUCH"
@@ -2747,10 +2673,8 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
     📝 频道重命名: "1497" → "东森财经新闻台"
     📝 频道重命名: "1502" → "东森电影台"
     📝 频道重命名: "1503" → "纬来电影台"
-    📝 频道重命名: "1504" → "龙祥电影台"
     📝 频道重命名: "1505" → "HBO"
-    📝 频道重命名: "1506" → "东森洋片台"
-    📝 频道重命名: "1507" → "AXN"
+    📝 频道重命名: "1507" → "AXN_国"
     📝 频道重命名: "1508" → "好莱坞电影台"
     📝 频道重命名: "1511" → "CINEMAX"
     📝 频道重命名: "1512" → "纬来体育台"
@@ -2768,33 +2692,29 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
     📝 频道重命名: "1538" → "海豚综合台"
     📝 频道重命名: "1539" → "霹雳台湾台"
     📝 频道重命名: "1540" → "十方法界"
-    📝 频道重命名: "1541" → "信大频道"
     📝 频道重命名: "1551" → "高点育乐台"
     📝 频道重命名: "1552" → "冠军梦想台"
     📝 频道重命名: "1554" → "八大娱乐台"
     📝 频道重命名: "1555" → "大立电视台"
     📝 频道重命名: "1559" → "幸福空间居家台"
     📝 频道重命名: "1560" → "Channel News Asia"
-    📝 频道重命名: "1561" → "BloombergTV"
-    📝 频道重命名: "1563" → "大爱二台"
+    📝 频道重命名: "1561" → "Bloomberg TV(E)"
     📝 频道重命名: "1566" → "台视综合台"
     📝 频道重命名: "1568" → "BBC Lifestyle(e2)"
     📝 频道重命名: "1570" → "Warner TV HD"
-    📝 频道重命名: "1573" → "HBO HD"
     📝 频道重命名: "1574" → "HBO Hits"
-    📝 频道重命名: "1575" → "HBO Signature"
-    📝 频道重命名: "1577" → "BlueAntEntertainment"
+    📝 频道重命名: "1575" → "HBO Signature_国"
+    📝 频道重命名: "1577" → "BlueAnt Entertainment"
     📝 频道重命名: "1578" → "靖天日本台"
-    📝 频道重命名: "1579" → "Food Network美食台"
+    📝 频道重命名: "1579" → "Food Network美食台_香港(预)"
     📝 频道重命名: "1580" → "tvN"
     📝 频道重命名: "1582" → "韩国娱乐台KMTV"
     📝 频道重命名: "1584" → "EVE频道_国"
-    📝 频道重命名: "1585" → "Discovery科学"
-    📝 频道重命名: "1586" → "Discovery Asia"
+    📝 频道重命名: "1585" → "Discovery 科学"
+    📝 频道重命名: "1586" → "Discovery Asia_国"
     📝 频道重命名: "1588" → "Travel Channel(Z)"
     📝 频道重命名: "1589" → "Asian Food Network(国)"
     📝 频道重命名: "1592" → "亚洲旅游台"
-    📝 频道重命名: "1593" → "梅迪奇艺术"
     📝 频道重命名: "1594" → "博斯运动二台"
     📝 频道重命名: "1596" → "博斯无限台"
     📝 频道重命名: "1598" → "博斯高球2台(C)"
@@ -2806,8 +2726,6 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
     📝 频道重命名: "1609" → "BBC Earth(e2)"
     📝 频道重命名: "1611" → "靖洋卡通台"
     📝 频道重命名: "1612" → "靖天卡通台"
-    📝 频道重命名: "1760" → "龙华偶像"
-    📝 频道重命名: "1761" → "龙华戏剧"
     📝 频道重命名: "1764" → "龙华经典"
     📝 频道重命名: "1765" → "龙华影剧"
     📝 频道重命名: "1772" → "TVBS精采台"
@@ -2824,12 +2742,11 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
     📝 频道重命名: "1810" → "ELTV"
     📝 频道重命名: "1811" → "靖天国际"
     📝 频道重命名: "1812" → "龙华动画"
-    📝 频道重命名: "1813" → "MTV综合"
+    📝 频道重命名: "1813" → "MTV综合(预告)"
     📝 频道重命名: "1816" → "LUXETV"
     📝 频道重命名: "1817" → "rollor"
     📝 频道重命名: "1818" → "亚洲综合"
     📝 频道重命名: "1819" → "寰宇HD综合"
-    📝 频道重命名: "1820" → "纬来精采"
     📝 频道重命名: "1822" → "八大优频道"
     📝 频道重命名: "1828" → "CatchPlay电影"
     📝 频道重命名: "1829" → "MCE(My Cinema Europe)"
@@ -2837,30 +2754,29 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
     📝 频道重命名: "1840" → "三立戏剧"
     📝 频道重命名: "1845" → "华艺影剧"
     📝 频道重命名: "1846" → "唯心电视"
-    📝 频道重命名: "1853" → "Animax"
-    📝 频道重命名: "1870" → "globaltrekker"
-    📝 频道重命名: "2055" → "凤凰电影"
+    📝 频道重命名: "1853" → "Animax_国"
+    📝 频道重命名: "1870" → "Global Trekker_国2"
     🕐 时区处理: 未指定时区，保持原XML时区不变
     📝 别名映射: 修改ID=True, 修改DisplayName=True
-    📺 新增频道: 138/138
-    📅 新增节目: 7871/7871
+    📺 新增频道: 122/122
+    📅 新增节目: 7017/7017
    ✓ 处理成功
 
 ------------------------------------------------------------
 📡 源 6/12: https://epg.pw/xmltv/epg_MY.xml
-   请求频道: 150 个
-   需要查找: 150 个
+   请求频道: 147 个
+   需要查找: 147 个
     ✓ 下载成功: 11.68 MB
-    🕐 时间范围: 2026-04-30 09:44 到 2026-05-04 09:44 (UTC)
+    🕐 时间范围: 2026-04-30 13:34 到 2026-05-04 13:34 (UTC)
     📊 包含过去 48 小时 + 未来 48 小时
     📝 频道重命名: "1072" → "TV3"
     📝 频道重命名: "1122" → "8TV(MY)"
-    📝 频道重命名: "1835" → "BERNAMA"
+    📝 频道重命名: "1835" → "Bernama TV"
     📝 频道重命名: "2226" → "Astro AEC"
     📝 频道重命名: "3179" → "CNN HD(MY)"
     📝 频道重命名: "3308" → "Star Vijay HD"
     📝 频道重命名: "3325" → "Colors Hindi HD"
-    📝 频道重命名: "3329" → "BBC News HD(MY)"
+    📝 频道重命名: "3329" → "BBC News_新马"
     📝 频道重命名: "3683" → "TV1 HD"
     📝 频道重命名: "370131" → "TV6"
     📝 频道重命名: "370132" → "Berita RTM"
@@ -2935,7 +2851,7 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
     📝 频道重命名: "3478" → "凤凰中文台 HD(MY)"
     📝 频道重命名: "3493" → "TVB-星河台 HD(英)"
     📝 频道重命名: "3509" → "TVBS-亚洲 HD(英)"
-    📝 频道重命名: "3518" → "CCTV4(英)"
+    📝 频道重命名: "3518" → "CCTV4_英"
     📝 频道重命名: "3533" → "Astro Ceria"
     📝 频道重命名: "3575" → "HITS Movies HD(MY2)"
     📝 频道重命名: "3600" → "Nick Jr.(MY)"
@@ -2947,17 +2863,14 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
     📝 频道重命名: "3784" → "Astro Rania"
     📝 频道重命名: "3809" → "Astro Tutor TV SMK HD"
     📝 频道重命名: "3835" → "Sun Music HD(MY)"
-    📝 频道重命名: "3858" → "Bloomberg TV HD"
     📝 频道重命名: "3873" → "CNBC Asia HD"
-    📝 频道重命名: "3885" → "中天亚洲台 HD(英)"
+    📝 频道重命名: "3885" → "中天亚洲台_英"
     📝 频道重命名: "3895" → "TVB Classic HD(MY)"
-    📝 频道重命名: "3906" → "CGTN HD"
     📝 频道重命名: "3920" → "TVB-娱乐新闻台(英)"
     📝 频道重命名: "3929" → "NHK World Premium(MY)"
     📝 频道重命名: "3942" → "TVS"
     📝 频道重命名: "3958" → "Astro Awani"
     📝 频道重命名: "3968" → "Lifetime HD(MY)"
-    📝 频道重命名: "4019" → "BBC Lifestyle HD(MY)"
     📝 频道重命名: "4030" → "BBC Earth(MY)"
     📝 频道重命名: "4057" → "SHOWCASE MOVIES"
     📝 频道重命名: "4100" → "Astro Arena 2"
@@ -2982,7 +2895,7 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
     📝 频道重命名: "397402" → "Astro Sports Plus"
     📝 频道重命名: "397403" → "Astro Grandstand"
     📝 频道重命名: "400446" → "Blippi & Friends"
-    📝 频道重命名: "461591" → "CGTN-英文纪录(英2)"
+    📝 频道重命名: "461591" → "CGTN英文纪录(英2)"
     📝 频道重命名: "517641" → "Astro Showtime"
     📝 频道重命名: "524198" → "Astro Sports Plus 2"
     📝 频道重命名: "535446" → "Astro FAM Time"
@@ -2990,23 +2903,23 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
     📝 频道重命名: "1584" → "Al-Hijrah(MY)"
     🕐 时区处理: ChangeTimezone=Y → 强制将时区改为 +0800（时间数值不变）
     📝 别名映射: 修改ID=True, 修改DisplayName=True
-    ⚠ 未找到频道: 510886
-    ⚠ 未找到频道: 491618
-    ⚠ 未找到频道: 411253
-    ⚠ 未找到频道: 411241
-    ⚠ 未找到频道: 411308
-    ⚠ 未找到频道: 428785
-    ⚠ 未找到频道: 535447
-    ⚠ 未找到频道: 411251
-    ⚠ 未找到频道: 411240
-    ⚠ 未找到频道: 411236
-    ⚠ 未找到频道: 411231
-    ⚠ 未找到频道: 411256
     ⚠ 未找到频道: 478717
+    ⚠ 未找到频道: 411240
+    ⚠ 未找到频道: 411256
+    ⚠ 未找到频道: 411253
+    ⚠ 未找到频道: 491618
+    ⚠ 未找到频道: 510886
+    ⚠ 未找到频道: 411231
+    ⚠ 未找到频道: 411308
+    ⚠ 未找到频道: 411236
     ⚠ 未找到频道: 491619
+    ⚠ 未找到频道: 428785
     ⚠ 未找到频道: 411257
-    📺 新增频道: 135/150
-    📅 新增节目: 8645/19765
+    ⚠ 未找到频道: 411251
+    ⚠ 未找到频道: 535447
+    ⚠ 未找到频道: 411241
+    📺 新增频道: 132/147
+    📅 新增节目: 9033/19387
    ✓ 处理成功
 
 ------------------------------------------------------------
@@ -3014,42 +2927,40 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
    请求频道: 1 个
    需要查找: 1 个
     ✓ 下载成功: 19.29 MB
-    🕐 时间范围: 2026-04-30 09:44 到 2026-05-04 09:44 (UTC)
+    🕐 时间范围: 2026-04-30 13:34 到 2026-05-04 13:34 (UTC)
     📊 包含过去 48 小时 + 未来 48 小时
     📝 频道重命名: "368371" → "天映经典电影_香港"
     🕐 时区处理: ChangeTimezone=Y → 强制将时区改为 +0800（时间数值不变）
     📝 别名映射: 修改ID=True, 修改DisplayName=True
     📺 新增频道: 1/1
-    📅 新增节目: 36/103
+    📅 新增节目: 38/103
    ✓ 处理成功
 
 ------------------------------------------------------------
 📡 源 8/12: https://epg.pw/xmltv/epg_SG.xml
-   请求频道: 206 个
-   需要查找: 206 个
+   请求频道: 196 个
+   需要查找: 196 个
     ✓ 下载成功: 20.65 MB
-    🕐 时间范围: 2026-04-30 09:44 到 2026-05-04 09:44 (UTC)
+    🕐 时间范围: 2026-04-30 13:34 到 2026-05-04 13:34 (UTC)
     📊 包含过去 48 小时 + 未来 48 小时
     📝 频道重命名: "369717" → "mio Sports 2(新加坡)"
     📝 频道重命名: "369719" → "ROCK Entertainment HD(新加坡2)"
     📝 频道重命名: "369720" → "TLC (新加坡)"
-    📝 频道重命名: "369722" → "NHK World Premium(新加坡)"
     📝 频道重命名: "369726" → "France 24 English_新加坡"
     📝 频道重命名: "369727" → "ROCK Action HD(新加坡2)"
     📝 频道重命名: "369728" → "ONE HD_新马_ 国英"
-    📝 频道重命名: "369729" → "BBC News(新加坡)"
     📝 频道重命名: "369730" → "天映经典电影_新加坡非马"
     📝 频道重命名: "369734" → "KBS World_英(新加坡)"
     📝 频道重命名: "369737" → "TRACE Sport Stars HD(新加坡2)"
     📝 频道重命名: "369740" → "HITS NOW HD(新加坡)"
     📝 频道重命名: "369742" → "Citra Drama (HD)(新加坡)"
-    📝 频道重命名: "369744" → "Discovery Channel (HD)(新加坡)"
+    📝 频道重命名: "369744" → "Discovery Channel HD(新加坡)"
     📝 频道重命名: "369745" → "Crime + Investigation™ (HD)(新加坡)"
     📝 频道重命名: "369746" → "SET (HINDI)(新加坡)"
     📝 频道重命名: "369748" → "CM+(新加坡)"
     📝 频道重命名: "369750" → "beIN Sports HD(新加坡)"
     📝 频道重命名: "369757" → "Sky News HD_新加坡"
-    📝 频道重命名: "369758" → "HBO Signature HD_国 (新加坡)"
+    📝 频道重命名: "369758" → "HBO Signature HD_英 (新加坡)"
     📝 频道重命名: "369760" → "AFN(新加坡)"
     📝 频道重命名: "369765" → "HISTORY™ (HD)(新加坡)"
     📝 频道重命名: "369766" → "Deutsche Welle (English)(新加坡)"
@@ -3059,10 +2970,10 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
     📝 频道重命名: "369774" → "Jia Le Channel (HD)(新加坡)"
     📝 频道重命名: "369779" → "HGTV HD(新加坡-英)"
     📝 频道重命名: "369780" → "Cartoon Network (HD)(新加坡)"
-    📝 频道重命名: "369783" → "凤凰资讯台(新加坡)"
+    📝 频道重命名: "369783" → "凤凰资讯台_新加坡_国"
     📝 频道重命名: "369785" → "Animal Planet HD(新加坡)"
     📝 频道重命名: "369786" → "HBO Family HD(新加坡)"
-    📝 频道重命名: "369789" → "中天亚洲台(国)(新加坡)"
+    📝 频道重命名: "369789" → "中天亚洲台_新加坡_国"
     📝 频道重命名: "369790" → "Premier Sports(A)(新加坡)"
     📝 频道重命名: "369796" → "TVB-星河台_新加坡_中英"
     📝 频道重命名: "369802" → "mio Sports 3(新加坡)"
@@ -3073,30 +2984,28 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
     📝 频道重命名: "369812" → "STAR Bharat(新加坡)"
     📝 频道重命名: "369813" → "CNBC Asia(新加坡)"
     📝 频道重命名: "369814" → "STAR Gold(新加坡)"
-    📝 频道重命名: "369816" → "CBeebies (HD)(新加坡_英)"
+    📝 频道重命名: "369816" → "CBeebies HD)(新加坡_英)"
     📝 频道重命名: "369818" → "tvN HD(国)(新加坡)"
     📝 频道重命名: "369819" → "天映经典电影_非新非马"
     📝 频道重命名: "369824" → "Drama Channel(新加坡)"
     📝 频道重命名: "369828" → "ZEE TV(新加坡)"
     📝 频道重命名: "369832" → "Lifetime HD(新加坡)"
     📝 频道重命名: "369833" → "ABC Australia(新加坡)"
-    📝 频道重命名: "369836" → "NHK World - Japan(新加坡)"
+    📝 频道重命名: "369836" → "NHK World-Japan(新加坡)"
     📝 频道重命名: "369839" → "France 24 French_新加坡"
-    📝 频道重命名: "369840" → "HBO Hits HD(新加坡)"
+    📝 频道重命名: "369840" → "HBO Hits HD_国(新加坡)"
     📝 频道重命名: "369844" → "STAR Plus(新加坡)"
     📝 频道重命名: "369846" → "SONY MAX(新加坡)"
     📝 频道重命名: "369849" → "SAB TV(新加坡)"
     📝 频道重命名: "369851" → "Hits HD(新加坡)"
-    📝 频道重命名: "412088" → "HBO HD(新加坡)"
+    📝 频道重命名: "412088" → "HBO HD_新加坡_英"
     📝 频道重命名: "412089" → "BBC Lifestyle(新加坡)"
     📝 频道重命名: "412091" → "ROCK Entertainment(新加坡)"
-    📝 频道重命名: "412092" → "Bloomberg TV HD(新加坡2)"
-    📝 频道重命名: "412093" → "HBO Hits HD(新加坡2)"
     📝 频道重命名: "412094" → "Sun Music(新加坡)"
     📝 频道重命名: "412095" → "DreamWorks Channel HD(新加坡)"
     📝 频道重命名: "412096" → "Cinemax HD(新加坡)"
     📝 频道重命名: "412097" → "Vannathirai(新加坡)"
-    📝 频道重命名: "412098" → "BBC World News HD(新加坡)"
+    📝 频道重命名: "412098" → "BBC World News(新加坡)"
     📝 频道重命名: "412104" → "Citra Entertainment(新加坡)"
     📝 频道重命名: "412106" → "TVB-星河台_新加坡_英"
     📝 频道重命名: "412112" → "HBO Signature HD(新加坡)"
@@ -3111,7 +3020,7 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
     📝 频道重命名: "412136" → "Nick Jr.(新加坡)"
     📝 频道重命名: "412141" → "Vijay TV HD(新加坡)"
     📝 频道重命名: "412142" → "Dragon TV(新加坡)"
-    📝 频道重命名: "412145" → "凤凰资讯台(新加坡2)"
+    📝 频道重命名: "412145" → "凤凰资讯台_新加坡_英"
     📝 频道重命名: "412147" → "Arirang TV(新加坡)"
     📝 频道重命名: "412148" → "Preview Channel(新加坡)"
     📝 频道重命名: "412153" → "HGTV(新加坡)"
@@ -3143,7 +3052,7 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
     📝 频道重命名: "459681" → "StarHub(新加坡)"
     📝 频道重命名: "484245" → "Outdoor Channel(新加坡)"
     📝 频道重命名: "485760" → "HITS NOW(新加坡)"
-    📝 频道重命名: "491151" → "东森亚洲卫视 (国)(新加坡)"
+    📝 频道重命名: "491151" → "东森亚洲卫视_新加坡_ 国"
     📝 频道重命名: "491154" → "GMA Life TV"
     📝 频道重命名: "491157" → "CNN International(新加坡)"
     📝 频道重命名: "491159" → "ANIPLUS HD(新加坡)"
@@ -3160,21 +3069,19 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
     📝 频道重命名: "492836" → "Hub Sports 3"
     📝 频道重命名: "492850" → "AXN HD(新加坡)"
     📝 频道重命名: "492851" → "Hub VV Drama HD(新加坡)"
-    📝 频道重命名: "492856" → "东森亚洲卫视 (英)(新加坡)"
+    📝 频道重命名: "492856" → "东森亚洲卫视_新加坡_ 英"
     📝 频道重命名: "492858" → "Food ON(新加坡)"
     📝 频道重命名: "492860" → "SPL CH01(新加坡)"
-    📝 频道重命名: "492861" → "HGTV HD(新加坡 英2)"
     📝 频道重命名: "492863" → "BBC Lifestyle HD(新加坡)"
     📝 频道重命名: "492864" → "Channel U(国+英)"
     📝 频道重命名: "492865" → "Cartoon Network(新加坡)"
     📝 频道重命名: "492866" → "Crime + Investigation HD(新加坡)"
     📝 频道重命名: "492869" → "Astro Sensasi HD(新加坡)"
     📝 频道重命名: "492870" → "ONE (Malay)(新加坡)"
-    📝 频道重命名: "492871" → "BBC News HD(新加坡)"
     📝 频道重命名: "492878" → "TG Junior(新加坡)"
-    📝 频道重命名: "492879" → "Nickelodeon Asia HD(新加坡)"
+    📝 频道重命名: "492879" → "Nickelodeon Asia HD_英(新加坡)"
     📝 频道重命名: "492880" → "W-Sport(新加坡)"
-    📝 频道重命名: "492883" → "中天亚洲台(英)(新加坡)"
+    📝 频道重命名: "492883" → "中天亚洲台_新加坡_英2"
     📝 频道重命名: "492892" → "BBC Earth HD(新加坡)"
     📝 频道重命名: "492894" → "Channel 8(国+英)"
     📝 频道重命名: "492895" → "Hub E City HD(新加坡)"
@@ -3186,18 +3093,15 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
     📝 频道重命名: "492905" → "LIVE 1(新加坡)"
     📝 频道重命名: "492915" → "Karisma(新加坡)"
     📝 频道重命名: "493279" → "TestChannel 996(新加坡)"
-    📝 频道重命名: "495472" → "Fear Factor(新加坡)"
     📝 频道重命名: "495473" → "Deal or No Deal(新加坡)"
     📝 频道重命名: "501125" → "北京国际频道"
     📝 频道重命名: "501126" → "WION(新加坡)"
-    📝 频道重命名: "501127" → "ABS-CBN News Channel(新加坡)"
-    📝 频道重命名: "502440" → "CGTN-英文纪录(新加坡)"
+    📝 频道重命名: "502440" → "CGTN英文纪录(新加坡)"
     📝 频道重命名: "503775" → "Hub Sports 4"
     📝 频道重命名: "503776" → "Hub Sports 5"
     📝 频道重命名: "507899" → "Master Chef(新加坡)"
     📝 频道重命名: "512067" → "CCTV娱乐"
     📝 频道重命名: "512068" → "NOW Jelli (HD)(新加坡)"
-    📝 频道重命名: "512070" → "上海东方国际(新加坡)"
     📝 频道重命名: "513276" → "Channel 8(国)"
     📝 频道重命名: "513280" → "Channel U(国)"
     📝 频道重命名: "516576" → "SPOTV (HD)(新加坡)"
@@ -3211,7 +3115,6 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
     📝 频道重命名: "522558" → "Zoom TV(新加坡)"
     📝 频道重命名: "524981" → "Hub Sports 7"
     📝 频道重命名: "524983" → "beIN SPORTS 4 HD(新加坡)"
-    📝 频道重命名: "524984" → "beIN SPORTS 5 HD(新加坡)"
     📝 频道重命名: "524985" → "beIN SPORTS 3 HD(新加坡)"
     📝 频道重命名: "524986" → "Hub Sports 6"
     📝 频道重命名: "524990" → "Cricbuzz 2(新加坡)"
@@ -3221,33 +3124,33 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
     📝 频道重命名: "535445" → "That's 70s(新加坡)"
     🕐 时区处理: ChangeTimezone=Y → 强制将时区改为 +0800（时间数值不变）
     📝 别名映射: 修改ID=True, 修改DisplayName=True
-    ⚠ 未找到频道: 535294
-    ⚠ 未找到频道: 535552
-    ⚠ 未找到频道: 535531
-    ⚠ 未找到频道: 523496
+    ⚠ 未找到频道: 535568
+    ⚠ 未找到频道: 492911
+    ⚠ 未找到频道: 535488
+    ⚠ 未找到频道: 535492
     ⚠ 未找到频道: 520018
     ⚠ 未找到频道: 492912
-    ⚠ 未找到频道: 492911
-    ⚠ 未找到频道: 535515
-    ⚠ 未找到频道: 535582
-    ⚠ 未找到频道: 535568
-    ⚠ 未找到频道: 535487
-    ⚠ 未找到频道: 535553
-    ⚠ 未找到频道: 535533
-    ⚠ 未找到频道: 535492
-    ⚠ 未找到频道: 535488
-    ⚠ 未找到频道: 492913
     ⚠ 未找到频道: 521905
-    📺 新增频道: 189/206
-    📅 新增节目: 14157/29355
+    ⚠ 未找到频道: 535552
+    ⚠ 未找到频道: 492913
+    ⚠ 未找到频道: 535487
+    ⚠ 未找到频道: 535533
+    ⚠ 未找到频道: 535531
+    ⚠ 未找到频道: 535553
+    ⚠ 未找到频道: 535294
+    ⚠ 未找到频道: 535515
+    ⚠ 未找到频道: 523496
+    ⚠ 未找到频道: 535582
+    📺 新增频道: 179/196
+    📅 新增节目: 14283/27758
    ✓ 处理成功
 
 ------------------------------------------------------------
 📡 源 9/12: https://epg.pw/xmltv/epg_US.xml
-   请求频道: 668 个
-   需要查找: 668 个
+   请求频道: 662 个
+   需要查找: 662 个
     ✓ 下载成功: 148.18 MB
-    🕐 时间范围: 2026-04-30 09:44 到 2026-05-04 09:44 (UTC)
+    🕐 时间范围: 2026-04-30 13:34 到 2026-05-04 13:34 (UTC)
     📊 包含过去 48 小时 + 未来 48 小时
     📝 频道重命名: "464745" → "HBO East(US)"
     📝 频道重命名: "464746" → "BBC News (North America) HD(US)"
@@ -3257,7 +3160,7 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
     📝 频道重命名: "464751" → "HSN Home Shopping Network HD(US)"
     📝 频道重命名: "464753" → "Bravo HD(US)"
     📝 频道重命名: "464754" → "beIN Sports USA HD(US)"
-    📝 频道重命名: "464755" → "Boomerang(US)"
+    📝 频道重命名: "464755" → "Boomerang TV(US)(F)"
     📝 频道重命名: "464756" → "RFD TV HD(US)"
     📝 频道重命名: "464758" → "DZMM Radyo Patrol(US)"
     📝 频道重命名: "464759" → "Rai Premium(US)"
@@ -3377,7 +3280,6 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
     📝 频道重命名: "464904" → "NBC Sports California Outer Market(US)"
     📝 频道重命名: "464905" → "MSG Plus(US)"
     📝 频道重命名: "464906" → "Daystar TV Network HD [CHARTER](US)"
-    📝 频道重命名: "464907" → "NHK 1 HD(US)"
     📝 频道重命名: "464908" → "Once(US)"
     📝 频道重命名: "464909" → "ATN Movies(US)"
     📝 频道重命名: "464910" → "NBC Sports Boston HD(US)"
@@ -3400,7 +3302,7 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
     📝 频道重命名: "464932" → "Destination America HD(US)"
     📝 频道重命名: "464933" → "Weather Nation TV HD(US)"
     📝 频道重命名: "464934" → "SBS Plus(US)"
-    📝 频道重命名: "464936" → "CTI Zhong Tian Channel(US)"
+    📝 频道重命名: "464936" → "中天 Channel(US)"
     📝 频道重命名: "464937" → "CBS Sports Network HD(US)"
     📝 频道重命名: "464938" → "Spectrum News+(US)"
     📝 频道重命名: "464941" → "CBS News National Stream(US)"
@@ -3464,7 +3366,6 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
     📝 频道重命名: "465011" → "Sur Peru(US)"
     📝 频道重命名: "465012" → "Magnolia Network HD(US)"
     📝 频道重命名: "465013" → "NBC Sports Bay Area Plus(US)"
-    📝 频道重命名: "465015" → "Big Ten Network Overflow HD(US)"
     📝 频道重命名: "465017" → "MGM Presents: Westerns(US)"
     📝 频道重命名: "465018" → "ReelzChannel HD(US)"
     📝 频道重命名: "465019" → "Bang U(US)"
@@ -3485,7 +3386,7 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
     📝 频道重命名: "465037" → "NBC Sports Philadelphia HD(US)"
     📝 频道重命名: "465038" → "Nicktoons(US)"
     📝 频道重命名: "465039" → "NewsNation(US)"
-    📝 频道重命名: "465040" → "Crime and Investigation Network HD(US)"
+    📝 频道重命名: "465040" → "Crime + Investigation Network HD(US)"
     📝 频道重命名: "465041" → "HBO2 HD(US)"
     📝 频道重命名: "465042" → "Smithsonian HD Network(US)"
     📝 频道重命名: "465043" → "NBC Sports Bay Area Outer Market(US)"
@@ -3580,7 +3481,7 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
     📝 频道重命名: "465157" → "Honvietv(US)"
     📝 频道重命名: "465158" → "AMC+(US)"
     📝 频道重命名: "465160" → "EarthX(US)"
-    📝 频道重命名: "465161" → "ABS-CBN News Channel(US)"
+    📝 频道重命名: "465161" → "ABS-CBN News Channel"
     📝 频道重命名: "465162" → "JBS(US)"
     📝 频道重命名: "465163" → "NBC Sports Bay Area HD(US)"
     📝 频道重命名: "465164" → "Golden Eagle Broadcasting(US)"
@@ -3597,7 +3498,6 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
     📝 频道重命名: "465178" → "The First(US)"
     📝 频道重命名: "465179" → "World Harvest Television(US)"
     📝 频道重命名: "465180" → "Teen Nick(US)"
-    📝 频道重命名: "465181" → "DirecTV Sports Mix(US)"
     📝 频道重命名: "465182" → "Mega TV HD(US)"
     📝 频道重命名: "465184" → "Bravo (Pacific)(US)"
     📝 频道重命名: "465185" → "The Discovery Channel HD (Pacific)(US)"
@@ -3609,7 +3509,6 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
     📝 频道重命名: "465192" → "Danbi Christian TV(US)"
     📝 频道重命名: "465193" → "AccuWeather HD(US)"
     📝 频道重命名: "465194" → "GEMS(US)"
-    📝 频道重命名: "465195" → "DIRECTV Sports MixHD(US)"
     📝 频道重命名: "465196" → "Turner Classic Movies HD(US)"
     📝 频道重命名: "465197" → "NFL SUNDAY TICKET RED ZONE(US)"
     📝 频道重命名: "465198" → "ESPN HD(US)"
@@ -3688,7 +3587,6 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
     📝 频道重命名: "465287" → "Rai Radio 1(US)"
     📝 频道重命名: "465288" → "Altitude Sports(US)"
     📝 频道重命名: "465290" → "Lifetime HD(US)"
-    📝 频道重命名: "465291" → "FS1 Fox Sports 1 HD(US)"
     📝 频道重命名: "465292" → "Bounce TV(US)"
     📝 频道重命名: "465293" → "Starz in Black HD(US)"
     📝 频道重命名: "465294" → "Investigation Discovery HD(US)"
@@ -3744,7 +3642,6 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
     📝 频道重命名: "465352" → "EWTN - Eternal Word TV Network HD(US)"
     📝 频道重命名: "465353" → "BINGE-TV(US)"
     📝 频道重命名: "465354" → "ION TV HD(US)"
-    📝 频道重命名: "465355" → "FS2 Fox Sports 2 HD(US)"
     📝 频道重命名: "465357" → "FXX HD(US)"
     📝 频道重命名: "465358" → "World Fishing Network HD (US)(US)"
     📝 频道重命名: "465360" → "Nuestra Visión(US)"
@@ -3919,8 +3816,8 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
     📝 频道重命名: "530871" → "Black Voices(US)"
     🕐 时区处理: 未指定时区，保持原XML时区不变
     📝 别名映射: 修改ID=True, 修改DisplayName=True
-    📺 新增频道: 668/668
-    📅 新增节目: 42408/44766
+    📺 新增频道: 662/662
+    📅 新增节目: 44426/44574
    ✓ 处理成功
 
 ------------------------------------------------------------
@@ -3928,10 +3825,11 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
    请求频道: 7 个
    需要查找: 7 个
     ✓ 下载成功: 1.54 MB
-    🕐 时间范围: 2026-04-30 09:44 到 2026-05-04 09:44 (UTC)
+    🕐 时间范围: 2026-04-30 13:34 到 2026-05-04 13:34 (UTC)
     📊 包含过去 48 小时 + 未来 48 小时
-    📝 频道重命名: "明珠台" → "TVB-明珠台"
-    📝 频道重命名: "BBC Earth" → "BBC Earth(国)"
+    📝 频道重命名: "明珠台" → "TVB明珠台"
+    📝 频道重命名: "BBC Earth" → "BBC Earth_国4"
+    📝 频道重命名: "BBC Lifestyle" → "BBC Lifestyle_国5"
     📝 频道重命名: "Now Sports 精選" → "Now Sports精选"
     📝 频道重命名: "商業電台 雷霆881" → "商业电台 雷霆881"
     📝 频道重命名: "商業電台 AM864" → "商业电台 AM864"
@@ -3939,7 +3837,7 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
     🕐 时区处理: 未指定时区，保持原XML时区不变
     📝 别名映射: 修改ID=True, 修改DisplayName=True
     📺 新增频道: 7/7
-    📅 新增节目: 389/466
+    📅 新增节目: 368/466
    ✓ 处理成功
 
 ------------------------------------------------------------
@@ -3947,7 +3845,7 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
    请求频道: 102 个
    需要查找: 102 个
     ✓ 下载成功: 1.61 MB
-    🕐 时间范围: 2026-04-30 09:44 到 2026-05-04 09:44 (UTC)
+    🕐 时间范围: 2026-04-30 13:34 到 2026-05-04 13:34 (UTC)
     📊 包含过去 48 小时 + 未来 48 小时
     📝 频道重命名: "62442f28afe626000747f195" → "I Jefferson"
     📝 频道重命名: "608aa4a4cc92820007b663af" → "Pluto TV Film Romantici"
@@ -4054,17 +3952,17 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
     🕐 时区处理: 未指定时区，保持原XML时区不变
     📝 别名映射: 修改ID=True, 修改DisplayName=True
     📺 新增频道: 102/102
-    📅 新增节目: 3136/3140
+    📅 新增节目: 3127/3127
    ✓ 处理成功
 
 ------------------------------------------------------------
 📡 源 12/12: https://raw.githubusercontent.com/kiekostui/rakuten_tv_it/refs/heads/main/epg_rakuten_it.xml
    请求频道: 46 个
    需要查找: 46 个
-    ✓ 下载成功: 2.27 MB
-    🕐 时间范围: 2026-04-30 09:44 到 2026-05-04 09:44 (UTC)
+    ✓ 下载成功: 2.26 MB
+    🕐 时间范围: 2026-04-30 13:34 到 2026-05-04 13:34 (UTC)
     📊 包含过去 48 小时 + 未来 48 小时
-    📝 频道重命名: "france-24-en" → "France 24 English"
+    📝 频道重命名: "france-24-en" → "France 24 English_英"
     📝 频道重命名: "africanews-eng" → "Africanews English"
     📝 频道重命名: "bloomberg-tv-plus" → "Bloomberg TV Plus"
     📝 频道重命名: "bloomberg-originals-new" → "Bloomberg Originals New"
@@ -4113,16 +4011,16 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
     🕐 时区处理: 未指定时区，保持原XML时区不变
     📝 别名映射: 修改ID=True, 修改DisplayName=True
     📺 新增频道: 46/46
-    📅 新增节目: 2961/2961
+    📅 新增节目: 2981/2981
    ✓ 处理成功
 
 ============================================================
 📝 生成最终XML文件...
 🔤 应用智能排序（按display-name，数字-字母-汉字，不区分大小写）...
 ✓ XML文件: guide.xml
-  大小: 59.41 MB
-  频道数: 2959
-  节目数: 197422
+  大小: 59.07 MB
+  频道数: 2849
+  节目数: 194008
 
 📺 频道排序示例（前10个）:
     1. 4K健身 (ID: 4K健身)
@@ -4137,8 +4035,8 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
    10. 8TV(MY) (ID: 8TV(MY))
 
 🗜️ 压缩为GZIP格式...
-  ✓ 压缩完成: 6.34 MB (89.3% 压缩率)
-  ✓ 压缩率: 89.3%
+  ✓ 压缩完成: 6.36 MB (89.2% 压缩率)
+  ✓ 压缩率: 89.2%
 
 🧹 清理临时文件...
 ✓ 清理完成
@@ -4146,10 +4044,10 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
 ============================================================
 ✅ EPG合并完成
 ============================================================
-结束时间: 2026-05-02 17:45:21 (北京时间)
-总耗时: 42.49 秒
+结束时间: 2026-05-02 21:35:25 (北京时间)
+总耗时: 40.56 秒
 成功处理: 12/12 个源
-成功处理: 2959 个频道，197422 条节目
+成功处理: 2849 个频道，194008 条节目
 输出文件: guide.xml 和 guide.xml.gz
 时间范围: 过去 48 小时 + 未来 48 小时
 ============================================================

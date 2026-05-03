@@ -5,7 +5,7 @@ CCTV-1 综合	CCTV1
 CCTV-2 财经	CCTV2
 CCTV-3 综艺	CCTV3
 CCTV-4 中文国际	CCTV4
-CCTV-4 中文国际欧洲	CCTV4欧洲
+CCTV-4 中文国际欧洲	CCTV4欧洲(回看)
 CCTV-5 体育	CCTV5
 CCTV-5+ 体育赛事	CCTV5+
 CCTV-6 电影	CCTV6
@@ -39,7 +39,6 @@ CCTV-央视足球
 CGTN英语	CGTN(国)
 CGTN英文记录	CGTN英文纪录(国)
 CGTN法语
-CGTN西班牙语
 湖南卫视
 浙江卫视
 北京卫视4K	北京卫视4K(回看)
@@ -223,26 +222,24 @@ TRACEUrban	Trace Urban_国
 
 https://raw.githubusercontent.com/zzq1234567890/epg/refs/heads/main/swepg.xml.gz
 ChangeTimezone=Y
-CCTV-1香港
-CCTV-4	CCTV-4(英)
-CCTV-4香港
-cctv4亚洲	CCTV-4亚洲
-CCTV4美洲	CCTV-4美洲
-CCTV4欧洲	CCTV-4欧洲
-cctv8k	CCTV-8k
+CCTV-4	CCTV4_英2
+CCTV-4香港	CCTV4香港
+CCTV4美洲	CCTV4美洲
+CCTV4欧洲	CCTV4欧洲(预告)
+cctv8k	CCTV8K
 cctv4k	CCTV4K
 cctv风云剧场	CCTV-风云剧场(swepg)
 cctv风云足球	CCTV-风云足球
 cctv台球	CCTV-台球
-中央电视台新闻频道香港	CCTV-13香港
-中央电视台综合频道 (港澳版) (免费)	CCTV-1 (港澳版)
+中央电视台新闻频道香港	CCTV13香港
+中央电视台综合频道 (港澳版) (免费)	CCTV1(港澳版)
 中国中央电视台戏曲频道 (免费)	CCTV-戏曲
 CGTN	CGTN(英)
-中国环球电视网香港	CGTN香港
-CGTN (中国环球电视网)记录频道 (免费)	CGTN英文纪录_中
+中国环球电视网香港	CGTN_香港_英
+CGTN (中国环球电视网)记录频道 (免费)	CGTN英文纪录_国
 cgtn阿拉伯语	CGTN阿拉伯语
 cgtn俄语	CGTN俄语(国)
-cgtn西班牙语	CGTN西班牙语(swepg)
+cgtn西班牙语	CGTN西班牙语
 CHC 家庭影院	CHC家庭影院
 河北卫视
 北京卫视
@@ -443,7 +440,6 @@ tvN Movies	tvN Movies(英)
 tvN香港
 tvN有线
 AMC 电影台
-AMC电影
 amc电影台
 粤语片台
 周星驰台
@@ -937,7 +933,6 @@ elta体育max 8	爱尔达体育MAX8台
 罪案侦查频道	罪案侦缉频道_国2
 罪案侦缉频道	罪案侦缉频道_国
 罪案侦辑频道	罪案侦缉频道_英
-韩国阿里郎	Arirang(E)
 韩国娱乐KMTV	韩国娱乐台KMTV(回看)
 韩国娱乐台 KMTV	韩国娱乐台KMTV(B)
 中华一番(中文版)
@@ -946,15 +941,14 @@ elta体育max 8	爱尔达体育MAX8台
 早餐中国
 Astro_Boo	Astro Boo
 Astro Cricket
-Astro_First_HD	Astro First HD
+Astro_First_HD	Astro First
 Astro_Golf	Astro Golf
 Astro_Premier_League_3	Astro Premier League 3
 Astro Sensasi HD
-Astro_Showcase	Astro Showcase2
 Astro_Sports_Plus_3	Astro Sports Plus 3(swepg)
 Astro_Sports_UHD_805	Astro Sports UHD 805
 Astro_Thangathirai	Astro Thangathirai
-Astro Warna HD
+Astro Warna HD	Astro Warna
 CCM	天映经典电影_印尼_英
 Celebrities TV
 Celestial_Classic_Movies	天映经典电影_英(swepg)
@@ -1010,69 +1004,58 @@ Adithya
 ADITHYA TV
 Al Quran Al Kareem
 ANC	ANC(新加坡)
-ANIMAX	ANIMAX(swepg)
-Animax HD	Animax HD(新加坡)
-Animax香港
+Animax HD	Animax(新加坡)
+Animax香港	Animax_香港
 ANTV
 Arirang
-Asian Food Network 亚洲美食频道	Asian Food Network(MY 中)
+Asian Food Network 亚洲美食频道	Asian Food Network_马来_国
 Asianet
 Asianet Movies
 ASMR行车纪录
-AXN	AXN(swepg)
 AXN HD	AXN HD(swepg)
-AXN_HD	AXN HD(英)
-BBC_Brit_HD	BBC Brit HD
+BBC_Brit_HD	BBC Brit
 BBC EARTH	BBC Earth(国1)
 BBC_Earth	BBC Earth(英swepg)
 BBC Earth	BBC Earth(英)
 BBC Earth香港
 BBC_First_HD	BBC First
-BBC LIFESTYLE	BBC Lifestyle(国)
-BBC Lifestyle HD	BBC Lifestyle HD(swepg英)
-BBC Lifestyle香港
-BBC News
-BBC News HD	BBC News HD(swepg1)
-BBC News香港
+BBC LIFESTYLE	BBC Lifestyle_香港
+BBC News	BBC News (North America)
+BBC News HD	BBC News_香港
 BBCEarth	BBC Earth(国2)
 BBCNEWS	BBC NEWS(国1)
 bb快报
-beIN Sports 1 HD
-beIN SPORTS 1香港
+beIN SPORTS 1香港	beIN Sports-1_香港
 beIN_SPORTS_2	beIN SPORTS 2(swepg1)
-beIN Sports 2	beIN Sports 2(swepg2)
-beIN Sports 2 HD
-beIN SPORTS 2香港
-beIN_SPORTS_3	beIN SPORTS 3(swepg1)
-beIN Sports 3 HD
-beIN SPORTS 3香港
-beIN SPORTS 4
-beIN SPORTS 4香港
-beIN SPORTS 6香港
-beIN SPORTS RUGBY香港
-Bloomberg	Bloomberg TV(D)
+beIN Sports 2	beIN Sports-2(swepg2)
+beIN SPORTS 2香港	beIN Sports-2香港
+beIN_SPORTS_3	beIN Sports-3(swepg1)
+beIN Sports 3 HD	beIN Sports-3 HD
+beIN SPORTS 3香港	beIN Sports-3香港
+beIN SPORTS 4	beIN Sports-4
+beIN SPORTS 4香港	beIN Sports- 4香港
+beIN SPORTS 6香港	beIN Sports-6香港
+beIN SPORTS RUGBY香港	beIN Sports-RUGBY香港
 Bloomberg News
 Bloomberg Television香港	Bloomberg TV香港
 Bloomberg_TV_HD	Bloomberg TV HD(swepg)
-BloombergTV	Bloomberg TV(swepg)
 BTV
 BUDDY STARS
-Cartoon Network
 Cartoon Network香港
-CARTOONITO HD
-CATCH PLAY电影台
-CatchPlay HD
+CARTOONITO HD	CARTOONITO
+CATCH PLAY电影台	CATCHPLAY电影台(B)
+CatchPlay HD	CatchPlay HD_国(B)
 CATCHPLAY电影台
 Cbeebies	Cbeebies(swepg1)
-CBeebies HD	CBeebies HD(swepg1)
+CBeebies HD	CBeebies HD_英1
 Cbeebies HD	Cbeebies HD_国(B)
 CBeebies香港
 CI 罪案侦查频道
 CINEEDGE
 Cinema One Global
-cinemalworld世界电影频道有线
-CinemaWorld频道	CinemaWorld_新加坡_国
-CINEMAX HD	CINEMAX HD_国
+cinemalworld世界电影频道有线	cinemaworld_台湾_国
+CinemaWorld频道	CinemaWorld_台湾_国2
+CINEMAX HD	Cinemax HD_国
 CINEMAX香港
 CINEMAX有线
 Citra Entertainment
@@ -1086,17 +1069,15 @@ CNA
 CNBC
 CNBC Asia 财经台
 CNBC HD	CNBC HD(新加坡)
-CNBC香港
 CNEX纪实频道
 CNN HD	CNN HD(swepg)
 CNN International
 CNN 国际新闻网络香港
-CNNI HD
 CNN国际新闻台
 CNN头条新闻台(HLN)
 CN卡通频道	CN卡通频道(回)
 COLORS
-COLORS Tamil HD	Colors Tamil HD(MY)
+COLORS Tamil HD	Colors Tamil
 Concerto (免费)	Concerto
 Crime + Investigation HD
 Crime Investigation
@@ -1277,9 +1258,8 @@ http://epg.51zmt.top:8000/e.xml.gz
 
 
 https://liliu.serv00.net/epg/cn.xml.gz
-CCTV4美洲	CCTV4美洲(CN)
 CGTN	CGTN(国)
-CGTN纪录	CGTN纪录(CN)
+CGTN纪录	CGTN英文纪录(CN)
 CETV3	CETV-3
 iHOT爱赛车
 iHOT爱喜剧
@@ -1566,7 +1546,6 @@ IPTV8+	IPTV-8+
 
 
 http://epg.51zmt.top:8000/e2.xml.gz
-296	CGTN Documentary
 1797	中视经典(预告)
 1822	八大优频道
 1554	八大娱乐台
@@ -1611,22 +1590,19 @@ http://epg.51zmt.top:8000/e2.xml.gz
 123	TVB-无线新闻
 1559	幸福空间居家台
 1592	亚洲旅游台_有线(预告)
-1589	Asian Food Network(国)
 1818	亚洲综合
 222	壹电视综合台
 1532	运通财经
-1792	AMC
 1853	Animax_国
 1507	AXN_国
 229	BBC
-1609	BBC Earth(e2)
 1568	BBC Lifestyle(e2)
 1577	BlueAnt Entertainment
 1828	CatchPlay电影
 1607	CBeebies(国)
 1560	Channel News Asia
 1803	CI
-287	cinemaworld_台湾_国
+287	cinemaworld_新加坡_国
 1511	CINEMAX
 232	CNBC Hong Kong
 1804	CNEX
@@ -1674,7 +1650,7 @@ ChangeTimezone=Y
 2181	ABO Movies Thangathirai HD
 1584	Al-Hijrah(MY)
 479619	Apetito
-997	Asian Food Network HD(MY 英)
+997	Asian Food Network_马来_英
 2226	Astro AEC
 2124	Astro AOD
 2552	Astro Arena
@@ -1704,31 +1680,30 @@ ChangeTimezone=Y
 535447	Astro Sports Plus 3
 399518	Astro Sports UHD
 3018	Astro SuperSport UHD 1
-3809	Astro Tutor TV SMK HD
+3809	Astro Tutor TV SMK
 3735	Astro Vaanavil
-3760	Astro Vellithirai HD
+3760	Astro Vellithirai
 2058	Astro Vinmeen
 411257	Asyik FM
 1205	AXN HD(MY)
 854	BAYU(MY)
 4030	BBC Earth(MY)
 3329	BBC News_新马
-399482	beIN SPORTS 1(MY)
-4146	beIN Sports 2(MY)
-3118	beIN Sports 3(MY)
-2580	beIN Sports HD(MY)
+399482	beIN Sports-1_马来
+4146	beIN Sports-2(MY)
+3118	beIN Sports-3(MY)
+2580	beIN Sports(MY2)
 370132	Berita RTM
 1835	Bernama TV
 411236	Bintulu FM
 400446	Blippi & Friends
 2636	BOO HD
-3403	Cartoon Network HD
 4187	CBeebies(MY)
 3518	CCTV4_英
 2280	天映经典电影_马来非新_英
 1298	天映电影_马来非新_英
 461591	CGTN英文纪录(英2)
-3873	CNBC Asia HD
+3873	CNBC Asia_新马
 3179	CNN HD(MY)
 3325	Colors Hindi
 3885	中天亚洲台_英
@@ -1822,14 +1797,14 @@ ChangeTimezone=Y
 https://epg.pw/xmltv/epg_SG.xml
 ChangeTimezone=Y
 369770	HITS Movies HD(MY)
-512067	CCTV娱乐
-502440	CGTN英文纪录(新加坡)
+512067	CCTV-娱乐
+502440	CGTN英文纪录_英(新加坡)
 369833	ABC Australia(新加坡)
 412157	ABC Australia HD(新加坡)
 412123	ADITHYA TV(新加坡)
 369760	AFN(新加坡)
 369785	Animal Planet HD(新加坡)
-491159	ANIPLUS HD(新加坡)
+491159	ANIPLUS(新加坡)
 435717	Asianet TV(新加坡)
 516579	Astro Ria HD(新加坡)
 492869	Astro Sensasi HD(新加坡)
@@ -1838,36 +1813,32 @@ ChangeTimezone=Y
 492863	BBC Lifestyle HD(新加坡)
 412089	BBC Lifestyle(新加坡)
 412098	BBC World News(新加坡)
-369750	beIN Sports HD(新加坡)
-412167	beIN Sports HD(新加坡2)
-412129	beIN Sports 2 HD(新加坡)
-524985	beIN SPORTS 3 HD(新加坡)
-524983	beIN SPORTS 4 HD(新加坡)
+369750	beIN Sports-HD(新加坡2)
+412167	beIN Sports(新加坡2)
+412129	beIN Sports-2 HD(新加坡2)
+524985	beIN Sports-3 HD(新加坡2)
+524983	beIN Sports-4 HD(新加坡2)
 412199	Bloomberg Originals(新加坡)
 369771	Bloomberg TV HD(新加坡)
 535553	C+I (HD)(新加坡)-
 492865	Cartoon Network(新加坡)
 369780	Cartoon Network (HD)(新加坡)
-535492	Cartoonito HD)(新加坡)-
-369816	CBeebies HD)(新加坡_英)
-492826	CBeebies HD(新加坡_英)
+369816	CBeebies HD(新加坡_英)
 369819	天映经典电影_非新非马
 369730	天映经典电影_新加坡非马
-513276	Channel 8(国)
-513280	Channel U(国)
 492816	Channel 5(新加坡)
-492894	Channel 8(国+英)
-492864	Channel U(国+英)
+492894	Channel 8_国英
+513276	Channel 8_国
+492864	Channel U_国英
+513280	Channel U_国
 491172	中国电影频道China Movie Channel(新加坡)
 412186	Cinema One Global(新加坡)
 492823	CinemaWorld_新加坡_英
 412096	Cinemax HD(新加坡)
-369742	Citra Drama (HD)(新加坡)
-412104	Citra Entertainment(新加坡)
+369742	Citra Drama(新加坡)
 369748	CM+(新加坡)
-369813	CNBC Asia(新加坡)
 412201	CNN HD(新加坡)
-491157	CNN International(新加坡)
+491157	CNN International_中东
 492904	COLORS TV(新加坡)
 523496	CricBuzz(MY)
 524990	Cricbuzz 2(新加坡)
@@ -2013,8 +1984,8 @@ ChangeTimezone=Y
 https://epg.pw/xmltv/epg_US.xml
 465049	365BLK(US)
 465147	5 StarMAX HD East(US)
-484875	80s Sitcoms(US)
-464795	88 Films(US)
+484875	80s Sitcoms
+464795	88 Films
 465229	88 TV(US)
 484886	90s Sitcoms(US)
 464992	A and E HD East(US)
@@ -2043,53 +2014,52 @@ https://epg.pw/xmltv/epg_US.xml
 465158	AMC+(US)
 473069	American Crimes
 464895	American Heroes Channel
-465200	AMG TV(US)
-496606	And TV(US)
-464900	Anheuser Busch Private Network(US)
+465200	AMG TV
+496606	And TV
+464900	Anheuser Busch Private Network
 465310	Animal Planet HD(US)
-465253	Animal Planet HD (Pacific)(US)
+465253	Animal Planet Pacific HD(US)
 464750	Antena 3 Internacional
 496613	Antenna TV
-464916	Arizona Family Sports(US)
-464951	ASPiRE HD(US)
-520489	Asylum Movie(US)
-496601	ATN Cricket Plus(US)
-464909	ATN Movies(US)
-465118	Atrescine(US)
-464809	Atreseries(US)
-465071	AWE A Wealth of Entertainment HD(US)
-464771	AXS TV(US)
+464916	Arizona Family Sports
+464951	ASPiRE HD
+520489	Asylum Movie
+496601	ATN Cricket Plus
+464909	ATN Movies
+465118	Atrescine
+464809	Atreseries
+465071	AWE A Wealth of Entertainment
+464771	AXS TV
 465369	Baby TV US(US)
 465394	Baby First TV(US)
-465007	Bandamax(US)
-465019	Bang U(US)
-464899	Barvanna Network(US)
-465025	BBC America HD(US)
+465007	Bandamax
+465019	Bang U
+464899	Barvanna Network
+465025	BBC America
 487333	BBC Dinos 24/7(US)
-464746	BBC News (North America) HD(US)
 483549	Beach TV (WDES-CD) Destin, FL(US)
 465366	beIN Sports En Español HD(US)
-464754	beIN Sports USA HD(US)
-465051	BET GOSPEL(US)
+464754	beIN Sports USA 
+465051	BET GOSPEL
 464968	BET HD(US)
-464867	BET HD (Pacific)(US)
-465008	BET Her(US)
-465128	BET Jams(US)
-465030	BET Soul(US)
-465073	Big Ten Network HD(US)
+464867	BET Pacific HD(US)
+465008	BET Her
+465128	BET Jams
+465030	BET Soul
+465073	Big Ten Network
 465254	Big Ten Network Overflow(US)
-465353	BINGE-TV(US)
-496609	Biz TV(US)
-530871	Black Voices(US)
-496610	Blaze TV(US)
-465213	Bloomberg Business Television(US)
+465353	BINGE TV
+496609	Biz TV
+530871	Black Voices
+496610	Blaze TV
+465213	Bloomberg Business TV(US)
 465324	Bloomberg HD(US)
 465083	Blossom TV(US)
 484881	Bon Appétit TV
 464755	Boomerang TV(US)
 465292	Bounce TV
 494592	Bowling TV
-465184	Bravo (Pacific)(US)
+465184	Bravo Pacific(US)
 464753	Bravo HD(US)
 465297	BraZZers TV Plus
 521096	Busted TV
@@ -2097,52 +2067,52 @@ https://epg.pw/xmltv/epg_US.xml
 464868	BYU TV
 464872	CANAL 22 Internacional
 464944	CARACOL International
-465318	Cars TV HD(US)
-465177	Cartoon Network (Pacific)(US)
+465318	Cars TV
+465177	Cartoon Network Pacific(US)
 465267	Cartoon Network HD(US)
 465404	CASH(US)
 496616	Catchy Comedy(US)
 464776	CBO(US)
-467875	CBOFT-DT(US)
+467875	CBOFT-DT
 464941	CBS News National Stream
 464937	CBS Sports Network
 464994	CBS Streaming East feed
 464830	CBS West
-464760	Centro América TV(US)
-464982	CFN CATHOLIC FAITH NETWORK(US)
+464760	Centro América TV
+464982	CFN CATHOLIC FAITH Network
 464946	Charming China
-464798	Cheddar(US)
+464798	Cheddar
 465321	Christian TV Network
 465058	CHSN Chicago Sports Network
 483395	CHSN Plus
-467530	CIMT-DT(US)
-465133	Cine Estelar(US)
-465035	Cine Latino US(US)
-465233	Cine Mexicano US Feed(US)
-465130	Cine Nostalgia(US)
-465090	Cinema Dinamita(US)
+467530	CIMT-DT
+465133	Cine Estelar
+465035	Cine Latino US
+465233	Cine Mexicano US Feed
+465130	Cine Nostalgia
+465090	Cinema Dinamita
 465199	Cinema One(US)
-465388	Cinemax (Pacific)(US)
-480608	Cinemax Action(US)
-480607	Cinemax Classics(US)
+465388	Cinemax Pacific(US)
+480608	Cinemax Action
+480607	Cinemax Classics
 464917	Cinemax HD(US)
-465191	Cinemax HD (Pacific)(US)
-464945	Cinemax Hits(US)
-465263	Cinemax Spanish HD(US)
-501744	CINEVAULT(US)
-484883	Cinevault Classics(US)
-464749	Circle Country(US)
-465363	Cleo TV HD(US)
-465107	CMT HD(US)
+465191	Cinemax Pacific HD(US)
+464945	Cinemax Hits
+465263	Cinemax Spanish
+501744	CINEVAULT
+484883	Cinevault Classics
+464749	Circle Country
+465363	Cleo TV
+465107	CMT
 464791	CNBC HD(US)
-465282	CNBC World(US)
+465282	CNBC World
 464871	CNN En Español
 464857	CNN HD(US)
-465021	CNN International(US)
-465371	Comedy Central HD (Pacific)(US)
-465056	Comedy.TV HD(US)
+465021	CNN International_欧洲
+465371	Comedy Central Pacific HD(US)
+465056	Comedy TV
 465305	Comet(US)
-464959	Comet (Pacific)(US)
+464959	Comet Pacific(US)
 464963	Compre AQUI los productos mejores del TV(US)
 465211	Cooking Channel
 465226	Court TV
@@ -2180,12 +2150,12 @@ https://epg.pw/xmltv/epg_US.xml
 465152	Discovery Family Channel HD(US)
 464838	Discovery Life Channel(US)
 516450	Discovery Turbo TV(US)
-465170	Disney Channel (Pacific)(US)
+465170	Disney Channel Pacific(US)
 465349	Disney Channel HD(US)
 465320	Disney Junior HD(US)
-464864	Disney Junior HD (Pacific)(US)
+464864	Disney Junior Pacific HD(US)
 464807	Disney XD HD(US)
-465390	Disney XD HD (Pacific)(US)
+465390	Disney XD Pacific HD(US)
 465328	DOG TV(US)
 464859	DraftKings Network(US)
 464792	DTV ARANG(US)
@@ -2231,13 +2201,13 @@ https://epg.pw/xmltv/epg_US.xml
 465222	Fun Roads(US)
 465105	Fuse HD(US)
 464813	FX HD(US)
-464983	FX HD (Pacific)(US)
+464983	FX Pacific HD(US)
 465400	FX Movie Channel HD(US)
 465357	FXX HD(US)
-465034	FXX HD (Pacific)(US)
+465034	FXX Pacific HD(US)
 464774	FYI Channel HD(US)
 465335	Galavision Cable Network HD(US)
-465312	Galavision Cable Network HD (Pacific)(US)
+465312	Galavision Cable Network Pacific HD(US)
 464810	Game Show Network HD(US)
 465336	Game+ Game Plus HD(US)
 465194	GEMS(US)
@@ -2258,7 +2228,7 @@ https://epg.pw/xmltv/epg_US.xml
 465167	Hallmark Mystery HD(US)
 481954	Haunt TV(US)
 483396	HBCUGO SPORTS(US)
-465249	HBO (Pacific)(US)
+465249	HBO Pacific(US)
 464953	HBO Comedy HD(US)
 465201	HBO Drama(US)
 464745	HBO East(US)
@@ -2268,9 +2238,9 @@ https://epg.pw/xmltv/epg_US.xml
 465279	HBO Signature HD(US)
 465302	HBO West(US)
 465104	HBO Zone HD(US)
-465146	HBO2 (Pacific)(US)
+465146	HBO2 Pacific(US)
 465041	HBO2 HD(US)
-464985	HBO2 HD (Pacific)(US)
+464985	HBO2 Pacific HD(US)
 465212	HDNet Movies(US)
 464942	Heroes and Icons Network SD(US)
 464762	History Channel En Español(US)
@@ -2281,7 +2251,7 @@ https://epg.pw/xmltv/epg_US.xml
 465403	Hogar TV(US)
 465319	HOLA! TV
 465028	Home and Garden TV HD(US)
-465095	Home and Garden TV HD (Pacific)(US)
+465095	Home and Garden TV Pacific HD(US)
 465139	Home Shopping Network(US)
 465157	Honvietv(US)
 490837	Horror Machine(US)
@@ -2298,7 +2268,7 @@ https://epg.pw/xmltv/epg_US.xml
 497973	Insight TV
 464786	INSP HD
 465294	Investigation Discovery HD(US)
-465171	Investigation Discovery HD (Pacific)(US)
+465171	Investigation Discovery Pacific HD(US)
 492942	ION Mystery
 465354	ION TV HD
 465162	JBS(US)
@@ -2364,7 +2334,7 @@ https://epg.pw/xmltv/epg_US.xml
 465169	MSG2 HD
 465087	MSNBC HD
 465080	MTV - Music Television HD(US)
-464997	MTV - Music Television HD (Pacific)(US)
+464997	MTV - Music Television Pacific HD(US)
 465050	MTV Classic(US)
 465113	MTV2: Music Television HD(US)
 464825	MTV LIVE(US)
@@ -2376,7 +2346,7 @@ https://epg.pw/xmltv/epg_US.xml
 484876	NASCAR Channel
 465142	Nat Geo Mundo(US)
 465089	National Geographic HD(US)
-464974	National Geographic HD (Pacific)(US)
+464974	National Geographic Pacific HD(US)
 464884	National Geographic Wild HD(US)
 464912	NBA TV HD(US)
 501747	NBC Chicago (Live Stream)(US)
@@ -2416,7 +2386,7 @@ https://epg.pw/xmltv/epg_US.xml
 465348	NHL Network HD(US)
 464911	Nick Jr HD(US)
 465106	Nick Music(US)
-465345	Nickelodeon (Pacific)(US)
+465345	Nickelodeon Pacific(US)
 465251	Nickelodeon HD(US)
 465038	Nicktoons(US)
 465047	Nippon TV Channel(US)
@@ -2442,7 +2412,7 @@ https://epg.pw/xmltv/epg_US.xml
 464821	Oxygen True Crime HD(US)
 464882	Paramount Network HD(US)
 465332	Paramount+ with Showtime HD(US)
-465308	Paramount+ with Showtime HD (Pacific)(US)
+465308	Paramount+ with Showtime Pacific HD(US)
 465223	Pasiones TV US(US)
 464770	PBS Kids(US)
 465245	PBS Stream(US)
@@ -2534,11 +2504,11 @@ https://epg.pw/xmltv/epg_US.xml
 465264	Sportsman Channel
 465124	SportsNet Pittsburgh HD(US)
 465278	Start TV Network(US)
-465238	Starz (Pacific)(US)
+465238	Starz Pacific(US)
 465115	Starz Cinema HD(US)
 464979	Starz Comedy HD(US)
 464839	Starz Edge HD(US)
-464763	Starz Encore (Pacific)(US)
+464763	Starz Encore Pacific(US)
 465232	Starz Encore Action HD(US)
 464820	Starz Encore Black(US)
 465240	Starz Encore Classic(US)
@@ -2546,10 +2516,10 @@ https://epg.pw/xmltv/epg_US.xml
 465242	Starz Encore Family(US)
 464893	Starz Encore HD(US)
 465122	Starz Encore Suspense(US)
-464784	Starz Encore Westerns (Pacific)(US)
+464784	Starz Encore Westerns Pacific(US)
 464973	Starz Encore Westerns(US)
 464975	Starz HD(US)
-465370	Starz HD (Pacific)(US)
+465370	Starz Pacific HD(US)
 465293	Starz in Black HD(US)
 465109	Starz Kids HD(US)
 483393	STELLAR TV(US)
@@ -2560,7 +2530,7 @@ https://epg.pw/xmltv/epg_US.xml
 465138	Sundance TV(US)
 465011	Sur Peru(US)
 465053	Syfy HD(US)
-465190	Syfy HD (Pacific)(US)
+465190	Syfy Pacific HD(US)
 464811	Tan TV
 465110	Tastemade TV
 484877	Tastemade Food and More
@@ -2568,7 +2538,7 @@ https://epg.pw/xmltv/epg_US.xml
 465317	Tastemade Travel
 464840	TBN Inspire(US)
 465285	TBS HD(US)
-465131	TBS HD (Pacific)(US)
+465131	TBS Pacific HD(US)
 464822	TC Internacional(US)
 465389	TCT(US)
 465180	Teen Nick(US)
@@ -2580,34 +2550,34 @@ https://epg.pw/xmltv/epg_US.xml
 474984	TFC (The Filipino Channel) HD(US)
 464823	The Africa Channel
 465132	The Cowboy Channel
-465185	The Discovery Channel HD (Pacific)(US)
+465185	The Discovery Channel Pacific HD(US)
 496623	The Family Channel
 465075	The Film Detective
 465178	The First(US)
 465346	The Grio HD
 464958	The Hope Channel(US)
-464814	The Movie Channel (Pacific)(US)
+464814	The Movie Channel Pacific(US)
 465397	The Movie Channel Extra HD(US)
 465365	The Movie Channel HD(US)
 496602	The Nest(US)
 465186	The Travel Channel HD(US)
-464790	The Travel Channel HD (Pacific)(US)
+464790	The Travel Channel Pacific HD(US)
 465272	The Weather Channel HD(US)
 465386	The Word Network(US)
-465069	TLC HD (Pacific)(US)
+465069	TLC Pacific HD(US)
 464919	TLC HD (US)(US)
 465114	TNT HD(US)
-465307	TNT HD (Pacific)(US)
+465307	TNT Pacific HD(US)
 465300	Tr3s: MTV, Musica y Mas(US)
 465277	Tribeca Festival +(US)
 464788	Trinity Broadcasting Network HD(US)
 464987	truTV HD(US)
-464988	truTV HD (Pacific)(US)
+464988	truTV Pacific HD(US)
 465174	TUDN(US)
 465196	Turner Classic Movies HD(US)
 465055	TV Chile(US)
 465235	TV Land HD(US)
-465362	TV Land HD (Pacific)(US)
+465362	TV Land Pacific HD(US)
 465208	TV ONE HD(US)
 464986	TVE(US)
 465093	TViet Network(US)
@@ -2615,18 +2585,18 @@ https://epg.pw/xmltv/epg_US.xml
 464952	TyC Sports Internacional USA(US)
 465298	TYT The Young Turks(US)
 464928	UniMas(US)
-464918	UniMas HD (Pacific)(US)
+464918	UniMas Pacific HD(US)
 492944	Universal Action
 492943	Universal Crime
 492941	Universal Monsters
 477700	Universal Movies
 465329	UNIVERSO HD(US)
-465341	Univision Network (Pacific)(US)
+465341	Univision Network Pacific(US)
 464782	Univision Network HD(US)
 465283	Univision TL Novelas(US)
 465111	UPtv(US)
 465006	USA Network HD(US)
-464903	USA Network HD (Pacific)(US)
+464903	USA Network Pacific HD(US)
 465060	Ve Plus(US)
 497977	Vevo 2K
 497972	Vevo 70s

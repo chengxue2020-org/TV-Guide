@@ -238,7 +238,7 @@ cctv台球	CCTV-台球
 中央电视台新闻频道香港	CCTV13香港
 中央电视台综合频道 (港澳版) (免费)	CCTV1(港澳版)
 中国中央电视台戏曲频道 (免费)	CCTV-戏曲
-CGTN	CGTN_马来_英
+CGTN	CGTN_港马_英
 中国环球电视网香港	CGTN_香港_英
 CGTN (中国环球电视网)记录频道 (免费)	CGTN英文纪录_国2
 cgtn阿拉伯语	CGTN阿拉伯语
@@ -410,7 +410,7 @@ CHC 家庭影院	CHC家庭影院
 香港电台32	RTHK32
 香港电台33	RTHK33
 TVB Plus (免费)	TVB Plus
-TVB星河新加坡	TVB-星河台_新加坡_英(swepg)
+TVB星河新加坡	TVB-星河台_英
 TVBS欢乐台	TVBS-欢乐台
 TVBS精采台	TVBS-精采台(EPG1)
 TVBS看板人物-FastTV飞速看
@@ -467,16 +467,16 @@ HBO HD	HBO HD_国
 HBO Hits香港
 HBO Signature香港
 HBO香港
-HGTV HD新加坡	HGTV HD新加坡(英)
-HGTV居家乐活频道	HGTV_新马港_国
-HISTORY HD新加坡	History HD新加坡
+HGTV HD新加坡	HGTV HD_英
+HGTV居家乐活频道	HGTV_港马_国
+HISTORY HD新加坡	History HD(新加坡)
 History 历史频道有线	History历史频道有线
 HITS	HITS_国(swepg)
 HITS HD新加坡
-HITS MOVIES HD	HITS MOVIES HD(swepg2)
-HITS MOVIES HD新加坡
+HITS MOVIES HD	HITS MOVIES(EPG2)
+HITS MOVIES HD新加坡	HITS MOVIES(EPG3)
 HITS电影台 	HITS HD电影台
-HITS频道	HITS HD频道
+HITS频道	HITS HD频道_国
 HITS有线	HITS HD有线
 HOY TV
 HOY 国际财经台
@@ -544,14 +544,14 @@ myTV SUPER直播足球6台
 myTV SUPER直播足球7台
 NBA香港
 Netflix香港
-Nick Jr	Nick Jr.(新马2)
+Nick Jr	Nick Jr._新马2
 Nick Jr. 	Nick Jr.(swepg2)
 Nick Jr. HD
-Nick Jr. HD新加坡
+Nick Jr. HD新加坡	Nick Jr. HD_新加坡
 Nick Jr. 儿童频道
 Nick Jr.(小尼克)	Nick Jr. 儿童频道(C)
 Nick Jr.香港	Nick Jr. 儿童频道香港
-Nickelodeon Asia HD新加坡
+Nickelodeon Asia HD新加坡	Nickelodeon Asia(新加坡3)
 Nickelodeon Asia尼克儿童频道	Nickelodeon Asia_国2
 Nickelodeon Jr
 Nickelodeon香港
@@ -594,7 +594,7 @@ now体育	NOW体育
 now体育4k	NOW体育4k
 now新闻	NOW新闻
 now直播 	NOW直播
-ONE	ONE TV_马来_英
+ONE	ONE TV_新马_英
 ONE (Malay)	ONE TV_英
 ONE HD	ONE HD(swepg)
 OneTV 综合频道	One TV综合频道
@@ -612,16 +612,15 @@ River Monsters
 ROCK Action	Rock Action_国
 ROCK ACTION Rock Action_香港_国
 ROCKAction	ROCK Action_国(TW)
-ROCK Entertainme
+ROCK Entertainme	ROCK Entertainme_新加坡
 ROCK ENTERTAINMENT	ROCK Entertainment_国
 Rock Entertainment
 ROCK Entertainment香港
 ROCK Extreme
 Rock_X_Stream	Rock X Stream_马来_英
 ROCK Xstream摇滚极限频道	Rock X Stream摇滚极限频道
-ROCKEntertainment	ROCK Entertainment_国2
 ROCKXStream	ROCK X Stream_国2
-ROCK综艺娱乐	ROCK Entertainment ROCK综艺娱乐
+ROCK综艺娱乐	ROCK Entertainment综艺娱乐
 RT香港
 SBN全球财经台	SBN全球财经台(EPG1)
 Taiwan Plus
@@ -705,7 +704,7 @@ elta体育max 8	爱尔达体育MAX8台
 东森购物三台	东森购物3台
 东森购物四台	东森购物4台
 东森购物5台HD	东森购物5台
-东森亚洲台新加坡
+东森亚洲台新加坡	东森亚洲台_英
 东森洋片台	东森洋片
 东森幼幼台	东森幼幼
 东森娱乐台
@@ -858,10 +857,10 @@ elta体育max 8	爱尔达体育MAX8台
 天映经典台新加坡	天映经典电影_新加坡(英)
 天映经典新加坡	天映经典电影_新加坡2
 千禧经典台(MY)	TVB-千禧经典台_(MY)
-天映经典新加坡	天映经典电影_新加坡(简中3)
+天映经典新加坡	天映经典电影_马来(简中3)
 天映经典印尼	天映经典电影_印尼_国
 天映频道马来西亚	天映电影_马来非新_国
-天映频道新加坡	天映电影_新加坡_国2
+天映频道新加坡	天映电影_新加坡_国
 天映频道印尼	天映电影_印尼_国
 威达超舜生活台
 纬来精采HD	纬来精采
@@ -885,7 +884,7 @@ elta体育max 8	爱尔达体育MAX8台
 亚洲旅游台有线	亚洲旅游台_有线(回看+详情)
 亚洲美食台香港
 亚洲卫视
-亚洲新闻台	CNA_马来
+亚洲新闻台	CNA
 亚洲综合HD演唱会直击
 壹电视电影台
 壹电视新闻台
@@ -906,7 +905,7 @@ elta体育max 8	爱尔达体育MAX8台
 中台湾生活网频道
 中天北美台
 中天亚洲精采台
-中天亚洲台新加坡	中天亚洲台_新加坡_英
+中天亚洲台新加坡	中天亚洲台_新马_英2
 中天娱乐HD	中天娱乐
 中天综合台
 猪哥亮歌厅秀
@@ -929,11 +928,7 @@ Astro_Thangathirai	Astro Thangathirai
 Astro Warna HD	Astro Warna
 CCM	天映经典电影_印尼_英
 Celebrities TV
-Celestial Movies	天映电影(英)
-Channel 5
-Channel Suria
-Channel U
-Channel Vasantham
+Celestial Movies	天映电影_新加坡_英
 EBS CHILD
 EBS EDUCATION
 EBS PLUS1
@@ -951,7 +946,6 @@ Focus探索新知台
 Food Network香港	Food Network美食台_香港(回)
 Food Travel HD	Food Travel
 FoodON	Food ON
-FOX News
 FOX 新闻台
 France 24 (French)	France 24 French
 France 24香港
@@ -979,9 +973,9 @@ Action Hollywood Movies
 Adithya	Adithya TV_马来
 ADITHYA TV
 Al Quran Al Kareem
-ANC	ANC(新加坡)
-Animax HD	Animax(新加坡)
-Animax香港	Animax_香港
+ANC
+Animax HD	Animax
+Animax香港	Animax_港新
 ANTV
 Arirang
 Asian Food Network 亚洲美食频道	Asian Food Network_马来_国
@@ -1000,7 +994,6 @@ beIN SPORTS 1香港	beIN Sports-1_香港_国
 beIN SPORTS 2香港	beIN Sports-2_香港_国
 beIN Sports 3 HD	beIN Sports-3
 beIN SPORTS 3香港	beIN Sports-3_香港_国
-beIN SPORTS 4	beIN Sports-4
 beIN SPORTS 4香港	beIN Sports-4_香港_国
 beIN SPORTS 6香港	beIN Sports-6香港_香港_国
 beIN SPORTS RUGBY香港	beIN Sports-RUGBY香港
@@ -1026,13 +1019,11 @@ CLASSICA 古典乐	Classica古典乐
 CMC 北美频道
 CMC 香港频道
 CMusic
-CNA
-CNBC HD	CNBC (新加坡)
+CNBC HD	CNBC (非新加坡)
 CNEX纪实频道
-CNN HD	CNN International(新加坡)
 CN卡通频道	CN卡通频道(回)
 COLORS
-COLORS Tamil HD	Colors Tamil
+COLORS Tamil HD	Colors Tamil_马来
 Concerto (免费)	Concerto
 Crime + Investigation HD	Crime & Investigation
 Da Vinc香港
@@ -1095,7 +1086,6 @@ MBC on
 MDTV
 Medici-arts HD	Medici-Arts
 Metro TV
-meWATCH LIVE 1
 meWATCH LIVE 2
 meWATCH LIVE 5
 MNCTV
@@ -1134,7 +1124,7 @@ Sky News香港
 Smithsonian_Channel	Smithsonian Channel
 Soccer Channel
 Sony Entertainment Televis新加坡	SONY Entertainment TV_新加坡
-SONY MAX	SONY MAX(swepg)
+SONY MAX
 Sony SAB	SONY SAB
 Sony TV (India)	SONY TV (India)
 SPL-CH01
@@ -1147,16 +1137,15 @@ SPY X FAMILY 间谍家家酒(国)
 Studio Universal
 Sun Music
 Sun TV
-TFC	TFC (The Filipino Channel)(swepg)
 TG Junior
 that's 90s00s (免费)	That's 90s 00s(B)
 The Filipino Channel HD	TFC (The Filipino Channel)
 Thrill
-TRACE Sport Stars (免费)	Trace Sport Stars(英1)
-TRACE Sport Stars	Trace Sport Stars(英2)
-TRACE Sport Stars HD	Trace Sport Stars(国)
+TRACE Sport Stars (免费)	Trace Sport Stars_英1
+TRACE Sport Stars	Trace Sport Stars_英2
+TRACE Sport Stars HD	Trace Sport Stars_国
 trace sport star运动明星	Trace SportStar运动明星
-TRACESportStars	Trace Sport Stars(D)
+TRACESportStars	Trace Sport Stars_新加坡_国
 TRACE Urban (免费)	Trace Urban_英
 Trans 7
 Trans TV
@@ -1172,7 +1161,7 @@ TVRI
 UNIQUES
 Vannathirai	Vannathirai(EPG1)
 video express rentnow
-Vijay TV HD	Vijay TV(新加坡)
+Vijay TV HD	Vijay TV_新加坡
 Vision Prime
 viu6
 ViuTV	Viu TV
@@ -1610,20 +1599,20 @@ ChangeTimezone=Y
 3760	Astro Vellithirai
 2058	Astro Vinmeen
 411257	Asyik FM
-1205	AXN(MY)
+1205	AXN_新加坡
 854	BAYU(MY)
 4030	BBC Earth_马来
-3329	BBC News_新马台_国
+3329	BBC News_新马台
 399482	beIN Sports-1_马来
 4146	beIN Sports-2(MY)
-3118	beIN Sports-3_新马1
+3118	beIN Sports-3(MY)
 2580	beIN Sports(MY2)
 370132	Berita RTM
 1835	Bernama TV
 411236	Bintulu FM
 400446	Blippi & Friends_马来_英
 2636	Astro Boo
-3518	CCTV4_马来_英
+3518	CCTV4_新马_英
 2280	天映经典电影_马来非新_英
 1298	天映电影_马来非新_英
 461591	CGTN英文纪录_马来_英
@@ -1637,7 +1626,7 @@ ChangeTimezone=Y
 533	GOLD(MY)
 2300	Golf Channel(EPG1)
 2830	GOXUAN
-2473	HGTV_新马港_英
+2473	HGTV_港马_英
 1477	History HD_新马
 2208	HITS HD_新马
 186250	HITS NOW_马来
@@ -1649,21 +1638,20 @@ ChangeTimezone=Y
 863	KENYALANG(MY)
 411251	KL FM
 2652	K-Plus
-4183	KTV_马来
+4183	KTV_新马
 411253	Labuan FM
 531	LITE FM
 771	MELODY FM
 491619	Miri FM
 495	MIX FM
 492	MY FM
-3385	Nickelodeon_马来_英2
 1029	NTV7
 370134	Okey TV
-1242	ONE HD(MY)
+1242	ONE HD_新加坡
 493	OPUS
 733	OSAI
 428785	Perak FM
-3478	凤凰中文台_马来_英
+3478	凤凰中文台_新马_英
 3625	Premier Sports_马来
 399506	Premier Sports Rugby
 411240	Red FM
@@ -1675,10 +1663,10 @@ ChangeTimezone=Y
 478717	Snap
 3308	Star Vijay
 370133	Sukan RTM
+3313	SUN TV_新马
 4181	Sun Life
 3835	Sun Music_马来
 4185	Sun News
-3313	SUN TV_马来
 556	THR GEGAR
 848	THR RAAGA
 3234	TLC HD_马来
@@ -1691,7 +1679,7 @@ ChangeTimezone=Y
 3895	TVB-经典台(MY2)
 3920	TVB-娱乐新闻台_英
 2524	TVB-翡翠台_马来_英
-3493	TVB-星河台_马来_英
+3493	TVB-星河台_新马_英
 2323	tvN_马来_英
 2726	tvN Movies_马来_英
 3942	TVS
@@ -1710,63 +1698,101 @@ ChangeTimezone=Y
 
 https://epg.pw/xmltv/epg_SG.xml
 ChangeTimezone=Y
-369770	HITS Movies(SG)
-512067	CCTV-娱乐
-502440	CGTN英文纪录_英(新加坡)
-412157	ABC Australia_新马
-412123	ADITHYA TV(新加坡)
-369760	Asia Food Network_马来
-369785	Animal Planet(新加坡)
-491159	ANIPLUS(新加坡)
-435717	Asianet TV(新加坡)
-516579	Astro Ria(新加坡)
-492869	Astro Sensasi(新加坡)
-492850	AXN_马来
-492892	BBC Earth_新马2
-492863	BBC Lifestyle_英(新加坡)
-412098	BBC World News(新加坡)
-412167	beIN Sports(新加坡2)
-412129	beIN Sports-2 HD(新加坡)
-524985	beIN Sports-3_新马2
-524983	beIN Sports-4(新加坡)
-412199	Bloomberg Originals
-369771	Bloomberg TV(新加坡)
-535553	C+I (HD)(新加坡)-
-492865	Cartoon Network_马来_英
-369816	CBeebies HD(新加坡_英)
-369819	天映经典电影_非新非马_国英
-369730	天映经典电影_新加坡非马
-492816	Channel 5(新加坡)
+492816	Channel 5
 492894	Channel 8_国英
 513276	Channel 8_国
 492864	Channel U_国英
 513280	Channel U_国
-491172	中国电影频道China Movie Channel(新加坡)
+492901	Channel Suria
+492817	Channel Vasantham
+492905	meWATCH Live 1
+535294	LIVE 2(新加坡)-
+520018	LIVE 5(新加坡)-
+535445	That's 70s_新加坡
+535443	That's 80s_新加坡
+535444	That's Rock_新加坡
+492896	TRACE Sport Stars_新加坡
+492878	TG Junior_新加坡
+412123	ADITHYA TV_新加坡
+435717	Asianet TV_新加坡
+492892	BBC Earth_新加坡
+492863	BBC Lifestyle_新加坡_英
+492869	Astro Sensasi_新加坡
+412167	beIN Sports_新加坡
+412129	beIN Sports-2_新加坡
+524985	beIN Sports-3_新加坡
+524983	beIN Sports-4_新加坡
 492823	CinemaWorld_新加坡_英
+369816	CBeebies HD_新加坡_英
+491157	CNN International_中东
+492904	COLORS TV_新加坡
+492850	AXN_马来
+369760	Asia Food Network_马来
+412157	ABC Australia_新马
+492865	Cartoon Network_新马_英
+369819	天映经典电影_非新非马_国英
+369730	天映经典电影_新加坡非马
+524990	Cricbuzz 2_新加坡
+412142	上海东方卫视_新加坡
+412095	DreamWorks Channel_新加坡
+412165	Fight Sports_新加坡
+412153	HGTV_新加坡
+412116	Kalaignar TV_新加坡
+492915	Karisma_新加坡
+492895	Hub-都会台
+492836	Hub Sports 3
+503775	Hub Sports 4
+503776	Hub Sports 5
+524986	Hub Sports 6
+524981	Hub Sports 7
+455187	Hub Sports 8
+369734	KBS World_新马_英
+492851	Hub-娱家_新加坡
+369832	Lifetime HD_马来_英
+412184	Lifetime HD_新加坡
+491166	Nick Jr._新马_英
+412130	NHK World Premium_新马
+412136	Nick Jr._新马
+492879	Nickelodeon_新马_英
+369719	ROCK Entertainment_新加坡2
+369757	Sky News_新加坡
+369846	SONY MAX_新加坡
+516576	SPOTV_新加坡
+412181	SPOTV_新加坡2
+412187	SPOTV 2_新加坡
+412094	Sun Music_新加坡
+455314	TFC (The Filipino Channel)_新加坡
+412120	Travelxp HD_新加坡
+412097	Vannathirai_新加坡
+412185	Zee Cinema_新加坡
+412115	Zee Tamil_新加坡
+369828	ZEE TV_新加坡
+516580	Zee Thirai_新加坡
+495473	Deal or No Deal_新加坡
+512067	CCTV-娱乐
+369770	HITS Movies(EPG1)
+502440	CGTN英文纪录_英(新加坡)
+369785	Animal Planet(新加坡)
+491159	ANIPLUS(新加坡)
+516579	Astro Ria(新加坡)
+412098	BBC World News(新加坡)
+412199	Bloomberg Originals
+369771	Bloomberg TV(新加坡)
+535553	C+I (HD)(新加坡)-
+491172	中国电影频道China Movie Channel(新加坡)
 412096	Cinemax HD_英(新加坡)
 369742	Citra Drama
 369748	CM+(新加坡)
-491157	CNN International_中东
-492904	COLORS TV(新加坡)
 523496	CricBuzz(MY)
-524990	Cricbuzz 2(新加坡)
-492866	Crime & Investigation_马来
-495473	Deal or No Deal(新加坡)
-535552	Discovery Asia HD)(新加坡)-
-412142	Dragon TV(新加坡)
+492866	Crime & Investigation_新马
 369824	Drama Channel(新加坡)
-412095	DreamWorks Channel(新加坡)
 412178	DW English(新加坡)
 369806	e-乐
 491151	东森亚洲卫视_新加坡_ 国
 492856	东森亚洲卫视_新加坡_ 英
-535568	东森亚洲新闻HD_新加坡-
 412122	Euronews_新加坡
-535488	Eurosport HD)(新加坡)-
 412197	Fashion TV HD(新加坡)
-412165	Fight Sports(新加坡)
-535515	Food Network (HD)(新加坡)-
-492858	Food ON(新加坡)
+492858	Food ON_新加坡
 369726	France 24 English_新马
 412190	France 24 English_新马2
 369839	France 24 French_新加坡
@@ -1778,45 +1804,18 @@ ChangeTimezone=Y
 412088	HBO HD_新加坡_英
 369840	HBO Hits HD_国(新加坡)
 369758	HBO Signature_英 (新加坡)
-412153	HGTV(新加坡)
-412172	History_新马2
-369765	HISTORY (HD)(新加坡)
-412194	Hits HD(新加坡2)
+412172	History HD_马来
+412194	Hits HD
 485760	HITS NOW(新加坡)
-492895	Hub-都会台
-492836	Hub Sports 3
-503775	Hub Sports 4
-503776	Hub Sports 5
-524986	Hub Sports 6
-524981	Hub Sports 7
-455187	Hub Sports 8
-492851	Hub-娱家(EPG2)
 369774	Jia Le Channel(新加坡)
-412116	Kalaignar TV(EPG2)(新加坡)
-492915	Karisma(EPG1)(新加坡)
-369734	KBS World_马来_英s
-369832	Lifetime HD_马来_英
-412184	Lifetime HD(新加坡)
-492905	LIVE 1(新加坡)
-535294	LIVE 2(新加坡)-
-520018	LIVE 5(新加坡)-
 451933	MAA Movies(新加坡)
-507899	Master Chef(新加坡)
+507899	Master Chef
 369773	mio Sports HD(新加坡)
 369717	mio Sports 2(新加坡)
 369802	mio Sports 3(新加坡)
-535487	MOLA Sport(新加坡)-
 369804	MTV India
-535533	MTV LIVE HD(新加坡)-
-412130	NHK World Premium_新马
-412136	Nick Jr.(新马)
-491166	Nick Jr._马来_英
-492879	Nickelodeon_马来_英
-492912	NOW 70s(新加坡)-
-492911	NOW 80s(新加坡)-
+492911	NOW 80s_新加坡
 512068	NOW Jelli HD(新加坡)
-492913	NOW Rock(新加坡)-
-521905	Oktolidays(新加坡)-
 492870	ONE (Malay)(新加坡)
 369728	ONE HD_新马_ 国英
 484245	Outdoor Channel(新加坡)
@@ -1827,54 +1826,33 @@ ChangeTimezone=Y
 412148	Preview Channel(新加坡)
 369727	ROCK Action HD(新加坡2)
 412091	ROCK Entertainment(新加坡)
-369719	ROCK Entertainment HD(新加坡2)
 369849	SAB TV(新加坡)
 535531	SEA Today(新加坡)-
 369746	SET (HINDI)(新加坡)
-369757	Sky News HD_新加坡
-369846	SONY MAX(新加坡)
 369811	SONY YAY!(新加坡)
-412181	SPOTV(新加坡)
-516576	SPOTV HD(新加坡)
-412187	SPOTV 2(新加坡)
 369812	STAR Bharat(新加坡)
 369814	STAR Gold(新加坡)
 451931	Star Maa(新加坡)
 369844	STAR Plus(新加坡)
 459681	StarHub(新加坡)
-412094	Sun Music(新加坡)
-492901	Channel Suria(新加坡)
 516581	TechStorm
 413372	TestChannel 993(新加坡)
 493279	TestChannel 996(新加坡)
-492878	TG Junior(新加坡)
-535445	That's 70s(新加坡)
-535443	That's 80s(新加坡)
-535444	That's Rock(新加坡)
-455314	TFC (The Filipino Channel)(新加坡)
 522557	Times Now
-492896	TRACE Sport Stars(新加坡-中)
-412120	Travelxp HD(新加坡)
 369805	TVB-翡翠台_新加坡_中
 412135	TVB-翡翠台_新加坡_英
-412106	TVB-星河台_新加坡_英
-369796	TVB-星河台_新加坡_中英
+412106	TVB-星河台_新马_英2
+369796	TVB-星河台_新马_中英
 491163	TVBS-亚洲台_新加坡_中英
 492453	TVBS-新闻台
 369818	tvN HD(国)(新加坡)
 535582	tvN Movies On Demand(新加坡)-
-412097	Vannathirai(EPG2)(新加坡)
-492817	Channel Vasantham_新加坡_英
-530390	Vijay Takkar(新加坡)
+530390	Vijay Takkar_新加坡
 501126	WION(新加坡)
-492880	W-Sport(新加坡)
+492880	W-Sport_新加坡
 501125	北京国际频道
 522556	湖南国际频道(EPG2)
-492883	中天亚洲台_马来_英
-412185	Zee Cinema(新加坡)
-412115	Zee Tamil(新加坡)
-516580	Zee Thirai(EPG2)(新加坡)
-369828	ZEE TV(新加坡)
+492883	中天亚洲台_新马_英
 522558	Zoom TV(新加坡)
 
 
@@ -1988,7 +1966,7 @@ https://epg.pw/xmltv/epg_US.xml
 465233	Cine Mexicano US Feed
 465130	Cine Nostalgia
 465090	Cinema Dinamita
-465199	Cinema One(US)
+465199	Cinema One_马来
 480608	Cinemax Action
 480607	Cinemax Classics
 464917	Cinemax HD_英(US)
@@ -2679,9 +2657,9 @@ daystar-eng	Daystar English
 gusto-tv-new	Gusto TV New
 radio-italia-live	Radio Italia Live
 deluxe-lounge-hd	Deluxe Lounge
-that-s-70s	That'S 70S(B)
-that-s-80s	That'S 80S(B)
-that-s-rock	That'S Rock(B)
+that-s-70s	That's 70S(Rakuten)
+that-s-80s	That's 80S(Rakuten)
+that-s-rock	That's Rock(Rakuten)
 vevo-pop-it	Vevo Pop(IT)
 vevo-pop-90-00-it	Vevo Pop 90 00 (It)
 that-s-90s00s	That'S 90S 00S

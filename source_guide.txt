@@ -1,8 +1,19 @@
-timeframe=96
+#timeframe=96
 
+#台湾EPG核对:https://tvking.funorange.com.tw/now
 
 https://epg.112114.xyz/pp.xml
 #此EPG只有当天
+
+
+https://epg.zsdc.eu.org/t.xml
+#7天回看（包含当天）+5天预告，取自以下EPG
+#https://epg.mb6.top/heiptv.xml
+#http://epg.51zmt.top:8000/e.xml.gz
+#http://epg.51zmt.top:8000/e1.xml.gz
+#https://e.erw.cc/all.xml.gz
+#https://github.com/mytv-android/myEPG/raw/refs/heads/master/output/epg.gz
+
 
 https://raw.githubusercontent.com/litiande03/epg/refs/heads/master/pl.xml.gz
 CCTV-1 综合	CCTV1
@@ -140,9 +151,8 @@ TVB生活台	TVB-生活台
 LiTV中視	中视(LiTV)
 中視新聞台	中视新闻台
 LiTV 華視	华视(LiTV)
-LiTV華視新聞	华视新闻(LiTV)
+LiTV華視新聞	华视新闻资讯(LiTV)
 公視戲劇	公视戏剧
-LiTV民視	民视(LiTV)
 LiTV 民視台灣台	民视台湾台(LiTV)
 LiTV民視第一台	民视第一台(LiTV)
 FTV旅遊	民视旅游台
@@ -192,15 +202,15 @@ GOOD TV 2台	好消息2台
 靖天資訊	靖天资讯台
 靖天綜合台	靖天综合台
 靖洋戲劇台	靖洋戏剧台
-SETiNEWS	三立iNEWS
+SETiNEWS	三立财经新闻iNEWS
 非凡商業台	非凡商业台
 非凡新聞台	非凡新闻台
 采昌影劇	采昌影剧台
-亞洲旅遊台	亚洲旅游台
+亞洲旅遊台	亚洲旅游台_非台_国
 台灣戲劇台	台湾戏剧台
 智林體育台	智林体育台
 HakkaTV	客家电视
-KMTV HD	韩国娱乐台KMTV
+KMTV HD	韩国娱乐台KMTV_台湾
 MCE 我的歐洲電影	MCE(My Cinema Europe HD) 我的欧洲电影
 寵物頻道	宠物频道(TW)
 第1商業	第一商业
@@ -216,7 +226,7 @@ DaVinCi
 DayStar
 EDGE sport
 GINX	GINX电竞频道_国
-Mezzo Live	Mezzo Live_国
+Mezzo Live	Mezzo Live_非台_国
 Nice Bingo
 Nice TV
 Smart知識台	Smart知识台
@@ -439,7 +449,7 @@ TVB粤语片	TVB-粤语片
 PopC
 tvN Movies	tvN Movies(英)
 tvN有线
-AMC 电影台	AMC电影台(EPG1)
+AMC 电影台	AMC电影台_非台_国
 amc电影台		AMC电影台(EPG2)
 粤语片台
 周星驰台
@@ -460,13 +470,13 @@ Hami体育3台
 HAPPY频道
 HBLTV1台
 HBLTV2台
-HBO	HBO 国
+HBO	HBO HD_国
+HBO HD	HBO HD_国2
+HBO香港	HBO HD_香港
 HBO Family	HBO Family(香港1)国
 HBO Family香港
-HBO HD	HBO HD_国
 HBO Hits香港
 HBO Signature香港
-HBO香港
 HGTV HD新加坡	HGTV HD_英
 HGTV居家乐活频道	HGTV_港马_国
 HISTORY HD新加坡	History HD(新加坡)
@@ -520,18 +530,17 @@ Kompas TV
 KTV	KTV_印
 KTV HD	KTV(EPG1)
 LIFE
-Lifeime	Lifetimelifetime娱乐频道_国
+Lifeime	Lifetime娱乐频道_港台_国
+Lifetime 娱乐频道	Lifetime娱乐频道_港台_国2
+Lifetime香港	Lifetime娱乐频道_港台_国3
 Lifetime HD新加坡
-Lifetime 娱乐频道
-Lifetime香港
 lifetime娱乐频道有线
 LiveABC互动英语频道
-Love Nature 4K	Love Nature 4K(国)
+Love Nature 4K	Love Nature 4K_港台_国
 Love_Nature_4K	Love Nature 4K_马来_英
-Love Nature HD
-Love Nature香港
+Love Nature香港	Love Nature_港台_国1
 LOVE NATURE有线	Love Nature有线
-LOVENATURE	Love Nature_国
+LOVENATURE	Love Nature_港台_国2
 LS TIME电影台	龙祥电影台
 MUTV香港
 My Cinema Europe HD 我的欧洲电影有线		MCE(My Cinema Europe HD) 我的欧洲电影_有线
@@ -548,14 +557,14 @@ Nick Jr	Nick Jr._新马2
 Nick Jr. 	Nick Jr.(swepg2)
 Nick Jr. HD
 Nick Jr. HD新加坡	Nick Jr. HD_新加坡
-Nick Jr. 儿童频道
-Nick Jr.(小尼克)	Nick Jr. 儿童频道(C)
-Nick Jr.香港	Nick Jr. 儿童频道香港
+Nick Jr. 儿童频道	Nick Jr. 儿童频道_台湾
+Nick Jr.(小尼克)	Nick Jr. 儿童频道_台湾2
+NickJr.	Nick Jr. 儿童频道_台湾3
+Nick Jr.香港	Nick Jr. 儿童频道_香港
 Nickelodeon Asia HD新加坡	Nickelodeon Asia(新加坡3)
 Nickelodeon Asia尼克儿童频道	Nickelodeon Asia_国2
 Nickelodeon Jr
 Nickelodeon香港
-NickJr.	Nick Jr. 儿童频道(D)
 尼克儿童频道	Nickelodeon尼克儿童频道(中)
 NOW 70s
 NOW 80s
@@ -609,9 +618,8 @@ PETCLUBTV	PET CLUB TV_国
 RCTI
 Rialto Classic Movies (RCM) (免费)	RCM(Rialto Classic Movies)
 River Monsters
-ROCK Action	Rock Action_国
+ROCK Action	Rock Action_台湾_国
 ROCK ACTION Rock Action_香港_国
-ROCKAction	ROCK Action_国(TW)
 ROCK Entertainme	ROCK Entertainme_新加坡
 ROCK ENTERTAINMENT	ROCK Entertainment_国
 Rock Entertainment
@@ -622,7 +630,7 @@ ROCK Xstream摇滚极限频道	Rock X Stream摇滚极限频道
 ROCKXStream	ROCK X Stream_国2
 ROCK综艺娱乐	ROCK Entertainment综艺娱乐
 RT香港
-SBN全球财经台	SBN全球财经台(EPG1)
+SBN全球财经台	SBN全球财经台(EPG2)
 Taiwan Plus
 TBC台中生活台
 SUPER FREE (免费)	SUPER FREE
@@ -689,7 +697,7 @@ elta体育max 8	爱尔达体育MAX8台
 厨神明星秀-FastTV飞速看
 创世电视 (免费)	创世电视
 达文西频道
-大爱电视	大爱电视台
+大爱电视	大爱电视
 大爱二台
 大爱精选-FastTV飞速看
 大兵日记-FastTV飞速看
@@ -708,14 +716,14 @@ elta体育max 8	爱尔达体育MAX8台
 东森洋片台	东森洋片
 东森幼幼台	东森幼幼
 东森娱乐台
-动物星球频道
-动物星球频道香港
+动物星球频道	Animal Planet动物星球_台湾
+动物星球频道香港	Animal Planet动物星球_香港
 都会台
 短剧马拉松
 哆啦Ａ梦台
 法眼黑与白
 法治天地
-番薯电视台
+番薯电视台	番薯卫星电视台
 凡尔赛玫瑰
 放松的爵士午后
 非凡大探索
@@ -728,7 +736,7 @@ elta体育max 8	爱尔达体育MAX8台
 公视好剧-FastTV飞速看
 公视金奖台
 公视台语台
-公用频道
+公用频道	公用频道_台湾
 古典音乐台
 古装武侠剧-FastTV飞速看
 怪兽之王-FastTV飞速看
@@ -742,10 +750,9 @@ elta体育max 8	爱尔达体育MAX8台
 韩流美食料理秀-FastTV飞速看
 贺岁电影推荐-FastTV飞速看
 户外频道香港
-华藏卫视
-华藏卫星电视台	华藏卫视(预告+详情)
+华藏卫星电视台	华藏卫视
 华视
-华视HD
+华视HD	华视HD_与华视节目不同
 华视好剧-FastTV飞速看
 华视教育体育文化台
 华视新闻资讯台
@@ -824,7 +831,7 @@ elta体育max 8	爱尔达体育MAX8台
 人间卫视
 三立综合台HD	三立综合台
 三立新闻HD	三立新闻台
-三立新闻iNEWS
+三立新闻iNEWS	三立财经新闻iNEWS(B)
 三立都会台
 三立国际台
 三立台湾台
@@ -880,9 +887,9 @@ elta体育max 8	爱尔达体育MAX8台
 信吉艺文台HD	信吉艺文台
 幸福保卫战-FastTV飞速看
 亚洲剧台	TVB-亚洲剧台
-亚洲旅游HD
+亚洲旅游HD	亚洲旅游台_非台_国
 亚洲旅游台有线	亚洲旅游台_有线(回看+详情)
-亚洲美食台香港
+亚洲美食台香港	亚洲美食台_港台
 亚洲卫视
 亚洲新闻台	CNA
 亚洲综合HD演唱会直击
@@ -892,13 +899,12 @@ elta体育max 8	爱尔达体育MAX8台
 英超1台
 英超2台
 原住民族电视台	原住民电视
-运通财经综合台
 正德电视台
 智叻乐园
 中国旅游大探索
 中国美食大探索
 中华电视台
-中视HD
+中视HD	中视
 中视经典台HD	中视经典(回看)
 中视菁采台HD	中视菁采台
 中视数位台
@@ -909,10 +915,10 @@ elta体育max 8	爱尔达体育MAX8台
 中天娱乐HD	中天娱乐
 中天综合台
 猪哥亮歌厅秀
-罪案侦查频道	罪案侦缉频道_香港_国
-罪案侦辑频道	罪案侦缉频道_英
-韩国娱乐KMTV	韩国娱乐台KMTV(回看)
-韩国娱乐台 KMTV	韩国娱乐台KMTV_简中
+罪案侦查频道	Crime & Investigation罪案侦缉_香港_国
+罪案侦辑频道	Crime & Investigation罪案侦缉_英
+韩国娱乐KMTV	韩国娱乐台KMTV_台湾(B)
+韩国娱乐台 KMTV	韩国娱乐台KMTV_台湾_简中
 中华一番(中文版)
 超人力霸王台
 奥林匹克官网直播
@@ -957,9 +963,9 @@ Galaxy
 Galaxy Premium
 GINX Esports TV
 Global Trekker探索世界频道	Global Trekker_英
-GlobalTrekker	Global Trekker_国
+GlobalTrekker	Global Trekker探索世界_国
 Globetrotter (免费)	Globet Trotter
-GLOBLTREKKER探索世界	Global Trekker探索世界(预告+详情)
+GLOBLTREKKER探索世界	Global Trekker探索世界_国(详情)
 TLC 旅游生活频道	TLC旅游生活频道
 TLC旅游生活频道香港	TLC旅游生活频道_香港
 Golden 强片台	Golden强片台
@@ -974,8 +980,8 @@ Adithya	Adithya TV_马来
 ADITHYA TV
 Al Quran Al Kareem
 ANC
-Animax HD	Animax
-Animax香港	Animax_港新
+Animax HD	Animax_英
+Animax香港	Animax_港新_国
 ANTV
 Arirang
 Asian Food Network 亚洲美食频道	Asian Food Network_马来_国
@@ -983,10 +989,10 @@ Asianet
 Asianet Movies
 ASMR行车纪录
 BBC_Brit_HD	BBC Brit
-BBC EARTH	BBC Earth_香港_国简
-BBC Earth	BBC Earth(英)
+BBC EARTH	BBC Earth_新马港_国简
+BBC Earth	BBC Earth_英
 BBC_First_HD	BBC First
-BBC LIFESTYLE	BBC Lifestyle_香港_国
+BBC LIFESTYLE	BBC Lifestyle_港台_国2
 BBC News	BBC News (North America)
 BBC News HD	BBC News_香港
 bb快报
@@ -1001,19 +1007,19 @@ BTV
 BUDDY STARS
 Cartoon Network香港
 CARTOONITO HD	CARTOONITO
-CATCH PLAY电影台	CATCHPLAY电影台
+CATCH PLAY电影台	CATCHPLAY电影台_台湾
 Cbeebies	Cbeebies_国
 CBeebies HD	CBeebies HD_英1
 Cbeebies HD	Cbeebies HD_国(B)
 CBeebies香港
-CI 罪案侦查频道
+CI 罪案侦查频道	Crime & Investigation罪案侦查
 CINEEDGE
 Cinema One Global
 cinemalworld世界电影频道有线	cinemaworld_台湾_国+详情
 CinemaWorld频道	CinemaWorld_台新_国
-CINEMAX HD	Cinemax HD_国_有线
+CINEMAX HD	Cinemax HD_非台_国_有线
 Citra Entertainment
-CI罪案侦查频道有线	Crime & Investigation罪案侦查频道有线
+CI罪案侦查频道有线	Crime & Investigation罪案侦查_有线
 CLASSIC_ROCK	Classic ROCK
 CLASSICA 古典乐	Classica古典乐
 CMC 北美频道
@@ -1021,25 +1027,25 @@ CMC 香港频道
 CMusic
 CNBC HD	CNBC (非新加坡)
 CNEX纪实频道
-CN卡通频道	CN卡通频道(回)
+CN卡通频道	Cartoon Network卡通频道_台湾(回)
 COLORS
 COLORS Tamil HD	Colors Tamil_马来
 Concerto (免费)	Concerto
 Crime + Investigation HD	Crime & Investigation
 Da Vinc香港
 daystar	Daystar(swepg)
-DAZN 1
-DAZN 2
-DAZN 3
-Deal or No Deal
-Discovery	Discovery_国
-Discovery Asia	Discovery Asia_香港_国_详情
-DiscoveryAsia	Discovery Asia_香港_国_标题
+DAZN 1	DAZN-1_台湾
+DAZN 2	DAZN-2_台湾
+DAZN 3	DAZN-3_台湾
+Deal or No Deal	Deal or No Deal_新加坡
+Discovery	Discovery_台湾_国
+Discovery Asia	Discovery Asia_港台_国_详情
+DiscoveryAsia	Discovery Asia_港台_国_标题
 Discovery Channel香港
 Discovery HD新加坡	Discovery HD_新加坡_英
-Discovery 科学频道	Discovery科学频道_香港_国
-DiscoveryDMAX	Discovery DMAX
-DiscoveryEVE	Discovery EVE
+Discovery 科学频道	Discovery科学频道_港台_国
+DiscoveryDMAX	Discovery DMAX_国
+DiscoveryEVE	Discovery EVE_国
 DMAX香港
 DMAX有线
 Docsville (免费)	Docsville
@@ -1091,21 +1097,20 @@ meWATCH LIVE 5
 MNCTV
 momo1台HD	MOMO1台
 momo2台HD	MOMO2台
-momo亲子台	MOMO亲子台(回看)
+momo亲子台	MOMO亲子台(EPG2)
 MOMO综合台	MOMO综合台
 Moonbug	Moonbug_马来
 Moonbug香港	Moonbug香港_繁中
 moov
 MOVIE MOVIE
 MTV	MTV_国
-MTV综合台HD	MTV综合(回看)
+MTV综合台HD	MTV综合(EPG2)
 MUCH TV
 Music TV
 Muslim TV
 NewsWorld (免费)	NewsWorld
 NHK HD
-NHK	NHK World Premium_国(EPG1)
-NHK WORLD PREMIUM	NHK World Premium_国(EPG2)
+NHK WORLD PREMIUM	NHK World Premium_非台_国
 NHK World-Japan	NHK World Japan
 NHK 日本国家电视台
 SBS
@@ -1143,7 +1148,7 @@ The Filipino Channel HD	TFC (The Filipino Channel)
 Thrill
 TRACE Sport Stars (免费)	Trace Sport Stars_英1
 TRACE Sport Stars	Trace Sport Stars_英2
-TRACE Sport Stars HD	Trace Sport Stars_国
+TRACE Sport Stars HD	Trace Sport Stars_台湾_国
 trace sport star运动明星	Trace SportStar运动明星
 TRACESportStars	Trace Sport Stars_新加坡_国
 TRACE Urban (免费)	Trace Urban_英
@@ -1490,13 +1495,12 @@ http://epg.51zmt.top:8000/e2.xml.gz
 1480	东森戏剧台
 1472	东森综合台
 1551	高点育乐台
-1484	高点综合台
+1484	高点电视台(B)
 1454	公视(预告)
 1526	冠军电视台
 1552	冠军梦想台
 1518	国兴卫视
 1538	海豚综合台
-1582	韩国娱乐台KMTV(预告)
 1508	好莱坞电影台
 1778	华艺中文台
 1819	寰宇HD综合
@@ -1504,7 +1508,6 @@ http://epg.51zmt.top:8000/e2.xml.gz
 1765	龙华影剧
 1836	美食星球
 1478	年代MUCH
-1539	霹雳台湾台
 1528	全大电视台
 1530	三立财经新闻台
 1840	三立戏剧
@@ -1517,39 +1520,38 @@ http://epg.51zmt.top:8000/e2.xml.gz
 1483	纬来戏剧台
 123	TVB-无线新闻
 1559	幸福空间居家台
-1592	亚洲旅游台_有线(预告+详情)
+1592	亚洲旅游台_台湾_国(预告+详情)
 1818	亚洲综合
 222	壹电视综合台
 1532	运通财经
-1853	Animax_国
+1853	Animax_台湾_国
 1507	AXN_国
 229	BBC
 1577	BlueAnt Entertainment
 1560	Channel News Asia
 1511	CINEMAX_香港_国
 232	CNBC Hong Kong
-230	CN卡通频道(预)
-1585	Discovery科学_港台
+230	Cartoon Network卡通频道_台湾(预)
 1810	ELTV
 1584	EVE频道_国
 1579	Food Network美食台_香港(预)
-1505	HBO
+1505	HBO HD_国2
 1574	HBO Hits_国
 1575	HBO Signature_国
 1783	History_香港_国
 321	HITS HD_国
 194	Mezzo Live_英
-1464	MOMO亲子台(预告)
-1536	MTV
-1813	MTV综合(预告)
+1464	MOMO亲子台
+1536	MTV_英
+1813	MTV综合_台湾
 157	NHK World_国
 1604	Nickelodeon_国
-1605	Nick Jr. 儿童频道(国5)
+1605	Nick Jr. 儿童频道_台湾4
 164	NOW财经台
-1533	SBN全球财经台(EPG2)
+1533	SBN全球财经台
 249	Sky News
-1461	TLC旅游生活频道
-1779	Trace Urban(B)
+1461	TLC旅游生活频道_台湾
+1779	Trace Urban_英2
 190	TVB-J2
 1496	TVBS
 1772	TVBS-精采台(EPG2)
@@ -1599,9 +1601,9 @@ ChangeTimezone=Y
 3760	Astro Vellithirai
 2058	Astro Vinmeen
 411257	Asyik FM
-1205	AXN_新加坡
+1205	AXN_新马_英
 854	BAYU(MY)
-4030	BBC Earth_马来
+4030	BBC Earth_新马港台_英
 3329	BBC News_新马台
 399482	beIN Sports-1_马来
 4146	beIN Sports-2(MY)
@@ -1618,7 +1620,7 @@ ChangeTimezone=Y
 461591	CGTN英文纪录_马来_英
 3873	CNBC Asia_新马
 3325	Colors Hindi
-1358	Discovery Asia_新马
+1358	Discovery Asia_新马_英
 3437	Discovery Channel_新马
 2756	DW English_马来
 491	ERA FM
@@ -1711,11 +1713,11 @@ ChangeTimezone=Y
 535445	That's 70s_新加坡
 535443	That's 80s_新加坡
 535444	That's Rock_新加坡
-492896	TRACE Sport Stars_新加坡
+492896	TRACE Sport Stars_新加坡_英
 492878	TG Junior_新加坡
 412123	ADITHYA TV_新加坡
 435717	Asianet TV_新加坡
-492892	BBC Earth_新加坡
+492892	BBC Earth_新马港台_英2
 492863	BBC Lifestyle_新加坡_英
 492869	Astro Sensasi_新加坡
 412167	beIN Sports_新加坡
@@ -1724,9 +1726,9 @@ ChangeTimezone=Y
 524983	beIN Sports-4_新加坡
 492823	CinemaWorld_新加坡_英
 369816	CBeebies HD_新加坡_英
-491157	CNN International_中东
+491157	CNN International_台湾+中东
 492904	COLORS TV_新加坡
-492850	AXN_马来
+492850	AXN_新马_英2
 369760	Asia Food Network_马来
 412157	ABC Australia_新马
 492865	Cartoon Network_新马_英
@@ -1749,9 +1751,9 @@ ChangeTimezone=Y
 369734	KBS World_新马_英
 492851	Hub-娱家_新加坡
 369832	Lifetime HD_马来_英
-412184	Lifetime HD_新加坡
+412184	Lifetime HD_新加坡_英
 491166	Nick Jr._新马_英
-412130	NHK World Premium_新马
+412130	NHK World Premium_新马_英
 412136	Nick Jr._新马
 492879	Nickelodeon_新马_英
 369719	ROCK Entertainment_新加坡2
@@ -1776,7 +1778,7 @@ ChangeTimezone=Y
 491159	ANIPLUS(新加坡)
 516579	Astro Ria(新加坡)
 412098	BBC World News(新加坡)
-412199	Bloomberg Originals
+412199	Bloomberg Originals_台湾？
 369771	Bloomberg TV(新加坡)
 535553	C+I (HD)(新加坡)-
 491172	中国电影频道China Movie Channel(新加坡)
@@ -1824,7 +1826,7 @@ ChangeTimezone=Y
 412145	凤凰资讯台_新加坡_英
 369790	Premier Sports(新加坡)
 412148	Preview Channel(新加坡)
-369727	ROCK Action HD(新加坡2)
+369727	ROCK Action(新加坡)
 412091	ROCK Entertainment(新加坡)
 369849	SAB TV(新加坡)
 535531	SEA Today(新加坡)-
@@ -2514,8 +2516,8 @@ https://epg.pw/xmltv/epg_US.xml
 
 https://epg.yang-1989.eu.org/epg.xml.gz
 明珠台	TVB-明珠台
-BBC Earth	BBC Earth_香港_中繁+详情
-BBC Lifestyle	BBC Lifestyle_国2
+BBC Earth	BBC Earth_新马港台_中繁+详情
+BBC Lifestyle	BBC Lifestyle_港台_国
 Now Sports 精選	Now Sports精选
 商業電台 雷霆881	商业电台 雷霆881
 商業電台 AM864	商业电台 AM864

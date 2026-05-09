@@ -11,6 +11,7 @@ EPG Merger Script - 合并多个EPG源的频道节目信息
 支持跨天节目拆分（如 23:40-0:20 拆分为两个节目）
 """
 
+import requests
 import gzip
 import xml.etree.ElementTree as ET
 import os
@@ -21,18 +22,6 @@ from datetime import datetime, timedelta, timezone
 from typing import Dict, List, Tuple, Optional, Set
 import hashlib
 import copy
-
-# ==================== HTTP库 ====================
-# 优先使用 curl_cffi（最强CF绕过）
-try:
-    from curl_cffi import requests
-    HAS_CURL_CFFI = True
-    print("✓ 已加载 curl_cffi（Chrome TLS 指纹模拟）")
-except ImportError:
-    import requests
-    HAS_CURL_CFFI = False
-    print("⚠ 未安装 curl_cffi")
-    print("  安装方法: pip install curl_cffi")
 
 # 尝试导入Cloudflare绕过库
 try:
@@ -63,7 +52,6 @@ MAX_RETRIES = 3                          # 最大重试次数
 DOWNLOAD_TIMEOUT = 30                    # 下载超时（秒）
 CHUNK_SIZE = 131072                      # 下载块大小（128KB）
 USE_CLOUDSCRAPER = True                  # 是否使用cloudscraper绕过CF
-USE_CURL_CFFI = True
 
 # ==================== 别名映射配置 ====================
 # True: 修改channel id
@@ -616,102 +604,41 @@ def analyze_epg_time_range(program_dict: Dict[Tuple[str, str], ET.Element]) -> T
 
 # ==================== 文件下载 ====================
 def download_file(url: str, path: str) -> Optional[str]:
-    """下载EPG文件（增强版，支持Cloudflare绕过）"""
-
+    """下载EPG文件，支持HTTP/HTTPS和Cloudflare绕过"""
     filename = os.path.basename(url.split('?')[0])
-
     if not filename:
         url_hash = hashlib.md5(url.encode()).hexdigest()[:8]
         filename = f'epg_{url_hash}.xml'
-
+    
     download_path = os.path.join(path, filename)
-
     name, ext = os.path.splitext(filename)
     counter = 1
-
     while os.path.exists(download_path):
         download_path = os.path.join(path, f"{name}({counter}){ext}")
         counter += 1
-
-    # ==================== 浏览器请求头 ====================
+    
     headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36',
-
-        'Accept': 'application/xml,text/xml,application/xhtml+xml,text/html;q=0.9,*/*;q=0.8',
-
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
         'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8',
-
         'Accept-Encoding': 'gzip, deflate, br',
-
-        'Cache-Control': 'no-cache',
-
-        'Pragma': 'no-cache',
-
-        'DNT': '1',
-
         'Connection': 'keep-alive',
-
         'Upgrade-Insecure-Requests': '1',
-
-        'Sec-Fetch-Dest': 'document',
-
-        'Sec-Fetch-Mode': 'navigate',
-
-        'Sec-Fetch-Site': 'same-origin',
-
-        'Sec-Fetch-User': '?1',
-
-        'Sec-Ch-Ua': '"Google Chrome";v="136", "Chromium";v="136", "Not/A)Brand";v="24"',
-
-        'Sec-Ch-Ua-Mobile': '?0',
-
-        'Sec-Ch-Ua-Platform': '"Windows"',
     }
-
-    # ==================== 特定域名处理 ====================
-    if 'mb6.top' in url:
-        headers['Referer'] = 'https://epg.mb6.top/'
-        headers['Origin'] = 'https://epg.mb6.top/'
-
-    elif '112114' in url:
+    
+    if '112114' in url:
         headers['Referer'] = 'https://epg.112114.xyz/'
-
     elif '51zjy' in url:
         headers['Referer'] = 'https://epg.51zjy.top/'
-
-    # ==================== 下载重试 ====================
+    
     for attempt in range(MAX_RETRIES + 1):
-
         try:
-
             if attempt > 0:
                 wait_time = attempt * 3
                 print(f'    ⏳ 第 {attempt} 次重试，等待 {wait_time} 秒...')
                 time.sleep(wait_time)
-
-            # ==========================================================
-            # 优先使用 curl_cffi（最强）
-            # ==========================================================
-            if HAS_CURL_CFFI and USE_CURL_CFFI:
-
-                response = requests.get(
-                    url,
-                    headers=headers,
-
-                    impersonate="chrome136",
-
-                    timeout=DOWNLOAD_TIMEOUT,
-
-                    allow_redirects=True,
-
-                    verify=False
-                )
-
-            # ==========================================================
-            # 次选 cloudscraper
-            # ==========================================================
-            elif HAS_CLOUDSCRAPER and USE_CLOUDSCRAPER:
-
+            
+            if USE_CLOUDSCRAPER and HAS_CLOUDSCRAPER:
                 scraper = cloudscraper.create_scraper(
                     browser={
                         'browser': 'chrome',
@@ -719,125 +646,44 @@ def download_file(url: str, path: str) -> Optional[str]:
                         'mobile': False
                     }
                 )
-
-                response = scraper.get(
-                    url,
-                    headers=headers,
-                    timeout=DOWNLOAD_TIMEOUT,
-                    allow_redirects=True
-                )
-
-            # ==========================================================
-            # 最后 fallback requests
-            # ==========================================================
+                response = scraper.get(url, headers=headers, timeout=DOWNLOAD_TIMEOUT, allow_redirects=True)
             else:
-
-                session = requests.Session()
-
-                response = session.get(
-                    url,
-                    headers=headers,
-                    stream=True,
-                    timeout=DOWNLOAD_TIMEOUT,
-                    allow_redirects=True
-                )
-
-            # ==========================================================
-            # 状态码检查
-            # ==========================================================
-            if response.status_code != 200:
-
+                response = requests.get(url, headers=headers, stream=True, timeout=DOWNLOAD_TIMEOUT, allow_redirects=True)
+            
+            if response.status_code == 200:
+                with open(download_path, 'wb') as f:
+                    downloaded = 0
+                    if USE_CLOUDSCRAPER and HAS_CLOUDSCRAPER:
+                        f.write(response.content)
+                        downloaded = len(response.content)
+                    else:
+                        for chunk in response.iter_content(chunk_size=CHUNK_SIZE):
+                            if chunk:
+                                f.write(chunk)
+                                downloaded += len(chunk)
+                
+                print(f'    ✓ 下载成功: {format_size(downloaded)}')
+                return download_path
+                
+            elif response.status_code == 403:
+                print(f'    ✗ 访问被拒绝 (403)')
+                if attempt == MAX_RETRIES:
+                    return None
+            elif response.status_code == 404:
+                print(f'    ✗ 文件不存在 (404)')
+                return None
+            else:
                 print(f'    ✗ HTTP错误: {response.status_code}')
-
                 if attempt == MAX_RETRIES:
                     return None
-
-                continue
-
-            # ==========================================================
-            # 获取内容
-            # ==========================================================
-            content = response.content
-
-            if not content:
-
-                print(f'    ✗ 返回空内容')
-
-                if attempt == MAX_RETRIES:
-                    return None
-
-                continue
-
-            # ==========================================================
-            # 检测HTML challenge
-            # ==========================================================
-            lower_content = content[:5000].lower()
-
-            if (
-                b'<!doctype html' in lower_content
-                or b'<html' in lower_content
-            ):
-
-                print(f'    ⚠ 返回HTML页面而不是XML')
-
-                if b'cloudflare' in lower_content:
-                    print(f'    ⚠ 检测到Cloudflare保护')
-
-                if b'access denied' in lower_content:
-                    print(f'    ⚠ Access Denied')
-
-                if b'challenge' in lower_content:
-                    print(f'    ⚠ JS Challenge')
-
-                if attempt == MAX_RETRIES:
-                    return None
-
-                continue
-
-            # ==========================================================
-            # 检测XML/GZIP
-            # ==========================================================
-            is_xml = (
-                content.startswith(b'<?xml')
-                or content.startswith(b'<tv')
-            )
-
-            is_gzip = content.startswith(b'\x1f\x8b')
-
-            if not is_xml and not is_gzip:
-
-                print(f'    ⚠ 未识别为XML/GZIP')
-
-                preview = content[:100]
-
-                try:
-                    print(f'    内容预览: {preview.decode("utf-8", errors="ignore")}')
-                except:
-                    pass
-
-                if attempt == MAX_RETRIES:
-                    return None
-
-                continue
-
-            # ==========================================================
-            # 保存文件
-            # ==========================================================
-            with open(download_path, 'wb') as f:
-                f.write(content)
-
-            print(f'    ✓ 下载成功: {format_size(len(content))}')
-
-            return download_path
-
+                    
         except Exception as e:
-
-            print(f'    ✗ 下载异常: {e}')
-
+            print(f'    ✗ 错误: {e}')
             if attempt == MAX_RETRIES:
                 return None
-
+    
     return None
+
 
 # ==================== EPG处理 ====================
 def process_epg_source(

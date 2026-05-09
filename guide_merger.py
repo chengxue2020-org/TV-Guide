@@ -617,6 +617,7 @@ def download_file(url: str, path: str) -> Optional[str]:
         download_path = os.path.join(path, f"{name}({counter}){ext}")
         counter += 1
     
+    # ==================== 设置请求头 ====================
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
@@ -626,10 +627,26 @@ def download_file(url: str, path: str) -> Optional[str]:
         'Upgrade-Insecure-Requests': '1',
     }
     
+    # ==================== 为特定域名添加自定义请求头 ====================
+    # mb6.top 域名需要特定的 Referer
+    if 'mb6.top' in url:
+        headers['Referer'] = 'https://epg.mb6.top/'
+        headers['Origin'] = 'https://epg.mb6.top/'
+        print(f'    🔧 已添加 mb6.top 专用请求头')
+    
+    # 112114 域名
     if '112114' in url:
         headers['Referer'] = 'https://epg.112114.xyz/'
-    elif '51zjy' in url:
+    
+    # 51zjy 域名
+    if '51zjy' in url:
         headers['Referer'] = 'https://epg.51zjy.top/'
+    
+    # 可以继续添加其他域名的特殊配置
+    # if 'example.com' in url:
+    #     headers['Referer'] = 'https://example.com/'
+    #     headers['Cookie'] = 'session=xxx'
+    #     headers['Authorization'] = 'Bearer token'
     
     for attempt in range(MAX_RETRIES + 1):
         try:
@@ -651,18 +668,20 @@ def download_file(url: str, path: str) -> Optional[str]:
                 response = requests.get(url, headers=headers, stream=True, timeout=DOWNLOAD_TIMEOUT, allow_redirects=True)
             
             if response.status_code == 200:
-                with open(download_path, 'wb') as f:
-                    downloaded = 0
-                    if USE_CLOUDSCRAPER and HAS_CLOUDSCRAPER:
-                        f.write(response.content)
-                        downloaded = len(response.content)
-                    else:
-                        for chunk in response.iter_content(chunk_size=CHUNK_SIZE):
-                            if chunk:
-                                f.write(chunk)
-                                downloaded += len(chunk)
+                content = response.content
                 
-                print(f'    ✓ 下载成功: {format_size(downloaded)}')
+                # 检查内容是否为有效的 XML
+                if not content.startswith(b'<?xml') and not content.startswith(b'<tv'):
+                    content_preview = content[:200]
+                    print(f'    ⚠ 警告: 返回内容可能不是 XML 格式')
+                    print(f'    内容预览: {content_preview}')
+                    # 可以选择继续或放弃
+                    # return None
+                
+                with open(download_path, 'wb') as f:
+                    f.write(content)
+                
+                print(f'    ✓ 下载成功: {format_size(len(content))}')
                 return download_path
                 
             elif response.status_code == 403:

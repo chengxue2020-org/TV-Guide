@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-EPG Merger Script - 合并多个EPG源的频道节目信息
+EPG Merger Script - 合并多个EPG源的频道节目信息 
 支持 .xml 和 .xml.gz 格式
 支持在 source_guide.txt 中直接定义频道别名映射
 支持智能排序（按display-name，数字-字母-汉字，不区分大小写）

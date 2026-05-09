@@ -3,8 +3,8 @@
 ============================================================
 Guide Merger v2.0 (Cookie Persistence & Dynamic Referer)
 ============================================================
-当前时间: 2026-05-09 23:08:13 (北京时间)
-当前时间: 2026-05-09 15:08:13 (UTC)
+当前时间: 2026-05-09 23:15:50 (北京时间)
+当前时间: 2026-05-09 15:15:50 (UTC)
 
 ⚠ 未安装 curl_cffi 库，将使用普通 requests
   安装方法: pip install curl-cffi
@@ -1850,16 +1850,16 @@ Guide Merger v2.0 (Cookie Persistence & Dynamic Referer)
     🔧 为域名 epg.mb6.top 创建新 Session
     🔗 Referer: https://epg.mb6.top/
     ⚠ 未识别为XML/GZIP
-    内容预览: b"\x8b\xff\x0f\x00\xe4\xff\x9cZU;\xcb\x86s\x84?C\x92\xfd\x10\x17B\xae\xd6\x01\x1c%\x8b'!\x9d\xdeUr\x8c\xb1*\xd7\xfc\x01*\xfb\xff\xdd\xa7\x82Q\x19\x1c\xcc\x19\n\xd9j{[+Xj\x9b\xfe{\xfft\x7f]7[6j\xb1\\/\xf5\x14\xa4`\x15I\x00k\xf8p@K\xc5\x9e\x02\xd51c\x8d\xf5[\x02\xb1,\x07b\x9b\xff"
+    内容预览: b'\x0b\xd7;\x11\xd5\xa4\x1e\x004R\x16\xce\xdf\xef\x7f\x9d\xe6\xb4\xfeSJ\x87/Q\xdcdRJ\x9f\xce\x05\xb9\x82\xe1\x81p\xfc2\xd5\xda\xb6!FpS\xfc\xd0\xa9\xbf\xad\xce\xaf\xd2!\xa1w\xcb\xf0\xd7\xbf\xcdi\xd8i\x9d\xb8tR\xaaCj\x9b\xc6\x84\x130\xd9\xff\xffe\xceH\xac\xb9\xcc\x98\x01\xb5gU4\xc6\xf4\xe6\x10.\xb8\x14\xbb\xef'
     ⏳ 第 1 次重试，等待 3 秒...
     ⚠ 未识别为XML/GZIP
-    内容预览: b'\x8b3\x0b\x00\xe4\xff\x9a\xb3\xd3u\x96-U\xf8\x0cE\xe3C\xb6\x94~\x8a\x05R1\xf2\x14]\xdf\x9e4\xb5\xb6\xd312\x03\x9e\xe2\xff\xff\xd5\x04S\xf9\xf8q\xce\xa7!k\xb3e\xb5\xc0\xca6\x9dwg\xa1\xd6\xed\xf8F\x85q\x1eu\x02\t,\x91\x19\xc0\x0c?~\xd0(\x0e(\xc7\x06\x07\xc7Jg9\x98\xe7\xef\xe5\xcc\xd7\xa4<NG\r'
+    内容预览: b"\x8b\xff\x0f\x00\xe4\xff\x9cZU;\xcb\x86s\x84?C\x92\xfd\x10\x17B\xae\xd6\x01\x1c%\x8b'!\x9d\xdeUr\x8c\xb1*\xd7\xfc\x01*\xfb\xff\xdd\xa7\x82Q\x19\x1c\xcc\x19\n\xd9j{[+Xj\x9b\xfe{\xfft\x7f]7[6j\xb1\\/\xf5\x14\xa4`\x15I\x00k\xf8p@K\xc5\x9e\x02\xd51c\x8d\xf5[\x02\xb1,\x07b\x9b\xff"
     ⏳ 第 2 次重试，等待 6 秒...
     ⚠ 未识别为XML/GZIP
-    内容预览: b"\x8b\xff\x0f\x00\xe4\xff\x9cZU;\xcb\x86s\x84?C\x92\xfd\x10\x17B\xae\xd6\x01\x1c%\x8b'!\x9d\xdeUr\x8c\xb1*\xd7\xfc\x01*\xfb\xff\xdd\xa7\x82Q\x19\x1c\xcc\x19\n\xd9j{[+Xj\x9b\xfe{\xfft\x7f]7[6j\xb1\\/\xf5\x14\xa4`\x15I\x00k\xf8p@K\xc5\x9e\x02\xd51c\x8d\xf5[\x02\xb1,\x07b\x9b\xff"
+    内容预览: b'\x8b5\x0b\x00\xe4\xff\x9a\xb3\xd3u\x96-U\xf8\x0cE\xe3C\xb6\x94~\x8a\x05R1\xf2\x14]\xdf\x9e4\xb5\xb6\xd312\x03\x9e\xe2\xff\xff\xd5\x04S\xf9\xf8q\xce\xa7!k\xb3e\xb5\xc0\xca6\x9dwg\xa1\xd6\xed\xf8F\x85q\x1eu\x02\t,\x91\x19\xc0\x0c?~\xd0(\x0e(\xc7\x06\x07\xc7Jg9\x98\xe7\xef\xe5\xcc\xd7\xa4<NG\r'
     ⏳ 第 3 次重试，等待 9 秒...
     ⚠ 未识别为XML/GZIP
-    内容预览: b'\x8b3\x0b\x00\xe4\xff\x9a\xb3\xd3u\x96-U\xf8\x0cE\xe3C\xb6\x94~\x8a\x05R1\xf2\x14]\xdf\x9e4\xb5\xb6\xd312\x03\x9e\xe2\xff\xff\xd5\x04S\xf9\xf8q\xce\xa7!k\xb3e\xb5\xc0\xca6\x9dwg\xa1\xd6\xed\xf8F\x85q\x1eu\x02\t,\x91\x19\xc0\x0c?~\xd0(\x0e(\xc7\x06\x07\xc7Jg9\x98\xe7\xef\xe5\xcc\xd7\xa4<NG\r'
+    内容预览: b"\x8b6\x0b\x00\xe4\xff\x9a\xb3\xd3u\x96-U\xf8\x0cE\xe3C\xb6\x94~\x8a\x05R1\xf2\x14]\xdf\x9e4\xb5\xb6\xd312\x03\x9e\xe2\xff\xff\xd5\x04S\xf9\xf8q\xce\xa7!k_,\xb0\xb2M\xe7\xdd\xa9h]\x8foT\x18\xe7Q'\x90\xc0\x12)\xc0\x0c?~\xd0(\x0e(\xc7\x06\xc3\xb1\xd2Y\x0e\xe6\xf9{9\xf3\x95)\x8f\xd3Q\x03\xe9\xfd"
    ✗ 下载失败，跳过此源
 
 ------------------------------------------------------------
@@ -1990,8 +1990,8 @@ Guide Merger v2.0 (Cookie Persistence & Dynamic Referer)
     ✂️ 跨天节目拆分: 83 个
     🔗 智能合并更新: 44 个节目
     ⚠ 未找到频道: 愛爾達娛樂
-    ⚠ 未找到频道: 揭阳生活
     ⚠ 未找到频道: 现代教育
+    ⚠ 未找到频道: 揭阳生活
     📺 新增频道: 212/215
     📅 新增节目: 43094/44119
    ✓ 处理成功
@@ -2353,57 +2353,57 @@ Guide Merger v2.0 (Cookie Persistence & Dynamic Referer)
     🔗 智能合并: True
     ✂️ 跨天节目拆分: 2329 个
     🔗 智能合并更新: 4305 个节目
-    ⚠ 未找到频道: now直播
-    ⚠ 未找到频道: 千禧经典台(MY)
-    ⚠ 未找到频道: Hub Sports 1
-    ⚠ 未找到频道: 承德旅游文化
-    ⚠ 未找到频道: 张家口公共
-    ⚠ 未找到频道: 唐山生活服务
-    ⚠ 未找到频道: 保定新闻综合
-    ⚠ 未找到频道: Nick Jr.
-    ⚠ 未找到频道: 秦皇岛民生
-    ⚠ 未找到频道: ROCK ACTION Rock Action_香港_国
-    ⚠ 未找到频道: 承德新闻综合
-    ⚠ 未找到频道: 廊坊公共
-    ⚠ 未找到频道: BBC_Brit_HD
-    ⚠ 未找到频道: Hub 如意
-    ⚠ 未找到频道: Hub Sports 3
-    ⚠ 未找到频道: TV5Monde 法国TV5
-    ⚠ 未找到频道: BBC_First_HD
-    ⚠ 未找到频道: 沧州影视娱乐
-    ⚠ 未找到频道: 茶频道
     ⚠ 未找到频道: 邯郸新闻综合
-    ⚠ 未找到频道: 唐山新闻综合
-    ⚠ 未找到频道: Astro_Sports_Plus_3
-    ⚠ 未找到频道: MagellanTV频道 (麦哲伦频道)
-    ⚠ 未找到频道: 唐山公共
-    ⚠ 未找到频道: 保定公共频道
-    ⚠ 未找到频道: 睛彩河北
-    ⚠ 未找到频道: SUPER识叹 (免费)
-    ⚠ 未找到频道: 衡水新闻综合
-    ⚠ 未找到频道: SUPER单元剧 (免费)
-    ⚠ 未找到频道: 沧州公共
-    ⚠ 未找到频道: 邢台城市生活
     ⚠ 未找到频道: 河北杂技频道
-    ⚠ 未找到频道: 唐山影视
-    ⚠ 未找到频道: Hub Sports 2
-    ⚠ 未找到频道: 沧州新闻综合
-    ⚠ 未找到频道: 廊坊新闻
-    ⚠ 未找到频道: 秦皇岛新闻综合
-    ⚠ 未找到频道: 邯郸公共
-    ⚠ 未找到频道: HITS电影台
-    ⚠ 未找到频道: 南京新闻综合
-    ⚠ 未找到频道: 新哆啦A梦(中文版)2台新年追剧首选-FastTV飞速看
-    ⚠ 未找到频道: 张家口新闻综合
-    ⚠ 未找到频道: 亚洲综合HD演唱会直击
+    ⚠ 未找到频道: 张家口公共
     ⚠ 未找到频道: 1905App 热血影院
-    ⚠ 未找到频道: 邯郸科技教育
-    ⚠ 未找到频道: 保定生活健康
-    ⚠ 未找到频道: 衡水经济科教
-    ⚠ 未找到频道: FashionTV 时尚频道
-    ⚠ 未找到频道: SPY X FAMILY 间谍家家酒(国)
-    ⚠ 未找到频道: SUPER金曲 (免费)
+    ⚠ 未找到频道: 衡水新闻综合
+    ⚠ 未找到频道: 睛彩河北
     ⚠ 未找到频道: 邢台综合
+    ⚠ 未找到频道: 沧州影视娱乐
+    ⚠ 未找到频道: HITS电影台
+    ⚠ 未找到频道: 唐山公共
+    ⚠ 未找到频道: SPY X FAMILY 间谍家家酒(国)
+    ⚠ 未找到频道: 千禧经典台(MY)
+    ⚠ 未找到频道: 茶频道
+    ⚠ 未找到频道: 衡水经济科教
+    ⚠ 未找到频道: Hub Sports 2
+    ⚠ 未找到频道: 唐山影视
+    ⚠ 未找到频道: TV5Monde 法国TV5
+    ⚠ 未找到频道: 廊坊公共
+    ⚠ 未找到频道: SUPER识叹 (免费)
+    ⚠ 未找到频道: 邯郸公共
+    ⚠ 未找到频道: 南京新闻综合
+    ⚠ 未找到频道: 保定公共频道
+    ⚠ 未找到频道: SUPER单元剧 (免费)
+    ⚠ 未找到频道: 承德旅游文化
+    ⚠ 未找到频道: 沧州公共
+    ⚠ 未找到频道: 保定新闻综合
+    ⚠ 未找到频道: 秦皇岛民生
+    ⚠ 未找到频道: BBC_First_HD
+    ⚠ 未找到频道: 秦皇岛新闻综合
+    ⚠ 未找到频道: FashionTV 时尚频道
+    ⚠ 未找到频道: Hub 如意
+    ⚠ 未找到频道: 唐山新闻综合
+    ⚠ 未找到频道: 张家口新闻综合
+    ⚠ 未找到频道: Hub Sports 1
+    ⚠ 未找到频道: MagellanTV频道 (麦哲伦频道)
+    ⚠ 未找到频道: 邯郸科技教育
+    ⚠ 未找到频道: Nick Jr.
+    ⚠ 未找到频道: now直播
+    ⚠ 未找到频道: SUPER金曲 (免费)
+    ⚠ 未找到频道: Astro_Sports_Plus_3
+    ⚠ 未找到频道: 新哆啦A梦(中文版)2台新年追剧首选-FastTV飞速看
+    ⚠ 未找到频道: 承德新闻综合
+    ⚠ 未找到频道: BBC_Brit_HD
+    ⚠ 未找到频道: 廊坊新闻
+    ⚠ 未找到频道: 唐山生活服务
+    ⚠ 未找到频道: 邢台城市生活
+    ⚠ 未找到频道: 亚洲综合HD演唱会直击
+    ⚠ 未找到频道: 沧州新闻综合
+    ⚠ 未找到频道: 保定生活健康
+    ⚠ 未找到频道: ROCK ACTION Rock Action_香港_国
+    ⚠ 未找到频道: Hub Sports 3
     📺 新增频道: 861/912
     📅 新增节目: 62993/80638
    ✓ 处理成功
@@ -2527,17 +2527,17 @@ Guide Merger v2.0 (Cookie Persistence & Dynamic Referer)
     🔗 智能合并: True
     ✂️ 跨天节目拆分: 70 个
     🔗 智能合并更新: 6 个节目
-    ⚠ 未找到频道: 福建电视剧
-    ⚠ 未找到频道: 河北影视剧
-    ⚠ 未找到频道: 福建乡村振兴
-    ⚠ 未找到频道: 纯享4K
     ⚠ 未找到频道: 福建文体
+    ⚠ 未找到频道: IPTV足球
     ⚠ 未找到频道: 星空卫视
+    ⚠ 未找到频道: 纯享4K
     ⚠ 未找到频道: 淘Baby
     ⚠ 未找到频道: 内蒙古农牧
-    ⚠ 未找到频道: 福建经济
-    ⚠ 未找到频道: IPTV足球
+    ⚠ 未找到频道: 河北影视剧
     ⚠ 未找到频道: 福建旅游
+    ⚠ 未找到频道: 福建乡村振兴
+    ⚠ 未找到频道: 福建经济
+    ⚠ 未找到频道: 福建电视剧
     📺 新增频道: 263/274
     📅 新增节目: 10861/10803
    ✓ 处理成功
@@ -2887,8 +2887,8 @@ Guide Merger v2.0 (Cookie Persistence & Dynamic Referer)
 ============================================================
 ✅ EPG合并完成
 ============================================================
-结束时间: 2026-05-09 23:09:34 (北京时间)
-总耗时: 80.83 秒
+结束时间: 2026-05-09 23:17:03 (北京时间)
+总耗时: 72.99 秒
 成功处理: 7/14 个源
 成功处理: 1565 个频道，128277 条节目
 输出文件: guide.xml 和 guide.xml.gz

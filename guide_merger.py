@@ -616,8 +616,8 @@ def download_file(url: str, path: str) -> Optional[str]:
     while os.path.exists(download_path):
         download_path = os.path.join(path, f"{name}({counter}){ext}")
         counter += 1
-    
-    # ==================== 设置请求头 ====================
+ 
+ # ==================== 设置请求头 ==================== 
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
@@ -627,7 +627,7 @@ def download_file(url: str, path: str) -> Optional[str]:
         'Upgrade-Insecure-Requests': '1',
     }
     
-    # ==================== 为特定域名添加自定义请求头 ====================
+# ==================== 为特定域名添加自定义请求头 ====================
     # mb6.top 域名需要特定的 Referer
     if 'mb6.top' in url:
         headers['Referer'] = 'https://epg.mb6.top/'
@@ -668,20 +668,18 @@ def download_file(url: str, path: str) -> Optional[str]:
                 response = requests.get(url, headers=headers, stream=True, timeout=DOWNLOAD_TIMEOUT, allow_redirects=True)
             
             if response.status_code == 200:
-                content = response.content
-                
-                # 检查内容是否为有效的 XML
-                if not content.startswith(b'<?xml') and not content.startswith(b'<tv'):
-                    content_preview = content[:200]
-                    print(f'    ⚠ 警告: 返回内容可能不是 XML 格式')
-                    print(f'    内容预览: {content_preview}')
-                    # 可以选择继续或放弃
-                    # return None
-                
                 with open(download_path, 'wb') as f:
-                    f.write(content)
+                    downloaded = 0
+                    if USE_CLOUDSCRAPER and HAS_CLOUDSCRAPER:
+                        f.write(response.content)
+                        downloaded = len(response.content)
+                    else:
+                        for chunk in response.iter_content(chunk_size=CHUNK_SIZE):
+                            if chunk:
+                                f.write(chunk)
+                                downloaded += len(chunk)
                 
-                print(f'    ✓ 下载成功: {format_size(len(content))}')
+                print(f'    ✓ 下载成功: {format_size(downloaded)}')
                 return download_path
                 
             elif response.status_code == 403:

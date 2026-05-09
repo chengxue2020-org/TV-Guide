@@ -1,8 +1,8 @@
 ============================================================
 Guide Merger v2.0 (Flexible Timezone & Alias Support)
 ============================================================
-当前时间: 2026-05-09 18:34:06 (北京时间)
-当前时间: 2026-05-09 10:34:06 (UTC)
+当前时间: 2026-05-09 18:45:11 (北京时间)
+当前时间: 2026-05-09 10:45:11 (UTC)
 
 ✓ 已加载cloudscraper库，支持绕过Cloudflare保护
 ✓ 已加载pypinyin库，支持中文拼音排序
@@ -1849,7 +1849,10 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
 📡 源 2/14: https://epg.mb6.top/heiptv.xml
    请求频道: 9 个
    需要查找: 9 个
-    ✓ 下载成功: 279.62 KB
+    🔧 已添加 mb6.top 专用请求头
+    ⚠ 警告: 返回内容可能不是 XML 格式
+    内容预览: b'\x8b\xff\x07\x00d\xd2\xa9M\xab\x9e/\x1d\x84(i\x98/\xa5OqA\xa9\x108\x90\xfd\xbe\x9fpjm\xd3\xf8F`O\xf1\xf9\xae&\x98\xca\xe0`oh\xc9\xba\xec8\xad\x17H\xd9\xa5\xf3\x7f\x07]7\xd8E\x85q\x1e\xf5\x02\t,\x91]\xc0\x0c\x07\x07-\xc7\x16\xc3\xb5\x16\x9e}\x8e\xc1cpX\xce\xab\xfb FC\xa1\xb6)\x8f\x92\x86\x0e\x8e\xfd1\x9e\x85\x0c\xf8\xdd@\xaa\xb9\xfb\xcb>R\x95k\xcf?=\xfb\xfe\xe7\xf3\x0b@\x12\xe0\xdb\x9fo\xdf_|\x00L\xd2\xd0I\x82\xd5\x88\xc6\xa8\nI\x00\xc7\x8c\xdb1\xfc\xb0\xb4\xa2\xc8|\x18\xb7\xf5\x10SB\x88\xe5\xe4s\\T7\x8b\xd9\xb2\xd2\xc8_\\\xca&K+8\x068f\xdc\x8e\xe1\x87\xd3oVD\x0c\x1cb\xbe\xc5J'
+    ✓ 下载成功: 283.98 KB
     🕐 时间范围: 2026-05-03 00:00 到 2026-05-13 00:00 (UTC)
     📊 包含过去 6 天 + 当天 + 未来 3 天
     ✗ XML格式错误
@@ -1859,6 +1862,8 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
 📡 源 3/14: https://raw.githubusercontent.com/litiande03/epg/refs/heads/master/pl.xml.gz
    请求频道: 215 个
    需要查找: 215 个
+    ⚠ 警告: 返回内容可能不是 XML 格式
+    内容预览: b'\x1f\x8b\x08\x08S\xdf\xfei\x02\xffiptv.xml\x00\xcc\xbd[\x93\x1d\xc7\x91\xe7\xf9>\x9f\x02\xa6\'\xc8\xda\xb0\xca\xb8G\xd0\xa4\x1e\xdb\xd9\x99\x1e[\x9b\x97yX\x9bw\xdaP\xdbC3\x89\x92\x89m\xb2\xd5>\x01$A\xdco"\x88\x0bQ$x\xc1\x8d7\x10 \x00\x02(\xdc\xbe\x8b\xba\xf2\x9cSO\xfa\n\x93\xa7\n\x84Nd"\xfe\x19\'\xd2\xb3<\xd5\xe8n\x89\tU\xfc*3"\xdc\xfd\xef\x11\xee\xbf\xfe\x8f\xff\xdf\xef\x7f\xb7\xef\xcf\xbf\xfd\xd3\xbbo\xff\xe1\x9d\xdf\xfcB\xfc\x1f\xd5/\xf6\xfd\xc7\x7f\xfe\x0f\xbf\xfe\xb7?\xef\xfb\xd7\xdf\xbe\xf3\xdb?\xbd\xf9o\x7f\xf8\xd3\x81\xb7\xdf\xf9\x7f\xffp\xe0\x9d7\x7f\xff\xdb\xdf\xfc\xe2\xff\xfe\xef\xff\xcf\xff\xd8\xf7_\xfe\xfb\x7f\xdd'
     ✓ 下载成功: 974.90 KB
     🕐 时间范围: 2026-05-03 00:00 到 2026-05-13 00:00 (UTC)
     📊 包含过去 6 天 + 当天 + 未来 3 天
@@ -1989,6 +1994,8 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
 📡 源 4/14: https://raw.githubusercontent.com/zzq1234567890/epg/refs/heads/main/swepg.xml.gz
    请求频道: 916 个
    需要查找: 913 个
+    ⚠ 警告: 返回内容可能不是 XML 格式
+    内容预览: b'\x1f\x8b\x08\x08L\x07\xffi\x02\xffswepg.xml\x00\xd4\xbdYW\x1b\xc9\xb6.\xfa~\x7fE\xde\xf5pN\xd5X\xc7u\x90\x00\x1b\xef\xb3\xf7>\x170\xb6\xa9\xa2\xf1\x02\xdc\xd4z\xf1HC\x96\xadm!yH\xc2.\xd7\x13n\xe8\xfb*c\xc0`\xe3\x0epC\x0f\xb6Atc\x9c_\xb1\xd6\xf3QfJO\xeb/\xdc\xc8LId\xa6\xa4\x8c\xf9\x85\xc0\xa6\xd6`x\xb9\xcc7\xe7\x17\x11\x19\xcd\x8c\x889g\xfc\xfb\xff\xfe\xb5=(\xddU"\xd1@8\xf4\x1f\x7f\xf1\xfdP\xf2\x17I\t\xb5\x86\xdb\x02\xa1\x9b\xff\xf1\x97\xcb-\xe7OU\xfc\xe5\x7f\xff\xe7\xff\xf3\xef\xb1\xbb\xff\xf9\xffH\xd2\xbf\xb7\xde\x92C!%(\x05\xda\xfe\xe3/\xd5\xd5-WN\x95\xe9\xfb\xc3\xda\xe6'
     ✓ 下载成功: 4.05 MB
     🕐 时间范围: 2026-05-03 00:00 到 2026-05-13 00:00 (UTC)
     📊 包含过去 6 天 + 当天 + 未来 3 天
@@ -2339,32 +2346,32 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
     📝 别名映射: 修改ID=True, 修改DisplayName=True
     ✂️ 跨天拆分: True
     ✂️ 跨天节目拆分: 2462 个
-    ⚠ 未找到频道: SUPER单元剧 (免费)
-    ⚠ 未找到频道: BBC_Brit_HD
-    ⚠ 未找到频道: 睛彩河北
-    ⚠ 未找到频道: Hub 如意
-    ⚠ 未找到频道: SPY X FAMILY 间谍家家酒(国)
-    ⚠ 未找到频道: SUPER识叹 (免费)
-    ⚠ 未找到频道: Astro_Sports_Plus_3
-    ⚠ 未找到频道: Hub Sports 3
-    ⚠ 未找到频道: MagellanTV频道 (麦哲伦频道)
-    ⚠ 未找到频道: 1905App 热血影院
-    ⚠ 未找到频道: SUPER金曲 (免费)
-    ⚠ 未找到频道: 南京新闻综合
     ⚠ 未找到频道: FashionTV 时尚频道
-    ⚠ 未找到频道: Hub Sports 2
-    ⚠ 未找到频道: TV5Monde 法国TV5
-    ⚠ 未找到频道: BBC_First_HD
-    ⚠ 未找到频道: 茶频道
-    ⚠ 未找到频道: Nick Jr.
+    ⚠ 未找到频道: SUPER单元剧 (免费)
+    ⚠ 未找到频道: Hub Sports 3
     ⚠ 未找到频道: 千禧经典台(MY)
-    ⚠ 未找到频道: now直播
-    ⚠ 未找到频道: Hub Sports 1
+    ⚠ 未找到频道: SUPER识叹 (免费)
+    ⚠ 未找到频道: 南京新闻综合
     ⚠ 未找到频道: 河北杂技频道
-    ⚠ 未找到频道: ROCK ACTION Rock Action_香港_国
     ⚠ 未找到频道: 新哆啦A梦(中文版)2台新年追剧首选-FastTV飞速看
-    ⚠ 未找到频道: 亚洲综合HD演唱会直击
+    ⚠ 未找到频道: BBC_First_HD
+    ⚠ 未找到频道: TV5Monde 法国TV5
+    ⚠ 未找到频道: Hub 如意
+    ⚠ 未找到频道: SUPER金曲 (免费)
+    ⚠ 未找到频道: Astro_Sports_Plus_3
+    ⚠ 未找到频道: ROCK ACTION Rock Action_香港_国
+    ⚠ 未找到频道: MagellanTV频道 (麦哲伦频道)
+    ⚠ 未找到频道: SPY X FAMILY 间谍家家酒(国)
+    ⚠ 未找到频道: Hub Sports 1
     ⚠ 未找到频道: HITS电影台
+    ⚠ 未找到频道: 睛彩河北
+    ⚠ 未找到频道: BBC_Brit_HD
+    ⚠ 未找到频道: now直播
+    ⚠ 未找到频道: Nick Jr.
+    ⚠ 未找到频道: 亚洲综合HD演唱会直击
+    ⚠ 未找到频道: 1905App 热血影院
+    ⚠ 未找到频道: 茶频道
+    ⚠ 未找到频道: Hub Sports 2
     📺 新增频道: 886/912
     📅 新增节目: 67828/85707
    ✓ 处理成功
@@ -2373,6 +2380,8 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
 📡 源 5/14: http://epg.51zmt.top:8000/e.xml.gz
    请求频道: 11 个
    需要查找: 11 个
+    ⚠ 警告: 返回内容可能不是 XML 格式
+    内容预览: b"\x1f\x8b\x08\x08\x1c^\xfei\x02\xffe.xml\x00\xcc\xbd\xe9o#Kv'\xfa\xdd\x7f\x85\xdc\x9fT\xcf\xa6+#ra\xb2`{`\xf4\xf3\x9byh\x18c<{\x0c\x0c\x06\xf3\xa1a\xf7\xd8\r\xb4\xbb\x1b\xed;\xc6{\xf3\x89*\x89\x12)\x89\xdaJ;\xa9]\xd4RZH\xed\\\xb4\x00\xfd\xa7x\x18\x91\x99\x9f\xfc/\xbcH\xa6\xaan%3\xf302\x82\x99\xaaF\xa1q\xef\xd5\xbd\x19?\x9d8\xe7\xc4\xd9\xcf\x9f\xfe\x87\xff\xf7\x9f\x7f5\xf2\xaf\xbf\xf8\xdd\xbf\xfc\xf27\xbf\xfe\xb3\x9f\xa0?Q~2\xf2\x8b_\xff\xfdo\xfe\xe1\x97\xbf\xfe\xc7?\xfb\xc9\x7f\xf9\xdb\xff+c\xfe\xe4?\xfc\xf9\x1f\xfc\xe9\x1f\xfe\x9f\xff\xf9\xa7\x7f\xfb_\xff\xfa/G~\xf8\xd7\x91\xbf\xf9\xaf\x7f\xf3\xb7"
     ✓ 下载成功: 94.47 KB
     🕐 时间范围: 2026-05-03 00:00 到 2026-05-13 00:00 (UTC)
     📊 包含过去 6 天 + 当天 + 未来 3 天
@@ -2399,6 +2408,8 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
 📡 源 6/14: https://liliu.serv00.net/epg/cn.xml.gz
    请求频道: 275 个
    需要查找: 274 个
+    ⚠ 警告: 返回内容可能不是 XML 格式
+    内容预览: b'\x1f\x8b\x08\x00\x00\x00\x00\x00\x02\x03\xd4\xbdYo#Mz\xa8y\x7f~E\xa3\xaf\xf4\xc18cF.\\\x00\xdb\x07\x9e\x9e\x1e\xcf\xc176\x06\x98\x1e\xdf\x1bv\xc3\xc7\x80\xdd>\xb0{\x0ef\xe6J*\x89\x12\xa9\x9d*\xad%\xaa\xb4RKi!)J%\x92\x12\xa5\xff\xd2\xc8\x88\xcc\xbc\xf2_\x98H\xa6\xaa*S\xc9|#"\xf3\xa5\xc8\x9e\xf9\xd0\xa7\xfd):\xe2ad,o\xbc\xeb\x9f\xfd\x97\xff\xe7_\xfe\xf9\x17\xff\xe3\xb7\xff\xf6\xef\xff\xf4\xaf\xbf\xfb\xf3_\x92\xff)\xf3\xcb_\xfc\xf6w\x7f\xff\xaf\xff\xf0O\xbf\xfb\xc7?\xff\xe5\xff\xf5\x9b\xff\xf5?\xe7\x7f\xf9_\xfe\xe2?\xfd\xd9\xef\xff\xc7_\xfc\xa7_\xfc\xe2\xcf\xfe\xfe\xbf\xfd\xdd\xef~\xf7\xdb\x7f\xfe\xc5?\xfd\xc3\x9f\xff\xf2W'
     ✓ 下载成功: 251.76 KB
     🕐 时间范围: 2026-05-03 00:00 到 2026-05-13 00:00 (UTC)
     📊 包含过去 6 天 + 当天 + 未来 3 天
@@ -2481,15 +2492,15 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
     📝 别名映射: 修改ID=True, 修改DisplayName=True
     ✂️ 跨天拆分: True
     ✂️ 跨天节目拆分: 72 个
-    ⚠ 未找到频道: 福建电视剧
-    ⚠ 未找到频道: 福建文体
     ⚠ 未找到频道: 星空卫视
-    ⚠ 未找到频道: IPTV足球
-    ⚠ 未找到频道: 福建乡村振兴
+    ⚠ 未找到频道: 福建电视剧
     ⚠ 未找到频道: 河北影视剧
-    ⚠ 未找到频道: 纯享4K
-    ⚠ 未找到频道: 福建经济
     ⚠ 未找到频道: 福建旅游
+    ⚠ 未找到频道: 福建文体
+    ⚠ 未找到频道: IPTV足球
+    ⚠ 未找到频道: 福建经济
+    ⚠ 未找到频道: 纯享4K
+    ⚠ 未找到频道: 福建乡村振兴
     📺 新增频道: 265/274
     📅 新增节目: 10914/10854
    ✓ 处理成功
@@ -2498,6 +2509,8 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
 📡 源 7/14: http://epg.51zmt.top:8000/e2.xml.gz
    请求频道: 76 个
    需要查找: 73 个
+    ⚠ 警告: 返回内容可能不是 XML 格式
+    内容预览: b'\x1f\x8b\x08\x08\x1b^\xfei\x02\xffe2.xml\x00\xec\xbdkW\x1aY\xda0\xfc}~E=\xb3\xd6\xfb\xac\x9e\xf7M\xfa\x16\xd4h\xfa>\xcc2\xc6t2\xdd9\xbc\xd1\xee\xbe\xe7\xfeV\xd1Jd\x82\xe0\x03\x98L\xe6\x13h\x10\x109\x98x\x06\xcf\xe2Y\x0ej\x149\xc8\x7f\x99a\xef\xaa\xfa\xd4\x7f\xe1\xb9\xae\xbd\xd1h\x1a\x81bFb\xbaY\xcbN+T]\xb5\xeb:\x9f\xf6\xb5\xff\xe3\x8f\x7f\xed3\n\xaf$\x8b\xd5`6\xfd\xe7\xefu_7\xfc^\x90L\xdd\xe6\x1e\x83\xe9\xc5\x7f\xfe\xfe\x87\xae{7[\x7f\xff\xc7\xff\xfa\xdd\x7f\xfc\xaf\xbb\x8f\xdb\xbb\xfe\xfc\xa4C\xb0\xbd\x12:\xff\xdc\xd9\xd5\xf1P\xf8=\xdci{\xf5u\x8f\xad\xe7\xf7p\x01|\xfeB2I\x16\xd1f\xb6'
     ✓ 下载成功: 695.84 KB
     🕐 时间范围: 2026-05-03 00:00 到 2026-05-13 00:00 (UTC)
     📊 包含过去 6 天 + 当天 + 未来 3 天
@@ -2708,21 +2721,21 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
     📝 别名映射: 修改ID=True, 修改DisplayName=True
     ✂️ 跨天拆分: True
     ✂️ 跨天节目拆分: 456 个
-    ⚠ 未找到频道: 411257
-    ⚠ 未找到频道: 535447
-    ⚠ 未找到频道: 411256
-    ⚠ 未找到频道: 411253
-    ⚠ 未找到频道: 411240
-    ⚠ 未找到频道: 428785
-    ⚠ 未找到频道: 411231
-    ⚠ 未找到频道: 411236
-    ⚠ 未找到频道: 491618
-    ⚠ 未找到频道: 411308
-    ⚠ 未找到频道: 411241
-    ⚠ 未找到频道: 510886
-    ⚠ 未找到频道: 491619
     ⚠ 未找到频道: 478717
+    ⚠ 未找到频道: 428785
+    ⚠ 未找到频道: 411256
     ⚠ 未找到频道: 411251
+    ⚠ 未找到频道: 411231
+    ⚠ 未找到频道: 411308
+    ⚠ 未找到频道: 510886
+    ⚠ 未找到频道: 411253
+    ⚠ 未找到频道: 411241
+    ⚠ 未找到频道: 411236
+    ⚠ 未找到频道: 411240
+    ⚠ 未找到频道: 491618
+    ⚠ 未找到频道: 411257
+    ⚠ 未找到频道: 491619
+    ⚠ 未找到频道: 535447
     📺 新增频道: 115/130
     📅 新增节目: 11703/20076
    ✓ 处理成功
@@ -2891,13 +2904,13 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
     📝 别名映射: 修改ID=True, 修改DisplayName=True
     ✂️ 跨天拆分: True
     ✂️ 跨天节目拆分: 519 个
-    ⚠ 未找到频道: 523496
+    ⚠ 未找到频道: 492911
     ⚠ 未找到频道: 535531
     ⚠ 未找到频道: 520018
-    ⚠ 未找到频道: 535294
-    ⚠ 未找到频道: 492911
-    ⚠ 未找到频道: 535553
     ⚠ 未找到频道: 535582
+    ⚠ 未找到频道: 535553
+    ⚠ 未找到频道: 535294
+    ⚠ 未找到频道: 523496
     📺 新增频道: 148/155
     📅 新增节目: 15942/22434
    ✓ 处理成功
@@ -3572,6 +3585,8 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
 📡 源 12/14: https://epg.yang-1989.eu.org/epg.xml.gz
    请求频道: 7 个
    需要查找: 7 个
+    ⚠ 警告: 返回内容可能不是 XML 格式
+    内容预览: b'\x1f\x8b\x08\x00K\xec\xfei\x02\xff\xdc\xbd[s\x1d\xc7\x91.\xfa~~\x05\xc2/#\xc7\x1cn\xf5u\xad*\xc6\xcc\xec\xa0d\xd9\xd2\xd8\x92\xbcMZ\xf6\xec\x97\x13\xb4\x8c\xb1\x19\xa6H\x07Iy\x8f\xf6\x13@\x12\xc4\xfdF\x82\x00I\x00\x04/\x00A\x12\xc4\x1d$\x80\x85[\xc4\xfe){Vu\xf7z\xf2_8\xd5\xabApu7:\xbb\xaa;{Uk&\x14\x1a\x19\xab\xba\xeb\xeb\xbadfef}\xf9O\xff\xfd?\xbe\xbb\xdc\xf1\xb7\xcek\xd7/]\xbd\xf2\xcf\xff\xa0\xff7\xed\x1f::\xaf|{\xf5\x8f\x97\xae\xfc\xe9\x9f\xff\xe1\xb7\x17~~\x86\xfc\xc3\x7f\xff\x97\xff\xe7\x9fn\xfc\xad\xe3O\x9dW:\xaf]\xbcq\xf5\xda\x99KW\xfe\xfd\xea\x99+\x17\xbf\xeb\xfc\xe7\x9f\xfc\xdb\xc5'
     ✓ 下载成功: 1.49 MB
     🕐 时间范围: 2026-05-03 00:00 到 2026-05-13 00:00 (UTC)
     📊 包含过去 6 天 + 当天 + 未来 3 天
@@ -3795,8 +3810,8 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
 ============================================================
 ✅ EPG合并完成
 ============================================================
-结束时间: 2026-05-09 18:34:52 (北京时间)
-总耗时: 46.39 秒
+结束时间: 2026-05-09 18:48:04 (北京时间)
+总耗时: 173.10 秒
 成功处理: 12/14 个源
 成功处理: 2513 个频道，207952 条节目
 输出文件: guide.xml 和 guide.xml.gz

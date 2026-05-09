@@ -604,7 +604,7 @@ def analyze_epg_time_range(program_dict: Dict[Tuple[str, str], ET.Element]) -> T
 
 # ==================== 文件下载 ====================
 def download_file(url: str, path: str) -> Optional[str]:
-    """下载EPG文件，支持HTTP/HTTPS和Cloudflare绕过"""
+    """下载EPG文件，模拟真实浏览器GET请求"""
     filename = os.path.basename(url.split('?')[0])
     if not filename:
         url_hash = hashlib.md5(url.encode()).hexdigest()[:8]
@@ -616,19 +616,32 @@ def download_file(url: str, path: str) -> Optional[str]:
     while os.path.exists(download_path):
         download_path = os.path.join(path, f"{name}({counter}){ext}")
         counter += 1
- 
- # ==================== 设置请求头 ==================== 
+    
+    # ==================== 完整的浏览器请求头 ====================
     headers = {
+        # 基础请求头
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
-        'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8',
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+        'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
         'Accept-Encoding': 'gzip, deflate, br',
         'Connection': 'keep-alive',
+        
+        # 现代浏览器特有的请求头
         'Upgrade-Insecure-Requests': '1',
+        'Sec-Fetch-Dest': 'document',
+        'Sec-Fetch-Mode': 'navigate',
+        'Sec-Fetch-Site': 'none',
+        'Sec-Fetch-User': '?1',
+        'Cache-Control': 'max-age=0',
+        
+        # Chrome 特有的客户端提示
+        'Sec-Ch-Ua': '"Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"',
+        'Sec-Ch-Ua-Mobile': '?0',
+        'Sec-Ch-Ua-Platform': '"Windows"',
     }
     
-# ==================== 为特定域名添加自定义请求头 ====================
-    # mb6.top 域名需要特定的 Referer
+    # ==================== 为特定域名添加自定义请求头 ====================
+    # mb6.top 域名
     if 'mb6.top' in url:
         headers['Referer'] = 'https://epg.mb6.top/'
         headers['Origin'] = 'https://epg.mb6.top/'
@@ -642,11 +655,9 @@ def download_file(url: str, path: str) -> Optional[str]:
     if '51zjy' in url:
         headers['Referer'] = 'https://epg.51zjy.top/'
     
-    # 可以继续添加其他域名的特殊配置
-    # if 'example.com' in url:
-    #     headers['Referer'] = 'https://example.com/'
-    #     headers['Cookie'] = 'session=xxx'
-    #     headers['Authorization'] = 'Bearer token'
+    # 可以继续添加其他域名
+    # if 'github' in url:
+    #     headers['Referer'] = 'https://github.com/'
     
     for attempt in range(MAX_RETRIES + 1):
         try:
@@ -655,31 +666,51 @@ def download_file(url: str, path: str) -> Optional[str]:
                 print(f'    ⏳ 第 {attempt} 次重试，等待 {wait_time} 秒...')
                 time.sleep(wait_time)
             
-            if USE_CLOUDSCRAPER and HAS_CLOUDSCRAPER:
-                scraper = cloudscraper.create_scraper(
-                    browser={
-                        'browser': 'chrome',
-                        'platform': 'windows',
-                        'mobile': False
-                    }
-                )
-                response = scraper.get(url, headers=headers, timeout=DOWNLOAD_TIMEOUT, allow_redirects=True)
-            else:
-                response = requests.get(url, headers=headers, stream=True, timeout=DOWNLOAD_TIMEOUT, allow_redirects=True)
+            # 使用 session 保持连接状态
+            session = requests.Session()
+            
+            # 可以预先访问主页获取 cookie（可选）
+            if 'mb6.top' in url and attempt == 0:
+                try:
+                    session.get('https://epg.mb6.top/', headers=headers, timeout=10)
+                    print(f'    🔧 已预热访问主页')
+                except:
+                    pass
+            
+            # 发送 GET 请求
+            response = session.get(
+                url, 
+                headers=headers, 
+                stream=True, 
+                timeout=DOWNLOAD_TIMEOUT, 
+                allow_redirects=True
+            )
             
             if response.status_code == 200:
-                with open(download_path, 'wb') as f:
-                    downloaded = 0
-                    if USE_CLOUDSCRAPER and HAS_CLOUDSCRAPER:
-                        f.write(response.content)
-                        downloaded = len(response.content)
-                    else:
-                        for chunk in response.iter_content(chunk_size=CHUNK_SIZE):
-                            if chunk:
-                                f.write(chunk)
-                                downloaded += len(chunk)
+                # 检查返回的 Content-Type
+                content_type = response.headers.get('content-type', '')
+                if 'xml' not in content_type and 'html' not in content_type:
+                    print(f'    ⚠ Content-Type: {content_type}')
                 
-                print(f'    ✓ 下载成功: {format_size(downloaded)}')
+                content = response.content
+                
+                # 检查内容是否为有效的 XML（或 gzip）
+                if not content.startswith(b'<?xml') and not content.startswith(b'<tv') and not content.startswith(b'\x1f\x8b'):
+                    content_preview = content[:200]
+                    print(f'    ⚠ 警告: 返回内容可能不是 XML 格式')
+                    print(f'    内容预览: {content_preview[:100]}...')
+                    
+                    # 如果返回的是 HTML 错误页面，可能是被拦截了
+                    if b'cloudflare' in content.lower() or b'access denied' in content.lower():
+                        print(f'    ⚠ 可能被 Cloudflare 或防火墙拦截')
+                        if attempt < MAX_RETRIES:
+                            continue
+                
+                with open(download_path, 'wb') as f:
+                    f.write(content)
+                
+                print(f'    ✓ 下载成功: {format_size(len(content))}')
+                session.close()
                 return download_path
                 
             elif response.status_code == 403:
@@ -694,13 +725,20 @@ def download_file(url: str, path: str) -> Optional[str]:
                 if attempt == MAX_RETRIES:
                     return None
                     
+        except requests.exceptions.Timeout:
+            print(f'    ✗ 连接超时')
+            if attempt == MAX_RETRIES:
+                return None
+        except requests.exceptions.ConnectionError:
+            print(f'    ✗ 连接错误')
+            if attempt == MAX_RETRIES:
+                return None
         except Exception as e:
             print(f'    ✗ 错误: {e}')
             if attempt == MAX_RETRIES:
                 return None
     
     return None
-
 
 # ==================== EPG处理 ====================
 def process_epg_source(

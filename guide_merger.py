@@ -8,6 +8,7 @@ EPG Merger Script - 合并多个EPG源的频道节目信息
 支持每个EPG源单独设置时区转换（可选，不设置则保持原时区）
 支持前后双向时间范围（包含过去和未来的节目，按天对齐）
 可配置是否修改 channel id 和 display-name
+支持跨天节目拆分（如 23:40-0:20 拆分为两个节目）
 """
 
 import requests
@@ -60,6 +61,11 @@ MODIFY_CHANNEL_ID = True
 # True: 修改display-name
 # False: 不修改display-name，保持原值
 MODIFY_DISPLAY_NAME = True
+
+# ==================== 跨天节目拆分配置 ====================
+# True: 拆分跨天节目（如 23:40-0:20 拆分为两个）
+# False: 保持原样
+SPLIT_OVERNIGHT_PROGRAMS = True
 
 # ==================== 时区配置 ====================
 BEIJING_TZ = timezone(timedelta(hours=8))  # 北京时区 UTC+8
@@ -129,15 +135,7 @@ def compress_gzip(input_file: str, output_file: str) -> bool:
 
 
 def is_beijing_timezone(timezone_str: str) -> bool:
-    """
-    判断时区是否为北京时间（+8时区）
-    
-    支持格式：
-    - +0800, +0800
-    - +8, +8
-    - UTC+8, UTC+8
-    - GMT+8, GMT+8
-    """
+    """判断时区是否为北京时间（+8时区）"""
     if not timezone_str:
         return False
     
@@ -211,9 +209,7 @@ def extract_timezone_from_time_str(time_str: str) -> Optional[timezone]:
 
 
 def convert_timezone(time_str: str, source_tz: timezone, target_tz: timezone) -> str:
-    """
-    将时间字符串从源时区转换为目标时区（时间数值会变化）
-    """
+    """将时间字符串从源时区转换为目标时区（时间数值会变化）"""
     if not time_str or source_tz is None or target_tz is None:
         return time_str
     
@@ -231,30 +227,90 @@ def convert_timezone(time_str: str, source_tz: timezone, target_tz: timezone) ->
 
 
 def change_timezone_only(time_str: str, target_tz_str: str = '+0800') -> str:
-    """
-    仅修改时间字符串的时区后缀，不改变时间数值
-    
-    Args:
-        time_str: 原始时间字符串，如 "20260405140000 +0000"
-        target_tz_str: 目标时区字符串，如 "+0800"
-        
-    Returns:
-        修改时区后的时间字符串，如 "20260405140000 +0800"
-    """
+    """仅修改时间字符串的时区后缀，不改变时间数值"""
     if not time_str:
         return time_str
     
     try:
-        # 提取时间部分（去掉原时区）
         if ' +' in time_str or ' -' in time_str:
             time_part = time_str.split()[0]
         else:
             time_part = time_str
         
-        # 返回新的时间字符串
         return f"{time_part} {target_tz_str}"
     except Exception:
         return time_str
+
+
+def parse_datetime_from_str(time_str: str) -> Optional[datetime]:
+    """从时间字符串解析datetime对象（带时区）"""
+    if not time_str:
+        return None
+    
+    try:
+        if ' +' in time_str or ' -' in time_str:
+            return datetime.strptime(time_str, '%Y%m%d%H%M%S %z')
+        else:
+            dt = datetime.strptime(time_str, '%Y%m%d%H%M%S')
+            return dt.replace(tzinfo=BEIJING_TZ)
+    except Exception:
+        return None
+
+
+def is_overnight_program(start_dt: datetime, stop_dt: datetime) -> bool:
+    """判断节目是否跨天（结束日期 > 开始日期）"""
+    if not start_dt or not stop_dt:
+        return False
+    return stop_dt.date() > start_dt.date()
+
+
+def split_overnight_program(
+    programme: ET.Element,
+    start_dt: datetime,
+    stop_dt: datetime,
+    channel_id: str
+) -> List[ET.Element]:
+    """
+    将跨天节目拆分为两个节目
+    
+    Args:
+        programme: 原始节目元素
+        start_dt: 节目开始时间
+        stop_dt: 节目结束时间
+        channel_id: 频道ID
+        
+    Returns:
+        拆分后的两个节目元素列表
+    """
+    # 计算当天的结束时间（23:59:59）
+    end_of_day = start_dt.replace(hour=23, minute=59, second=59)
+    
+    # 计算第二天的开始时间（00:00:00）
+    next_day_start = stop_dt.replace(hour=0, minute=0, second=0)
+    
+    # 第一个节目：从原开始时间到当天23:59:59
+    part1_start = start_dt
+    part1_stop = end_of_day
+    
+    # 第二个节目：从第二天00:00:00到原结束时间
+    part2_start = next_day_start
+    part2_stop = stop_dt
+    
+    # 创建第一个节目
+    part1 = copy.deepcopy(programme)
+    part1.set('start', part1_start.strftime('%Y%m%d%H%M%S %z'))
+    part1.set('stop', part1_stop.strftime('%Y%m%d%H%M%S %z'))
+    if channel_id:
+        part1.set('channel', channel_id)
+    
+    # 创建第二个节目
+    part2 = copy.deepcopy(programme)
+    part2.set('start', part2_start.strftime('%Y%m%d%H%M%S %z'))
+    part2.set('stop', part2_stop.strftime('%Y%m%d%H%M%S %z'))
+    if channel_id:
+        part2.set('channel', channel_id)
+    
+    return [part1, part2]
 
 
 def convert_date_for_filter(time_str: str, source_tz: timezone) -> Optional[datetime]:
@@ -392,27 +448,7 @@ def apply_alias_to_programme(programme: ET.Element, new_channel_id: str) -> ET.E
 
 # ==================== 配置解析 ====================
 def parse_source(source_file: str) -> Tuple[Dict[str, Dict], Tuple[int, int]]:
-    """
-    解析EPG源配置文件，支持频道别名映射、时区设置和时区转换开关
-    
-    文件格式示例：
-    PAST_DAYS=6
-    FUTURE_DAYS=3
-    
-    https://epg.iill.top/epg.xml.gz
-    TimeZone=+0000
-    ChangeTimezone=Y
-    1	CCTV1
-    2	CCTV2
-    明珠台
-    
-    Returns:
-        (数据源字典, (过去天数, 未来天数))
-        source_info 包含:
-            - 'timezone': 指定的时区（可能为None，表示保持原时区）
-            - 'change_timezone': 是否强制转换时区（Y/N，默认N）
-            - 'channels': 频道列表
-    """
+    """解析EPG源配置文件"""
     try:
         with open(source_file, 'r', encoding='utf-8') as source:
             lines = source.readlines()
@@ -421,11 +457,9 @@ def parse_source(source_file: str) -> Tuple[Dict[str, Dict], Tuple[int, int]]:
                 print(f'✗ 错误: 配置文件为空')
                 sys.exit(1)
             
-            # 初始化默认值
             past_days = DEFAULT_PAST_DAYS
             future_days = DEFAULT_FUTURE_DAYS
             
-            # 解析前几行的配置（支持大写）
             for line_num, line in enumerate(lines[:5], 1):
                 line = line.partition('#')[0].strip()
                 if not line:
@@ -445,13 +479,14 @@ def parse_source(source_file: str) -> Tuple[Dict[str, Dict], Tuple[int, int]]:
                     except ValueError:
                         print(f'⚠ 未来天数格式错误，使用默认值: {DEFAULT_FUTURE_DAYS} 天')
             
-            total_days = past_days + future_days + 1  # +1 包含当天
+            total_days = past_days + future_days + 1
             print(f'✓ 总时间范围: 过去 {past_days} 天 + 当天 + 未来 {future_days} 天 = 共 {total_days} 天')
             print()
             
             print(f'📝 别名映射配置:')
             print(f'   MODIFY_CHANNEL_ID: {MODIFY_CHANNEL_ID}')
             print(f'   MODIFY_DISPLAY_NAME: {MODIFY_DISPLAY_NAME}')
+            print(f'   SPLIT_OVERNIGHT_PROGRAMS: {SPLIT_OVERNIGHT_PROGRAMS}')
             print()
             
             data_source: Dict[str, Dict] = {}
@@ -464,7 +499,6 @@ def parse_source(source_file: str) -> Tuple[Dict[str, Dict], Tuple[int, int]]:
                 if not line:
                     continue
                 
-                # 跳过配置行（使用大写匹配）
                 if line.upper().startswith(('PAST_DAYS=', 'FUTURE_DAYS=')):
                     continue
                 
@@ -525,15 +559,7 @@ def parse_source(source_file: str) -> Tuple[Dict[str, Dict], Tuple[int, int]]:
 
 
 def analyze_epg_time_range(program_dict: Dict[Tuple[str, str], ET.Element]) -> Tuple[int, int]:
-    """
-    分析EPG数据中实际包含的过去天数和未来天数
-    
-    Args:
-        program_dict: 节目字典
-        
-    Returns:
-        (实际过去天数, 实际未来天数)
-    """
+    """分析EPG数据中实际包含的过去天数和未来天数"""
     if not program_dict:
         return 0, 0
     
@@ -545,14 +571,12 @@ def analyze_epg_time_range(program_dict: Dict[Tuple[str, str], ET.Element]) -> T
     
     for (_, start_time_str), _ in program_dict.items():
         try:
-            # 解析时间字符串
             if ' +' in start_time_str or ' -' in start_time_str:
                 dt = datetime.strptime(start_time_str, '%Y%m%d%H%M%S %z')
             else:
                 dt = datetime.strptime(start_time_str, '%Y%m%d%H%M%S')
                 dt = dt.replace(tzinfo=BEIJING_TZ)
             
-            # 转换为UTC
             dt_utc = dt.astimezone(UTC)
             
             if min_start is None or dt_utc < min_start:
@@ -565,13 +589,11 @@ def analyze_epg_time_range(program_dict: Dict[Tuple[str, str], ET.Element]) -> T
     if min_start is None or max_start is None:
         return 0, 0
     
-    # 计算过去天数（从今天00:00往前推）
     if min_start < today_start_utc:
         past_days_actual = (today_start_utc - min_start).days + 1
     else:
         past_days_actual = 0
     
-    # 计算未来天数（从今天00:00往后推）
     if max_start >= today_start_utc:
         future_days_actual = (max_start - today_start_utc).days + 1
     else:
@@ -694,9 +716,7 @@ def process_epg_source(
     today_start = start_utc.replace(hour=0, minute=0, second=0, microsecond=0)
     
     # 计算边界时间点（按天对齐）
-    # 开始边界：今天开始往前推 past_days 天
     start_boundary = today_start - timedelta(days=past_days)
-    # 结束边界：今天开始往后推 (future_days + 1) 天，包含当天结束
     end_boundary = today_start + timedelta(days=future_days + 1)
     
     print(f'    🕐 时间范围: {start_boundary.strftime("%Y-%m-%d %H:%M")} 到 {end_boundary.strftime("%Y-%m-%d %H:%M")} (UTC)')
@@ -763,10 +783,12 @@ def process_epg_source(
         print(f'    🕐 时区处理: 未指定时区，保持原XML时区不变')
     
     print(f'    📝 别名映射: 修改ID={MODIFY_CHANNEL_ID}, 修改DisplayName={MODIFY_DISPLAY_NAME}')
+    print(f'    ✂️ 跨天拆分: {SPLIT_OVERNIGHT_PROGRAMS}')
     
     # 提取节目
     programs_found = 0
     programs_total = 0
+    overnight_split_count = 0
     
     for programme in tree.findall('programme'):
         original_channel = programme.attrib.get('channel', '')
@@ -783,22 +805,18 @@ def process_epg_source(
             
             # 根据配置处理时间
             if change_timezone == 'Y':
-                # 强制转换时区：只改时区后缀，不改变时间数值
                 final_start = change_timezone_only(original_start, '+0800')
                 final_stop = change_timezone_only(original_stop, '+0800')
-                # 用于过滤的UTC时间（需要正确解析原时间）
                 source_tz_from_str = extract_timezone_from_time_str(original_start)
                 filter_start = convert_date_for_filter(original_start, source_tz_from_str)
                 filter_stop = convert_date_for_filter(original_stop, source_tz_from_str)
             elif specified_tz is not None:
-                # 指定了时区，使用指定的时区进行转换
                 source_tz = specified_tz
                 final_start = convert_timezone(original_start, source_tz, BEIJING_TZ)
                 final_stop = convert_timezone(original_stop, source_tz, BEIJING_TZ)
                 filter_start = convert_date_for_filter(original_start, source_tz)
                 filter_stop = convert_date_for_filter(original_stop, source_tz)
             else:
-                # 未指定时区，保持原样
                 final_start = original_start
                 final_stop = original_stop
                 source_tz_from_str = extract_timezone_from_time_str(original_start)
@@ -806,21 +824,56 @@ def process_epg_source(
                 filter_stop = convert_date_for_filter(original_stop, source_tz_from_str)
             
             if filter_start and filter_stop:
-                # 检查节目是否与时间范围有重叠
-                # 条件：节目开始时间 < 结束边界 AND 节目结束时间 > 开始边界
                 if filter_start < end_boundary and filter_stop > start_boundary:
-                    key = (final_channel, final_start)
-                    if key not in program_dict:
-                        new_programme = apply_alias_to_programme(programme, final_channel)
+                    # 检查是否需要拆分跨天节目
+                    if SPLIT_OVERNIGHT_PROGRAMS:
+                        # 解析开始和结束时间
+                        start_dt = parse_datetime_from_str(final_start)
+                        stop_dt = parse_datetime_from_str(final_stop)
                         
-                        for key_attr, value in new_programme.attrib.items():
-                            if key_attr == 'start':
-                                new_programme.set('start', final_start)
-                            elif key_attr == 'stop':
-                                new_programme.set('stop', final_stop)
-                        
-                        program_dict[key] = new_programme
-                        programs_found += 1
+                        if start_dt and stop_dt and is_overnight_program(start_dt, stop_dt):
+                            # 拆分跨天节目
+                            split_programmes = split_overnight_program(
+                                programme, start_dt, stop_dt, final_channel
+                            )
+                            overnight_split_count += 1
+                            
+                            for split_prog in split_programmes:
+                                split_start = split_prog.attrib.get('start', '')
+                                split_stop = split_prog.attrib.get('stop', '')
+                                key = (final_channel, split_start)
+                                if key not in program_dict:
+                                    new_programme = apply_alias_to_programme(split_prog, final_channel)
+                                    program_dict[key] = new_programme
+                                    programs_found += 1
+                        else:
+                            # 非跨天节目，正常添加
+                            key = (final_channel, final_start)
+                            if key not in program_dict:
+                                new_programme = apply_alias_to_programme(programme, final_channel)
+                                
+                                for key_attr, value in new_programme.attrib.items():
+                                    if key_attr == 'start':
+                                        new_programme.set('start', final_start)
+                                    elif key_attr == 'stop':
+                                        new_programme.set('stop', final_stop)
+                                
+                                program_dict[key] = new_programme
+                                programs_found += 1
+                    else:
+                        # 不拆分，直接添加
+                        key = (final_channel, final_start)
+                        if key not in program_dict:
+                            new_programme = apply_alias_to_programme(programme, final_channel)
+                            
+                            for key_attr, value in new_programme.attrib.items():
+                                if key_attr == 'start':
+                                    new_programme.set('start', final_start)
+                                elif key_attr == 'stop':
+                                    new_programme.set('stop', final_stop)
+                            
+                            program_dict[key] = new_programme
+                            programs_found += 1
             else:
                 # 时间格式异常，仍然添加
                 key = (final_channel, final_start)
@@ -835,6 +888,9 @@ def process_epg_source(
                     
                     program_dict[key] = new_programme
                     programs_found += 1
+    
+    if overnight_split_count > 0:
+        print(f'    ✂️ 跨天节目拆分: {overnight_split_count} 个')
     
     found_ids = set()
     for old_id, _ in channels_to_process:
@@ -882,13 +938,14 @@ def main() -> None:
     print('✓ ChangeTimezone=Y 可强制将时区改为 +0800（时间数值不变）')
     print('✓ 支持前后双向时间范围（过去天数 + 当天 + 未来天数）')
     print(f'✓ 别名映射: 修改ID={MODIFY_CHANNEL_ID}, 修改DisplayName={MODIFY_DISPLAY_NAME}')
+    print(f'✓ 跨天拆分: {SPLIT_OVERNIGHT_PROGRAMS}')
     print()
     
     print('📖 读取配置文件...')
     sources, days_range = parse_source(SOURCE_FILE)
     
     past_days, future_days = days_range
-    total_days = past_days + future_days + 1  # +1 包含当天
+    total_days = past_days + future_days + 1
     
     print(f'✓ 找到 {len(sources)} 个EPG源')
     print(f'✓ 配置时间范围: 过去 {past_days} 天 + 当天 + 未来 {future_days} 天 = 共 {total_days} 天')
@@ -981,6 +1038,10 @@ def main() -> None:
     root.append(comment)
     time_comment = ET.Comment(f' Time range: past {past_days} days + today + future {future_days} days ')
     root.append(time_comment)
+    
+    if SPLIT_OVERNIGHT_PROGRAMS:
+        split_comment = ET.Comment(' Overnight programs have been split into two parts ')
+        root.append(split_comment)
     
     print('🔤 应用智能排序（按display-name，数字-字母-汉字，不区分大小写）...')
     channels_sorted = sort_channels_by_display(list(channel_dict.values()))

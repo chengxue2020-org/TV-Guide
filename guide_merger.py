@@ -903,11 +903,36 @@ def process_epg_source(
         print(f'    ✗ 解析失败: {e}')
         return
     
+    # ==================== 自动创建缺失的频道定义 ====================
+    # 收集所有 programme 中出现的 channel 属性
+    programme_channels = set()
+    for programme in tree.findall('programme'):
+        channel_attr = programme.attrib.get('channel', '')
+        if channel_attr:
+            programme_channels.add(channel_attr)
+    
+    # 收集现有的 channel id
+    existing_channel_ids = set()
+    for channel in tree.findall('channel'):
+        existing_channel_ids.add(channel.attrib.get('id', ''))
+    
+    # 找出缺失的频道（在 programme 中出现但没有对应 channel 定义的）
+    missing_channels = programme_channels - existing_channel_ids
+    
+    # 为缺失的频道创建临时 channel 定义
+    root = tree.getroot()
+    for missing_channel in missing_channels:
+        temp_channel = ET.Element('channel', id=missing_channel)
+        display_name = ET.SubElement(temp_channel, 'display-name')
+        display_name.text = missing_channel
+        root.append(temp_channel)
+        print(f'    📝 自动创建频道定义: "{missing_channel}"')
+    
     # 创建原ID到新ID的映射
     id_mapping = {old_id: new_id for old_id, new_id in channels_to_process if new_id}
     target_ids = {old_id for old_id, _ in channels_to_process}
     
-    # 提取频道
+    # 提取频道（去重并应用别名）
     channels_found = 0
     for channel in tree.findall('channel'):
         original_id = channel.attrib.get('id', '')
@@ -1062,9 +1087,9 @@ def process_epg_source(
         if final_id in channel_dict:
             found_ids.add(old_id)
     
-    missing_channels = target_ids - found_ids
-    if missing_channels:
-        for channel in missing_channels:
+    missing_channels_list = target_ids - found_ids
+    if missing_channels_list:
+        for channel in missing_channels_list:
             print(f'    ⚠ 未找到频道: {channel}')
     
     print(f'    📺 新增频道: {channels_found}/{len(target_ids)}')

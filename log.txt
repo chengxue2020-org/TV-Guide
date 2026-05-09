@@ -1,12 +1,13 @@
-⚠ 未安装 curl_cffi
-  安装方法: pip install curl_cffi
+⚠ 未安装 curl_cffi 库，将使用普通 requests
+  安装方法: pip install curl-cffi
 ============================================================
-Guide Merger v2.0 (Flexible Timezone & Alias Support)
+Guide Merger v2.0 (Cookie Persistence & Dynamic Referer)
 ============================================================
-当前时间: 2026-05-09 22:45:59 (北京时间)
-当前时间: 2026-05-09 14:45:59 (UTC)
+当前时间: 2026-05-09 22:57:29 (北京时间)
+当前时间: 2026-05-09 14:57:29 (UTC)
 
-✓ 已加载cloudscraper库，支持绕过Cloudflare保护
+⚠ 未安装 curl_cffi 库，将使用普通 requests
+  安装方法: pip install curl-cffi
 ✓ 已加载pypinyin库，支持中文拼音排序
 ✓ 支持每个EPG源独立设置时区（可选，不设置则保持原时区）
 ✓ +8时区（北京时间）将被识别并保持原样不转换
@@ -14,16 +15,21 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
 ✓ 支持前后双向时间范围（过去天数 + 当天 + 未来天数）
 ✓ 别名映射: 修改ID=True, 修改DisplayName=True
 ✓ 跨天拆分: True
+✓ 智能合并: True
+✓ Cookie持久化: True
 
 📖 读取配置文件...
 ✓ 过去天数: 6 天
 ✓ 未来天数: 3 天
 ✓ 总时间范围: 过去 6 天 + 当天 + 未来 3 天 = 共 10 天
 
-📝 别名映射配置:
+📝 配置:
    MODIFY_CHANNEL_ID: True
    MODIFY_DISPLAY_NAME: True
    SPLIT_OVERNIGHT_PROGRAMS: True
+   SMART_MERGE: True
+   BROWSER_IMPERSONATE: chrome120
+   USE_COOKIE_PERSISTENCE: True
 
   ✓ 映射: "CCTV-1 综合" → "CCTV1"
   ✓ 映射: "CCTV-2 财经" → "CCTV2"
@@ -1841,25 +1847,25 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
 📡 源 2/14: https://epg.mb6.top/heiptv.xml
    请求频道: 9 个
    需要查找: 9 个
+    🔧 为域名 epg.mb6.top 创建新 Session
+    🔗 Referer: https://epg.mb6.top/
     ⚠ 未识别为XML/GZIP
-    内容预览:  ZU;ˆs?CB%'!Ur**ݧQ
-j{[+Xj{t]7[6j\/`I kp@KŞ1c[,b
+    内容预览: b'\x8b\xff\x07\x00d\xd2\xa9M\xab\x9e/\x1d\x84(i\x98/\xa5OqA\xa9\x108\x90\xfd\xbe\x9fpjm\xd3\xf8F`O\xf1\xf9\xae&\x98\xca\xe0`oh\xc9\xba\xec8\xad\x17H\xd9\xa5\xf3\x7f\x07]7\xd8E\x85q\x1e\xf5\x02\t,\x91]\xc0\x0c\x07\x07-\xc7\x16\xc3\xb5\x16\x9e}\x8e\xc1cpX\xce\xab\xfb FC\xa1\xb6)\x8f\x92\x86'
     ⏳ 第 1 次重试，等待 3 秒...
-    ⚠ 未识别为XML/GZIP
-    内容预览:  ZU;ˆs?CB%'!Ur**ݧQ
-j{[+Xj{t]7[6j\/`I kp@KŞ1c[,b
+    ✗ HTTP错误: 502
     ⏳ 第 2 次重试，等待 6 秒...
-    ⚠ 未识别为XML/GZIP
-    内容预览:  dҩM/(i/OqA8pjmF`O&`ohɺ8H٥]7Eq	,]-õ}cpXΫ FC)
+    ✗ HTTP错误: 400
     ⏳ 第 3 次重试，等待 9 秒...
     ⚠ 未识别为XML/GZIP
-    内容预览: 5 u-UEC~R1]ߞ412SqΧ!ke6wgFqu	,?~((Jg9פ<NG
+    内容预览: b'\x8b\xff\x07\x00d\xd2\xa9M\xab\x9e/\x1d\x84(i\x98/\xa5OqA\xa9\x108\x90\xfd\xbe\x9fpjm\xd3\xf8F`O\xf1\xf9\xae&\x98\xca\xe0`oh\xc9\xba\xec8\xad\x17H\xd9\xa5\xf3\x7f\x07]7\xd8E\x85q\x1e\xf5\x02\t,\x91]\xc0\x0c\x07\x07-\xc7\x16\xc3\xb5\x16\x9e}\x8e\xc1cpX\xce\xab\xfb FC\xa1\xb6)\x8f\x92\x86'
    ✗ 下载失败，跳过此源
 
 ------------------------------------------------------------
 📡 源 3/14: https://raw.githubusercontent.com/litiande03/epg/refs/heads/master/pl.xml.gz
    请求频道: 215 个
    需要查找: 215 个
+    🔧 为域名 raw.githubusercontent.com 创建新 Session
+    🔗 Referer: https://raw.githubusercontent.com/
     ✓ 下载成功: 974.90 KB
     🕐 时间范围: 2026-05-03 00:00 到 2026-05-13 00:00 (UTC)
     📊 包含过去 6 天 + 当天 + 未来 3 天
@@ -1978,10 +1984,12 @@ j{[+Xj{t]7[6j\/`I kp@KŞ1c[,b
     🕐 时区处理: 未指定时区，保持原XML时区不变
     📝 别名映射: 修改ID=True, 修改DisplayName=True
     ✂️ 跨天拆分: True
+    🔗 智能合并: True
     ✂️ 跨天节目拆分: 83 个
+    🔗 智能合并更新: 44 个节目
     ⚠ 未找到频道: 现代教育
-    ⚠ 未找到频道: 揭阳生活
     ⚠ 未找到频道: 愛爾達娛樂
+    ⚠ 未找到频道: 揭阳生活
     📺 新增频道: 212/215
     📅 新增节目: 43094/44119
    ✓ 处理成功
@@ -1990,6 +1998,7 @@ j{[+Xj{t]7[6j\/`I kp@KŞ1c[,b
 📡 源 4/14: https://raw.githubusercontent.com/zzq1234567890/epg/refs/heads/main/swepg.xml.gz
    请求频道: 916 个
    需要查找: 913 个
+    🔗 Referer: https://raw.githubusercontent.com/
     ✓ 下载成功: 3.98 MB
     🕐 时间范围: 2026-05-03 00:00 到 2026-05-13 00:00 (UTC)
     📊 包含过去 6 天 + 当天 + 未来 3 天
@@ -2339,58 +2348,60 @@ j{[+Xj{t]7[6j\/`I kp@KŞ1c[,b
     🕐 时区处理: ChangeTimezone=Y → 强制将时区改为 +0800（时间数值不变）
     📝 别名映射: 修改ID=True, 修改DisplayName=True
     ✂️ 跨天拆分: True
+    🔗 智能合并: True
     ✂️ 跨天节目拆分: 2329 个
-    ⚠ 未找到频道: 秦皇岛新闻综合
-    ⚠ 未找到频道: 张家口公共
-    ⚠ 未找到频道: 邯郸科技教育
-    ⚠ 未找到频道: TV5Monde 法国TV5
-    ⚠ 未找到频道: BBC_Brit_HD
-    ⚠ 未找到频道: HITS电影台
-    ⚠ 未找到频道: 张家口新闻综合
-    ⚠ 未找到频道: 沧州新闻综合
-    ⚠ 未找到频道: 邯郸公共
-    ⚠ 未找到频道: now直播
-    ⚠ 未找到频道: 邯郸新闻综合
-    ⚠ 未找到频道: Hub Sports 3
-    ⚠ 未找到频道: SUPER识叹 (免费)
-    ⚠ 未找到频道: 唐山新闻综合
-    ⚠ 未找到频道: 廊坊公共
-    ⚠ 未找到频道: Hub 如意
-    ⚠ 未找到频道: ROCK ACTION Rock Action_香港_国
-    ⚠ 未找到频道: 唐山影视
-    ⚠ 未找到频道: 南京新闻综合
-    ⚠ 未找到频道: MagellanTV频道 (麦哲伦频道)
-    ⚠ 未找到频道: Nick Jr.
-    ⚠ 未找到频道: 新哆啦A梦(中文版)2台新年追剧首选-FastTV飞速看
-    ⚠ 未找到频道: 唐山生活服务
-    ⚠ 未找到频道: SUPER单元剧 (免费)
-    ⚠ 未找到频道: 衡水经济科教
+    🔗 智能合并更新: 4305 个节目
     ⚠ 未找到频道: 保定公共频道
-    ⚠ 未找到频道: Hub Sports 1
-    ⚠ 未找到频道: 邢台综合
-    ⚠ 未找到频道: 1905App 热血影院
-    ⚠ 未找到频道: 茶频道
-    ⚠ 未找到频道: Astro_Sports_Plus_3
-    ⚠ 未找到频道: 衡水新闻综合
-    ⚠ 未找到频道: 唐山公共
-    ⚠ 未找到频道: 保定新闻综合
-    ⚠ 未找到频道: 河北杂技频道
-    ⚠ 未找到频道: 邢台城市生活
-    ⚠ 未找到频道: SPY X FAMILY 间谍家家酒(国)
-    ⚠ 未找到频道: FashionTV 时尚频道
-    ⚠ 未找到频道: 沧州公共
     ⚠ 未找到频道: 承德旅游文化
-    ⚠ 未找到频道: 秦皇岛民生
-    ⚠ 未找到频道: SUPER金曲 (免费)
-    ⚠ 未找到频道: BBC_First_HD
-    ⚠ 未找到频道: 千禧经典台(MY)
+    ⚠ 未找到频道: 秦皇岛新闻综合
     ⚠ 未找到频道: 保定生活健康
-    ⚠ 未找到频道: 睛彩河北
-    ⚠ 未找到频道: 亚洲综合HD演唱会直击
-    ⚠ 未找到频道: Hub Sports 2
+    ⚠ 未找到频道: Astro_Sports_Plus_3
+    ⚠ 未找到频道: 邢台城市生活
+    ⚠ 未找到频道: 邯郸科技教育
     ⚠ 未找到频道: 廊坊新闻
-    ⚠ 未找到频道: 承德新闻综合
+    ⚠ 未找到频道: FashionTV 时尚频道
+    ⚠ 未找到频道: Nick Jr.
+    ⚠ 未找到频道: 1905App 热血影院
+    ⚠ 未找到频道: SUPER金曲 (免费)
+    ⚠ 未找到频道: 沧州新闻综合
+    ⚠ 未找到频道: 新哆啦A梦(中文版)2台新年追剧首选-FastTV飞速看
+    ⚠ 未找到频道: BBC_Brit_HD
+    ⚠ 未找到频道: 张家口新闻综合
+    ⚠ 未找到频道: HITS电影台
+    ⚠ 未找到频道: Hub Sports 2
+    ⚠ 未找到频道: 邢台综合
+    ⚠ 未找到频道: 邯郸新闻综合
+    ⚠ 未找到频道: 唐山公共
+    ⚠ 未找到频道: 衡水经济科教
+    ⚠ 未找到频道: 唐山生活服务
     ⚠ 未找到频道: 沧州影视娱乐
+    ⚠ 未找到频道: 唐山影视
+    ⚠ 未找到频道: 茶频道
+    ⚠ 未找到频道: 南京新闻综合
+    ⚠ 未找到频道: 秦皇岛民生
+    ⚠ 未找到频道: 睛彩河北
+    ⚠ 未找到频道: 保定新闻综合
+    ⚠ 未找到频道: ROCK ACTION Rock Action_香港_国
+    ⚠ 未找到频道: SUPER单元剧 (免费)
+    ⚠ 未找到频道: 张家口公共
+    ⚠ 未找到频道: 邯郸公共
+    ⚠ 未找到频道: 亚洲综合HD演唱会直击
+    ⚠ 未找到频道: 廊坊公共
+    ⚠ 未找到频道: 千禧经典台(MY)
+    ⚠ 未找到频道: Hub Sports 3
+    ⚠ 未找到频道: 河北杂技频道
+    ⚠ 未找到频道: Hub 如意
+    ⚠ 未找到频道: BBC_First_HD
+    ⚠ 未找到频道: MagellanTV频道 (麦哲伦频道)
+    ⚠ 未找到频道: SUPER识叹 (免费)
+    ⚠ 未找到频道: 衡水新闻综合
+    ⚠ 未找到频道: 承德新闻综合
+    ⚠ 未找到频道: SPY X FAMILY 间谍家家酒(国)
+    ⚠ 未找到频道: 沧州公共
+    ⚠ 未找到频道: now直播
+    ⚠ 未找到频道: TV5Monde 法国TV5
+    ⚠ 未找到频道: Hub Sports 1
+    ⚠ 未找到频道: 唐山新闻综合
     📺 新增频道: 861/912
     📅 新增节目: 62993/80638
    ✓ 处理成功
@@ -2399,6 +2410,8 @@ j{[+Xj{t]7[6j\/`I kp@KŞ1c[,b
 📡 源 5/14: http://epg.51zmt.top:8000/e.xml.gz
    请求频道: 11 个
    需要查找: 11 个
+    🔧 为域名 epg.51zmt.top:8000 创建新 Session
+    🔗 Referer: http://epg.51zmt.top:8000/
     ✓ 下载成功: 94.47 KB
     🕐 时间范围: 2026-05-03 00:00 到 2026-05-13 00:00 (UTC)
     📊 包含过去 6 天 + 当天 + 未来 3 天
@@ -2416,7 +2429,9 @@ j{[+Xj{t]7[6j\/`I kp@KŞ1c[,b
     🕐 时区处理: 未指定时区，保持原XML时区不变
     📝 别名映射: 修改ID=True, 修改DisplayName=True
     ✂️ 跨天拆分: True
+    🔗 智能合并: True
     ✂️ 跨天节目拆分: 22 个
+    🔗 智能合并更新: 1 个节目
     📺 新增频道: 11/11
     📅 新增节目: 830/815
    ✓ 处理成功
@@ -2425,6 +2440,8 @@ j{[+Xj{t]7[6j\/`I kp@KŞ1c[,b
 📡 源 6/14: https://liliu.serv00.net/epg/cn.xml.gz
    请求频道: 275 个
    需要查找: 274 个
+    🔧 为域名 liliu.serv00.net 创建新 Session
+    🔗 Referer: https://liliu.serv00.net/
     ✓ 下载成功: 268.45 KB
     🕐 时间范围: 2026-05-03 00:00 到 2026-05-13 00:00 (UTC)
     📊 包含过去 6 天 + 当天 + 未来 3 天
@@ -2505,18 +2522,20 @@ j{[+Xj{t]7[6j\/`I kp@KŞ1c[,b
     🕐 时区处理: 未指定时区，保持原XML时区不变
     📝 别名映射: 修改ID=True, 修改DisplayName=True
     ✂️ 跨天拆分: True
+    🔗 智能合并: True
     ✂️ 跨天节目拆分: 70 个
-    ⚠ 未找到频道: 星空卫视
-    ⚠ 未找到频道: 福建电视剧
-    ⚠ 未找到频道: 内蒙古农牧
-    ⚠ 未找到频道: 福建乡村振兴
-    ⚠ 未找到频道: IPTV足球
-    ⚠ 未找到频道: 河北影视剧
+    🔗 智能合并更新: 6 个节目
     ⚠ 未找到频道: 福建文体
+    ⚠ 未找到频道: 内蒙古农牧
+    ⚠ 未找到频道: 星空卫视
     ⚠ 未找到频道: 纯享4K
     ⚠ 未找到频道: 淘Baby
+    ⚠ 未找到频道: 福建电视剧
+    ⚠ 未找到频道: 河北影视剧
     ⚠ 未找到频道: 福建经济
+    ⚠ 未找到频道: 福建乡村振兴
     ⚠ 未找到频道: 福建旅游
+    ⚠ 未找到频道: IPTV足球
     📺 新增频道: 263/274
     📅 新增节目: 10861/10803
    ✓ 处理成功
@@ -2525,6 +2544,7 @@ j{[+Xj{t]7[6j\/`I kp@KŞ1c[,b
 📡 源 7/14: http://epg.51zmt.top:8000/e2.xml.gz
    请求频道: 76 个
    需要查找: 73 个
+    🔗 Referer: http://epg.51zmt.top:8000/
     ✓ 下载成功: 695.84 KB
     🕐 时间范围: 2026-05-03 00:00 到 2026-05-13 00:00 (UTC)
     📊 包含过去 6 天 + 当天 + 未来 3 天
@@ -2604,7 +2624,9 @@ j{[+Xj{t]7[6j\/`I kp@KŞ1c[,b
     🕐 时区处理: 未指定时区，保持原XML时区不变
     📝 别名映射: 修改ID=True, 修改DisplayName=True
     ✂️ 跨天拆分: True
+    🔗 智能合并: True
     ✂️ 跨天节目拆分: 136 个
+    🔗 智能合并更新: 20 个节目
     📺 新增频道: 73/73
     📅 新增节目: 4165/4079
    ✓ 处理成功
@@ -2613,146 +2635,10 @@ j{[+Xj{t]7[6j\/`I kp@KŞ1c[,b
 📡 源 8/14: https://epg.pw/xmltv/epg_MY.xml
    请求频道: 130 个
    需要查找: 130 个
-    ✓ 下载成功: 14.11 MB
-    🕐 时间范围: 2026-05-03 00:00 到 2026-05-13 00:00 (UTC)
-    📊 包含过去 6 天 + 当天 + 未来 3 天
-    📝 频道重命名: "491" → "ERA FM"
-    📝 频道重命名: "492" → "MY FM"
-    📝 频道重命名: "493" → "OPUS"
-    📝 频道重命名: "494" → "HITZ FM"
-    📝 频道重命名: "495" → "MIX FM"
-    📝 频道重命名: "531" → "LITE FM"
-    📝 频道重命名: "533" → "GOLD(MY)"
-    📝 频道重命名: "556" → "THR GEGAR"
-    📝 频道重命名: "601" → "INDIA BEAT"
-    📝 频道重命名: "643" → "JAZZ(MY)"
-    📝 频道重命名: "702" → "SINAR FM"
-    📝 频道重命名: "733" → "OSAI"
-    📝 频道重命名: "771" → "MELODY FM"
-    📝 频道重命名: "848" → "THR RAAGA"
-    📝 频道重命名: "854" → "BAYU(MY)"
-    📝 频道重命名: "863" → "KENYALANG(MY)"
-    📝 频道重命名: "902" → "TV9"
-    📝 频道重命名: "997" → "Asian Food Network_马来_英"
-    📝 频道重命名: "1029" → "NTV7"
-    📝 频道重命名: "1072" → "TV3"
-    📝 频道重命名: "1122" → "8TV八度空间"
-    📝 频道重命名: "1205" → "AXN_新马_英"
-    📝 频道重命名: "1242" → "ONE HD_新加坡"
-    📝 频道重命名: "1298" → "天映电影_马来非新_英"
-    📝 频道重命名: "1358" → "Discovery Asia_新马_英"
-    📝 频道重命名: "1477" → "History HD_新马"
-    📝 频道重命名: "1584" → "Al-Hijrah"
-    📝 频道重命名: "1781" → "Astro-全佳"
-    📝 频道重命名: "1835" → "Bernama TV"
-    📝 频道重命名: "1951" → "Astro-欢喜台"
-    📝 频道重命名: "2058" → "Astro Vinmeen"
-    📝 频道重命名: "2124" → "Astro AOD"
-    📝 频道重命名: "2181" → "ABO Movies Thangathirai"
-    📝 频道重命名: "2208" → "HITS HD_新马"
-    📝 频道重命名: "2226" → "Astro AEC"
-    📝 频道重命名: "2280" → "天映经典电影_马来非新_英"
-    📝 频道重命名: "2300" → "Golf Channel(EPG1)"
-    📝 频道重命名: "2323" → "tvN_马来_英"
-    📝 频道重命名: "2384" → "Astro Ria_马来"
-    📝 频道重命名: "2473" → "HGTV_港马_英"
-    📝 频道重命名: "2524" → "TVB-翡翠台_马来_英"
-    📝 频道重命名: "2552" → "Astro Arena"
-    📝 频道重命名: "2580" → "beIN Sports(MY2)"
-    📝 频道重命名: "2636" → "Astro Boo"
-    📝 频道重命名: "2652" → "K-Plus"
-    📝 频道重命名: "2726" → "tvN Movies_马来_英"
-    📝 频道重命名: "2756" → "DW English_马来"
-    📝 频道重命名: "2801" → "ZAYAN"
-    📝 频道重命名: "2830" → "GOXUAN"
-    📝 频道重命名: "2885" → "Zee Tamil_马来"
-    📝 频道重命名: "2937" → "Astro Citra"
-    📝 频道重命名: "3018" → "Astro SuperSport UHD 1"
-    📝 频道重命名: "3118" → "beIN Sports-3(MY)"
-    📝 频道重命名: "3145" → "Astro Oasis"
-    📝 频道重命名: "3158" → "Astro Prima"
-    📝 频道重命名: "3234" → "TLC HD_马来"
-    📝 频道重命名: "3308" → "Star Vijay"
-    📝 频道重命名: "3313" → "SUN TV_新马"
-    📝 频道重命名: "3325" → "Colors Hindi"
-    📝 频道重命名: "3329" → "BBC News_新马台"
-    📝 频道重命名: "3437" → "Discovery Channel_新马"
-    📝 频道重命名: "3478" → "凤凰中文台_新马_英"
-    📝 频道重命名: "3493" → "TVB-星河台_新马_英"
-    📝 频道重命名: "3518" → "CCTV4_新马_英"
-    📝 频道重命名: "3533" → "Astro Ceria"
-    📝 频道重命名: "3575" → "HITS Movies_马来"
-    📝 频道重命名: "3625" → "Premier Sports_马来"
-    📝 频道重命名: "3683" → "TV1 HD"
-    📝 频道重命名: "3711" → "TV2 HD"
-    📝 频道重命名: "3735" → "Astro Vaanavil"
-    📝 频道重命名: "3760" → "Astro Vellithirai"
-    📝 频道重命名: "3770" → "Astro Aura"
-    📝 频道重命名: "3784" → "Astro Rania"
-    📝 频道重命名: "3809" → "Astro Tutor TV SMK"
-    📝 频道重命名: "3835" → "Sun Music_马来"
-    📝 频道重命名: "3873" → "CNBC Asia_新马"
-    📝 频道重命名: "3895" → "TVB-经典台(MY2)"
-    📝 频道重命名: "3920" → "TVB-娱乐新闻台_英"
-    📝 频道重命名: "3942" → "TVS"
-    📝 频道重命名: "3958" → "Astro Awani"
-    📝 频道重命名: "4030" → "BBC Earth_新马港台_英"
-    📝 频道重命名: "4057" → "SHOWCASE MOVIES"
-    📝 频道重命名: "4100" → "Astro Arena 2"
-    📝 频道重命名: "4146" → "beIN Sports-2(MY)"
-    📝 频道重命名: "4181" → "Sun Life"
-    📝 频道重命名: "4183" → "KTV_新马"
-    📝 频道重命名: "4185" → "Sun News"
-    📝 频道重命名: "4209" → "Astro Arena Bola"
-    📝 频道重命名: "4215" → "Astro Arena Bola 2"
-    📝 频道重命名: "4221" → "Zee Cinema_马来"
-    📝 频道重命名: "48630" → "W-Sport_马来"
-    📝 频道重命名: "186250" → "HITS NOW_马来"
-    📝 频道重命名: "370131" → "TV6"
-    📝 频道重命名: "370132" → "Berita RTM"
-    📝 频道重命名: "370133" → "Sukan RTM"
-    📝 频道重命名: "370134" → "Okey TV"
-    📝 频道重命名: "397396" → "Astro Premier League"
-    📝 频道重命名: "397397" → "Astro Premier League 2"
-    📝 频道重命名: "397399" → "Astro Football"
-    📝 频道重命名: "397400" → "Astro Badminton"
-    📝 频道重命名: "397402" → "Astro Sports Plus"
-    📝 频道重命名: "397403" → "Astro Grandstand"
-    📝 频道重命名: "399482" → "beIN Sports-1_马来"
-    📝 频道重命名: "399483" → "Astro Showcase"
-    📝 频道重命名: "399506" → "Premier Sports Rugby"
-    📝 频道重命名: "399518" → "Astro Sports UHD"
-    📝 频道重命名: "400446" → "Blippi & Friends_马来_英"
-    📝 频道重命名: "461591" → "CGTN英文纪录_马来_英"
-    📝 频道重命名: "479449" → "Fitrah"
-    📝 频道重命名: "479619" → "Apetito"
-    📝 频道重命名: "502308" → "JR."
-    📝 频道重命名: "517641" → "Astro Showtime"
-    📝 频道重命名: "521957" → "ROLL"
-    📝 频道重命名: "524198" → "Astro Sports Plus 2"
-    📝 频道重命名: "535446" → "Astro FAM Time"
-    🕐 时区处理: ChangeTimezone=Y → 强制将时区改为 +0800（时间数值不变）
-    📝 别名映射: 修改ID=True, 修改DisplayName=True
-    ✂️ 跨天拆分: True
-    ✂️ 跨天节目拆分: 456 个
-    ⚠ 未找到频道: 411236
-    ⚠ 未找到频道: 535447
-    ⚠ 未找到频道: 491619
-    ⚠ 未找到频道: 411257
-    ⚠ 未找到频道: 510886
-    ⚠ 未找到频道: 411240
-    ⚠ 未找到频道: 411308
-    ⚠ 未找到频道: 428785
-    ⚠ 未找到频道: 411241
-    ⚠ 未找到频道: 478717
-    ⚠ 未找到频道: 411231
-    ⚠ 未找到频道: 411256
-    ⚠ 未找到频道: 411251
-    ⚠ 未找到频道: 491618
-    ⚠ 未找到频道: 411253
-    📺 新增频道: 115/130
-    📅 新增节目: 11703/20076
-   ✓ 处理成功
+    🔧 为域名 epg.pw 创建新 Session
+    🔗 Referer: https://epg.pw/
+    ✗ 文件不存在 (404)
+   ✗ 下载失败，跳过此源
 
 ------------------------------------------------------------
 📡 源 9/14: https://epg.pw/xmltv/epg_HK.xml
@@ -2763,864 +2649,38 @@ j{[+Xj{t]7[6j\/`I kp@KŞ1c[,b
 📡 源 10/14: https://epg.pw/xmltv/epg_SG.xml
    请求频道: 156 个
    需要查找: 155 个
-    ✓ 下载成功: 20.50 MB
-    🕐 时间范围: 2026-05-03 00:00 到 2026-05-13 00:00 (UTC)
-    📊 包含过去 6 天 + 当天 + 未来 3 天
-    📝 频道重命名: "369717" → "mio Sports 2(新加坡)"
-    📝 频道重命名: "369719" → "ROCK Entertainment_新加坡2"
-    📝 频道重命名: "369726" → "France 24 English_新马"
-    📝 频道重命名: "369727" → "ROCK Action(新加坡)"
-    📝 频道重命名: "369728" → "ONE HD_新马_ 国英"
-    📝 频道重命名: "369730" → "天映经典电影_新加坡非马"
-    📝 频道重命名: "369734" → "KBS World_新马_英"
-    📝 频道重命名: "369742" → "Citra Drama"
-    📝 频道重命名: "369746" → "SET (HINDI)(新加坡)"
-    📝 频道重命名: "369748" → "CM+(新加坡)"
-    📝 频道重命名: "369757" → "Sky News_新加坡"
-    📝 频道重命名: "369758" → "HBO Signature_英 (新加坡)"
-    📝 频道重命名: "369760" → "Asia Food Network_马来"
-    📝 频道重命名: "369770" → "HITS Movies(EPG1)"
-    📝 频道重命名: "369771" → "Bloomberg TV(新加坡)"
-    📝 频道重命名: "369773" → "mio Sports HD(新加坡)"
-    📝 频道重命名: "369774" → "Jia Le Channel(新加坡)"
-    📝 频道重命名: "369783" → "凤凰资讯台"
-    📝 频道重命名: "369785" → "Animal Planet(新加坡)"
-    📝 频道重命名: "369786" → "HBO Family HD(新加坡)"
-    📝 频道重命名: "369790" → "Premier Sports(新加坡)"
-    📝 频道重命名: "369796" → "TVB-星河台_新马_中英"
-    📝 频道重命名: "369802" → "mio Sports 3(新加坡)"
-    📝 频道重命名: "369804" → "MTV India"
-    📝 频道重命名: "369805" → "TVB-翡翠台_新加坡_中"
-    📝 频道重命名: "369806" → "e-乐"
-    📝 频道重命名: "369811" → "SONY YAY!(新加坡)"
-    📝 频道重命名: "369812" → "STAR Bharat(新加坡)"
-    📝 频道重命名: "369814" → "STAR Gold(新加坡)"
-    📝 频道重命名: "369816" → "CBeebies HD_新加坡_英"
-    📝 频道重命名: "369818" → "tvN HD(国)(新加坡)"
-    📝 频道重命名: "369819" → "天映经典电影_非新非马_国英"
-    📝 频道重命名: "369824" → "Drama Channel(新加坡)"
-    📝 频道重命名: "369828" → "ZEE TV_新加坡"
-    📝 频道重命名: "369832" → "Lifetime HD_马来_英"
-    📝 频道重命名: "369839" → "France 24 French_新加坡"
-    📝 频道重命名: "369840" → "HBO Hits HD_国(新加坡)"
-    📝 频道重命名: "369844" → "STAR Plus(新加坡)"
-    📝 频道重命名: "369846" → "SONY MAX_新加坡"
-    📝 频道重命名: "369849" → "SAB TV(新加坡)"
-    📝 频道重命名: "412088" → "HBO HD_新加坡_英"
-    📝 频道重命名: "412091" → "ROCK Entertainment(新加坡)"
-    📝 频道重命名: "412094" → "Sun Music_新加坡"
-    📝 频道重命名: "412095" → "DreamWorks Channel_新加坡"
-    📝 频道重命名: "412096" → "Cinemax HD_英(新加坡)"
-    📝 频道重命名: "412097" → "Vannathirai_新加坡"
-    📝 频道重命名: "412098" → "BBC World News(新加坡)"
-    📝 频道重命名: "412106" → "TVB-星河台_新马_英2"
-    📝 频道重命名: "412115" → "Zee Tamil_新加坡"
-    📝 频道重命名: "412116" → "Kalaignar TV_新加坡"
-    📝 频道重命名: "412120" → "Travelxp HD_新加坡"
-    📝 频道重命名: "412122" → "Euronews_新加坡"
-    📝 频道重命名: "412123" → "ADITHYA TV_新加坡"
-    📝 频道重命名: "412129" → "beIN Sports-2_新加坡"
-    📝 频道重命名: "412130" → "NHK World Premium_新马_英"
-    📝 频道重命名: "412135" → "TVB-翡翠台_新加坡_英"
-    📝 频道重命名: "412136" → "Nick Jr._新马"
-    📝 频道重命名: "412142" → "上海东方卫视_新加坡"
-    📝 频道重命名: "412145" → "凤凰资讯台_新加坡_英"
-    📝 频道重命名: "412148" → "Preview Channel(新加坡)"
-    📝 频道重命名: "412153" → "HGTV_新加坡"
-    📝 频道重命名: "412157" → "ABC Australia_新马"
-    📝 频道重命名: "412165" → "Fight Sports_新加坡"
-    📝 频道重命名: "412167" → "beIN Sports_新加坡"
-    📝 频道重命名: "412172" → "History HD_马来"
-    📝 频道重命名: "412178" → "DW English(新加坡)"
-    📝 频道重命名: "412181" → "SPOTV_新加坡2"
-    📝 频道重命名: "412184" → "Lifetime HD_新加坡_英"
-    📝 频道重命名: "412185" → "Zee Cinema_新加坡"
-    📝 频道重命名: "412187" → "SPOTV 2_新加坡"
-    📝 频道重命名: "412190" → "France 24 English_新马2"
-    📝 频道重命名: "412194" → "Hits HD"
-    📝 频道重命名: "412195" → "HBO Family(香港2)"
-    📝 频道重命名: "412197" → "Fashion TV HD(新加坡)"
-    📝 频道重命名: "412199" → "Bloomberg Originals_台湾？"
-    📝 频道重命名: "413372" → "TestChannel 993(新加坡)"
-    📝 频道重命名: "429564" → "Pesona HD(新加坡)"
-    📝 频道重命名: "435717" → "Asianet TV_新加坡"
-    📝 频道重命名: "451931" → "Star Maa(新加坡)"
-    📝 频道重命名: "451933" → "MAA Movies(新加坡)"
-    📝 频道重命名: "455187" → "Hub Sports 8"
-    📝 频道重命名: "455314" → "TFC (The Filipino Channel)_新加坡"
-    📝 频道重命名: "459681" → "StarHub(新加坡)"
-    📝 频道重命名: "484245" → "Outdoor Channel(新加坡)"
-    📝 频道重命名: "485760" → "HITS NOW(新加坡)"
-    📝 频道重命名: "491151" → "东森亚洲卫视_新加坡_ 国"
-    📝 频道重命名: "491154" → "GMA Life TV"
-    📝 频道重命名: "491157" → "CNN International_台湾+中东"
-    📝 频道重命名: "491159" → "ANIPLUS(新加坡)"
-    📝 频道重命名: "491163" → "TVBS-亚洲台_新加坡_中英"
-    📝 频道重命名: "491164" → "GMA News TV"
-    📝 频道重命名: "491166" → "Nick Jr._新马_英"
-    📝 频道重命名: "491168" → "GMA Pinoy TV(新加坡)"
-    📝 频道重命名: "491172" → "中国电影频道China Movie Channel(新加坡)"
-    📝 频道重命名: "492453" → "TVBS-新闻台"
-    📝 频道重命名: "492816" → "Channel 5"
-    📝 频道重命名: "492817" → "Channel Vasantham"
-    📝 频道重命名: "492823" → "CinemaWorld_新加坡_英"
-    📝 频道重命名: "492836" → "Hub Sports 3"
-    📝 频道重命名: "492850" → "AXN_新马_英2"
-    📝 频道重命名: "492851" → "Hub-娱家_新加坡"
-    📝 频道重命名: "492856" → "东森亚洲卫视_新加坡_ 英"
-    📝 频道重命名: "492858" → "Food ON_新加坡"
-    📝 频道重命名: "492863" → "BBC Lifestyle_新加坡_英"
-    📝 频道重命名: "492864" → "Channel U_国英"
-    📝 频道重命名: "492865" → "Cartoon Network_新马_英"
-    📝 频道重命名: "492866" → "Crime & Investigation_新马"
-    📝 频道重命名: "492869" → "Astro Sensasi_新加坡"
-    📝 频道重命名: "492870" → "ONE (Malay)(新加坡)"
-    📝 频道重命名: "492878" → "TG Junior_新加坡"
-    📝 频道重命名: "492879" → "Nickelodeon_新马_英"
-    📝 频道重命名: "492880" → "W-Sport_新加坡"
-    📝 频道重命名: "492883" → "中天亚洲台_新马_英"
-    📝 频道重命名: "492892" → "BBC Earth_新马港台_英2"
-    📝 频道重命名: "492894" → "Channel 8_国英"
-    📝 频道重命名: "492895" → "Hub-都会台"
-    📝 频道重命名: "492896" → "TRACE Sport Stars_新加坡_英"
-    📝 频道重命名: "492901" → "Channel Suria"
-    📝 频道重命名: "492904" → "COLORS TV_新加坡"
-    📝 频道重命名: "492905" → "meWATCH Live 1"
-    📝 频道重命名: "492915" → "Karisma_新加坡"
-    📝 频道重命名: "493279" → "TestChannel 996(新加坡)"
-    📝 频道重命名: "501125" → "北京国际频道"
-    📝 频道重命名: "501126" → "WION(新加坡)"
-    📝 频道重命名: "502440" → "CGTN英文纪录_英(新加坡)"
-    📝 频道重命名: "503775" → "Hub Sports 4"
-    📝 频道重命名: "503776" → "Hub Sports 5"
-    📝 频道重命名: "512067" → "CCTV-娱乐"
-    📝 频道重命名: "512068" → "NOW Jelli HD(新加坡)"
-    📝 频道重命名: "513276" → "Channel 8_国"
-    📝 频道重命名: "513280" → "Channel U_国"
-    📝 频道重命名: "516576" → "SPOTV_新加坡"
-    📝 频道重命名: "516579" → "Astro Ria(新加坡)"
-    📝 频道重命名: "516580" → "Zee Thirai_新加坡"
-    📝 频道重命名: "516581" → "TechStorm"
-    📝 频道重命名: "522557" → "Times Now"
-    📝 频道重命名: "522558" → "Zoom TV(新加坡)"
-    📝 频道重命名: "524981" → "Hub Sports 7"
-    📝 频道重命名: "524983" → "beIN Sports-4_新加坡"
-    📝 频道重命名: "524985" → "beIN Sports-3_新加坡"
-    📝 频道重命名: "524986" → "Hub Sports 6"
-    📝 频道重命名: "524990" → "Cricbuzz 2_新加坡"
-    📝 频道重命名: "530390" → "Vijay Takkar_新加坡"
-    📝 频道重命名: "535443" → "That's 80s_新加坡"
-    📝 频道重命名: "535444" → "That's Rock_新加坡"
-    📝 频道重命名: "535445" → "That's 70s_新加坡"
-    📝 频道重命名: "507899" → "Master Chef"
-    📝 频道重命名: "522556" → "湖南国际频道(EPG2)"
-    🕐 时区处理: ChangeTimezone=Y → 强制将时区改为 +0800（时间数值不变）
-    📝 别名映射: 修改ID=True, 修改DisplayName=True
-    ✂️ 跨天拆分: True
-    ✂️ 跨天节目拆分: 519 个
-    ⚠ 未找到频道: 523496
-    ⚠ 未找到频道: 535531
-    ⚠ 未找到频道: 535582
-    ⚠ 未找到频道: 535294
-    ⚠ 未找到频道: 535553
-    ⚠ 未找到频道: 492911
-    ⚠ 未找到频道: 520018
-    📺 新增频道: 148/155
-    📅 新增节目: 15942/22434
-   ✓ 处理成功
+    🔗 Referer: https://epg.pw/
+    ✗ 文件不存在 (404)
+   ✗ 下载失败，跳过此源
 
 ------------------------------------------------------------
 📡 源 11/14: https://epg.pw/xmltv/epg_US.xml
    请求频道: 652 个
    需要查找: 652 个
-    ✓ 下载成功: 199.35 MB
-    🕐 时间范围: 2026-05-03 00:00 到 2026-05-13 00:00 (UTC)
-    📊 包含过去 6 天 + 当天 + 未来 3 天
-    📝 频道重命名: "464745" → "HBO East"
-    📝 频道重命名: "464748" → "Daystar Español"
-    📝 频道重命名: "464749" → "Circle Country"
-    📝 频道重命名: "464750" → "Antena 3 Internacional"
-    📝 频道重命名: "464751" → "HSN Home Shopping Network"
-    📝 频道重命名: "464753" → "Bravo HD"
-    📝 频道重命名: "464754" → "beIN Sports USA"
-    📝 频道重命名: "464755" → "Boomerang TV"
-    📝 频道重命名: "464756" → "RFD TV HD"
-    📝 频道重命名: "464758" → "DZMM Radyo Patrol"
-    📝 频道重命名: "464759" → "Rai Premium"
-    📝 频道重命名: "464760" → "Centro América TV"
-    📝 频道重命名: "464762" → "History Channel En Español"
-    📝 频道重命名: "464763" → "Starz Encore Pacific"
-    📝 频道重命名: "464766" → "FOX Business"
-    📝 频道重命名: "464769" → "GMA Pinoy TV(US)"
-    📝 频道重命名: "464770" → "PBS Kids"
-    📝 频道重命名: "464771" → "AXS TV"
-    📝 频道重命名: "464773" → "MeTV Toons"
-    📝 频道重命名: "464774" → "FYI Channel"
-    📝 频道重命名: "464775" → "ScreenPix Action"
-    📝 频道重命名: "464776" → "CBO"
-    📝 频道重命名: "464777" → "SNY (SportsNet New York)"
-    📝 频道重命名: "464779" → "NBC Sports 4K"
-    📝 频道重命名: "464780" → "GOL TV"
-    📝 频道重命名: "464782" → "Univision Network"
-    📝 频道重命名: "464783" → "Golf Channel(EPG2)"
-    📝 频道重命名: "464784" → "Starz Encore Westerns Pacific"
-    📝 频道重命名: "464785" → "Story TV"
-    📝 频道重命名: "464786" → "INSP HD"
-    📝 频道重命名: "464788" → "Trinity Broadcasting Network"
-    📝 频道重命名: "464789" → "NBC Sports California Plus-3"
-    📝 频道重命名: "464790" → "The Travel Channel Pacific"
-    📝 频道重命名: "464791" → "CNBC(US)"
-    📝 频道重命名: "464792" → "DTV ARANG"
-    📝 频道重命名: "464793" → "SONY Cine"
-    📝 频道重命名: "464794" → "Rai News 24"
-    📝 频道重命名: "464795" → "88 Films"
-    📝 频道重命名: "464796" → "QVC3 TV"
-    📝 频道重命名: "464797" → "Discovery en Español"
-    📝 频道重命名: "464798" → "Cheddar"
-    📝 频道重命名: "464803" → "Ecuavisa International"
-    📝 频道重命名: "464804" → "Telefe international"
-    📝 频道重命名: "464805" → "Science Channel"
-    📝 频道重命名: "464806" → "Spectrum SportsNet Lakers"
-    📝 频道重命名: "464807" → "Disney XD"
-    📝 频道重命名: "464808" → "Family Movie Classics"
-    📝 频道重命名: "464809" → "Atreseries"
-    📝 频道重命名: "464810" → "Game Show Network"
-    📝 频道重命名: "464811" → "Tan TV"
-    📝 频道重命名: "464812" → "MSG Sportsnet-2 Zone 1"
-    📝 频道重命名: "464813" → "FX HD"
-    📝 频道重命名: "464814" → "The Movie Channel Pacific"
-    📝 频道重命名: "464815" → "ActionMAX"
-    📝 频道重命名: "464816" → "QVC2 TV"
-    📝 频道重命名: "464819" → "Film 24h"
-    📝 频道重命名: "464820" → "Starz Encore Black"
-    📝 频道重命名: "464821" → "Oxygen True Crime"
-    📝 频道重命名: "464822" → "TC Internacional"
-    📝 频道重命名: "464823" → "The Africa Channel"
-    📝 频道重命名: "464825" → "MTV Live"
-    📝 频道重命名: "464826" → "Mexicanal"
-    📝 频道重命名: "464828" → "CSPAN3"
-    📝 频道重命名: "464830" → "CBS West"
-    📝 频道重命名: "464832" → "E! Entertainment TV"
-    📝 频道重命名: "464833" → "MASN2 - Mid Atlantic Sports Network-2"
-    📝 频道重命名: "464834" → "Shop Now"
-    📝 频道重命名: "464835" → "CSPAN"
-    📝 频道重命名: "464836" → "NTN24"
-    📝 频道重命名: "464838" → "Discovery Life Channel"
-    📝 频道重命名: "464839" → "Starz Edge"
-    📝 频道重命名: "464840" → "TBN Inspire"
-    📝 频道重命名: "464841" → "Vietface TV"
-    📝 频道重命名: "464843" → "Vien Thao TV"
-    📝 频道重命名: "464844" → "MLB Network Strike Zone"
-    📝 频道重命名: "464845" → "MBC America"
-    📝 频道重命名: "464846" → "Great American Family"
-    📝 频道重命名: "464849" → "ABC National Feed Pacific"
-    📝 频道重命名: "464850" → "MoreMax"
-    📝 频道重命名: "464851" → "MSG Plus - Syracuse"
-    📝 频道重命名: "464853" → "AdultSwim com Cartoon Network"
-    📝 频道重命名: "464856" → "Marquee Sports Network Overflow"
-    📝 频道重命名: "464857" → "CNN(US)"
-    📝 频道重命名: "464859" → "DraftKings Network"
-    📝 频道重命名: "464860" → "Jewish Life TV"
-    📝 频道重命名: "464861" → "El Sembrador"
-    📝 频道重命名: "464862" → "DirecTV VALU"
-    📝 频道重命名: "464863" → "Newsmax TV"
-    📝 频道重命名: "464864" → "Disney Junior Pacific"
-    📝 频道重命名: "464865" → "PI KBS World"
-    📝 频道重命名: "464867" → "BET Pacific"
-    📝 频道重命名: "464868" → "BYU TV"
-    📝 频道重命名: "464869" → "ScreenPix Westerns"
-    📝 频道重命名: "464871" → "CNN En Español"
-    📝 频道重命名: "464872" → "CANAL 22 Internacional"
-    📝 频道重命名: "464873" → "DirecTV - MLB Extra Innings - MLBEI"
-    📝 频道重命名: "464874" → "Scripps News"
-    📝 频道重命名: "464877" → "Showtime Extreme"
-    📝 频道重命名: "464878" → "IndiePlex"
-    📝 频道重命名: "464879" → "ACC Network"
-    📝 频道重命名: "464880" → "Outside TV"
-    📝 频道重命名: "464881" → "Rai Italia"
-    📝 频道重命名: "464882" → "Paramount Network"
-    📝 频道重命名: "464884" → "Nat Geo Wild"
-    📝 频道重命名: "464885" → "Telecentro TV"
-    📝 频道重命名: "464886" → "ACE TV"
-    📝 频道重命名: "464887" → "HSN2"
-    📝 频道重命名: "464889" → "MS NOW"
-    📝 频道重命名: "464890" → "SHO x BET HD"
-    📝 频道重命名: "464891" → "Saigon Broadcasting Network"
-    📝 频道重命名: "464892" → "NBC Sports Northwest Streaming"
-    📝 频道重命名: "464893" → "Starz Encore"
-    📝 频道重命名: "464894" → "Reality Kings TV"
-    📝 频道重命名: "464895" → "American Heroes Channel"
-    📝 频道重命名: "464896" → "PixL(US)"
-    📝 频道重命名: "464897" → "Hallmark Family"
-    📝 频道重命名: "464898" → "Showtime Women"
-    📝 频道重命名: "464899" → "Barvanna Network"
-    📝 频道重命名: "464900" → "Anheuser Busch Private Network"
-    📝 频道重命名: "464901" → "ETBN Enlace USA"
-    📝 频道重命名: "464902" → "ABC National Feed"
-    📝 频道重命名: "464903" → "USA Network Pacific"
-    📝 频道重命名: "464904" → "NBC Sports California Outer Market"
-    📝 频道重命名: "464905" → "MSG Plus"
-    📝 频道重命名: "464906" → "Daystar TV Network [CHARTER]"
-    📝 频道重命名: "464908" → "Once"
-    📝 频道重命名: "464909" → "ATN Movies"
-    📝 频道重命名: "464910" → "NBC Sports Boston"
-    📝 频道重命名: "464911" → "Nick Jr. HD(US)"
-    📝 频道重命名: "464912" → "NBA TV"
-    📝 频道重命名: "464913" → "EBS America"
-    📝 频道重命名: "464915" → "Estrella TV"
-    📝 频道重命名: "464916" → "Arizona Family Sports"
-    📝 频道重命名: "464917" → "Cinemax HD_英(US)"
-    📝 频道重命名: "464918" → "UniMas Pacific"
-    📝 频道重命名: "464919" → "TLC HD(US)"
-    📝 频道重命名: "464920" → "i24 News English"
-    📝 频道重命名: "464921" → "MGM+ Marquee"
-    📝 频道重命名: "464926" → "LooLoo Kids TV"
-    📝 频道重命名: "464928" → "UniMas"
-    📝 频道重命名: "464929" → "LMN HD"
-    📝 频道重命名: "464930" → "COZI TV"
-    📝 频道重命名: "464931" → "Jewelry TV"
-    📝 频道重命名: "464932" → "Destination America"
-    📝 频道重命名: "464933" → "Weather Nation TV"
-    📝 频道重命名: "464934" → "SBS Plus"
-    📝 频道重命名: "464936" → "中天 Channel(US)"
-    📝 频道重命名: "464937" → "CBS Sports Network"
-    📝 频道重命名: "464938" → "Spectrum News+"
-    📝 频道重命名: "464941" → "CBS News National Stream"
-    📝 频道重命名: "464942" → "Heroes and Icons Network"
-    📝 频道重命名: "464943" → "SONY Movie Channel"
-    📝 频道重命名: "464944" → "CARACOL International"
-    📝 频道重命名: "464945" → "Cinemax Hits"
-    📝 频道重命名: "464946" → "Charming China"
-    📝 频道重命名: "464949" → "ESPN Deportes"
-    📝 频道重命名: "464950" → "GZTV"
-    📝 频道重命名: "464951" → "ASPiRE HD"
-    📝 频道重命名: "464952" → "TyC Sports Internacional USA"
-    📝 频道重命名: "464953" → "HBO Comedy"
-    📝 频道重命名: "464954" → "Showtime Familyzone"
-    📝 频道重命名: "464956" → "ScreenPix TV"
-    📝 频道重命名: "464957" → "EWTN Español"
-    📝 频道重命名: "464958" → "The Hope Channel"
-    📝 频道重命名: "464959" → "Comet Pacific"
-    📝 频道重命名: "464960" → "HBO Latino"
-    📝 频道重命名: "464962" → "Telemundo Satellite Feed"
-    📝 频道重命名: "464963" → "Compre AQUI los productos mejores del TV"
-    📝 频道重命名: "464964" → "Penthouse TV XX5 Premium"
-    📝 频道重命名: "464966" → "VIETV"
-    📝 频道重命名: "464968" → "BET HD"
-    📝 频道重命名: "464969" → "DirecTV Playboy"
-    📝 频道重命名: "464970" → "Video Rola"
-    📝 频道重命名: "464971" → "Law and Crime"
-    📝 频道重命名: "464972" → "Vice(US)"
-    📝 频道重命名: "464973" → "Starz Encore Westerns"
-    📝 频道重命名: "464974" → "Nat Geo Pacific"
-    📝 频道重命名: "464975" → "Starz HD"
-    📝 频道重命名: "464977" → "Nuestra Tele Internacional"
-    📝 频道重命名: "464979" → "Starz Comedy"
-    📝 频道重命名: "464981" → "MGM Presents: Horror"
-    📝 频道重命名: "464982" → "CFN CATHOLIC FAITH Network"
-    📝 频道重命名: "464983" → "FX Pacific"
-    📝 频道重命名: "464984" → "Food Network HD(US)"
-    📝 频道重命名: "464985" → "HBO2 Pacific"
-    📝 频道重命名: "464986" → "TVE"
-    📝 频道重命名: "464987" → "truTV HD"
-    📝 频道重命名: "464988" → "truTV Pacific"
-    📝 频道重命名: "464989" → "MYX Channel"
-    📝 频道重命名: "464990" → "NBC Sports-2"
-    📝 频道重命名: "464991" → "ROAR TV"
-    📝 频道重命名: "464992" → "A&E East"
-    📝 频道重命名: "464993" → "NBC Sports California Plus"
-    📝 频道重命名: "464994" → "CBS Streaming East feed"
-    📝 频道重命名: "464995" → "SBS HD"
-    📝 频道重命名: "464996" → "MSG SportsZone"
-    📝 频道重命名: "464997" → "MTV - Music Television Pacific"
-    📝 频道重命名: "464998" → "VGN TV"
-    📝 频道重命名: "464999" → "NBC Sports-1"
-    📝 频道重命名: "465000" → "MSG (Alt. feed) - MSG2 OVERFLOW"
-    📝 频道重命名: "465002" → "Lifetime Real Women"
-    📝 频道重命名: "465005" → "DirecTV GO4IT"
-    📝 频道重命名: "465006" → "USA Network HD"
-    📝 频道重命名: "465007" → "Bandamax"
-    📝 频道重命名: "465008" → "BET Her"
-    📝 频道重命名: "465009" → "Ovation HD"
-    📝 频道重命名: "465010" → "Willow Cricket"
-    📝 频道重命名: "465011" → "Sur Peru"
-    📝 频道重命名: "465012" → "Magnolia Network"
-    📝 频道重命名: "465013" → "NBC Sports Bay Area Plus"
-    📝 频道重命名: "465017" → "MGM Presents: Westerns"
-    📝 频道重命名: "465018" → "Reelz Channel"
-    📝 频道重命名: "465019" → "Bang U"
-    📝 频道重命名: "465020" → "Pinoy Box Office"
-    📝 频道重命名: "465021" → "CNN International_欧洲"
-    📝 频道重命名: "465024" → "Shorts TV"
-    📝 频道重命名: "465025" → "BBC America"
-    📝 频道重命名: "465027" → "Great American Adventures"
-    📝 频道重命名: "465028" → "Home and Garden TV"
-    📝 频道重命名: "465029" → "Vivid TV"
-    📝 频道重命名: "465030" → "BET Soul"
-    📝 频道重命名: "465031" → "LifeS"
-    📝 频道重命名: "465032" → "AMC HD(US)"
-    📝 频道重命名: "465033" → "MSG National"
-    📝 频道重命名: "465034" → "FXX Pacific"
-    📝 频道重命名: "465035" → "Cine Latino US"
-    📝 频道重命名: "465036" → "CW Plus East"
-    📝 频道重命名: "465037" → "NBC Sports Philadelphia"
-    📝 频道重命名: "465038" → "Nicktoons"
-    📝 频道重命名: "465039" → "NewsNation"
-    📝 频道重命名: "465040" → "Crime & Investigation Network HD(US)"
-    📝 频道重命名: "465041" → "HBO2"
-    📝 频道重命名: "465042" → "Smithsonian HD Network"
-    📝 频道重命名: "465043" → "NBC Sports Bay Area Outer Market"
-    📝 频道重命名: "465044" → "HLN HD"
-    📝 频道重命名: "465045" → "WAPA America"
-    📝 频道重命名: "465047" → "Nippon TV Channel"
-    📝 频道重命名: "465049" → "365BLK"
-    📝 频道重命名: "465050" → "MTV Classic"
-    📝 频道重命名: "465051" → "BET GOSPEL"
-    📝 频道重命名: "465053" → "Syfy HD"
-    📝 频道重命名: "465054" → "NBC Sports California"
-    📝 频道重命名: "465055" → "TV Chile"
-    📝 频道重命名: "465056" → "Comedy TV"
-    📝 频道重命名: "465058" → "CHSN Chicago Sports Network"
-    📝 频道重命名: "465059" → "NBC East Stream"
-    📝 频道重命名: "465060" → "Ve Plus"
-    📝 频道重命名: "465063" → "Hogar HD"
-    📝 频道重命名: "465064" → "MSG Zone-1"
-    📝 频道重命名: "465065" → "Showtime Showcase"
-    📝 频道重命名: "465066" → "凤凰中文台_英(US)"
-    📝 频道重命名: "465067" → "Military History Channel"
-    📝 频道重命名: "465069" → "TLC Pacific"
-    📝 频道重命名: "465070" → "ZooMoo(US)"
-    📝 频道重命名: "465071" → "AWE A Wealth of Entertainment"
-    📝 频道重命名: "465072" → "Spectrum Bay News 9 Tampa"
-    📝 频道重命名: "465073" → "Big Ten Network"
-    📝 频道重命名: "465074" → "MoviePlex"
-    📝 频道重命名: "465075" → "The Film Detective"
-    📝 频道重命名: "465077" → "Spectrum SportsNet LA Dodgers"
-    📝 频道重命名: "465079" → "Hustler Mature"
-    📝 频道重命名: "465080" → "MTV - Music Television"
-    📝 频道重命名: "465081" → "IFC HD"
-    📝 频道重命名: "465082" → "Pets TV"
-    📝 频道重命名: "465083" → "Blossom TV"
-    📝 频道重命名: "465084" → "MOTORTREND"
-    📝 频道重命名: "465086" → "Telemundo Satellite Feed Pacific"
-    📝 频道重命名: "465087" → "MSNBC"
-    📝 频道重命名: "465088" → "Positiv TV"
-    📝 频道重命名: "465089" → "Nat Geo HD"
-    📝 频道重命名: "465090" → "Cinema Dinamita"
-    📝 频道重命名: "465093" → "TViet Network"
-    📝 频道重命名: "465094" → "NBC Sports-3"
-    📝 频道重命名: "465095" → "Home and Garden TV Pacific"
-    📝 频道重命名: "465097" → "Rewind HD"
-    📝 频道重命名: "465098" → "Pursuit Channel"
-    📝 频道重命名: "465099" → "Flix"
-    📝 频道重命名: "465102" → "NBC Sports Boston Outer Market"
-    📝 频道重命名: "465103" → "Newsy"
-    📝 频道重命名: "465104" → "HBO Zone"
-    📝 频道重命名: "465105" → "Fuse HD"
-    📝 频道重命名: "465106" → "Nick Music"
-    📝 频道重命名: "465107" → "CMT"
-    📝 频道重命名: "465108" → "ESPNU"
-    📝 频道重命名: "465109" → "Starz Kids"
-    📝 频道重命名: "465110" → "Tastemade TV"
-    📝 频道重命名: "465111" → "UPtv"
-    📝 频道重命名: "465112" → "MeTV Plus"
-    📝 频道重命名: "465113" → "MTV2: Music Television"
-    📝 频道重命名: "465114" → "TNT HD"
-    📝 频道重命名: "465115" → "Starz Cinema"
-    📝 频道重命名: "465116" → "RTV International"
-    📝 频道重命名: "465117" → "Grit"
-    📝 频道重命名: "465118" → "Atrescine"
-    📝 频道重命名: "465119" → "Starz Encore Español"
-    📝 频道重命名: "465120" → "SBS TV Korea"
-    📝 频道重命名: "465122" → "Starz Encore Suspense"
-    📝 频道重命名: "465123" → "INFAST US"
-    📝 频道重命名: "465124" → "SportsNet Pittsburgh"
-    📝 频道重命名: "465126" → "RetroPlex HD"
-    📝 频道重命名: "465127" → "Recipe TV"
-    📝 频道重命名: "465128" → "BET Jams"
-    📝 频道重命名: "465130" → "Cine Nostalgia"
-    📝 频道重命名: "465131" → "TBS Pacific"
-    📝 频道重命名: "465132" → "The Cowboy Channel"
-    📝 频道重命名: "465133" → "Cine Estelar"
-    📝 频道重命名: "465134" → "POP HD"
-    📝 频道重命名: "465135" → "GOD TV"
-    📝 频道重命名: "465136" → "ROOT Sports Northwest"
-    📝 频道重命名: "465138" → "Sundance TV"
-    📝 频道重命名: "465139" → "Home Shopping Network"
-    📝 频道重命名: "465140" → "Curiosity NOW"
-    📝 频道重命名: "465142" → "Nat Geo Mundo"
-    📝 频道重命名: "465144" → "MTV-U"
-    📝 频道重命名: "465147" → "5 StarMAX East"
-    📝 频道重命名: "465150" → "ABC News Live"
-    📝 频道重命名: "465151" → "RETRO"
-    📝 频道重命名: "465152" → "Discovery Family Channel"
-    📝 频道重命名: "465153" → "Free Speech TV"
-    📝 频道重命名: "465154" → "Fight Network"
-    📝 频道重命名: "465156" → "FOX Deportes"
-    📝 频道重命名: "465157" → "Honvietv"
-    📝 频道重命名: "465158" → "AMC+"
-    📝 频道重命名: "465160" → "EarthX"
-    📝 频道重命名: "465161" → "ABS-CBN News Channel"
-    📝 频道重命名: "465162" → "JBS"
-    📝 频道重命名: "465163" → "NBC Sports Bay Area"
-    📝 频道重命名: "465164" → "Golden Eagle Broadcasting"
-    📝 频道重命名: "465165" → "Zona Futbol"
-    📝 频道重命名: "465167" → "Hallmark Mystery"
-    📝 频道重命名: "465169" → "MSG2"
-    📝 频道重命名: "465170" → "Disney Channel Pacific"
-    📝 频道重命名: "465171" → "Investigation Discovery Pacific"
-    📝 频道重命名: "465172" → "ESTRELLA NEWS"
-    📝 频道重命名: "465174" → "TUDN"
-    📝 频道重命名: "465175" → "Curiosity Channel"
-    📝 频道重命名: "465176" → "History HD(US)"
-    📝 频道重命名: "465177" → "Cartoon Network Pacific"
-    📝 频道重命名: "465178" → "The First"
-    📝 频道重命名: "465179" → "World Harvest TV"
-    📝 频道重命名: "465180" → "Teen Nick"
-    📝 频道重命名: "465182" → "Mega TV"
-    📝 频道重命名: "465184" → "Bravo Pacific"
-    📝 频道重命名: "465185" → "The Discovery Channel Pacific"
-    📝 频道重命名: "465186" → "The Travel Channel"
-    📝 频道重命名: "465187" → "Real Americas Voice"
-    📝 频道重命名: "465188" → "SONY MIX(US)"
-    📝 频道重命名: "465190" → "Syfy Pacific"
-    📝 频道重命名: "465191" → "Cinemax Pacific"
-    📝 频道重命名: "465192" → "Danbi Christian TV"
-    📝 频道重命名: "465193" → "ACCUWeather"
-    📝 频道重命名: "465194" → "GEMS"
-    📝 频道重命名: "465196" → "Turner Classic Movies"
-    📝 频道重命名: "465197" → "NFL SUNDAY TICKET RED ZONE"
-    📝 频道重命名: "465198" → "ESPN"
-    📝 频道重命名: "465199" → "Cinema One_马来"
-    📝 频道重命名: "465200" → "AMG TV"
-    📝 频道重命名: "465201" → "HBO Drama"
-    📝 频道重命名: "465203" → "Multimedios USA"
-    📝 频道重命名: "465206" → "VH1 HD"
-    📝 频道重命名: "465207" → "Revolt HD"
-    📝 频道重命名: "465208" → "TV ONE HD"
-    📝 频道重命名: "465210" → "YTN Radio Korea"
-    📝 频道重命名: "465211" → "Cooking Channel"
-    📝 频道重命名: "465212" → "HDNet Movies"
-    📝 频道重命名: "465213" → "Bloomberg TV"
-    📝 频道重命名: "465214" → "FOX Soccer Plus"
-    📝 频道重命名: "465216" → "Justice Central"
-    📝 频道重命名: "465217" → "MSG Sportsnet Zone-1"
-    📝 频道重命名: "465220" → "Space City Home Network"
-    📝 频道重命名: "465221" → "Oprah Winfrey Network (Pacific A Feed)"
-    📝 频道重命名: "465222" → "Fun Roads"
-    📝 频道重命名: "465223" → "Pasiones TV"
-    📝 频道重命名: "465225" → "New England Sports Network"
-    📝 频道重命名: "465226" → "Court TV"
-    📝 频道重命名: "465227" → "SARI SARI Channel"
-    📝 频道重命名: "465228" → "Great American Faith and Living"
-    📝 频道重命名: "465229" → "88 TV"
-    📝 频道重命名: "465230" → "Hustler TV"
-    📝 频道重命名: "465231" → "RACER Network"
-    📝 频道重命名: "465232" → "Starz Encore Action"
-    📝 频道重命名: "465233" → "Cine Mexicano US Feed"
-    📝 频道重命名: "465235" → "TV Land HD"
-    📝 频道重命名: "465236" → "Tennis Channel"
-    📝 频道重命名: "465237" → "MBN Plus"
-    📝 频道重命名: "465238" → "Starz Pacific"
-    📝 频道重命名: "465239" → "MLB Network"
-    📝 频道重命名: "465240" → "Starz Encore Classic"
-    📝 频道重命名: "465241" → "Hallmark Channel"
-    📝 频道重命名: "465242" → "Starz Encore Family"
-    📝 频道重命名: "465243" → "CSPAN2"
-    📝 频道重命名: "465245" → "PBS Stream"
-    📝 频道重命名: "465247" → "MSG Sportsnet-2"
-    📝 频道重命名: "465248" → "FS1"
-    📝 频道重命名: "465249" → "HBO Pacific"
-    📝 频道重命名: "465251" → "Nickelodeon HD(US)"
-    📝 频道重命名: "465252" → "NBC West Stream"
-    📝 频道重命名: "465253" → "Animal Planet Pacific"
-    📝 频道重命名: "465254" → "Big Ten Network Overflow"
-    📝 频道重命名: "465255" → "HBO Hits"
-    📝 频道重命名: "465256" → "iCable Finance Info News Channel(US)"
-    📝 频道重命名: "465257" → "Peru Magico"
-    📝 频道重命名: "465258" → "Playboy HD"
-    📝 频道重命名: "465259" → "Oprah Winfrey Network"
-    📝 频道重命名: "465261" → "MGM+ HD"
-    📝 频道重命名: "465262" → "N+ Foro"
-    📝 频道重命名: "465263" → "Cinemax Spanish"
-    📝 频道重命名: "465264" → "Sportsman Channel"
-    📝 频道重命名: "465265" → "DirecTV Celebrity Shopping Network"
-    📝 频道重命名: "465266" → "SEC Network"
-    📝 频道重命名: "465270" → "Showtime Next"
-    📝 频道重命名: "465271" → "Marquee Sports Network"
-    📝 频道重命名: "465272" → "The Weather Channel"
-    📝 频道重命名: "465273" → "OPM TV"
-    📝 频道重命名: "465274" → "Rede Globo TV Internacional"
-    📝 频道重命名: "465277" → "Tribeca Festival +(US)"
-    📝 频道重命名: "465278" → "Start TV Network"
-    📝 频道重命名: "465279" → "HBO Signature HD(US)"
-    📝 频道重命名: "465280" → "FS2"
-    📝 频道重命名: "465281" → "Scientology Media Productions"
-    📝 频道重命名: "465282" → "CNBC World"
-    📝 频道重命名: "465283" → "Univision TL Novelas"
-    📝 频道重命名: "465284" → "MGM+ Hits"
-    📝 频道重命名: "465285" → "TBS HD"
-    📝 频道重命名: "465286" → "Living Faith Network"
-    📝 频道重命名: "465287" → "Rai Radio 1"
-    📝 频道重命名: "465288" → "Altitude Sports"
-    📝 频道重命名: "465290" → "Lifetime HD(US)"
-    📝 频道重命名: "465292" → "Bounce TV"
-    📝 频道重命名: "465293" → "Starz in Black"
-    📝 频道重命名: "465294" → "Investigation Discovery"
-    📝 频道重命名: "465295" → "VSIN Vegas Sports and Information Network"
-    📝 频道重命名: "465296" → "SonLife Broadcasting Network"
-    📝 频道重命名: "465297" → "BraZZers TV Plus"
-    📝 频道重命名: "465298" → "TYT The Young Turks"
-    📝 频道重命名: "465300" → "Tr3s: MTV, Musica y Mas"
-    📝 频道重命名: "465301" → "Zee TV(US)"
-    📝 频道重命名: "465302" → "HBO West"
-    📝 频道重命名: "465303" → "Playboy En Español"
-    📝 频道重命名: "465304" → "FM HD"
-    📝 频道重命名: "465305" → "Comet(US)"
-    📝 频道重命名: "465306" → "Scares by Shudder"
-    📝 频道重命名: "465307" → "TNT Pacific"
-    📝 频道重命名: "465308" → "Paramount+ with Showtime Pacific"
-    📝 频道重命名: "465310" → "Animal Planet"
-    📝 频道重命名: "465311" → "NFL Network"
-    📝 频道重命名: "465312" → "Galavision Cable Network Pacific"
-    📝 频道重命名: "465313" → "Adult On Demand"
-    📝 频道重命名: "465315" → "Peachtree TV"
-    📝 频道重命名: "465316" → "Playboy TV"
-    📝 频道重命名: "465317" → "Tastemade Travel"
-    📝 频道重命名: "465318" → "Cars TV"
-    📝 频道重命名: "465319" → "HOLA! TV"
-    📝 频道重命名: "465320" → "Disney Junior"
-    📝 频道重命名: "465321" → "Christian TV Network"
-    📝 频道重命名: "465323" → "MeTV Network"
-    📝 频道重命名: "465324" → "Bloomberg TV_台湾"
-    📝 频道重命名: "465325" → "Shop LC"
-    📝 频道重命名: "465328" → "DOG TV"
-    📝 频道重命名: "465329" → "UNIVERSO HD"
-    📝 频道重命名: "465330" → "Mediaset Italia"
-    📝 频道重命名: "465331" → "Freeform HD"
-    📝 频道重命名: "465332" → "Paramount+ with Showtime"
-    📝 频道重命名: "465333" → "MLB Network Alternate"
-    📝 频道重命名: "465335" → "Galavision Cable Network"
-    📝 频道重命名: "465336" → "Game+ Game Plus"
-    📝 频道重命名: "465337" → "Tastemade Home"
-    📝 频道重命名: "465339" → "NRB TV"
-    📝 频道重命名: "465340" → "So Yummy"
-    📝 频道重命名: "465341" → "Univision Network Pacific"
-    📝 频道重命名: "465342" → "Prime Revenue Frontier"
-    📝 频道重命名: "465345" → "Nickelodeon Pacific"
-    📝 频道重命名: "465346" → "The Grio HD"
-    📝 频道重命名: "465347" → "Monumental Sports Network"
-    📝 频道重命名: "465348" → "NHL Network"
-    📝 频道重命名: "465349" → "Disney Channel"
-    📝 频道重命名: "465350" → "DUCK TV"
-    📝 频道重命名: "465351" → "Monumental Sports Network-2"
-    📝 频道重命名: "465352" → "EWTN"
-    📝 频道重命名: "465353" → "BINGE TV"
-    📝 频道重命名: "465354" → "ION TV"
-    📝 频道重命名: "465357" → "FXX"
-    📝 频道重命名: "465358" → "World Fishing Network"
-    📝 频道重命名: "465360" → "Nuestra Visión"
-    📝 频道重命名: "465361" → "Monumental Sports Network Outer Market"
-    📝 频道重命名: "465362" → "TV Land Pacific"
-    📝 频道重命名: "465363" → "Cleo TV"
-    📝 频道重命名: "465364" → "Discovery Channel(US)"
-    📝 频道重命名: "465365" → "The Movie Channel HD"
-    📝 频道重命名: "465366" → "beIN Sports En Español"
-    📝 频道重命名: "465367" → "Logo(US)"
-    📝 频道重命名: "465369" → "Baby TV US(US)"
-    📝 频道重命名: "465371" → "Comedy Central Pacific"
-    📝 频道重命名: "465372" → "FOX News Channel"
-    📝 频道重命名: "465373" → "ESPN2"
-    📝 频道重命名: "465374" → "Victory Channel"
-    📝 频道重命名: "465375" → "MGM+ Drive-In"
-    📝 频道重命名: "465378" → "Curiosity Stream"
-    📝 频道重命名: "465379" → "De Pelicula Clasico"
-    📝 频道重命名: "465381" → "De Pelicula"
-    📝 频道重命名: "465382" → "One America News Network HD(US)"
-    📝 频道重命名: "465383" → "MLS Direct Kick - Direct TV - MLSSO"
-    📝 频道重命名: "465384" → "Discovery Familia En Español"
-    📝 频道重命名: "465385" → "HITN"
-    📝 频道重命名: "465386" → "The Word Network"
-    📝 频道重命名: "465387" → "Next Level Sports"
-    📝 频道重命名: "465389" → "TCT"
-    📝 频道重命名: "465390" → "Disney XD Pacific"
-    📝 频道重命名: "465391" → "QVC TV"
-    📝 频道重命名: "465392" → "Family Entertainment TV"
-    📝 频道重命名: "465393" → "Outdoor Channel HD(US)"
-    📝 频道重命名: "465394" → "Baby First TV(US)"
-    📝 频道重命名: "465395" → "S-channel"
-    📝 频道重命名: "465396" → "Oferta TV"
-    📝 频道重命名: "465397" → "The Movie Channel Extra"
-    📝 频道重命名: "465399" → "VME"
-    📝 频道重命名: "465400" → "FX Movie Channel"
-    📝 频道重命名: "465401" → "NFL RedZone"
-    📝 频道重命名: "465402" → "Showtime-2"
-    📝 频道重命名: "465403" → "Hogar TV"
-    📝 频道重命名: "465404" → "CASH(US)"
-    📝 频道重命名: "465405" → "DirecTV Lifetime"
-    📝 频道重命名: "465406" → "Playboy Premium"
-    📝 频道重命名: "465407" → "Impact Network"
-    📝 频道重命名: "465409" → "MASN - Mid Atlantic Sports Network"
-    📝 频道重命名: "465410" → "ESPNEWS"
-    📝 频道重命名: "465411" → "get(US)"
-    📝 频道重命名: "465412" → "ScreenPix Voices"
-    📝 频道重命名: "465925" → "OMNI2 HD"
-    📝 频道重命名: "466093" → "OMNI1 HD"
-    📝 频道重命名: "466109" → "Nueva Vida TV"
-    📝 频道重命名: "467093" → "Spectrum OC16"
-    📝 频道重命名: "467530" → "CIMT-DT"
-    📝 频道重命名: "467875" → "CBOFT-DT"
-    📝 频道重命名: "467912" → "Yes TV"
-    📝 频道重命名: "469356" → "TVO HD"
-    📝 频道重命名: "469850" → "Foro TV"
-    📝 频道重命名: "471425" → "Dabl Network LLC"
-    📝 频道重命名: "471426" → "Dabl Network LLC Pacific"
-    📝 频道重命名: "471427" → "Dabl"
-    📝 频道重命名: "472381" → "Merit TV"
-    📝 频道重命名: "472382" → "World Channel"
-    📝 频道重命名: "472383" → "Nosey"
-    📝 频道重命名: "472385" → "FNX First Nations Experience"
-    📝 频道重命名: "472386" → "Nosey on Peacock"
-    📝 频道重命名: "473069" → "American Crimes"
-    📝 频道重命名: "473210" → "BUZZR Stream"
-    📝 频道重命名: "474984" → "TFC (The Filipino Channel) HD(US)"
-    📝 频道重命名: "475508" → "SUMtv Latino"
-    📝 频道重命名: "475509" → "SUMtv"
-    📝 频道重命名: "477700" → "Universal Movies"
-    📝 频道重命名: "480607" → "Cinemax Classics"
-    📝 频道重命名: "480608" → "Cinemax Action"
-    📝 频道重命名: "480609" → "HBO Movies"
-    📝 频道重命名: "481953" → "Shades of Black"
-    📝 频道重命名: "481954" → "Haunt TV"
-    📝 频道重命名: "483389" → "Ryz Sports Network"
-    📝 频道重命名: "483390" → "Outdoor America Field and Stream"
-    📝 频道重命名: "483391" → "Gulf Coast Sports and Entertainment Network"
-    📝 频道重命名: "483393" → "STELLAR TV"
-    📝 频道重命名: "483394" → "Altitude Sports-2"
-    📝 频道重命名: "483395" → "CHSN Plus"
-    📝 频道重命名: "483396" → "HBCUGO Sports"
-    📝 频道重命名: "483549" → "Beach TV (WDES-CD) Destin, FL"
-    📝 频道重命名: "484875" → "80s Sitcoms"
-    📝 频道重命名: "484876" → "NASCAR Channel"
-    📝 频道重命名: "484877" → "Tastemade Food and More"
-    📝 频道重命名: "484878" → "ESPN8 The Ocho"
-    📝 频道重命名: "484879" → "MSG Sportsnet Zone-3 (MSG WNY)"
-    📝 频道重命名: "484880" → "MGM Presents Action"
-    📝 频道重命名: "484881" → "Bon Appétit TV"
-    📝 频道重命名: "484882" → "Pure Flix TV"
-    📝 频道重命名: "484883" → "Cinevault Classics"
-    📝 频道重命名: "484884" → "Living With Evil"
-    📝 频道重命名: "484885" → "Filmrise Mysteries"
-    📝 频道重命名: "484886" → "90s Sitcoms"
-    📝 频道重命名: "484887" → "MGM Presents"
-    📝 频道重命名: "484888" → "FM Fuse Music"
-    📝 频道重命名: "485735" → "NBC Sports Now"
-    📝 频道重命名: "487333" → "BBC Dinos 24/7(US)"
-    📝 频道重命名: "489130" → "SportsGrid"
-    📝 频道重命名: "490837" → "Horror Machine"
-    📝 频道重命名: "492940" → "NBC Comedy Vault"
-    📝 频道重命名: "492941" → "Universal Monsters"
-    📝 频道重命名: "492942" → "ION Mystery"
-    📝 频道重命名: "492943" → "Universal Crime"
-    📝 频道重命名: "492944" → "Universal Action"
-    📝 频道重命名: "494591" → "Fawesome"
-    📝 频道重命名: "494592" → "Bowling TV"
-    📝 频道重命名: "495109" → "Love Kills"
-    📝 频道重命名: "496440" → "Plus Movies"
-    📝 频道重命名: "496594" → "YTA Youtoo America"
-    📝 频道重命名: "496596" → "Yes Network Overflow"
-    📝 频道重命名: "496597" → "My Network"
-    📝 频道重命名: "496599" → "Right Now TV"
-    📝 频道重命名: "496600" → "Action Channel"
-    📝 频道重命名: "496601" → "ATN Cricket Plus"
-    📝 频道重命名: "496602" → "The Nest"
-    📝 频道重命名: "496605" → "Rewind TV"
-    📝 频道重命名: "496606" → "And TV"
-    📝 频道重命名: "496607" → "Yes Network"
-    📝 频道重命名: "496609" → "Biz TV"
-    📝 频道重命名: "496610" → "Blaze TV"
-    📝 频道重命名: "496612" → "NECN New England Cable News"
-    📝 频道重命名: "496613" → "Antenna TV"
-    📝 频道重命名: "496614" → "Laff"
-    📝 频道重命名: "496615" → "Defy TV"
-    📝 频道重命名: "496616" → "Catchy Comedy"
-    📝 频道重命名: "496617" → "Create(US)"
-    📝 频道重命名: "496618" → "Quest"
-    📝 频道重命名: "496619" → "CW"
-    📝 频道重命名: "496620" → "NBC Sports Philadelphia Plus"
-    📝 频道重命名: "496623" → "The Family Channel"
-    📝 频道重命名: "496625" → "NESN+ New England Sports Network Plus"
-    📝 频道重命名: "496759" → "AFN Family/AFN pulse"
-    📝 频道重命名: "496760" → "AFN Prime Pacific"
-    📝 频道重命名: "496761" → "AFN Prime Atlantic"
-    📝 频道重命名: "496762" → "AFN News"
-    📝 频道重命名: "496763" → "AFN Spectrum"
-    📝 频道重命名: "496764" → "AFN Sports"
-    📝 频道重命名: "496765" → "AFN Sports-2"
-    📝 频道重命名: "496766" → "AFN Movie"
-    📝 频道重命名: "497969" → "Vevo Rock"
-    📝 频道重命名: "497970" → "Vevo R and B"
-    📝 频道重命名: "497971" → "Vevo Pop(US)"
-    📝 频道重命名: "497972" → "Vevo 70s"
-    📝 频道重命名: "497973" → "Insight TV"
-    📝 频道重命名: "497974" → "Vevo Holiday"
-    📝 频道重命名: "497975" → "Vevo True School Hip-Hop"
-    📝 频道重命名: "497976" → "Vevo 90s"
-    📝 频道重命名: "497977" → "Vevo 2K"
-    📝 频道重命名: "497978" → "Vevo Íconos Latinos"
-    📝 频道重命名: "497979" → "Vevo Country"
-    📝 频道重命名: "497980" → "Vevo 80s"
-    📝 频道重命名: "497981" → "Vevo Latino"
-    📝 频道重命名: "497982" → "Vevo Hip-Hop"
-    📝 频道重命名: "497983" → "Vevo Reggaeton and Trap"
-    📝 频道重命名: "497985" → "Vevo Regional Mexicano"
-    📝 频道重命名: "501743" → "Salem News Channel"
-    📝 频道重命名: "501744" → "CINEVAULT"
-    📝 频道重命名: "501747" → "NBC Chicago (Live Stream)"
-    📝 频道重命名: "516449" → "Movies!"
-    📝 频道重命名: "516450" → "Discovery Turbo TV"
-    📝 频道重命名: "520489" → "Asylum Movie"
-    📝 频道重命名: "521096" → "Busted TV"
-    📝 频道重命名: "524796" → "NBC True CRMZ"
-    📝 频道重命名: "524797" → "News 12 New Jersey"
-    📝 频道重命名: "529205" → "FOX SOUL"
-    📝 频道重命名: "530870" → "Stories by AMC"
-    📝 频道重命名: "531475" → "WWE Network"
-    📝 频道重命名: "530871" → "Black Voices"
-    🕐 时区处理: 未指定时区，保持原XML时区不变
-    📝 别名映射: 修改ID=True, 修改DisplayName=True
-    ✂️ 跨天拆分: True
-    ✂️ 跨天节目拆分: 1958 个
-    📺 新增频道: 651/652
-    📅 新增节目: 46656/45544
-   ✓ 处理成功
+    🔗 Referer: https://epg.pw/
+    ✗ 文件不存在 (404)
+   ✗ 下载失败，跳过此源
 
 ------------------------------------------------------------
 📡 源 12/14: https://epg.yang-1989.eu.org/epg.xml.gz
    请求频道: 7 个
    需要查找: 7 个
-    ✓ 下载成功: 1.49 MB
-    🕐 时间范围: 2026-05-03 00:00 到 2026-05-13 00:00 (UTC)
-    📊 包含过去 6 天 + 当天 + 未来 3 天
-    📝 频道重命名: "明珠台" → "TVB-明珠台"
-    📝 频道重命名: "BBC Earth" → "BBC Earth_新马港台_中繁+详情"
-    📝 频道重命名: "BBC Lifestyle" → "BBC Lifestyle_港台_国"
-    📝 频道重命名: "Now Sports 精選" → "Now Sports精选"
-    📝 频道重命名: "商業電台 雷霆881" → "商业电台 雷霆881"
-    📝 频道重命名: "商業電台 AM864" → "商业电台 AM864"
-    📝 频道重命名: "商業電台 叱咤903" → "商业电台 叱咤903"
-    🕐 时区处理: 未指定时区，保持原XML时区不变
-    📝 别名映射: 修改ID=True, 修改DisplayName=True
-    ✂️ 跨天拆分: True
-    ✂️ 跨天节目拆分: 16 个
-    📺 新增频道: 7/7
-    📅 新增节目: 464/452
-   ✓ 处理成功
+    🔧 为域名 epg.yang-1989.eu.org 创建新 Session
+    🔗 Referer: https://epg.yang-1989.eu.org/
+    ✗ 访问被拒绝 (403)
+    ⏳ 第 1 次重试，等待 3 秒...
+    ✗ 访问被拒绝 (403)
+    ⏳ 第 2 次重试，等待 6 秒...
+    ✗ 访问被拒绝 (403)
+    ⏳ 第 3 次重试，等待 9 秒...
+    ✗ 访问被拒绝 (403)
+   ✗ 下载失败，跳过此源
 
 ------------------------------------------------------------
 📡 源 13/14: https://raw.githubusercontent.com/kiekostui/pluto_tv_it/refs/heads/main/epg_pluto_it.xml
    请求频道: 101 个
    需要查找: 101 个
+    🔗 Referer: https://raw.githubusercontent.com/
     ✓ 下载成功: 1.71 MB
     🕐 时间范围: 2026-05-03 00:00 到 2026-05-13 00:00 (UTC)
     📊 包含过去 6 天 + 当天 + 未来 3 天
@@ -3728,6 +2788,7 @@ j{[+Xj{t]7[6j\/`I kp@KŞ1c[,b
     🕐 时区处理: 未指定时区，保持原XML时区不变
     📝 别名映射: 修改ID=True, 修改DisplayName=True
     ✂️ 跨天拆分: True
+    🔗 智能合并: True
     ✂️ 跨天节目拆分: 183 个
     📺 新增频道: 101/101
     📅 新增节目: 3287/3105
@@ -3737,6 +2798,7 @@ j{[+Xj{t]7[6j\/`I kp@KŞ1c[,b
 📡 源 14/14: https://raw.githubusercontent.com/kiekostui/rakuten_tv_it/refs/heads/main/epg_rakuten_it.xml
    请求频道: 44 个
    需要查找: 44 个
+    🔗 Referer: https://raw.githubusercontent.com/
     ✓ 下载成功: 2.26 MB
     🕐 时间范围: 2026-05-03 00:00 到 2026-05-13 00:00 (UTC)
     📊 包含过去 6 天 + 当天 + 未来 3 天
@@ -3787,6 +2849,7 @@ j{[+Xj{t]7[6j\/`I kp@KŞ1c[,b
     🕐 时区处理: 未指定时区，保持原XML时区不变
     📝 别名映射: 修改ID=True, 修改DisplayName=True
     ✂️ 跨天拆分: True
+    🔗 智能合并: True
     ✂️ 跨天节目拆分: 82 个
     📺 新增频道: 44/44
     📅 新增节目: 3047/2965
@@ -3796,9 +2859,9 @@ j{[+Xj{t]7[6j\/`I kp@KŞ1c[,b
 📝 生成最终XML文件...
 🔤 应用智能排序（按display-name，数字-字母-汉字，不区分大小写）...
 ✓ XML文件: guide.xml
-  大小: 60.48 MB
-  频道数: 2486
-  节目数: 203042
+  大小: 30.28 MB
+  频道数: 1565
+  节目数: 128277
 
 📺 频道排序示例（前10个）:
     1. 4K健身 (ID: 4K健身)
@@ -3809,12 +2872,12 @@ j{[+Xj{t]7[6j\/`I kp@KŞ1c[,b
     6. 4K电视剧 (ID: 4K电视剧)
     7. 4K纪实 (ID: 4K纪实)
     8. 4K美食 (ID: 4K美食)
-    9. 5 StarMAX East (ID: 5 StarMAX East)
-   10. 8TV八度空间 (ID: 8TV八度空间)
+    9. 16 Anni e Incinta (ID: 16 Anni e Incinta)
+   10. 1905App 环球经典 (ID: 1905App 环球经典)
 
 🗜️ 压缩为GZIP格式...
-  ✓ 压缩完成: 6.36 MB (89.5% 压缩率)
-  ✓ 压缩率: 89.5%
+  ✓ 压缩完成: 3.00 MB (90.1% 压缩率)
+  ✓ 压缩率: 90.1%
 
 🧹 清理临时文件...
 ✓ 清理完成
@@ -3822,11 +2885,11 @@ j{[+Xj{t]7[6j\/`I kp@KŞ1c[,b
 ============================================================
 ✅ EPG合并完成
 ============================================================
-结束时间: 2026-05-09 22:52:26 (北京时间)
-总耗时: 386.66 秒
-成功处理: 11/14 个源
-成功处理: 2486 个频道，203042 条节目
+结束时间: 2026-05-09 22:58:41 (北京时间)
+总耗时: 71.62 秒
+成功处理: 7/14 个源
+成功处理: 1565 个频道，128277 条节目
 输出文件: guide.xml 和 guide.xml.gz
 配置时间范围: 过去 6 天 + 当天 + 未来 3 天
-实际时间范围: 过去 7 天 + 当天 + 未来 5 天
+实际时间范围: 过去 7 天 + 当天 + 未来 4 天
 ============================================================

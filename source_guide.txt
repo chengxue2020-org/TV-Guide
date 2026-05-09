@@ -1,4 +1,5 @@
-#timeframe=96
+PAST_DAYS=6
+FUTURE_DAYS=3
 
 #台湾EPG核对:https://tvking.funorange.com.tw/now
 

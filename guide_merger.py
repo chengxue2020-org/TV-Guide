@@ -6,7 +6,7 @@ EPG Merger Script - 合并多个EPG源的频道节目信息
 支持在 source_guide.txt 中直接定义频道别名映射
 支持智能排序（按display-name，数字-字母-汉字，不区分大小写）
 支持每个EPG源单独设置时区转换（可选，不设置则保持原时区）
-支持前后双向时间范围（包含过去和未来的节目）
+支持前后双向时间范围（包含过去和未来的节目，按天对齐）
 可配置是否修改 channel id 和 display-name
 """
 
@@ -45,7 +45,8 @@ SOURCE_FILE = 'source_guide.txt'         # EPG源配置文件
 OUTPUT_XML = 'guide.xml'                 # 输出XML文件名
 OUTPUT_GZ = 'guide.xml.gz'               # 输出GZ压缩文件名
 TEMP_DIR_NAME = 'temp_epg_files'         # 临时文件目录
-DEFAULT_TIME_FRAME = 96                  # 默认时间范围（小时）- 前后各48小时
+DEFAULT_PAST_DAYS = 6                    # 默认过去天数（6天）
+DEFAULT_FUTURE_DAYS = 3                  # 默认未来天数（3天）
 MAX_RETRIES = 3                          # 最大重试次数
 DOWNLOAD_TIMEOUT = 30                    # 下载超时（秒）
 CHUNK_SIZE = 131072                      # 下载块大小（128KB）
@@ -390,12 +391,13 @@ def apply_alias_to_programme(programme: ET.Element, new_channel_id: str) -> ET.E
 
 
 # ==================== 配置解析 ====================
-def parse_source(source_file: str) -> Tuple[Dict[str, Dict], int]:
+def parse_source(source_file: str) -> Tuple[Dict[str, Dict], Tuple[int, int]]:
     """
     解析EPG源配置文件，支持频道别名映射、时区设置和时区转换开关
     
     文件格式示例：
-    timeframe=96
+    PAST_DAYS=6
+    FUTURE_DAYS=3
     
     https://epg.iill.top/epg.xml.gz
     TimeZone=+0000
@@ -405,7 +407,7 @@ def parse_source(source_file: str) -> Tuple[Dict[str, Dict], int]:
     明珠台
     
     Returns:
-        (数据源字典, 时间范围)
+        (数据源字典, (过去天数, 未来天数))
         source_info 包含:
             - 'timezone': 指定的时区（可能为None，表示保持原时区）
             - 'change_timezone': 是否强制转换时区（Y/N，默认N）
@@ -418,23 +420,33 @@ def parse_source(source_file: str) -> Tuple[Dict[str, Dict], int]:
             if not lines:
                 print(f'✗ 错误: 配置文件为空')
                 sys.exit(1)
+            
+            # 初始化默认值
+            past_days = DEFAULT_PAST_DAYS
+            future_days = DEFAULT_FUTURE_DAYS
+            
+            # 解析前几行的配置（支持大写）
+            for line_num, line in enumerate(lines[:5], 1):
+                line = line.partition('#')[0].strip()
+                if not line:
+                    continue
                 
-            first_line = lines[0].strip()
-            time_frame_string = first_line.rpartition('=')[2].strip()
+                if line.upper().startswith('PAST_DAYS='):
+                    try:
+                        past_days = int(line.split('=', 1)[1].strip())
+                        print(f'✓ 过去天数: {past_days} 天')
+                    except ValueError:
+                        print(f'⚠ 过去天数格式错误，使用默认值: {DEFAULT_PAST_DAYS} 天')
+                
+                elif line.upper().startswith('FUTURE_DAYS='):
+                    try:
+                        future_days = int(line.split('=', 1)[1].strip())
+                        print(f'✓ 未来天数: {future_days} 天')
+                    except ValueError:
+                        print(f'⚠ 未来天数格式错误，使用默认值: {DEFAULT_FUTURE_DAYS} 天')
             
-            try:
-                total_hours = int(time_frame_string)
-                past_hours = total_hours // 2
-                future_hours = total_hours - past_hours
-                print(f'✓ 时间范围: 前后共 {total_hours} 小时')
-                print(f'  (过去 {past_hours} 小时 → 未来 {future_hours} 小时)')
-            except ValueError:
-                total_hours = DEFAULT_TIME_FRAME
-                past_hours = total_hours // 2
-                future_hours = total_hours - past_hours
-                print(f'⚠ 未指定时间范围，使用默认值: {DEFAULT_TIME_FRAME} 小时')
-                print(f'  (过去 {past_hours} 小时 → 未来 {future_hours} 小时)')
-            
+            total_days = past_days + future_days + 1  # +1 包含当天
+            print(f'✓ 总时间范围: 过去 {past_days} 天 + 当天 + 未来 {future_days} 天 = 共 {total_days} 天')
             print()
             
             print(f'📝 别名映射配置:')
@@ -445,17 +457,21 @@ def parse_source(source_file: str) -> Tuple[Dict[str, Dict], int]:
             data_source: Dict[str, Dict] = {}
             current_source = ''
             current_timezone = None
-            current_change_tz = 'N'  # 默认不转换时区
+            current_change_tz = 'N'
             
             for line_num, line in enumerate(lines[1:], 2):
                 line = line.partition('#')[0].strip()
                 if not line:
                     continue
                 
+                # 跳过配置行（使用大写匹配）
+                if line.upper().startswith(('PAST_DAYS=', 'FUTURE_DAYS=')):
+                    continue
+                
                 if line.startswith(('http://', 'https://')):
                     current_source = line
                     current_timezone = None
-                    current_change_tz = 'N'  # 重置
+                    current_change_tz = 'N'
                     if current_source not in data_source:
                         data_source[current_source] = {
                             'timezone': None,
@@ -463,7 +479,6 @@ def parse_source(source_file: str) -> Tuple[Dict[str, Dict], int]:
                             'channels': []
                         }
                 elif current_source:
-                    # 检查是否是时区设置行
                     if line.lower().startswith('timezone='):
                         tz_str = line.split('=', 1)[1].strip()
                         current_timezone = parse_timezone(tz_str)
@@ -473,7 +488,6 @@ def parse_source(source_file: str) -> Tuple[Dict[str, Dict], int]:
                         else:
                             print(f'  ✓ 时区设置: {tz_str} → 北京时间，保持原样不转换')
                     
-                    # 检查是否是时区转换开关行
                     elif line.lower().startswith('changetimezone='):
                         change_tz_str = line.split('=', 1)[1].strip().upper()
                         if change_tz_str in ['Y', 'YES', 'TRUE']:
@@ -483,7 +497,6 @@ def parse_source(source_file: str) -> Tuple[Dict[str, Dict], int]:
                         data_source[current_source]['change_timezone'] = current_change_tz
                         print(f'  ✓ 时区转换开关: ChangeTimezone={current_change_tz}')
                     
-                    # 检查是否包含Tab键（别名映射）
                     elif '\t' in line:
                         parts = line.split('\t')
                         if len(parts) >= 2:
@@ -501,7 +514,7 @@ def parse_source(source_file: str) -> Tuple[Dict[str, Dict], int]:
                 print(f'✗ 错误: 配置文件中没有找到有效的EPG源')
                 sys.exit(1)
             
-            return data_source, total_hours
+            return data_source, (past_days, future_days)
             
     except FileNotFoundError:
         print(f'✗ 错误: 配置文件 {source_file} 不存在！')
@@ -601,7 +614,7 @@ def process_epg_source(
     channel_dict: Dict[str, ET.Element],
     program_dict: Dict[Tuple[str, str], ET.Element],
     start_utc: datetime,
-    total_hours: int
+    days_range: Tuple[int, int]
 ) -> None:
     """
     处理EPG源文件，提取频道和节目信息
@@ -610,21 +623,28 @@ def process_epg_source(
     1. 如果 ChangeTimezone=Y，则直接将时区改为 +0800（时间数值不变）
     2. 否则如果指定了 timezone 且不是+8时区，则将时间从该时区转换为北京时间
     3. 否则保持原XML中的时区不变
+    
+    时间范围规则：
+    - 包含完整的当天（00:00:00 到 23:59:59）
+    - 过去 past_days 天 + 当天 + 未来 future_days 天
     """
     channels_to_process = source_info['channels']
     specified_tz = source_info['timezone']
     change_timezone = source_info.get('change_timezone', 'N')
     
-    # 计算时间范围边界
-    past_hours = total_hours // 2
-    future_hours = total_hours - past_hours
+    past_days, future_days = days_range
     
-    # 计算边界时间点
-    start_boundary = start_utc - timedelta(hours=past_hours)
-    end_boundary = start_utc + timedelta(hours=future_hours)
+    # 获取当天的开始时间（00:00:00 UTC）
+    today_start = start_utc.replace(hour=0, minute=0, second=0, microsecond=0)
+    
+    # 计算边界时间点（按天对齐）
+    # 开始边界：今天开始往前推 past_days 天
+    start_boundary = today_start - timedelta(days=past_days)
+    # 结束边界：今天开始往后推 (future_days + 1) 天，包含当天结束
+    end_boundary = today_start + timedelta(days=future_days + 1)
     
     print(f'    🕐 时间范围: {start_boundary.strftime("%Y-%m-%d %H:%M")} 到 {end_boundary.strftime("%Y-%m-%d %H:%M")} (UTC)')
-    print(f'    📊 包含过去 {past_hours} 小时 + 未来 {future_hours} 小时')
+    print(f'    📊 包含过去 {past_days} 天 + 当天 + 未来 {future_days} 天')
     
     # 处理gzip压缩文件
     if file_path.endswith('.gz'):
@@ -730,6 +750,8 @@ def process_epg_source(
                 filter_stop = convert_date_for_filter(original_stop, source_tz_from_str)
             
             if filter_start and filter_stop:
+                # 检查节目是否与时间范围有重叠
+                # 条件：节目开始时间 < 结束边界 AND 节目结束时间 > 开始边界
                 if filter_start < end_boundary and filter_stop > start_boundary:
                     key = (final_channel, final_start)
                     if key not in program_dict:
@@ -744,6 +766,7 @@ def process_epg_source(
                         program_dict[key] = new_programme
                         programs_found += 1
             else:
+                # 时间格式异常，仍然添加
                 key = (final_channel, final_start)
                 if key not in program_dict:
                     new_programme = apply_alias_to_programme(programme, final_channel)
@@ -801,19 +824,18 @@ def main() -> None:
     print('✓ 支持每个EPG源独立设置时区（可选，不设置则保持原时区）')
     print('✓ +8时区（北京时间）将被识别并保持原样不转换')
     print('✓ ChangeTimezone=Y 可强制将时区改为 +0800（时间数值不变）')
-    print('✓ 支持前后双向时间范围（包含过去和未来的节目）')
+    print('✓ 支持前后双向时间范围（过去天数 + 当天 + 未来天数）')
     print(f'✓ 别名映射: 修改ID={MODIFY_CHANNEL_ID}, 修改DisplayName={MODIFY_DISPLAY_NAME}')
     print()
     
     print('📖 读取配置文件...')
-    sources, total_hours = parse_source(SOURCE_FILE)
+    sources, days_range = parse_source(SOURCE_FILE)
     
-    past_hours = total_hours // 2
-    future_hours = total_hours - past_hours
+    past_days, future_days = days_range
+    total_days = past_days + future_days + 1  # +1 包含当天
     
     print(f'✓ 找到 {len(sources)} 个EPG源')
-    print(f'✓ 总时间范围: {total_hours} 小时')
-    print(f'  (过去 {past_hours} 小时 → 未来 {future_hours} 小时)')
+    print(f'✓ 时间范围: 过去 {past_days} 天 + 当天 + 未来 {future_days} 天 = 共 {total_days} 天')
     print()
     
     for url, info in sources.items():
@@ -878,7 +900,7 @@ def main() -> None:
             process_epg_source(
                 file_path, source_info_filtered,
                 channel_dict, program_dict,
-                start_utc, total_hours
+                start_utc, days_range
             )
             success_count += 1
             print(f'   ✓ 处理成功')
@@ -898,7 +920,7 @@ def main() -> None:
     
     comment = ET.Comment(f' Generated by Guide Merger on {start_beijing.strftime("%Y-%m-%d %H:%M:%S")} Beijing Time ')
     root.append(comment)
-    time_comment = ET.Comment(f' Time range: past {past_hours}h + future {future_hours}h (total {total_hours}h) ')
+    time_comment = ET.Comment(f' Time range: past {past_days} days + today + future {future_days} days ')
     root.append(time_comment)
     
     print('🔤 应用智能排序（按display-name，数字-字母-汉字，不区分大小写）...')
@@ -960,7 +982,7 @@ def main() -> None:
     print(f'成功处理: {success_count}/{len(sources)} 个源')
     print(f'成功处理: {len(channels_sorted)} 个频道，{len(programmes_sorted)} 条节目')
     print(f'输出文件: {OUTPUT_XML} 和 {OUTPUT_GZ}')
-    print(f'时间范围: 过去 {past_hours} 小时 + 未来 {future_hours} 小时')
+    print(f'时间范围: 过去 {past_days} 天 + 当天 + 未来 {future_days} 天')
     print_separator('=')
 
 

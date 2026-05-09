@@ -524,6 +524,62 @@ def parse_source(source_file: str) -> Tuple[Dict[str, Dict], Tuple[int, int]]:
         sys.exit(1)
 
 
+def analyze_epg_time_range(program_dict: Dict[Tuple[str, str], ET.Element]) -> Tuple[int, int]:
+    """
+    分析EPG数据中实际包含的过去天数和未来天数
+    
+    Args:
+        program_dict: 节目字典
+        
+    Returns:
+        (实际过去天数, 实际未来天数)
+    """
+    if not program_dict:
+        return 0, 0
+    
+    now_utc = datetime.now(UTC)
+    today_start_utc = now_utc.replace(hour=0, minute=0, second=0, microsecond=0)
+    
+    min_start = None
+    max_start = None
+    
+    for (_, start_time_str), _ in program_dict.items():
+        try:
+            # 解析时间字符串
+            if ' +' in start_time_str or ' -' in start_time_str:
+                dt = datetime.strptime(start_time_str, '%Y%m%d%H%M%S %z')
+            else:
+                dt = datetime.strptime(start_time_str, '%Y%m%d%H%M%S')
+                dt = dt.replace(tzinfo=BEIJING_TZ)
+            
+            # 转换为UTC
+            dt_utc = dt.astimezone(UTC)
+            
+            if min_start is None or dt_utc < min_start:
+                min_start = dt_utc
+            if max_start is None or dt_utc > max_start:
+                max_start = dt_utc
+        except Exception:
+            continue
+    
+    if min_start is None or max_start is None:
+        return 0, 0
+    
+    # 计算过去天数（从今天00:00往前推）
+    if min_start < today_start_utc:
+        past_days_actual = (today_start_utc - min_start).days + 1
+    else:
+        past_days_actual = 0
+    
+    # 计算未来天数（从今天00:00往后推）
+    if max_start >= today_start_utc:
+        future_days_actual = (max_start - today_start_utc).days + 1
+    else:
+        future_days_actual = 0
+    
+    return past_days_actual, future_days_actual
+
+
 # ==================== 文件下载 ====================
 def download_file(url: str, path: str) -> Optional[str]:
     """下载EPG文件，支持HTTP/HTTPS和Cloudflare绕过"""
@@ -835,7 +891,7 @@ def main() -> None:
     total_days = past_days + future_days + 1  # +1 包含当天
     
     print(f'✓ 找到 {len(sources)} 个EPG源')
-    print(f'✓ 时间范围: 过去 {past_days} 天 + 当天 + 未来 {future_days} 天 = 共 {total_days} 天')
+    print(f'✓ 配置时间范围: 过去 {past_days} 天 + 当天 + 未来 {future_days} 天 = 共 {total_days} 天')
     print()
     
     for url, info in sources.items():
@@ -913,6 +969,9 @@ def main() -> None:
         print('✗ 错误: 所有EPG源都下载失败！')
         sys.exit(1)
     
+    # 分析实际EPG时间范围
+    actual_past_days, actual_future_days = analyze_epg_time_range(program_dict)
+    
     print_separator('=')
     print('📝 生成最终XML文件...')
     
@@ -982,7 +1041,8 @@ def main() -> None:
     print(f'成功处理: {success_count}/{len(sources)} 个源')
     print(f'成功处理: {len(channels_sorted)} 个频道，{len(programmes_sorted)} 条节目')
     print(f'输出文件: {OUTPUT_XML} 和 {OUTPUT_GZ}')
-    print(f'时间范围: 过去 {past_days} 天 + 当天 + 未来 {future_days} 天')
+    print(f'配置时间范围: 过去 {past_days} 天 + 当天 + 未来 {future_days} 天')
+    print(f'实际时间范围: 过去 {actual_past_days} 天 + 当天 + 未来 {actual_future_days} 天')
     print_separator('=')
 
 

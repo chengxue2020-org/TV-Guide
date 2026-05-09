@@ -1,8 +1,10 @@
+⚠ 未安装 curl_cffi
+  安装方法: pip install curl_cffi
 ============================================================
 Guide Merger v2.0 (Flexible Timezone & Alias Support)
 ============================================================
-当前时间: 2026-05-09 20:11:14 (北京时间)
-当前时间: 2026-05-09 12:11:14 (UTC)
+当前时间: 2026-05-09 20:40:16 (北京时间)
+当前时间: 2026-05-09 12:40:16 (UTC)
 
 ✓ 已加载cloudscraper库，支持绕过Cloudflare保护
 ✓ 已加载pypinyin库，支持中文拼音排序
@@ -1849,21 +1851,22 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
 📡 源 2/14: https://epg.mb6.top/heiptv.xml
    请求频道: 9 个
    需要查找: 9 个
-    🔧 已添加 mb6.top 专用请求头
-    🔧 已预热访问主页
-    ⚠ 警告: 返回内容可能不是 XML 格式
-    内容预览: b'\x8b\xff\x07\x00d\xd2\xa9M\xab\x9e/\x1d\x84(i\x98/\xa5OqA\xa9\x108\x90\xfd\xbe\x9fpjm\xd3\xf8F`O\xf1\xf9\xae&\x98\xca\xe0`oh\xc9\xba\xec8\xad\x17H\xd9\xa5\xf3\x7f\x07]7\xd8E\x85q\x1e\xf5\x02\t,\x91]\xc0\x0c\x07\x07-\xc7\x16\xc3\xb5\x16\x9e}\x8e\xc1cpX\xce\xab\xfb FC\xa1\xb6)\x8f\x92\x86'...
-    ✓ 下载成功: 284.35 KB
-    🕐 时间范围: 2026-05-03 00:00 到 2026-05-13 00:00 (UTC)
-    📊 包含过去 6 天 + 当天 + 未来 3 天
-    ✗ XML格式错误
-   ✓ 处理成功
+    ⚠ 未识别为XML/GZIP
+    内容预览:  dҩM/(i/OqA8pjmF`O&`ohɺ8H٥]7Eq	,]-õ}cpXΫ FC)
+    ⏳ 第 1 次重试，等待 3 秒...
+    ✗ HTTP错误: 400
+    ⏳ 第 2 次重试，等待 6 秒...
+    ⚠ 未识别为XML/GZIP
+    内容预览:  dҩM/(i/OqA8pjmF`O&`ohɺ8H٥]7Eq	,]-õ}cpXΫ FC)
+    ⏳ 第 3 次重试，等待 9 秒...
+    ⚠ 未识别为XML/GZIP
+    内容预览:  dҩM/(i/OqA8pjmF`O&`ohɺ8H٥]7Eq	,]-õ}cpXΫ FC)
+   ✗ 下载失败，跳过此源
 
 ------------------------------------------------------------
 📡 源 3/14: https://raw.githubusercontent.com/litiande03/epg/refs/heads/master/pl.xml.gz
    请求频道: 215 个
    需要查找: 215 个
-    ⚠ Content-Type: application/octet-stream
     ✓ 下载成功: 974.90 KB
     🕐 时间范围: 2026-05-03 00:00 到 2026-05-13 00:00 (UTC)
     📊 包含过去 6 天 + 当天 + 未来 3 天
@@ -1994,7 +1997,6 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
 📡 源 4/14: https://raw.githubusercontent.com/zzq1234567890/epg/refs/heads/main/swepg.xml.gz
    请求频道: 916 个
    需要查找: 913 个
-    ⚠ Content-Type: application/octet-stream
     ✓ 下载成功: 4.04 MB
     🕐 时间范围: 2026-05-03 00:00 到 2026-05-13 00:00 (UTC)
     📊 包含过去 6 天 + 当天 + 未来 3 天
@@ -2345,32 +2347,32 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
     📝 别名映射: 修改ID=True, 修改DisplayName=True
     ✂️ 跨天拆分: True
     ✂️ 跨天节目拆分: 2459 个
-    ⚠ 未找到频道: 亚洲综合HD演唱会直击
-    ⚠ 未找到频道: BBC_Brit_HD
-    ⚠ 未找到频道: BBC_First_HD
-    ⚠ 未找到频道: Astro_Sports_Plus_3
-    ⚠ 未找到频道: 1905App 热血影院
-    ⚠ 未找到频道: 新哆啦A梦(中文版)2台新年追剧首选-FastTV飞速看
-    ⚠ 未找到频道: now直播
-    ⚠ 未找到频道: HITS电影台
-    ⚠ 未找到频道: SPY X FAMILY 间谍家家酒(国)
-    ⚠ 未找到频道: SUPER识叹 (免费)
-    ⚠ 未找到频道: SUPER金曲 (免费)
-    ⚠ 未找到频道: 茶频道
-    ⚠ 未找到频道: ROCK ACTION Rock Action_香港_国
-    ⚠ 未找到频道: Nick Jr.
     ⚠ 未找到频道: SUPER单元剧 (免费)
-    ⚠ 未找到频道: 千禧经典台(MY)
-    ⚠ 未找到频道: Hub Sports 1
-    ⚠ 未找到频道: 河北杂技频道
-    ⚠ 未找到频道: 睛彩河北
-    ⚠ 未找到频道: FashionTV 时尚频道
-    ⚠ 未找到频道: 南京新闻综合
-    ⚠ 未找到频道: TV5Monde 法国TV5
-    ⚠ 未找到频道: Hub 如意
-    ⚠ 未找到频道: MagellanTV频道 (麦哲伦频道)
+    ⚠ 未找到频道: Nick Jr.
+    ⚠ 未找到频道: 亚洲综合HD演唱会直击
     ⚠ 未找到频道: Hub Sports 2
+    ⚠ 未找到频道: Hub 如意
+    ⚠ 未找到频道: 睛彩河北
+    ⚠ 未找到频道: 新哆啦A梦(中文版)2台新年追剧首选-FastTV飞速看
+    ⚠ 未找到频道: 千禧经典台(MY)
+    ⚠ 未找到频道: BBC_Brit_HD
+    ⚠ 未找到频道: SPY X FAMILY 间谍家家酒(国)
+    ⚠ 未找到频道: 南京新闻综合
+    ⚠ 未找到频道: BBC_First_HD
+    ⚠ 未找到频道: SUPER金曲 (免费)
+    ⚠ 未找到频道: Hub Sports 1
+    ⚠ 未找到频道: now直播
+    ⚠ 未找到频道: Astro_Sports_Plus_3
+    ⚠ 未找到频道: TV5Monde 法国TV5
+    ⚠ 未找到频道: MagellanTV频道 (麦哲伦频道)
     ⚠ 未找到频道: Hub Sports 3
+    ⚠ 未找到频道: FashionTV 时尚频道
+    ⚠ 未找到频道: HITS电影台
+    ⚠ 未找到频道: 茶频道
+    ⚠ 未找到频道: SUPER识叹 (免费)
+    ⚠ 未找到频道: 1905App 热血影院
+    ⚠ 未找到频道: 河北杂技频道
+    ⚠ 未找到频道: ROCK ACTION Rock Action_香港_国
     📺 新增频道: 886/912
     📅 新增节目: 67736/85592
    ✓ 处理成功
@@ -2379,7 +2381,6 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
 📡 源 5/14: http://epg.51zmt.top:8000/e.xml.gz
    请求频道: 11 个
    需要查找: 11 个
-    ⚠ Content-Type: application/octet-stream
     ✓ 下载成功: 94.47 KB
     🕐 时间范围: 2026-05-03 00:00 到 2026-05-13 00:00 (UTC)
     📊 包含过去 6 天 + 当天 + 未来 3 天
@@ -2406,7 +2407,6 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
 📡 源 6/14: https://liliu.serv00.net/epg/cn.xml.gz
    请求频道: 275 个
    需要查找: 274 个
-    ⚠ Content-Type: application/gzip
     ✓ 下载成功: 251.76 KB
     🕐 时间范围: 2026-05-03 00:00 到 2026-05-13 00:00 (UTC)
     📊 包含过去 6 天 + 当天 + 未来 3 天
@@ -2490,14 +2490,14 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
     ✂️ 跨天拆分: True
     ✂️ 跨天节目拆分: 72 个
     ⚠ 未找到频道: 福建文体
+    ⚠ 未找到频道: 福建经济
+    ⚠ 未找到频道: 纯享4K
     ⚠ 未找到频道: 福建电视剧
     ⚠ 未找到频道: 福建乡村振兴
-    ⚠ 未找到频道: 星空卫视
-    ⚠ 未找到频道: 河北影视剧
-    ⚠ 未找到频道: 纯享4K
-    ⚠ 未找到频道: 福建旅游
-    ⚠ 未找到频道: 福建经济
     ⚠ 未找到频道: IPTV足球
+    ⚠ 未找到频道: 河北影视剧
+    ⚠ 未找到频道: 福建旅游
+    ⚠ 未找到频道: 星空卫视
     📺 新增频道: 265/274
     📅 新增节目: 10914/10854
    ✓ 处理成功
@@ -2506,7 +2506,6 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
 📡 源 7/14: http://epg.51zmt.top:8000/e2.xml.gz
    请求频道: 76 个
    需要查找: 73 个
-    ⚠ Content-Type: application/gzip
     ✓ 下载成功: 695.84 KB
     🕐 时间范围: 2026-05-03 00:00 到 2026-05-13 00:00 (UTC)
     📊 包含过去 6 天 + 当天 + 未来 3 天
@@ -2717,21 +2716,21 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
     📝 别名映射: 修改ID=True, 修改DisplayName=True
     ✂️ 跨天拆分: True
     ✂️ 跨天节目拆分: 456 个
-    ⚠ 未找到频道: 411236
-    ⚠ 未找到频道: 411308
-    ⚠ 未找到频道: 491619
-    ⚠ 未找到频道: 411256
-    ⚠ 未找到频道: 491618
-    ⚠ 未找到频道: 478717
-    ⚠ 未找到频道: 411231
-    ⚠ 未找到频道: 411240
     ⚠ 未找到频道: 411241
-    ⚠ 未找到频道: 411257
-    ⚠ 未找到频道: 535447
+    ⚠ 未找到频道: 411253
     ⚠ 未找到频道: 428785
     ⚠ 未找到频道: 411251
-    ⚠ 未找到频道: 411253
+    ⚠ 未找到频道: 491619
+    ⚠ 未找到频道: 535447
+    ⚠ 未找到频道: 411236
+    ⚠ 未找到频道: 411231
+    ⚠ 未找到频道: 411256
+    ⚠ 未找到频道: 411308
+    ⚠ 未找到频道: 491618
+    ⚠ 未找到频道: 411240
     ⚠ 未找到频道: 510886
+    ⚠ 未找到频道: 478717
+    ⚠ 未找到频道: 411257
     📺 新增频道: 115/130
     📅 新增节目: 11703/20076
    ✓ 处理成功
@@ -2901,12 +2900,12 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
     ✂️ 跨天拆分: True
     ✂️ 跨天节目拆分: 519 个
     ⚠ 未找到频道: 535294
-    ⚠ 未找到频道: 535553
+    ⚠ 未找到频道: 535582
     ⚠ 未找到频道: 535531
     ⚠ 未找到频道: 492911
     ⚠ 未找到频道: 520018
-    ⚠ 未找到频道: 535582
     ⚠ 未找到频道: 523496
+    ⚠ 未找到频道: 535553
     📺 新增频道: 148/155
     📅 新增节目: 15942/22434
    ✓ 处理成功
@@ -3581,20 +3580,28 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
 📡 源 12/14: https://epg.yang-1989.eu.org/epg.xml.gz
    请求频道: 7 个
    需要查找: 7 个
-    ✗ 访问被拒绝 (403)
-    ⏳ 第 1 次重试，等待 3 秒...
-    ✗ 访问被拒绝 (403)
-    ⏳ 第 2 次重试，等待 6 秒...
-    ✗ 访问被拒绝 (403)
-    ⏳ 第 3 次重试，等待 9 秒...
-    ✗ 访问被拒绝 (403)
-   ✗ 下载失败，跳过此源
+    ✓ 下载成功: 1.49 MB
+    🕐 时间范围: 2026-05-03 00:00 到 2026-05-13 00:00 (UTC)
+    📊 包含过去 6 天 + 当天 + 未来 3 天
+    📝 频道重命名: "明珠台" → "TVB-明珠台"
+    📝 频道重命名: "BBC Earth" → "BBC Earth_新马港台_中繁+详情"
+    📝 频道重命名: "BBC Lifestyle" → "BBC Lifestyle_港台_国"
+    📝 频道重命名: "Now Sports 精選" → "Now Sports精选"
+    📝 频道重命名: "商業電台 雷霆881" → "商业电台 雷霆881"
+    📝 频道重命名: "商業電台 AM864" → "商业电台 AM864"
+    📝 频道重命名: "商業電台 叱咤903" → "商业电台 叱咤903"
+    🕐 时区处理: 未指定时区，保持原XML时区不变
+    📝 别名映射: 修改ID=True, 修改DisplayName=True
+    ✂️ 跨天拆分: True
+    ✂️ 跨天节目拆分: 16 个
+    📺 新增频道: 7/7
+    📅 新增节目: 464/452
+   ✓ 处理成功
 
 ------------------------------------------------------------
 📡 源 13/14: https://raw.githubusercontent.com/kiekostui/pluto_tv_it/refs/heads/main/epg_pluto_it.xml
    请求频道: 101 个
    需要查找: 101 个
-    ⚠ Content-Type: text/plain; charset=utf-8
     ✓ 下载成功: 1.73 MB
     🕐 时间范围: 2026-05-03 00:00 到 2026-05-13 00:00 (UTC)
     📊 包含过去 6 天 + 当天 + 未来 3 天
@@ -3711,7 +3718,6 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
 📡 源 14/14: https://raw.githubusercontent.com/kiekostui/rakuten_tv_it/refs/heads/main/epg_rakuten_it.xml
    请求频道: 44 个
    需要查找: 44 个
-    ⚠ Content-Type: text/plain; charset=utf-8
     ✓ 下载成功: 2.26 MB
     🕐 时间范围: 2026-05-03 00:00 到 2026-05-13 00:00 (UTC)
     📊 包含过去 6 天 + 当天 + 未来 3 天
@@ -3771,9 +3777,9 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
 📝 生成最终XML文件...
 🔤 应用智能排序（按display-name，数字-字母-汉字，不区分大小写）...
 ✓ XML文件: guide.xml
-  大小: 61.37 MB
-  频道数: 2506
-  节目数: 207396
+  大小: 61.49 MB
+  频道数: 2513
+  节目数: 207860
 
 📺 频道排序示例（前10个）:
     1. 4K健身 (ID: 4K健身)
@@ -3788,7 +3794,7 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
    10. 8TV八度空间 (ID: 8TV八度空间)
 
 🗜️ 压缩为GZIP格式...
-  ✓ 压缩完成: 6.39 MB (89.6% 压缩率)
+  ✓ 压缩完成: 6.41 MB (89.6% 压缩率)
   ✓ 压缩率: 89.6%
 
 🧹 清理临时文件...
@@ -3797,10 +3803,10 @@ Guide Merger v2.0 (Flexible Timezone & Alias Support)
 ============================================================
 ✅ EPG合并完成
 ============================================================
-结束时间: 2026-05-09 20:14:32 (北京时间)
-总耗时: 197.24 秒
+结束时间: 2026-05-09 20:41:44 (北京时间)
+总耗时: 88.22 秒
 成功处理: 11/14 个源
-成功处理: 2506 个频道，207396 条节目
+成功处理: 2513 个频道，207860 条节目
 输出文件: guide.xml 和 guide.xml.gz
 配置时间范围: 过去 6 天 + 当天 + 未来 3 天
 实际时间范围: 过去 7 天 + 当天 + 未来 5 天

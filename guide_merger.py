@@ -654,10 +654,12 @@ def download_file(url: str, path: str) -> Optional[str]:
         'Sec-Ch-Ua-Platform': '"Windows"',
     }
 
+
     # ==================== 特定域名处理 ====================
     if 'mb6.top' in url:
-        headers['Referer'] = 'https://epg.mb6.top/'
-        headers['Origin'] = 'https://epg.mb6.top/'
+        headers['Referer'] = 'https://epg.mb6.top/heiptv.xml/'
+        headers['Host'] = 'epg.mb6.top'
+        headers['Origin'] = 'https://epg.mb6.top/heiptv.xml/'
 
     elif '112114' in url:
         headers['Referer'] = 'https://epg.112114.xyz/'

@@ -11,9 +11,9 @@ https://epg.112114.xyz/pp.xml
 #https://raw.githubusercontent.com/AqFad2811/epg/refs/heads/main/unifitv.xml
 
 
-https://epg.zsdc.eu.org/t.xml.gz
+#https://epg.zsdc.eu.org/t.xml.gz
 #7天回看（包含当天）+5天预告，取自以下EPG
-#https://epg.mb6.top/heiptv.xml
+https://epg.mb6.top/heiptv.xml
 #http://epg.51zmt.top:8000/e.xml.gz
 #http://epg.51zmt.top:8000/e1.xml.gz
 #https://e.erw.cc/all.xml.gz

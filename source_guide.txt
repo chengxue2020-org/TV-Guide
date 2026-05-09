@@ -11,26 +11,23 @@ https://epg.112114.xyz/pp.xml
 #https://raw.githubusercontent.com/AqFad2811/epg/refs/heads/main/unifitv.xml
 
 
-
-#https://epg.zsdc.eu.org/t.xml
+https://epg.zsdc.eu.org/t.xml
 #7天回看（包含当天）+5天预告，取自以下EPG
 #https://epg.mb6.top/heiptv.xml
 #http://epg.51zmt.top:8000/e.xml.gz
 #http://epg.51zmt.top:8000/e1.xml.gz
 #https://e.erw.cc/all.xml.gz
 #https://github.com/mytv-android/myEPG/raw/refs/heads/master/output/epg.gz
+河北卫视
+河北经济
+河北少儿科教
+河北都市
+河北文旅体育
+河北三农
+石家庄文化娱乐
+石家庄新闻综合
+石家庄城市服务
 
-
-https://epg.zsdc.eu.org/t.xml
-20000163	河北卫视
-20000042	河北经济
-20000043	河北少儿科教
-20000029	河北都市
-20000017	河北文旅体育
-20000069	河北三农
-20000132	石家庄文化娱乐
-20000083	石家庄新闻综合
-20000082	石家庄城市服务
 
 https://raw.githubusercontent.com/litiande03/epg/refs/heads/master/pl.xml.gz
 CCTV-1 综合	CCTV1

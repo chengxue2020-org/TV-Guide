@@ -6,6 +6,11 @@ FUTURE_DAYS=3
 https://epg.112114.xyz/pp.xml
 #此EPG只有当天
 
+#https://epg.deny.vip/sh/tel-epg.xml
+#https://epg.51zmt.top:8001/difang.xml
+#https://raw.githubusercontent.com/AqFad2811/epg/refs/heads/main/unifitv.xml
+
+
 
 #https://epg.zsdc.eu.org/t.xml
 #7天回看（包含当天）+5天预告，取自以下EPG

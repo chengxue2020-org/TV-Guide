@@ -20,15 +20,15 @@ https://epg.112114.xyz/pp.xml
 #https://github.com/mytv-android/myEPG/raw/refs/heads/master/output/epg.gz
 
 https://chengxue2020.github.io/Cat-ports/EPG/heiptv.xml
-河北卫视
-河北经济
-河北少儿科教
-河北都市
-河北文旅体育
-河北三农
-石家庄文化娱乐
-石家庄新闻综合
-石家庄城市服务
+20000163	河北卫视
+20000042	河北经济
+20000043	河北少儿科教
+20000029	河北都市
+20000017	河北文旅体育
+20000069	河北三农
+20000132	石家庄新闻综合
+20000083	石家庄文化娱乐
+20000082	石家庄城市服务
 
 
 https://raw.githubusercontent.com/litiande03/epg/refs/heads/master/pl.xml.gz

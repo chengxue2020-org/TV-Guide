@@ -21,7 +21,7 @@ https://epg.112114.xyz/pp.xml
 #https://github.com/mytv-android/myEPG/raw/refs/heads/master/output/epg.gz
 
 
-https://epg.mb6.top/heiptv.xml
+https://epg.zsdc.eu.org/t.xml
 20000163	河北卫视
 20000042	河北经济
 20000043	河北少儿科教

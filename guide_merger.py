@@ -1082,6 +1082,8 @@ def process_epg_source(
 # ==================== 主函数 ====================
 def main() -> None:
     """主函数"""
+    global USE_CURL  # 必须在函数开头声明
+    
     start_utc = datetime.now(UTC)
     start_beijing = start_utc.astimezone(BEIJING_TZ)
     
@@ -1099,7 +1101,6 @@ def main() -> None:
             print('✓ curl 命令可用')
         except (subprocess.SubprocessError, FileNotFoundError):
             print('⚠ curl 命令不可用，将使用 Python 下载')
-            global USE_CURL
             USE_CURL = False
     
     if HAS_PYPINYIN:

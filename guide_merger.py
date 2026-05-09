@@ -9,9 +9,11 @@ EPG Merger Script - 合并多个EPG源的频道节目信息
 支持前后双向时间范围（包含过去和未来的节目，按天对齐）
 可配置是否修改 channel id 和 display-name
 支持跨天节目拆分（如 23:40-0:20 拆分为两个节目）
+支持智能合并：对于相同时间的节目，保留信息更完整的版本
+支持 curl_cffi 模拟真实浏览器 TLS 指纹（绕过反爬）
+支持动态获取 Referer 和 Cookie 保存/复用
 """
 
-import requests
 import gzip
 import xml.etree.ElementTree as ET
 import os
@@ -19,30 +21,20 @@ import sys
 import time
 import re
 from datetime import datetime, timedelta, timezone
-from typing import Dict, List, Tuple, Optional, Set
+from typing import Dict, List, Tuple, Optional
 import hashlib
 import copy
+from urllib.parse import urlparse
 
-# ==================== HTTP库 ====================
-# 优先使用 curl_cffi（最强CF绕过）
+# 尝试导入 curl_cffi（浏览器指纹模拟）
 try:
-    from curl_cffi import requests
+    from curl_cffi import requests as curl_requests
     HAS_CURL_CFFI = True
-    print("✓ 已加载 curl_cffi（Chrome TLS 指纹模拟）")
 except ImportError:
-    import requests
     HAS_CURL_CFFI = False
-    print("⚠ 未安装 curl_cffi")
-    print("  安装方法: pip install curl_cffi")
- 
-# 尝试导入Cloudflare绕过库
-try:
-    import cloudscraper
-    HAS_CLOUDSCRAPER = True
-except ImportError:
-    HAS_CLOUDSCRAPER = False
-    print("⚠ 未安装cloudscraper库，无法绕过Cloudflare保护")
-    print("  安装方法: pip install cloudscraper")
+    import requests
+    print("⚠ 未安装 curl_cffi 库，将使用普通 requests")
+    print("  安装方法: pip install curl-cffi")
 
 # 尝试导入拼音转换库（用于中文排序）
 try:
@@ -58,27 +50,28 @@ SOURCE_FILE = 'source_guide.txt'         # EPG源配置文件
 OUTPUT_XML = 'guide.xml'                 # 输出XML文件名
 OUTPUT_GZ = 'guide.xml.gz'               # 输出GZ压缩文件名
 TEMP_DIR_NAME = 'temp_epg_files'         # 临时文件目录
+COOKIE_FILE = 'cookies.json'             # Cookie 保存文件
 DEFAULT_PAST_DAYS = 6                    # 默认过去天数（6天）
 DEFAULT_FUTURE_DAYS = 3                  # 默认未来天数（3天）
 MAX_RETRIES = 3                          # 最大重试次数
 DOWNLOAD_TIMEOUT = 30                    # 下载超时（秒）
 CHUNK_SIZE = 131072                      # 下载块大小（128KB）
-USE_CLOUDSCRAPER = True                  # 是否使用cloudscraper绕过CF
-USE_CURL_CFFI = True
 
 # ==================== 别名映射配置 ====================
-# True: 修改channel id
-# False: 不修改channel id，保持原值
-MODIFY_CHANNEL_ID = True
-
-# True: 修改display-name
-# False: 不修改display-name，保持原值
-MODIFY_DISPLAY_NAME = True
+MODIFY_CHANNEL_ID = True      # True: 修改channel id, False: 不修改
+MODIFY_DISPLAY_NAME = True    # True: 修改display-name, False: 不修改
 
 # ==================== 跨天节目拆分配置 ====================
-# True: 拆分跨天节目（如 23:40-0:20 拆分为两个）
-# False: 保持原样
-SPLIT_OVERNIGHT_PROGRAMS = True
+SPLIT_OVERNIGHT_PROGRAMS = True   # True: 拆分跨天节目, False: 保持原样
+
+# ==================== 智能合并配置 ====================
+SMART_MERGE = True   # True: 启用智能合并（保留信息更完整的节目）, False: 禁用
+
+# ==================== 浏览器模拟配置 ====================
+# 可选的浏览器指纹: 'chrome110', 'chrome120', 'safari15_5', 'edge101'
+BROWSER_IMPERSONATE = 'chrome120'
+# 是否保存和复用 Cookie
+USE_COOKIE_PERSISTENCE = True
 
 # ==================== 时区配置 ====================
 BEIJING_TZ = timezone(timedelta(hours=8))  # 北京时区 UTC+8
@@ -112,6 +105,97 @@ TIMEZONE_MAP = {
     '-1100': timezone(timedelta(hours=-11)),
     '-1200': timezone(timedelta(hours=-12)),
 }
+
+# ==================== Cookie 管理 ====================
+# 全局 Session 字典，为每个域名保存独立的 Session
+_sessions: Dict[str, object] = {}
+
+
+def get_session_for_url(url: str):
+    """
+    为指定 URL 获取或创建 Session
+    每个域名使用独立的 Session，以保存各自的 Cookie
+    """
+    parsed = urlparse(url)
+    domain = parsed.netloc
+    
+    if domain not in _sessions:
+        if HAS_CURL_CFFI:
+            # 使用 curl_cffi 创建 Session
+            from curl_cffi import requests as curl_requests
+            session = curl_requests.Session()
+            session.impersonate = BROWSER_IMPERSONATE
+        else:
+            import requests
+            session = requests.Session()
+        _sessions[domain] = session
+        print(f'    🔧 为域名 {domain} 创建新 Session')
+    
+    return _sessions[domain]
+
+
+def get_referer_for_url(url: str) -> str:
+    """
+    根据 URL 获取合适的 Referer
+    返回网站根域名作为 Referer
+    """
+    parsed = urlparse(url)
+    return f"{parsed.scheme}://{parsed.netloc}/"
+
+
+def save_cookies_to_file():
+    """保存所有 Session 的 Cookie 到文件"""
+    if not USE_COOKIE_PERSISTENCE:
+        return
+    
+    try:
+        cookies_data = {}
+        for domain, session in _sessions.items():
+            if hasattr(session, 'cookies'):
+                cookie_dict = session.cookies.get_dict()
+                if cookie_dict:
+                    cookies_data[domain] = cookie_dict
+        
+        if cookies_data:
+            import json
+            with open(COOKIE_FILE, 'w', encoding='utf-8') as f:
+                json.dump(cookies_data, f, indent=2, ensure_ascii=False)
+            print(f'    📝 已保存 {len(cookies_data)} 个域名的 Cookie')
+    except Exception as e:
+        print(f'    ⚠ 保存 Cookie 失败: {e}')
+
+
+def load_cookies_from_file():
+    """从文件加载 Cookie 到 Session"""
+    if not USE_COOKIE_PERSISTENCE:
+        return
+    
+    if not os.path.exists(COOKIE_FILE):
+        return
+    
+    try:
+        import json
+        with open(COOKIE_FILE, 'r', encoding='utf-8') as f:
+            cookies_data = json.load(f)
+        
+        for domain, cookie_dict in cookies_data.items():
+            # 为每个域名创建 Session（如果还没有）
+            if domain not in _sessions:
+                if HAS_CURL_CFFI:
+                    from curl_cffi import requests as curl_requests
+                    session = curl_requests.Session()
+                    session.impersonate = BROWSER_IMPERSONATE
+                else:
+                    import requests
+                    session = requests.Session()
+                _sessions[domain] = session
+            
+            # 恢复 Cookie
+            for name, value in cookie_dict.items():
+                _sessions[domain].cookies.set(name, value)
+            print(f'    🔄 已加载域名 {domain} 的 Cookie ({len(cookie_dict)} 个)')
+    except Exception as e:
+        print(f'    ⚠ 加载 Cookie 失败: {e}')
 
 
 # ==================== 工具函数 ====================
@@ -277,46 +361,86 @@ def is_overnight_program(start_dt: datetime, stop_dt: datetime) -> bool:
     return stop_dt.date() > start_dt.date()
 
 
+def get_program_completeness_score(programme: ET.Element) -> int:
+    """计算节目信息的完整度分数（分数越高越完整）"""
+    score = 0
+    
+    if programme.find('title') is not None:
+        score += 10
+    if programme.find('desc') is not None:
+        score += 5
+    if programme.find('sub-title') is not None:
+        score += 3
+    if programme.find('category') is not None:
+        score += 2
+    if programme.find('icon') is not None:
+        score += 1
+    if programme.find('credits') is not None:
+        score += 1
+    if programme.find('length') is not None:
+        score += 1
+    if programme.find('rating') is not None:
+        score += 1
+    if programme.find('video') is not None:
+        score += 1
+    if programme.find('audio') is not None:
+        score += 1
+    
+    return score
+
+
+def is_programme_more_complete(prog1: ET.Element, prog2: ET.Element) -> bool:
+    """判断节目1是否比节目2更完整"""
+    score1 = get_program_completeness_score(prog1)
+    score2 = get_program_completeness_score(prog2)
+    
+    if score1 > score2:
+        return True
+    elif score1 < score2:
+        return False
+    else:
+        text1 = ET.tostring(prog1, encoding='unicode')
+        text2 = ET.tostring(prog2, encoding='unicode')
+        return len(text1) > len(text2)
+
+
+def merge_programmes(existing: ET.Element, new: ET.Element) -> ET.Element:
+    """合并两个节目，保留更完整的信息"""
+    tags_to_merge = ['title', 'desc', 'sub-title', 'category', 'icon', 'credits', 'length', 'rating', 'video', 'audio']
+    
+    for tag in tags_to_merge:
+        existing_elem = existing.find(tag)
+        new_elem = new.find(tag)
+        
+        if existing_elem is None and new_elem is not None:
+            new_child = copy.deepcopy(new_elem)
+            existing.append(new_child)
+    
+    return existing
+
+
 def split_overnight_program(
     programme: ET.Element,
     start_dt: datetime,
     stop_dt: datetime,
     channel_id: str
 ) -> List[ET.Element]:
-    """
-    将跨天节目拆分为两个节目
-    
-    Args:
-        programme: 原始节目元素
-        start_dt: 节目开始时间
-        stop_dt: 节目结束时间
-        channel_id: 频道ID
-        
-    Returns:
-        拆分后的两个节目元素列表
-    """
-    # 计算当天的结束时间（23:59:59）
+    """将跨天节目拆分为两个节目"""
     end_of_day = start_dt.replace(hour=23, minute=59, second=59)
-    
-    # 计算第二天的开始时间（00:00:00）
     next_day_start = stop_dt.replace(hour=0, minute=0, second=0)
     
-    # 第一个节目：从原开始时间到当天23:59:59
     part1_start = start_dt
     part1_stop = end_of_day
     
-    # 第二个节目：从第二天00:00:00到原结束时间
     part2_start = next_day_start
     part2_stop = stop_dt
     
-    # 创建第一个节目
     part1 = copy.deepcopy(programme)
     part1.set('start', part1_start.strftime('%Y%m%d%H%M%S %z'))
     part1.set('stop', part1_stop.strftime('%Y%m%d%H%M%S %z'))
     if channel_id:
         part1.set('channel', channel_id)
     
-    # 创建第二个节目
     part2 = copy.deepcopy(programme)
     part2.set('start', part2_start.strftime('%Y%m%d%H%M%S %z'))
     part2.set('stop', part2_stop.strftime('%Y%m%d%H%M%S %z'))
@@ -496,10 +620,13 @@ def parse_source(source_file: str) -> Tuple[Dict[str, Dict], Tuple[int, int]]:
             print(f'✓ 总时间范围: 过去 {past_days} 天 + 当天 + 未来 {future_days} 天 = 共 {total_days} 天')
             print()
             
-            print(f'📝 别名映射配置:')
+            print(f'📝 配置:')
             print(f'   MODIFY_CHANNEL_ID: {MODIFY_CHANNEL_ID}')
             print(f'   MODIFY_DISPLAY_NAME: {MODIFY_DISPLAY_NAME}')
             print(f'   SPLIT_OVERNIGHT_PROGRAMS: {SPLIT_OVERNIGHT_PROGRAMS}')
+            print(f'   SMART_MERGE: {SMART_MERGE}')
+            print(f'   BROWSER_IMPERSONATE: {BROWSER_IMPERSONATE}')
+            print(f'   USE_COOKIE_PERSISTENCE: {USE_COOKIE_PERSISTENCE}')
             print()
             
             data_source: Dict[str, Dict] = {}
@@ -615,217 +742,116 @@ def analyze_epg_time_range(program_dict: Dict[Tuple[str, str], ET.Element]) -> T
     return past_days_actual, future_days_actual
 
 
-# ==================== 文件下载 ====================
+# ==================== 文件下载（支持 Session、Cookie、动态 Referer）====================
 def download_file(url: str, path: str) -> Optional[str]:
-    """下载EPG文件（增强版，支持Cloudflare绕过）"""
-
+    """下载EPG文件，支持 Session、Cookie 持久化和动态 Referer"""
     filename = os.path.basename(url.split('?')[0])
-
     if not filename:
         url_hash = hashlib.md5(url.encode()).hexdigest()[:8]
         filename = f'epg_{url_hash}.xml'
-
+    
     download_path = os.path.join(path, filename)
-
     name, ext = os.path.splitext(filename)
     counter = 1
-
     while os.path.exists(download_path):
         download_path = os.path.join(path, f"{name}({counter}){ext}")
         counter += 1
-
-    # ==================== 浏览器请求头 ====================
+    
+    # 获取或创建 Session
+    session = get_session_for_url(url)
+    
+    # 动态获取 Referer（使用主页作为 Referer）
+    referer = get_referer_for_url(url)
+    
+    # 完整的浏览器请求头
     headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36',
-        'Accept': 'application/xml,text/xml,application/xhtml+xml,text/html;q=0.9,*/*;q=0.8',
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
         'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8',
         'Accept-Encoding': 'gzip, deflate, br',
-        'Cache-Control': 'no-cache',
-        'Pragma': 'no-cache',
-        'DNT': '1',
         'Connection': 'keep-alive',
+        'Referer': referer,
+        'Origin': referer.rstrip('/'),
         'Upgrade-Insecure-Requests': '1',
         'Sec-Fetch-Dest': 'document',
         'Sec-Fetch-Mode': 'navigate',
         'Sec-Fetch-Site': 'same-origin',
         'Sec-Fetch-User': '?1',
-        'Sec-Ch-Ua': '"Google Chrome";v="136", "Chromium";v="136", "Not/A)Brand";v="24"',
-        'Sec-Ch-Ua-Mobile': '?0',
-        'Sec-Ch-Ua-Platform': '"Windows"',
+        'Cache-Control': 'max-age=0',
     }
-
-
-    # ==================== 特定域名处理 ====================
-    if 'mb6.top' in url:
-        headers['Referer'] = 'https://epg.mb6.top/heiptv.xml/'
-        headers['Host'] = 'epg.mb6.top'
-        headers['Origin'] = 'https://epg.mb6.top/heiptv.xml/'
-
-    elif '112114' in url:
-        headers['Referer'] = 'https://epg.112114.xyz/'
-
-    elif '51zjy' in url:
-        headers['Referer'] = 'https://epg.51zjy.top/'
-
-    # ==================== 下载重试 ====================
+    
+    print(f'    🔗 Referer: {referer}')
+    
     for attempt in range(MAX_RETRIES + 1):
-
         try:
-
             if attempt > 0:
                 wait_time = attempt * 3
                 print(f'    ⏳ 第 {attempt} 次重试，等待 {wait_time} 秒...')
                 time.sleep(wait_time)
-
-            # ==========================================================
-            # 优先使用 curl_cffi（最强）
-            # ==========================================================
-            if HAS_CURL_CFFI and USE_CURL_CFFI:
-
-                response = requests.get(
-                    url,
-                    headers=headers,
-
-                    impersonate="chrome136",
-
-                    timeout=DOWNLOAD_TIMEOUT,
-
-                    allow_redirects=True,
-
-                    verify=False
-                )
-
-            # ==========================================================
-            # 次选 cloudscraper
-            # ==========================================================
-            elif HAS_CLOUDSCRAPER and USE_CLOUDSCRAPER:
-
-                scraper = cloudscraper.create_scraper(
-                    browser={
-                        'browser': 'chrome',
-                        'platform': 'windows',
-                        'mobile': False
-                    }
-                )
-
-                response = scraper.get(
-                    url,
-                    headers=headers,
-                    timeout=DOWNLOAD_TIMEOUT,
-                    allow_redirects=True
-                )
-
-            # ==========================================================
-            # 最后 fallback requests
-            # ==========================================================
-            else:
-
-                session = requests.Session()
-
+            
+            # 使用 Session 发送请求
+            if HAS_CURL_CFFI:
+                # curl_cffi Session 已设置 impersonate
                 response = session.get(
                     url,
                     headers=headers,
-                    stream=True,
                     timeout=DOWNLOAD_TIMEOUT,
                     allow_redirects=True
                 )
-
-            # ==========================================================
-            # 状态码检查
-            # ==========================================================
-            if response.status_code != 200:
-
+            else:
+                response = session.get(
+                    url,
+                    headers=headers,
+                    timeout=DOWNLOAD_TIMEOUT,
+                    allow_redirects=True
+                )
+            
+            if response.status_code == 200:
+                content = response.content
+                
+                # 检查内容是否为有效的 XML 或 GZIP
+                is_valid = (content.startswith(b'<?xml') or 
+                           content.startswith(b'<tv') or 
+                           content.startswith(b'\x1f\x8b'))
+                
+                if not is_valid:
+                    content_preview = content[:100]
+                    print(f'    ⚠ 未识别为XML/GZIP')
+                    print(f'    内容预览: {content_preview}')
+                    if attempt == MAX_RETRIES:
+                        return None
+                    continue
+                
+                with open(download_path, 'wb') as f:
+                    f.write(content)
+                
+                print(f'    ✓ 下载成功: {format_size(len(content))}')
+                
+                # 保存 Cookie 到文件
+                if USE_COOKIE_PERSISTENCE:
+                    save_cookies_to_file()
+                
+                return download_path
+                
+            elif response.status_code == 403:
+                print(f'    ✗ 访问被拒绝 (403)')
+                if attempt == MAX_RETRIES:
+                    return None
+            elif response.status_code == 404:
+                print(f'    ✗ 文件不存在 (404)')
+                return None
+            else:
                 print(f'    ✗ HTTP错误: {response.status_code}')
-
                 if attempt == MAX_RETRIES:
                     return None
-
-                continue
-
-            # ==========================================================
-            # 获取内容
-            # ==========================================================
-            content = response.content
-
-            if not content:
-
-                print(f'    ✗ 返回空内容')
-
-                if attempt == MAX_RETRIES:
-                    return None
-
-                continue
-
-            # ==========================================================
-            # 检测HTML challenge
-            # ==========================================================
-            lower_content = content[:5000].lower()
-
-            if (
-                b'<!doctype html' in lower_content
-                or b'<html' in lower_content
-            ):
-
-                print(f'    ⚠ 返回HTML页面而不是XML')
-
-                if b'cloudflare' in lower_content:
-                    print(f'    ⚠ 检测到Cloudflare保护')
-
-                if b'access denied' in lower_content:
-                    print(f'    ⚠ Access Denied')
-
-                if b'challenge' in lower_content:
-                    print(f'    ⚠ JS Challenge')
-
-                if attempt == MAX_RETRIES:
-                    return None
-
-                continue
-
-            # ==========================================================
-            # 检测XML/GZIP
-            # ==========================================================
-            is_xml = (
-                content.startswith(b'<?xml')
-                or content.startswith(b'<tv')
-            )
-
-            is_gzip = content.startswith(b'\x1f\x8b')
-
-            if not is_xml and not is_gzip:
-
-                print(f'    ⚠ 未识别为XML/GZIP')
-
-                preview = content[:100]
-
-                try:
-                    print(f'    内容预览: {preview.decode("utf-8", errors="ignore")}')
-                except:
-                    pass
-
-                if attempt == MAX_RETRIES:
-                    return None
-
-                continue
-
-            # ==========================================================
-            # 保存文件
-            # ==========================================================
-            with open(download_path, 'wb') as f:
-                f.write(content)
-
-            print(f'    ✓ 下载成功: {format_size(len(content))}')
-
-            return download_path
-
+                    
         except Exception as e:
-
-            print(f'    ✗ 下载异常: {e}')
-
+            print(f'    ✗ 错误: {e}')
             if attempt == MAX_RETRIES:
                 return None
-
+    
     return None
+
 
 # ==================== EPG处理 ====================
 def process_epg_source(
@@ -836,28 +862,15 @@ def process_epg_source(
     start_utc: datetime,
     days_range: Tuple[int, int]
 ) -> None:
-    """
-    处理EPG源文件，提取频道和节目信息
-    
-    时区处理规则：
-    1. 如果 ChangeTimezone=Y，则直接将时区改为 +0800（时间数值不变）
-    2. 否则如果指定了 timezone 且不是+8时区，则将时间从该时区转换为北京时间
-    3. 否则保持原XML中的时区不变
-    
-    时间范围规则：
-    - 包含完整的当天（00:00:00 到 23:59:59）
-    - 过去 past_days 天 + 当天 + 未来 future_days 天
-    """
+    """处理EPG源文件，提取频道和节目信息"""
     channels_to_process = source_info['channels']
     specified_tz = source_info['timezone']
     change_timezone = source_info.get('change_timezone', 'N')
     
     past_days, future_days = days_range
     
-    # 获取当天的开始时间（00:00:00 UTC）
     today_start = start_utc.replace(hour=0, minute=0, second=0, microsecond=0)
     
-    # 计算边界时间点（按天对齐）
     start_boundary = today_start - timedelta(days=past_days)
     end_boundary = today_start + timedelta(days=future_days + 1)
     
@@ -884,7 +897,7 @@ def process_epg_source(
     try:
         tree = ET.parse(xml_file)
     except ET.ParseError:
-        print(f'    ✗ XML格式错误')
+        print(f'    ✗ XML格式错误，跳过此源')
         return
     except Exception as e:
         print(f'    ✗ 解析失败: {e}')
@@ -894,7 +907,7 @@ def process_epg_source(
     id_mapping = {old_id: new_id for old_id, new_id in channels_to_process if new_id}
     target_ids = {old_id for old_id, _ in channels_to_process}
     
-    # 提取频道（去重并应用别名）
+    # 提取频道
     channels_found = 0
     for channel in tree.findall('channel'):
         original_id = channel.attrib.get('id', '')
@@ -926,11 +939,13 @@ def process_epg_source(
     
     print(f'    📝 别名映射: 修改ID={MODIFY_CHANNEL_ID}, 修改DisplayName={MODIFY_DISPLAY_NAME}')
     print(f'    ✂️ 跨天拆分: {SPLIT_OVERNIGHT_PROGRAMS}')
+    print(f'    🔗 智能合并: {SMART_MERGE}')
     
     # 提取节目
     programs_found = 0
     programs_total = 0
     overnight_split_count = 0
+    merged_count = 0
     
     for programme in tree.findall('programme'):
         original_channel = programme.attrib.get('channel', '')
@@ -945,7 +960,7 @@ def process_epg_source(
             original_start = programme.attrib.get('start', '')
             original_stop = programme.attrib.get('stop', '')
             
-            # 根据配置处理时间
+            # 时间处理
             if change_timezone == 'Y':
                 final_start = change_timezone_only(original_start, '+0800')
                 final_stop = change_timezone_only(original_stop, '+0800')
@@ -967,14 +982,13 @@ def process_epg_source(
             
             if filter_start and filter_stop:
                 if filter_start < end_boundary and filter_stop > start_boundary:
-                    # 检查是否需要拆分跨天节目
+                    key = (final_channel, final_start)
+                    
                     if SPLIT_OVERNIGHT_PROGRAMS:
-                        # 解析开始和结束时间
                         start_dt = parse_datetime_from_str(final_start)
                         stop_dt = parse_datetime_from_str(final_stop)
                         
                         if start_dt and stop_dt and is_overnight_program(start_dt, stop_dt):
-                            # 拆分跨天节目
                             split_programmes = split_overnight_program(
                                 programme, start_dt, stop_dt, final_channel
                             )
@@ -983,41 +997,44 @@ def process_epg_source(
                             for split_prog in split_programmes:
                                 split_start = split_prog.attrib.get('start', '')
                                 split_stop = split_prog.attrib.get('stop', '')
-                                key = (final_channel, split_start)
-                                if key not in program_dict:
-                                    new_programme = apply_alias_to_programme(split_prog, final_channel)
-                                    program_dict[key] = new_programme
+                                split_key = (final_channel, split_start)
+                                
+                                if SMART_MERGE and split_key in program_dict:
+                                    existing = program_dict[split_key]
+                                    if is_programme_more_complete(split_prog, existing):
+                                        program_dict[split_key] = apply_alias_to_programme(split_prog, final_channel)
+                                        merged_count += 1
+                                elif split_key not in program_dict:
+                                    program_dict[split_key] = apply_alias_to_programme(split_prog, final_channel)
                                     programs_found += 1
-                        else:
-                            # 非跨天节目，正常添加
-                            key = (final_channel, final_start)
-                            if key not in program_dict:
-                                new_programme = apply_alias_to_programme(programme, final_channel)
-                                
-                                for key_attr, value in new_programme.attrib.items():
-                                    if key_attr == 'start':
-                                        new_programme.set('start', final_start)
-                                    elif key_attr == 'stop':
-                                        new_programme.set('stop', final_stop)
-                                
-                                program_dict[key] = new_programme
-                                programs_found += 1
-                    else:
-                        # 不拆分，直接添加
-                        key = (final_channel, final_start)
-                        if key not in program_dict:
-                            new_programme = apply_alias_to_programme(programme, final_channel)
-                            
-                            for key_attr, value in new_programme.attrib.items():
-                                if key_attr == 'start':
-                                    new_programme.set('start', final_start)
-                                elif key_attr == 'stop':
-                                    new_programme.set('stop', final_stop)
-                            
+                            continue
+                    
+                    # 非跨天节目处理
+                    if SMART_MERGE and key in program_dict:
+                        existing = program_dict[key]
+                        new_programme = apply_alias_to_programme(programme, final_channel)
+                        
+                        for key_attr, value in new_programme.attrib.items():
+                            if key_attr == 'start':
+                                new_programme.set('start', final_start)
+                            elif key_attr == 'stop':
+                                new_programme.set('stop', final_stop)
+                        
+                        if is_programme_more_complete(new_programme, existing):
                             program_dict[key] = new_programme
-                            programs_found += 1
+                            merged_count += 1
+                    elif key not in program_dict:
+                        new_programme = apply_alias_to_programme(programme, final_channel)
+                        
+                        for key_attr, value in new_programme.attrib.items():
+                            if key_attr == 'start':
+                                new_programme.set('start', final_start)
+                            elif key_attr == 'stop':
+                                new_programme.set('stop', final_stop)
+                        
+                        program_dict[key] = new_programme
+                        programs_found += 1
             else:
-                # 时间格式异常，仍然添加
                 key = (final_channel, final_start)
                 if key not in program_dict:
                     new_programme = apply_alias_to_programme(programme, final_channel)
@@ -1033,6 +1050,8 @@ def process_epg_source(
     
     if overnight_split_count > 0:
         print(f'    ✂️ 跨天节目拆分: {overnight_split_count} 个')
+    if merged_count > 0:
+        print(f'    🔗 智能合并更新: {merged_count} 个节目')
     
     found_ids = set()
     for old_id, _ in channels_to_process:
@@ -1055,20 +1074,27 @@ def process_epg_source(
 # ==================== 主函数 ====================
 def main() -> None:
     """主函数"""
+    # 加载之前保存的 Cookie
+    if USE_COOKIE_PERSISTENCE and os.path.exists(COOKIE_FILE):
+        print('🔄 加载已保存的 Cookie...')
+        load_cookies_from_file()
+        print()
+    
     start_utc = datetime.now(UTC)
     start_beijing = start_utc.astimezone(BEIJING_TZ)
     
     print_separator('=')
-    print('Guide Merger v2.0 (Flexible Timezone & Alias Support)')
+    print('Guide Merger v2.0 (Cookie Persistence & Dynamic Referer)')
     print_separator('=')
     print(f'当前时间: {start_beijing.strftime("%Y-%m-%d %H:%M:%S")} (北京时间)')
     print(f'当前时间: {start_utc.strftime("%Y-%m-%d %H:%M:%S")} (UTC)')
     print()
     
-    if HAS_CLOUDSCRAPER:
-        print('✓ 已加载cloudscraper库，支持绕过Cloudflare保护')
+    if HAS_CURL_CFFI:
+        print(f'✓ 已加载 curl_cffi 库，浏览器指纹模拟: {BROWSER_IMPERSONATE}')
     else:
-        print('⚠ 未安装cloudscraper库')
+        print('⚠ 未安装 curl_cffi 库，将使用普通 requests')
+        print('  安装方法: pip install curl-cffi')
     
     if HAS_PYPINYIN:
         print('✓ 已加载pypinyin库，支持中文拼音排序')
@@ -1081,6 +1107,8 @@ def main() -> None:
     print('✓ 支持前后双向时间范围（过去天数 + 当天 + 未来天数）')
     print(f'✓ 别名映射: 修改ID={MODIFY_CHANNEL_ID}, 修改DisplayName={MODIFY_DISPLAY_NAME}')
     print(f'✓ 跨天拆分: {SPLIT_OVERNIGHT_PROGRAMS}')
+    print(f'✓ 智能合并: {SMART_MERGE}')
+    print(f'✓ Cookie持久化: {USE_COOKIE_PERSISTENCE}')
     print()
     
     print('📖 读取配置文件...')
@@ -1168,7 +1196,6 @@ def main() -> None:
         print('✗ 错误: 所有EPG源都下载失败！')
         sys.exit(1)
     
-    # 分析实际EPG时间范围
     actual_past_days, actual_future_days = analyze_epg_time_range(program_dict)
     
     print_separator('=')

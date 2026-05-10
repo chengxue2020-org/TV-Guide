@@ -498,13 +498,13 @@ HGTV HD新加坡	HGTV_英
 HGTV居家乐活频道	HGTV_港马_国
 HISTORY HD新加坡	History HD(新加坡)
 History 历史频道有线	History历史频道有线_国
-HITS	HITS HD_国(swepg)
+HITS	HITS HD_香港_国
 HITS HD新加坡
 HITS MOVIES HD	HITS MOVIES_香港_英
 HITS MOVIES HD新加坡	HITS MOVIES_英(EPG3)
 HITS电影台 	HITS HD电影台
-HITS频道	HITS HD频道_国
-HITS有线	HITS HD有线
+HITS频道	HITS HD_港台_国
+HITS有线	HITS HD_港台_有线
 HOY TV
 HOY 国际财经台
 HOY 资讯台
@@ -547,15 +547,13 @@ KTV	KTV_印
 KTV HD	KTV(EPG1)
 LIFE
 Lifeime	Lifetime娱乐频道_港台_国
-Lifetime 娱乐频道	Lifetime娱乐频道_港台_国2
-lifetime娱乐频道有线	Lifetime娱乐频道_有线
 Lifetime HD新加坡
 LiveABC互动英语频道
 Love Nature 4K	Love Nature 4K_国
 Love_Nature_4K	Love Nature 4K_英
 LOVE NATURE有线	Love Nature_国
 LS TIME电影台	龙祥电影台
-MUTV香港
+MUTV香港	MUTV_香港
 My Cinema Europe HD 我的欧洲电影有线		MCE(My Cinema Europe HD) 我的欧洲电影_有线
 myTV SUPER 18台
 myTV SUPER直播足球2台
@@ -566,7 +564,7 @@ myTV SUPER直播足球6台
 myTV SUPER直播足球7台
 华语剧台	myTV SUPER华语剧台
 戏曲台	myTV SUPER戏曲台
-NBA香港	NBA_香港
+NBA香港	NBA TV_香港
 Netflix香港	Netflix_香港
 Nick Jr	Nick Jr._新马2
 Nick Jr. 	Nick Jr.(swepg2)
@@ -972,7 +970,6 @@ Golden影迷台
 GTV
 Hanacaraka TV
 ABC Australia
-ABC Australia香港	ABC Australia(香港)
 ABC澳大利亚电视台	ABC Australia(澳大利亚)
 Action Hollywood Movies
 Adithya	Adithya TV_马来
@@ -983,7 +980,7 @@ Animax HD	Animax_英
 Animax香港	Animax_港新_国
 ANTV
 Arirang
-Asian Food Network 亚洲美食频道	Asian Food Network_马来_国
+Asian Food Network 亚洲美食频道	Asian Food Network_国
 Asianet	Asianet TV
 Asianet Movies
 ASMR行车纪录
@@ -1052,7 +1049,6 @@ DW English	DW English Africa
 DW德国之声	DW English_台湾_国
 Zee Bioskop
 Zee Cinema HD
-Zee Cinema International
 Zee News
 Zee Tamil HD	Zee Tamil(EPG1)
 Zee Thirai	Zee Thirai(EPG1)
@@ -1097,13 +1093,11 @@ Moonbug	Moonbug_马来
 Moonbug香港	Moonbug_香港_繁中
 moov	MOOV_香港
 MOVIE MOVIE	MOVIE MOVIE_港_国
-MTV	MTV_国
-MTV综合台HD	MTV综合(EPG2)
 MUCH TV
 Music TV
 Muslim TV
 NewsWorld (免费)	NewsWorld
-NHK WORLD PREMIUM	NHK World Premium_非台_国
+NHK WORLD PREMIUM	NHK World Premium_国
 NHK World-Japan	NHK World Japan
 NHK 日本国家电视台
 SBS
@@ -1122,7 +1116,7 @@ Smithsonian_Channel	Smithsonian Channel
 Soccer Channel
 Sony Entertainment Televis新加坡	SONY Entertainment TV_新加坡
 SONY MAX
-Sony TV (India)	SONY TV (India)
+Sony TV (India)	SONY TV
 SPL-CH01
 SPL-CH02
 Sportstars
@@ -1525,7 +1519,6 @@ http://epg.51zmt.top:8000/e2.xml.gz
 1574	HBO Hits_国
 1575	HBO Signature_非港_国
 1783	History_香港_国
-321	HITS HD_香港_国
 194	Mezzo Live_港_英
 1464	MOMO亲子台
 1536	MTV_英
@@ -1550,7 +1543,7 @@ ChangeTimezone=Y
 2181	ABO Movies Thangathirai
 1584	Al-Hijrah
 479619	Apetito
-997	Asian Food Network_马来_英
+997	Asian Food Network_英
 2226	Astro AEC
 2124	Astro AOD
 2552	Astro Arena
@@ -1634,7 +1627,7 @@ ChangeTimezone=Y
 733	OSAI
 428785	Perak FM
 3478	凤凰中文台_新马_英
-3625	Premier Sports_马来
+3625	Premier Sports_新马
 399506	Premier Sports Rugby
 411240	Red FM
 521957	ROLL
@@ -1707,7 +1700,7 @@ ChangeTimezone=Y
 492823	CinemaWorld_新加坡_英
 369816	CBeebies_港新_英
 492904	COLORS TV_新加坡
-412157	ABC Australia_新马
+412157	ABC Australia_港新马
 492865	Cartoon Network_新马_英
 369819	天映经典电影_非新非马_国英
 369730	天映经典电影_新加坡非马
@@ -1730,7 +1723,7 @@ ChangeTimezone=Y
 369832	Lifetime HD_马来_英
 412184	Lifetime HD_新加坡_英
 491166	Nick Jr._新马_英
-412130	NHK World Premium_新马_英
+412130	NHK World Premium_英
 412136	Nick Jr._新马
 492879	Nickelodeon_新马_英
 369719	ROCK Entertainment_新加坡
@@ -1743,9 +1736,9 @@ ChangeTimezone=Y
 455314	TFC (The Filipino Channel)_港新
 412120	Travelxp HD_新加坡
 412097	Vannathirai_新加坡
-412185	Zee Cinema_新加坡
+412185	Zee Cinema_港新
 412115	Zee Tamil_新加坡
-369828	ZEE TV_新加坡
+369828	ZEE TV_港新
 516580	Zee Thirai_新加坡
 495473	Deal or No Deal_新加坡
 512067	CCTV-娱乐
@@ -1799,17 +1792,16 @@ ChangeTimezone=Y
 429564	Pesona HD
 369783	凤凰资讯台
 412145	凤凰资讯台_新加坡_英
-369790	Premier Sports(新加坡)
 412148	Preview Channel(新加坡)
 369727	ROCK Action(新加坡)
-369849	SONY SAB(新加坡)
+369849	SONY SAB
 535531	SEA Today(新加坡)-
 369746	SET (HINDI)(新加坡)
 369811	SONY YAY!(新加坡)
-369812	STAR Bharat(新加坡)
-369814	STAR Gold(新加坡)
+369812	STAR Bharat
+369814	STAR Gold
 451931	Star Maa(新加坡)
-369844	STAR Plus(新加坡)
+369844	STAR Plus
 459681	Star Hub(新加坡)
 516581	TechStorm
 413372	TestChannel 993(新加坡)
@@ -1827,7 +1819,7 @@ ChangeTimezone=Y
 492880	W-Sport_新加坡
 501125	北京国际频道
 522556	湖南国际频道(EPG2)
-492883	中天亚洲台_台新马_英
+492883	中天亚洲台_英
 522558	Zoom TV(新加坡)
 
 

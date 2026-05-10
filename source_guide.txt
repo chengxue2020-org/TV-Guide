@@ -300,7 +300,6 @@ cctv台球	CCTV-台球
 中央电视台综合频道 (港澳版) (免费)	CCTV1(港澳版)
 中国中央电视台戏曲频道 (免费)	CCTV-戏曲
 CGTN	CGTN_港马_英
-中国环球电视网香港	CGTN_香港_英
 CGTN (中国环球电视网)记录频道 (免费)	CGTN英文纪录_国2
 cgtn阿拉伯语	CGTN阿拉伯语
 cgtn俄语	CGTN俄语
@@ -488,7 +487,7 @@ HBLTV1台
 HBLTV2台
 HBO	HBO HD_国
 HBO HD	HBO HD_国2
-HBO香港	HBO_香港
+HBO香港	HBO_港新_国
 HBO Family	HBO Family_香港_国
 HBO Family香港	HBO Family_香港_英
 HBO Hits香港	HBO Hits_香港
@@ -499,7 +498,7 @@ HISTORY HD新加坡	History HD(新加坡)
 History 历史频道有线	History历史频道有线_国
 HITS	HITS_国(swepg)
 HITS HD新加坡
-HITS MOVIES HD	HITS MOVIES_英(EPG2)
+HITS MOVIES HD	HITS MOVIES_香港_英
 HITS MOVIES HD新加坡	HITS MOVIES_英(EPG3)
 HITS电影台 	HITS HD电影台
 HITS频道	HITS HD频道_国
@@ -551,11 +550,9 @@ Lifetime 娱乐频道	Lifetime娱乐频道_港台_国2
 lifetime娱乐频道有线	Lifetime娱乐频道_有线
 Lifetime HD新加坡
 LiveABC互动英语频道
-Love Nature 4K	Love Nature 4K_港台_国
-Love_Nature_4K	Love Nature 4K_马来_英
-Love Nature香港	Love Nature_港台_国1
-LOVE NATURE有线	Love Nature有线
-LOVENATURE	Love Nature_港台_国2
+Love Nature 4K	Love Nature 4K_国
+Love_Nature_4K	Love Nature 4K_英
+LOVE NATURE有线	Love Nature_国
 LS TIME电影台	龙祥电影台
 MUTV香港
 My Cinema Europe HD 我的欧洲电影有线		MCE(My Cinema Europe HD) 我的欧洲电影_有线
@@ -614,6 +611,7 @@ Now 高尔夫3
 now 剧集	NOW剧集
 nowjeli	NOW紫金国际台_香港
 now报价	NOW报价
+Panda TV	NOW Panda TV
 Now爆谷星影台	NOW爆谷星影台_香港
 now财经	NOW财经台_国
 now体育	NOW体育
@@ -626,9 +624,7 @@ ONE HD	ONE HD(swepg)
 OneTV 综合频道	One TV综合频道
 ORIGINALS
 Outdoor Channel
-Outdoor channel HD
 OUTtv HD
-Panda TV
 Pandora潘朵啦高画质粉红台
 Pandora潘朵啦高画质玩美台
 PETCLUBTV	PET CLUB TV_国
@@ -730,8 +726,7 @@ elta体育max 8	爱尔达体育MAX8台
 东森洋片台	东森洋片
 东森幼幼台	东森幼幼
 东森娱乐台
-动物星球频道	Animal Planet动物星球_台湾_国
-动物星球频道香港	Animal Planet动物星球_香港_国
+动物星球频道	Animal Planet动物星球_港台_国
 都会台
 短剧马拉松
 哆啦Ａ梦台
@@ -999,7 +994,6 @@ Asianet Movies
 ASMR行车纪录
 BBC_Brit_HD	BBC Brit
 BBC EARTH	BBC Earth_新马港台_国
-BBC Earth	BBC Earth_英
 BBC_First_HD	BBC First
 BBC LIFESTYLE	BBC Lifestyle_港台_国
 BBC News	BBC News (North America)
@@ -1010,7 +1004,7 @@ beIN SPORTS 2香港	beIN Sports-2_香港_国
 beIN Sports 3 HD	beIN Sports-3
 beIN SPORTS 3香港	beIN Sports-3_香港_国
 beIN SPORTS 4香港	beIN Sports-4_香港_国
-beIN SPORTS 6香港	beIN Sports-6香港_香港_国
+beIN SPORTS 6香港	beIN Sports-6_香港_国
 beIN SPORTS RUGBY香港	beIN Sports-RUGBY香港
 BTV
 BUDDY STARS
@@ -1018,8 +1012,7 @@ Cartoon Network香港	Cartoon Network_香港_国
 CARTOONITO HD	CARTOONITO
 CATCH PLAY电影台	CATCHPLAY电影台_台湾
 Cbeebies	Cbeebies_国
-CBeebies HD	CBeebies HD_英1
-Cbeebies HD	Cbeebies HD_国(B)
+CBeebies HD	CBeebies_香港_英1
 CBeebies香港	CBeebies_香港
 CI 罪案侦查频道	Crime & Investigation罪案侦查
 CINEEDGE
@@ -1047,15 +1040,13 @@ DAZN 1	DAZN-1_台湾
 DAZN 2	DAZN-2_台湾
 DAZN 3	DAZN-3_台湾
 Deal or No Deal	Deal or No Deal_新加坡
-Discovery	Discovery_台湾_国
-Discovery Asia	Discovery Asia_港台_国_详情
-DiscoveryAsia	Discovery Asia_港台_国_标题
-Discovery Channel香港
-Discovery HD新加坡	Discovery HD_新加坡_英
-Discovery 科学频道	Discovery科学频道_港台_国
-DiscoveryDMAX	Discovery DMAX_国
-DMAX香港	Discovery DMAX_香港_国
-DMAX有线	Discovery DMAX有线_国
+Discovery	Discovery Channel_台湾_国
+Discovery Asia	Discovery Asia_国_详情
+DiscoveryAsia	Discovery Asia_国_标题
+Discovery Channel香港	Discovery Channel_香港
+Discovery HD新加坡	Discovery Channel HD_新加坡_英
+Discovery 科学频道	Discovery Sci科学频道_港台_国
+DMAX有线	Discovery DMAX_国
 DiscoveryEVE	Discovery EVE_国
 Docsville (免费)	Docsville
 DreamWorks	DreamWorks_国
@@ -1085,7 +1076,7 @@ KBS NEWS
 KBS STORY
 KBSWorld	KBS World(swepg)
 KBS World HD	KBS World
-KBS World香港
+KBS World香港	KBS World_香港
 Lucky 688
 LUXE TV Channel
 MagellanTV频道 (麦哲伦频道) 
@@ -1110,8 +1101,8 @@ momo亲子台	MOMO亲子台(EPG2)
 MOMO综合台	MOMO综合台
 Moonbug	Moonbug_马来
 Moonbug香港	Moonbug_香港_繁中
-moov
-MOVIE MOVIE
+moov	MOOV_香港
+MOVIE MOVIE	MOVIE MOVIE_港_国
 MTV	MTV_国
 MTV综合台HD	MTV综合(EPG2)
 MUCH TV
@@ -1538,7 +1529,7 @@ http://epg.51zmt.top:8000/e2.xml.gz
 232	CNBC Hong Kong
 230	Cartoon Network_台湾(预)
 1810	ELTV英语学习台(B)
-1584	Discovery EVE__国(B)
+1584	Discovery EVE_国(B)
 1579	Food Network美食台_香港(预)
 1505	HBO HD_国2
 1574	HBO Hits_国
@@ -1560,7 +1551,7 @@ http://epg.51zmt.top:8000/e2.xml.gz
 1496	TVBS
 1772	TVBS-精采台(EPG2)
 122	TVB-经典台
-1580	tvN_港新_国
+1580	tvN_港新_国(B)
 
 
 
@@ -1607,11 +1598,8 @@ ChangeTimezone=Y
 411257	Asyik FM
 1205	AXN_新马_英
 854	SYOK BAYU_马来
-4030	BBC Earth_新马港台_英
+4030	BBC Earth_新马港台_英(EPG2)
 3329	BBC News_新马台
-2580	beIN Sports-1_马来
-4146	beIN Sports-2_马来
-3118	beIN Sports-3_马来
 370132	Berita RTM
 1835	Bernama TV
 411236	Bintulu FM
@@ -1623,7 +1611,7 @@ ChangeTimezone=Y
 461591	CGTN英文纪录_马来_英
 3873	CNBC Asia_新马
 3325	Colors Hindi
-1358	Discovery Asia_新马_英
+1358	Discovery Asia_英
 3437	Discovery Channel_新马
 2756	DW English_马来
 491	ERA FM
@@ -1720,13 +1708,13 @@ ChangeTimezone=Y
 492878	TG Junior_新加坡
 412123	ADITHYA TV_新加坡
 435717	Asianet TV_新加坡
-492892	BBC Earth_新马港台_英2
+492892	BBC Earth_新马港台_英
 492863	BBC Lifestyle_新加坡_英
 492869	Astro Sensasi_新加坡
-412167	beIN Sports-1_新加坡
-412129	beIN Sports-2_新加坡
-524985	beIN Sports-3_新加坡
-524983	beIN Sports-4_新加坡
+412167	beIN Sports-1_新马
+412129	beIN Sports-2_新马
+524985	beIN Sports-3_新马
+524983	beIN Sports-4_新马
 492823	CinemaWorld_新加坡_英
 369816	CBeebies HD_新加坡_英
 491157	CNN International_台湾+中东
@@ -1783,7 +1771,7 @@ ChangeTimezone=Y
 412199	Bloomberg Originals_台湾？
 369771	Bloomberg TV(新加坡)
 535553	C+I (HD)(新加坡)-
-412096	Cinemax HD_英(新加坡)
+412096	Cinemax HD_香港_英
 369742	Citra Drama
 369748	CM+(新加坡)
 523496	CricBuzz(MY)
@@ -1801,9 +1789,9 @@ ChangeTimezone=Y
 491154	GMA Life TV
 491164	GMA News TV
 491168	GMA Pinoy TV_香港
-369786	HBO Family HD(新加坡)
+369786	HBO Family(新加坡)
 412195	HBO Family_英
-412088	HBO HD_新加坡_英
+412088	HBO_港新_英
 369840	HBO Hits HD(新加坡)
 369758	HBO Signature_英 (新加坡)
 412172	History HD_马来
@@ -1820,7 +1808,7 @@ ChangeTimezone=Y
 512068	NOW紫金国际台 HD(新加坡)
 492870	ONE (Malay)(新加坡)
 369728	ONE HD_新马_ 国英
-484245	Outdoor Channel(新加坡)
+484245	Outdoor Channel_香港
 429564	Pesona HD(新加坡)
 369783	凤凰资讯台
 412145	凤凰资讯台_新加坡_英
@@ -1846,7 +1834,7 @@ ChangeTimezone=Y
 369796	TVB-星河台_新马_中英
 491163	TVBS-亚洲台_新加坡_中英
 492453	TVBS-新闻台
-369818	tvN_港新_国2
+369818	tvN_港新_国
 535582	tvN Movies On Demand(新加坡)-
 530390	Vijay Takkar_新加坡
 501126	WION(新加坡)

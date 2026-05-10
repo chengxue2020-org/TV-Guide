@@ -493,14 +493,14 @@ HBO Family	HBO Family(香港1)国
 HBO Family香港	HBO Family_英(香港3)
 HBO Hits香港	HBO Hits_香港
 HBO Signature香港	HBO Signature_香港
-HGTV HD新加坡	HGTV HD_英
+HGTV HD新加坡	HGTV_英
 HGTV居家乐活频道	HGTV_港马_国
 HISTORY HD新加坡	History HD(新加坡)
-History 历史频道有线	History历史频道有线
+History 历史频道有线	History历史频道有线_国
 HITS	HITS_国(swepg)
 HITS HD新加坡
-HITS MOVIES HD	HITS MOVIES(EPG2)
-HITS MOVIES HD新加坡	HITS MOVIES(EPG3)
+HITS MOVIES HD	HITS MOVIES_英(EPG2)
+HITS MOVIES HD新加坡	HITS MOVIES_英(EPG3)
 HITS电影台 	HITS HD电影台
 HITS频道	HITS HD频道_国
 HITS有线	HITS HD有线
@@ -548,9 +548,8 @@ KTV HD	KTV(EPG1)
 LIFE
 Lifeime	Lifetime娱乐频道_港台_国
 Lifetime 娱乐频道	Lifetime娱乐频道_港台_国2
-Lifetime香港	Lifetime娱乐频道_港台_国3
+lifetime娱乐频道有线	Lifetime娱乐频道_有线
 Lifetime HD新加坡
-lifetime娱乐频道有线
 LiveABC互动英语频道
 Love Nature 4K	Love Nature 4K_港台_国
 Love_Nature_4K	Love Nature 4K_马来_英
@@ -567,6 +566,8 @@ myTV SUPER直播足球4台
 myTV SUPER直播足球5台
 myTV SUPER直播足球6台
 myTV SUPER直播足球7台
+华语剧台	myTV SUPER华语剧台
+戏曲台	myTV SUPER戏曲台
 NBA香港
 Netflix香港
 Nick Jr	Nick Jr._新马2
@@ -775,8 +776,6 @@ elta体育max 8	爱尔达体育MAX8台
 华艺MBC综合台有线
 华艺台湾台 HD	华艺台湾台
 华艺影剧台
-华语剧台	MyTVsuper华语剧台
-戏曲台	MyTVsuper戏曲台
 怀旧经典电影-FastTV飞速看
 环游世界800天 -FastTV飞速看
 寰宇全视界
@@ -808,7 +807,7 @@ elta体育max 8	爱尔达体育MAX8台
 恐怖电影-FastTV飞速看
 蜡笔小新(中文版)
 啦啦队独家专访
-历史高清频道	History历史频道(预告)
+历史高清频道	History历史频道(预告)_英
 历史频道HD		History历史频道(回看)
 疗愈下雨声
 龙华动画HD	龙华动画(回看)
@@ -1116,7 +1115,7 @@ momo2台HD	MOMO2台
 momo亲子台	MOMO亲子台(EPG2)
 MOMO综合台	MOMO综合台
 Moonbug	Moonbug_马来
-Moonbug香港	Moonbug香港_繁中
+Moonbug香港	Moonbug_香港_繁中
 moov
 MOVIE MOVIE
 MTV	MTV_国
@@ -1786,7 +1785,7 @@ ChangeTimezone=Y
 516580	Zee Thirai_新加坡
 495473	Deal or No Deal_新加坡
 512067	CCTV-娱乐
-369770	HITS Movies(EPG1)
+369770	HITS Movies_英(EPG1)
 502440	CGTN英文纪录_英(新加坡)
 369785	Animal Planet(新加坡)
 491159	ANIPLUS(新加坡)
@@ -2133,7 +2132,7 @@ https://epg.pw/xmltv/epg_US.xml
 465176	History HD(US)
 465385	HITN
 465044	HLN HD
-465063	Hogar HD
+465063	Hogar TV HD
 465403	Hogar TV
 465319	HOLA! TV
 465028	Home and Garden TV
@@ -2219,8 +2218,8 @@ https://epg.pw/xmltv/epg_US.xml
 465064	MSG Zone-1
 465169	MSG2
 465087	MSNBC
-465080	MTV - Music Television
-464997	MTV - Music Television Pacific
+465080	MTV - Music TV
+464997	MTV - Music TV Pacific
 465050	MTV Classic
 465113	MTV2: Music Television
 464825	MTV Live

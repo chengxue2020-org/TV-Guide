@@ -489,8 +489,8 @@ HBLTV2台
 HBO	HBO HD_国
 HBO HD	HBO HD_国2
 HBO香港	HBO_香港
-HBO Family	HBO Family(香港1)国
-HBO Family香港	HBO Family_英(香港3)
+HBO Family	HBO Family_香港_国
+HBO Family香港	HBO Family_香港_英
 HBO Hits香港	HBO Hits_香港
 HBO Signature香港	HBO Signature_香港
 HGTV HD新加坡	HGTV_英
@@ -1802,7 +1802,7 @@ ChangeTimezone=Y
 491164	GMA News TV
 491168	GMA Pinoy TV_香港
 369786	HBO Family HD(新加坡)
-412195	HBO Family_英(香港2)
+412195	HBO Family_英
 412088	HBO HD_新加坡_英
 369840	HBO Hits HD(新加坡)
 369758	HBO Signature_英 (新加坡)
@@ -1996,7 +1996,7 @@ https://epg.pw/xmltv/epg_US.xml
 464835	CSPAN
 465243	CSPAN2
 464828	CSPAN3
-464936	中天 Channel(US)
+464936	中天北美台_英
 465175	Curiosity Channel
 465140	Curiosity NOW
 465378	Curiosity Stream

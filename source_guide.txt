@@ -179,10 +179,10 @@ LiTV台視	台视(LiTV)
 台視財經台	台视财经台
 台視新聞台	台视新闻台
 龍華電影台	龙华电影台
-龍華經典台	龙华经典台(EPG3)
-龍華戲劇台	龙华戏剧台(EPG2)
+龍華經典台	龙华经典台
+龍華戲劇台	龙华戏剧台
 龍華卡通台	龙华卡通台
-龍華偶像台	龙华偶像台(B)
+龍華偶像台	龙华偶像台MOD
 龍華日韓台	龙华日韩台
 東森新聞台	东森新闻台
 東森財經新聞	东森财经新闻
@@ -226,7 +226,7 @@ SETiNEWS	三立财经新闻iNEWS
 台灣戲劇台	台湾戏剧台
 智林體育台	智林体育台
 HakkaTV	客家电视
-KMTV HD	韩国娱乐台KMTV_台湾
+KMTV HD	韩国娱乐台KMTV_台湾(B)
 MCE 我的歐洲電影	MCE(My Cinema Europe HD) 我的欧洲电影
 寵物頻道	宠物频道(TW)
 第1商業	第一商业
@@ -464,7 +464,7 @@ TVB粤语片	TVB-粤语片
 黄金翡翠台 (免费)	TVB-黄金翡翠台
 PopC
 tvN Movies	tvN Movies(英)
-tvN有线
+tvN有线	tvN_港新_有线
 AMC 电影台	AMC电影台_非台_国
 amc电影台		AMC电影台(EPG2)
 粤语片台
@@ -568,15 +568,15 @@ myTV SUPER直播足球6台
 myTV SUPER直播足球7台
 华语剧台	myTV SUPER华语剧台
 戏曲台	myTV SUPER戏曲台
-NBA香港
-Netflix香港
+NBA香港	NBA_香港
+Netflix香港	Netflix_香港
 Nick Jr	Nick Jr._新马2
 Nick Jr. 	Nick Jr.(swepg2)
 Nick Jr. HD
 Nick Jr. HD新加坡	Nick Jr. HD_新加坡
 Nick Jr. 儿童频道	Nick Jr. 儿童频道_台湾
-Nick Jr.(小尼克)	Nick Jr. 儿童频道_台湾2
-NickJr.	Nick Jr. 儿童频道_台湾3
+Nick Jr.(小尼克)	Nick Jr. 儿童频道_香港1
+NickJr.	Nick Jr. 儿童频道_香港2
 Nick Jr.香港	Nick Jr. 儿童频道_香港
 Nickelodeon Asia HD新加坡	Nickelodeon Asia(新加坡3)
 Nickelodeon Asia尼克儿童频道	Nickelodeon Asia_国2
@@ -612,10 +612,10 @@ Now Sports 英超TV1
 Now 高尔夫2
 Now 高尔夫3
 now 剧集	NOW剧集
-nowjeli	NOW Jeli
+nowjeli	NOW紫金国际台_香港
 now报价	NOW报价
-Now爆谷星影台	NOW爆谷星影台
-now财经	NOW财经
+Now爆谷星影台	NOW爆谷星影台_香港
+now财经	NOW财经台_国
 now体育	NOW体育
 now体育4k	NOW体育4k
 now新闻	NOW新闻
@@ -637,15 +637,12 @@ Rialto Classic Movies (RCM) (免费)	RCM(Rialto Classic Movies)
 River Monsters
 ROCK Action	Rock Action_台湾_国
 ROCK ACTION Rock Action_香港_国
-ROCK Entertainme	ROCK Entertainme_新加坡
 ROCK ENTERTAINMENT	ROCK Entertainment_国
 Rock Entertainment
-ROCK Entertainment香港
-ROCK Extreme
+ROCK Extreme	ROCK Extreme_国
 Rock_X_Stream	Rock X Stream_马来_英
-ROCK Xstream摇滚极限频道	Rock X Stream摇滚极限频道
-ROCKXStream	ROCK X Stream_国2
-ROCK综艺娱乐	ROCK Entertainment综艺娱乐
+ROCK Xstream摇滚极限频道	Rock X Stream_国
+ROCK综艺娱乐	ROCK Entertainment_香港
 RT香港
 SBN全球财经台	SBN全球财经台(EPG2)
 Taiwan Plus
@@ -707,8 +704,8 @@ elta体育max 8	爱尔达体育MAX8台
 博斯高球一台有线	博斯高球1台有线
 博斯高球二台有线	博斯高球2台有线
 博斯魅力网有线
-博斯运动二台有线	博斯运动2台有线(C)
-博斯运动一台有线	博斯运动1台有线(C)
+博斯运动一台有线	博斯运动1台_有线
+博斯运动二台有线	博斯运动2台_有线
 茶金
 超视	东森超视
 厨神明星秀-FastTV飞速看
@@ -745,7 +742,6 @@ elta体育max 8	爱尔达体育MAX8台
 放松的爵士午后
 非凡大探索
 富立电视台HD		富立电视台
-高点电视台
 高清生活时光
 高雄都会台
 公共电视台	公视(回看)
@@ -811,7 +807,6 @@ elta体育max 8	爱尔达体育MAX8台
 历史频道HD		History历史频道(回看)
 疗愈下雨声
 龙华动画HD	龙华动画(回看)
-龙华经典HD	龙华经典台(EPG1)
 龙华经典台	龙华经典台(EPG2)
 龙华偶像台OTT
 龙华戏剧台	龙华戏剧台(EPG1)
@@ -860,8 +855,8 @@ elta体育max 8	爱尔达体育MAX8台
 双子卫视
 私藏浪漫
 台视主频	台视
+台湾电视台	台视(EPG2)
 台湾第一等
-台湾电视台
 台湾向前行
 台湾壹百种味道
 台湾艺术台
@@ -926,13 +921,13 @@ elta体育max 8	爱尔达体育MAX8台
 中台湾生活网频道
 中天北美台
 中天亚洲精采台
-中天亚洲台新加坡	中天亚洲台_新马_英2
+中天亚洲台新加坡	中天亚洲台(EPG2)
 中天娱乐HD	中天娱乐
 中天综合台
 猪哥亮歌厅秀
 罪案侦查频道	Crime & Investigation罪案侦缉_香港_国
 罪案侦辑频道	Crime & Investigation罪案侦缉_英
-韩国娱乐KMTV	韩国娱乐台KMTV_台湾(B)
+韩国娱乐KMTV	韩国娱乐台KMTV_台湾
 韩国娱乐台 KMTV	韩国娱乐台KMTV_台湾_简中
 中华一番(中文版)
 超人力霸王台
@@ -981,7 +976,6 @@ Global Trekker探索世界频道	Global Trekker_英
 GlobalTrekker	Global Trekker探索世界_国
 Globetrotter (免费)	Globet Trotter
 GLOBLTREKKER探索世界	Global Trekker探索世界_国(详情)
-TLC 旅游生活频道	TLC旅游生活频道
 TLC旅游生活频道香港	TLC旅游生活频道_香港
 Golden 强片台	Golden强片台
 Golden影迷台
@@ -1133,19 +1127,17 @@ SBS Biz
 SBS funE	SBS FunE
 SBS Golf
 SBS Golf2
-SBS life
+SBS life	SBS Life
 SBS plus	SBS Plus_韩
 SBS sport
 SCTV
 SEA TODAY
 SiCAR爱车酷
 Sindo News TV
-Sky News香港
 Smithsonian_Channel	Smithsonian Channel
 Soccer Channel
 Sony Entertainment Televis新加坡	SONY Entertainment TV_新加坡
 SONY MAX
-Sony SAB	SONY SAB
 Sony TV (India)	SONY TV (India)
 SPL-CH01
 SPL-CH02
@@ -1158,14 +1150,12 @@ Studio Universal
 Sun Music
 Sun TV
 TG Junior
-that's 90s00s (免费)	That's 90s 00s(B)
+that's 90s00s (免费)	That's 90s 00s
 The Filipino Channel HD	TFC (The Filipino Channel)
 Thrill
-TRACE Sport Stars (免费)	Trace Sport Stars_英1
-TRACE Sport Stars	Trace Sport Stars_英2
-TRACE Sport Stars HD	Trace Sport Stars_台湾_国
-trace sport star运动明星	Trace SportStar运动明星
-TRACESportStars	Trace Sport Stars_新加坡_国
+TRACE Sport Stars	Trace Sport Stars_英
+trace sport star运动明星	Trace Sport Star运动明星
+TRACESportStars	Trace Sport Stars_台新_国
 TRACE Urban (免费)	Trace Urban_英
 Trans 7
 Trans TV
@@ -1183,7 +1173,7 @@ Vannathirai	Vannathirai(EPG1)
 video express rentnow
 Vijay TV HD	Vijay TV_新加坡
 Vision Prime
-viu6
+viu6	Viu Six
 ViuTV	Viu TV
 ViVa 1台
 Warner TV	Warner TV_国
@@ -1453,7 +1443,7 @@ iHOT爱旅行
 哈萨克语综艺	新疆哈萨克语综艺
 维吾尔语经济生活	新疆维吾尔语经济生活
 汉语体育健康	新疆汉语体育健康
-星影	NOW爆谷星影台2
+星影	NOW爆谷星影台_非港
 海外剧场
 城市剧场
 华数军旅剧场
@@ -1503,14 +1493,14 @@ http://epg.51zmt.top:8000/e2.xml.gz
 1599	博斯魅力网
 1595	博斯网球台
 1596	博斯无限台
-1594	博斯运动2台_有线
+1594	博斯运动2台_有线2
 1534	诚心电视台
 1555	大立电视台
 1502	东森电影台
 1480	东森戏剧台
 1472	东森综合台
 1551	高点育乐台
-1484	高点电视台(B)
+1484	高点电视台
 1454	公视(预告)
 1526	冠军电视台
 1552	冠军梦想台
@@ -1524,8 +1514,8 @@ http://epg.51zmt.top:8000/e2.xml.gz
 1836	美食星球
 1478	年代MUCH
 1528	全大电视台
-1530	三立财经新闻台
-1840	三立戏剧
+1530	三立财经新闻iNEWS(EPG2)
+1840	三立戏剧台
 1540	十方法界
 1566	台视综合台
 1846	唯心电视
@@ -1561,17 +1551,16 @@ http://epg.51zmt.top:8000/e2.xml.gz
 1813	MTV综合_台湾
 157	NHK World_国
 1604	Nickelodeon_国
-1605	Nick Jr. 儿童频道_台湾4
-164	NOW财经台
+1605	Nick Jr. 儿童频道_香港3
+164	NOW财经台_英
 1533	SBN全球财经台
 249	Sky News
 1461	TLC旅游生活频道_台湾
-1779	Trace Urban_英2
 190	TVB-J2
 1496	TVBS
 1772	TVBS-精采台(EPG2)
 122	TVB-经典台
-1580	tvN_香港_国
+1580	tvN_港新_国
 
 
 
@@ -1727,7 +1716,7 @@ ChangeTimezone=Y
 535445	That's 70s_新加坡
 535443	That's 80s_新加坡
 535444	That's Rock_新加坡
-492896	TRACE Sport Stars_新加坡_英
+492896	Trace Sport Stars_台新_英
 492878	TG Junior_新加坡
 412123	ADITHYA TV_新加坡
 435717	Asianet TV_新加坡
@@ -1769,14 +1758,14 @@ ChangeTimezone=Y
 412130	NHK World Premium_新马_英
 412136	Nick Jr._新马
 492879	Nickelodeon_新马_英
-369719	ROCK Entertainment_新加坡2
+369719	ROCK Entertainment_新加坡
 369757	Sky News_新加坡
-369846	SONY MAX_新加坡
+369846	SONY MAX_港新
 516576	SPOTV_新加坡
 412181	SPOTV_新加坡2
-412187	SPOTV 2_新加坡
+412187	SPOTV-2_新加坡
 412094	Sun Music_新加坡
-455314	TFC (The Filipino Channel)_新加坡
+455314	TFC (The Filipino Channel)_港新
 412120	Travelxp HD_新加坡
 412097	Vannathirai_新加坡
 412185	Zee Cinema_新加坡
@@ -1794,7 +1783,6 @@ ChangeTimezone=Y
 412199	Bloomberg Originals_台湾？
 369771	Bloomberg TV(新加坡)
 535553	C+I (HD)(新加坡)-
-491172	中国电影频道China Movie Channel(新加坡)
 412096	Cinemax HD_英(新加坡)
 369742	Citra Drama
 369748	CM+(新加坡)
@@ -1829,7 +1817,7 @@ ChangeTimezone=Y
 369802	mio Sports 3(新加坡)
 369804	MTV India
 492911	NOW 80s_新加坡
-512068	NOW Jelli HD(新加坡)
+512068	NOW紫金国际台 HD(新加坡)
 492870	ONE (Malay)(新加坡)
 369728	ONE HD_新马_ 国英
 484245	Outdoor Channel(新加坡)
@@ -1839,8 +1827,7 @@ ChangeTimezone=Y
 369790	Premier Sports(新加坡)
 412148	Preview Channel(新加坡)
 369727	ROCK Action(新加坡)
-412091	ROCK Entertainment(新加坡)
-369849	SAB TV(新加坡)
+369849	SONY SAB(新加坡)
 535531	SEA Today(新加坡)-
 369746	SET (HINDI)(新加坡)
 369811	SONY YAY!(新加坡)
@@ -1848,7 +1835,7 @@ ChangeTimezone=Y
 369814	STAR Gold(新加坡)
 451931	Star Maa(新加坡)
 369844	STAR Plus(新加坡)
-459681	StarHub(新加坡)
+459681	Star Hub(新加坡)
 516581	TechStorm
 413372	TestChannel 993(新加坡)
 493279	TestChannel 996(新加坡)
@@ -1859,14 +1846,14 @@ ChangeTimezone=Y
 369796	TVB-星河台_新马_中英
 491163	TVBS-亚洲台_新加坡_中英
 492453	TVBS-新闻台
-369818	tvN HD(国)(新加坡)
+369818	tvN_港新_国2
 535582	tvN Movies On Demand(新加坡)-
 530390	Vijay Takkar_新加坡
 501126	WION(新加坡)
 492880	W-Sport_新加坡
 501125	北京国际频道
 522556	湖南国际频道(EPG2)
-492883	中天亚洲台_新马_英
+492883	中天亚洲台_台新马_英
 522558	Zoom TV(新加坡)
 
 
@@ -2285,7 +2272,7 @@ https://epg.pw/xmltv/epg_US.xml
 466093	OMNI1 HD
 465925	OMNI2 HD
 464908	Once
-465382	One America News Network HD(US)
+465382	One America News Network
 465273	OPM TV
 465221	Oprah Winfrey Network (Pacific A Feed)
 465259	Oprah Winfrey Network
@@ -2335,9 +2322,9 @@ https://epg.pw/xmltv/epg_US.xml
 465151	RETRO
 465126	RetroPlex HD
 465207	Revolt HD
-465097	Rewind HD
+465097	Rewind TV HD
 496605	Rewind TV
-464756	RFD TV HD
+464756	RFD TV
 496599	Right Now TV
 464991	ROAR TV
 465136	ROOT Sports Northwest
@@ -2346,7 +2333,6 @@ https://epg.pw/xmltv/epg_US.xml
 464891	Saigon Broadcasting Network
 501743	Salem News Channel
 465227	SARI SARI Channel
-464995	SBS HD
 464934	SBS Plus
 465120	SBS TV Korea
 465306	Scares by Shudder
@@ -2430,7 +2416,7 @@ https://epg.pw/xmltv/epg_US.xml
 464962	Telemundo Satellite Feed
 465086	Telemundo Satellite Feed Pacific
 465236	Tennis Channel
-474984	TFC (The Filipino Channel) HD(US)
+474984	TFC (The Filipino Channel)(US)
 464823	The Africa Channel
 465132	The Cowboy Channel
 465185	The Discovery Channel Pacific
@@ -2656,14 +2642,13 @@ sport-italia	Sport Italia
 pfl-mma	PFL MMA
 racer-international	Racer International
 golf-tv	Golf TV
-red-bull-tv-en	Red Bull TV English
+red-bull-tv-en	Red Bull TV
 motorvision-tv	Motorvision TV
 motoretro	Motoretro
 tennis-plus	Tennis Plus
 fashion-tv	Fashion TV
 beauty-channel	Beauty Channel
 the-design-network-new	The Design Network New
-travelxp-eng	Travelxp Eng
 daystar-spa	Daystar Spa
 daystar-eng	Daystar English
 gusto-tv-new	Gusto TV New
@@ -2674,7 +2659,7 @@ that-s-80s	That's 80S(Rakuten)
 that-s-rock	That's Rock(Rakuten)
 vevo-pop-it	Vevo Pop(IT)
 vevo-pop-90-00-it	Vevo Pop 90 00 (It)
-that-s-90s00s	That'S 90S 00S
+that-s-90s00s	That'S 90S 00S(EPG2)
 family-rakuten-tv	Family Rakuten TV
 baby-shark-tv	Baby Shark TV
 car-city-adventures-it	Car City Adventures (It)

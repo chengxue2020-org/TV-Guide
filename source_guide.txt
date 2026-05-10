@@ -488,11 +488,11 @@ HBLTV1台
 HBLTV2台
 HBO	HBO HD_国
 HBO HD	HBO HD_国2
-HBO香港	HBO HD_香港
+HBO香港	HBO_香港
 HBO Family	HBO Family(香港1)国
-HBO Family香港
-HBO Hits香港
-HBO Signature香港
+HBO Family香港	HBO Family_英(香港3)
+HBO Hits香港	HBO Hits_香港
+HBO Signature香港	HBO Signature_香港
 HGTV HD新加坡	HGTV HD_英
 HGTV居家乐活频道	HGTV_港马_国
 HISTORY HD新加坡	History HD(新加坡)
@@ -732,8 +732,8 @@ elta体育max 8	爱尔达体育MAX8台
 东森洋片台	东森洋片
 东森幼幼台	东森幼幼
 东森娱乐台
-动物星球频道	Animal Planet动物星球_台湾
-动物星球频道香港	Animal Planet动物星球_香港
+动物星球频道	Animal Planet动物星球_台湾_国
+动物星球频道香港	Animal Planet动物星球_香港_国
 都会台
 短剧马拉松
 哆啦Ａ梦台
@@ -959,9 +959,9 @@ EBS1
 EBS2
 Superrix
 euronews香港	Euronews_香港
-Eurosport	Eurosport(国)
-EUROSPORT HD	Eurosport(英)
-EVE有线
+Eurosport	Eurosport_国
+EUROSPORT HD	Eurosport_英
+EVE有线	Discovery EVE_有线
 FIFA+
 Fight Sports
 Focus探索新知台
@@ -970,7 +970,7 @@ Food Travel HD	Food Travel
 FoodON	Food ON
 FOX 新闻台
 France 24 (French)	France 24 French
-France 24香港
+France 24香港	France 24 English_香港
 FRANCE24 英文台	France 24 English_台湾
 Freeman @台湾
 fun探索娱乐台
@@ -1001,14 +1001,14 @@ Animax香港	Animax_港新_国
 ANTV
 Arirang
 Asian Food Network 亚洲美食频道	Asian Food Network_马来_国
-Asianet
+Asianet	Asianet TV
 Asianet Movies
 ASMR行车纪录
 BBC_Brit_HD	BBC Brit
-BBC EARTH	BBC Earth_新马港_国简
+BBC EARTH	BBC Earth_新马港台_国
 BBC Earth	BBC Earth_英
 BBC_First_HD	BBC First
-BBC LIFESTYLE	BBC Lifestyle_港台_国2
+BBC LIFESTYLE	BBC Lifestyle_港台_国
 BBC News	BBC News (North America)
 BBC News HD	BBC News_香港
 bb快报
@@ -1021,13 +1021,13 @@ beIN SPORTS 6香港	beIN Sports-6香港_香港_国
 beIN SPORTS RUGBY香港	beIN Sports-RUGBY香港
 BTV
 BUDDY STARS
-Cartoon Network香港
+Cartoon Network香港	Cartoon Network_香港_国
 CARTOONITO HD	CARTOONITO
 CATCH PLAY电影台	CATCHPLAY电影台_台湾
 Cbeebies	Cbeebies_国
 CBeebies HD	CBeebies HD_英1
 Cbeebies HD	Cbeebies HD_国(B)
-CBeebies香港
+CBeebies香港	CBeebies_香港
 CI 罪案侦查频道	Crime & Investigation罪案侦查
 CINEEDGE
 Cinema One Global
@@ -1043,12 +1043,12 @@ CMC 香港频道
 CMusic
 CNBC HD	CNBC (非新加坡)
 CNEX纪实频道
-CN卡通频道	Cartoon Network卡通频道_台湾(回)
-COLORS
+CN卡通频道	Cartoon Network_台湾(回)
+COLORS	Colors TV
 COLORS Tamil HD	Colors Tamil_马来
 Concerto (免费)	Concerto
 Crime + Investigation HD	Crime & Investigation
-Da Vinc香港
+Da Vinc香港	Da Vinci_香港_国
 daystar	Daystar(swepg)
 DAZN 1	DAZN-1_台湾
 DAZN 2	DAZN-2_台湾
@@ -1061,9 +1061,9 @@ Discovery Channel香港
 Discovery HD新加坡	Discovery HD_新加坡_英
 Discovery 科学频道	Discovery科学频道_港台_国
 DiscoveryDMAX	Discovery DMAX_国
+DMAX香港	Discovery DMAX_香港_国
+DMAX有线	Discovery DMAX有线_国
 DiscoveryEVE	Discovery EVE_国
-DMAX香港
-DMAX有线
 Docsville (免费)	Docsville
 DreamWorks	DreamWorks_国
 DreamWorks HD	DreamWorks_英
@@ -1547,13 +1547,13 @@ http://epg.51zmt.top:8000/e2.xml.gz
 1560	Channel News Asia
 1511	CINEMAX_香港_国
 232	CNBC Hong Kong
-230	Cartoon Network卡通频道_台湾(预)
-1810	ELTV
-1584	EVE频道_国
+230	Cartoon Network_台湾(预)
+1810	ELTV英语学习台(B)
+1584	Discovery EVE__国(B)
 1579	Food Network美食台_香港(预)
 1505	HBO HD_国2
 1574	HBO Hits_国
-1575	HBO Signature_国
+1575	HBO Signature_非港_国
 1783	History_香港_国
 321	HITS HD_国
 194	Mezzo Live_英
@@ -1618,13 +1618,12 @@ ChangeTimezone=Y
 2058	Astro Vinmeen
 411257	Asyik FM
 1205	AXN_新马_英
-854	BAYU(MY)
+854	SYOK BAYU_马来
 4030	BBC Earth_新马港台_英
 3329	BBC News_新马台
-399482	beIN Sports-1_马来
-4146	beIN Sports-2(MY)
-3118	beIN Sports-3(MY)
-2580	beIN Sports(MY2)
+2580	beIN Sports-1_马来
+4146	beIN Sports-2_马来
+3118	beIN Sports-3_马来
 370132	Berita RTM
 1835	Bernama TV
 411236	Bintulu FM
@@ -1736,7 +1735,7 @@ ChangeTimezone=Y
 492892	BBC Earth_新马港台_英2
 492863	BBC Lifestyle_新加坡_英
 492869	Astro Sensasi_新加坡
-412167	beIN Sports_新加坡
+412167	beIN Sports-1_新加坡
 412129	beIN Sports-2_新加坡
 524985	beIN Sports-3_新加坡
 524983	beIN Sports-4_新加坡
@@ -1745,14 +1744,13 @@ ChangeTimezone=Y
 491157	CNN International_台湾+中东
 492904	COLORS TV_新加坡
 492850	AXN_新马_英2
-369760	Asia Food Network_马来
 412157	ABC Australia_新马
 492865	Cartoon Network_新马_英
 369819	天映经典电影_非新非马_国英
 369730	天映经典电影_新加坡非马
 524990	Cricbuzz 2_新加坡
 412142	上海东方卫视_新加坡
-412095	DreamWorks Channel_新加坡
+412095	DreamWorks Channel_新加坡_英
 412165	Fight Sports_新加坡
 412153	HGTV_新加坡
 412116	Kalaignar TV_新加坡
@@ -1811,16 +1809,15 @@ ChangeTimezone=Y
 412122	Euronews_新加坡
 412197	Fashion TV HD(新加坡)
 492858	Food ON_新加坡
-369726	France 24 English_新马
-412190	France 24 English_新马2
+412190	France 24 English_新马
 369839	France 24 French_新加坡
 491154	GMA Life TV
 491164	GMA News TV
-491168	GMA Pinoy TV(新加坡)
+491168	GMA Pinoy TV_香港
 369786	HBO Family HD(新加坡)
-412195	HBO Family(香港2)
+412195	HBO Family_英(香港2)
 412088	HBO HD_新加坡_英
-369840	HBO Hits HD_国(新加坡)
+369840	HBO Hits HD(新加坡)
 369758	HBO Signature_英 (新加坡)
 412172	History HD_马来
 412194	Hits HD
@@ -1904,7 +1901,7 @@ https://epg.pw/xmltv/epg_US.xml
 496765	AFN Sports-2
 465288	Altitude Sports
 483394	Altitude Sports-2
-465032	AMC HD(US)
+465032	AMC HD
 465158	AMC+
 473069	American Crimes
 464895	American Heroes Channel
@@ -1924,7 +1921,7 @@ https://epg.pw/xmltv/epg_US.xml
 464809	Atreseries
 465071	AWE A Wealth of Entertainment
 464771	AXS TV
-465369	Baby TV US(US)
+465369	Baby TV USA
 465394	Baby First TV(US)
 465007	Bandamax
 465019	Bang U
@@ -1946,7 +1943,6 @@ https://epg.pw/xmltv/epg_US.xml
 496609	Biz TV
 530871	Black Voices
 496610	Blaze TV
-465213	Bloomberg TV
 465324	Bloomberg TV_台湾
 465083	Blossom TV
 484881	Bon Appétit TV
@@ -1972,7 +1968,7 @@ https://epg.pw/xmltv/epg_US.xml
 464994	CBS Streaming East feed
 464830	CBS West
 464760	Centro América TV
-464982	CFN CATHOLIC FAITH Network
+464982	CFN (CATHOLIC FAITH Network)
 464946	Charming China
 464798	Cheddar
 465321	Christian TV Network
@@ -1991,7 +1987,7 @@ https://epg.pw/xmltv/epg_US.xml
 465191	Cinemax Pacific
 464945	Cinemax Hits
 465263	Cinemax Spanish
-501744	CINEVAULT
+501744	Cinevault
 484883	Cinevault Classics
 464749	Circle Country
 465363	Cleo TV
@@ -2020,7 +2016,6 @@ https://epg.pw/xmltv/epg_US.xml
 465378	Curiosity Stream
 496619	CW
 465036	CW Plus East
-471427	Dabl
 471425	Dabl Network LLC
 471426	Dabl Network LLC Pacific
 465192	Danbi Christian TV
@@ -2692,5 +2687,5 @@ nature-time-ita	Nature Time (It)
 wedo-big-stories-ita	Wedo Big Stories (It)
 urania-news	Urania News
 class-cnbc	Class CNBC
-africanews-eng	Africanews English
+africanews-eng	AfricaNews English
 france-24-en	France 24 English_英

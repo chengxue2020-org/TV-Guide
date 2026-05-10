@@ -1,8 +1,8 @@
 ============================================================
 Guide Merger v2.0 (curl + Python Hybrid)
 ============================================================
-当前时间: 2026-05-10 12:08:52 (北京时间)
-当前时间: 2026-05-10 04:08:52 (UTC)
+当前时间: 2026-05-10 12:28:42 (北京时间)
+当前时间: 2026-05-10 04:28:42 (UTC)
 
 ✓ curl 命令可用
 ✓ 已加载pypinyin库，支持中文拼音排序
@@ -248,13 +248,13 @@ Guide Merger v2.0 (curl + Python Hybrid)
   ✓ 映射: "HBO Family香港" → "HBO Family_英(香港3)"
   ✓ 映射: "HBO Hits香港" → "HBO Hits_香港"
   ✓ 映射: "HBO Signature香港" → "HBO Signature_香港"
-  ✓ 映射: "HGTV HD新加坡" → "HGTV HD_英"
+  ✓ 映射: "HGTV HD新加坡" → "HGTV_英"
   ✓ 映射: "HGTV居家乐活频道" → "HGTV_港马_国"
   ✓ 映射: "HISTORY HD新加坡" → "History HD(新加坡)"
-  ✓ 映射: "History 历史频道有线" → "History历史频道有线"
+  ✓ 映射: "History 历史频道有线" → "History历史频道有线_国"
   ✓ 映射: "HITS" → "HITS_国(swepg)"
-  ✓ 映射: "HITS MOVIES HD" → "HITS MOVIES(EPG2)"
-  ✓ 映射: "HITS MOVIES HD新加坡" → "HITS MOVIES(EPG3)"
+  ✓ 映射: "HITS MOVIES HD" → "HITS MOVIES_英(EPG2)"
+  ✓ 映射: "HITS MOVIES HD新加坡" → "HITS MOVIES_英(EPG3)"
   ✓ 映射: "HITS电影台" → "HITS HD电影台"
   ✓ 映射: "HITS频道" → "HITS HD频道_国"
   ✓ 映射: "HITS有线" → "HITS HD有线"
@@ -265,13 +265,15 @@ Guide Merger v2.0 (curl + Python Hybrid)
   ✓ 映射: "KTV HD" → "KTV(EPG1)"
   ✓ 映射: "Lifeime" → "Lifetime娱乐频道_港台_国"
   ✓ 映射: "Lifetime 娱乐频道" → "Lifetime娱乐频道_港台_国2"
-  ✓ 映射: "Lifetime香港" → "Lifetime娱乐频道_港台_国3"
+  ✓ 映射: "lifetime娱乐频道有线" → "Lifetime娱乐频道_有线"
   ✓ 映射: "Love Nature 4K" → "Love Nature 4K_港台_国"
   ✓ 映射: "Love_Nature_4K" → "Love Nature 4K_马来_英"
   ✓ 映射: "Love Nature香港" → "Love Nature_港台_国1"
   ✓ 映射: "LOVE NATURE有线" → "Love Nature有线"
   ✓ 映射: "LOVENATURE" → "Love Nature_港台_国2"
   ✓ 映射: "LS TIME电影台" → "龙祥电影台"
+  ✓ 映射: "华语剧台" → "myTV SUPER华语剧台"
+  ✓ 映射: "戏曲台" → "myTV SUPER戏曲台"
   ✓ 映射: "Nick Jr" → "Nick Jr._新马2"
   ✓ 映射: "Nick Jr." → "Nick Jr.(swepg2)"
   ✓ 映射: "Nick Jr. HD新加坡" → "Nick Jr. HD_新加坡"
@@ -350,11 +352,9 @@ Guide Merger v2.0 (curl + Python Hybrid)
   ✓ 映射: "华藏卫星电视台" → "华藏卫视"
   ✓ 映射: "华视HD" → "华视HD_与华视节目不同"
   ✓ 映射: "华艺台湾台 HD" → "华艺台湾台"
-  ✓ 映射: "华语剧台" → "MyTVsuper华语剧台"
-  ✓ 映射: "戏曲台" → "MyTVsuper戏曲台"
   ✓ 映射: "靖天映画" → "靖天映画台"
   ✓ 映射: "靖洋卡通Nice Bingo" → "靖洋卡通"
-  ✓ 映射: "历史高清频道" → "History历史频道(预告)"
+  ✓ 映射: "历史高清频道" → "History历史频道(预告)_英"
   ✓ 映射: "龙华动画HD" → "龙华动画(回看)"
   ✓ 映射: "龙华经典HD" → "龙华经典台(EPG1)"
   ✓ 映射: "龙华经典台" → "龙华经典台(EPG2)"
@@ -502,7 +502,7 @@ Guide Merger v2.0 (curl + Python Hybrid)
   ✓ 映射: "momo亲子台" → "MOMO亲子台(EPG2)"
   ✓ 映射: "MOMO综合台" → "MOMO综合台"
   ✓ 映射: "Moonbug" → "Moonbug_马来"
-  ✓ 映射: "Moonbug香港" → "Moonbug香港_繁中"
+  ✓ 映射: "Moonbug香港" → "Moonbug_香港_繁中"
   ✓ 映射: "MTV" → "MTV_国"
   ✓ 映射: "MTV综合台HD" → "MTV综合(EPG2)"
   ✓ 映射: "NewsWorld (免费)" → "NewsWorld"
@@ -906,7 +906,7 @@ Guide Merger v2.0 (curl + Python Hybrid)
   ✓ 映射: "516580" → "Zee Thirai_新加坡"
   ✓ 映射: "495473" → "Deal or No Deal_新加坡"
   ✓ 映射: "512067" → "CCTV-娱乐"
-  ✓ 映射: "369770" → "HITS Movies(EPG1)"
+  ✓ 映射: "369770" → "HITS Movies_英(EPG1)"
   ✓ 映射: "502440" → "CGTN英文纪录_英(新加坡)"
   ✓ 映射: "369785" → "Animal Planet(新加坡)"
   ✓ 映射: "491159" → "ANIPLUS(新加坡)"
@@ -1249,7 +1249,7 @@ Guide Merger v2.0 (curl + Python Hybrid)
   ✓ 映射: "465176" → "History HD(US)"
   ✓ 映射: "465385" → "HITN"
   ✓ 映射: "465044" → "HLN HD"
-  ✓ 映射: "465063" → "Hogar HD"
+  ✓ 映射: "465063" → "Hogar TV HD"
   ✓ 映射: "465403" → "Hogar TV"
   ✓ 映射: "465319" → "HOLA! TV"
   ✓ 映射: "465028" → "Home and Garden TV"
@@ -1335,8 +1335,8 @@ Guide Merger v2.0 (curl + Python Hybrid)
   ✓ 映射: "465064" → "MSG Zone-1"
   ✓ 映射: "465169" → "MSG2"
   ✓ 映射: "465087" → "MSNBC"
-  ✓ 映射: "465080" → "MTV - Music Television"
-  ✓ 映射: "464997" → "MTV - Music Television Pacific"
+  ✓ 映射: "465080" → "MTV - Music TV"
+  ✓ 映射: "464997" → "MTV - Music TV Pacific"
   ✓ 映射: "465050" → "MTV Classic"
   ✓ 映射: "465113" → "MTV2: Music Television"
   ✓ 映射: "464825" → "MTV Live"
@@ -1807,7 +1807,7 @@ Guide Merger v2.0 (curl + Python Hybrid)
     别名映射: 118 个
   - https://raw.githubusercontent.com/zzq1234567890/epg/refs/heads/main/swepg.xml.gz
     时区处理: 强制转换为北京时间 (+0800)
-    频道数量: 916
+    频道数量: 915
     别名映射: 378 个
   - http://epg.51zmt.top:8000/e.xml.gz
     时区: 保持原XML时区（可能是未指定或+8时区）
@@ -2011,17 +2011,17 @@ Guide Merger v2.0 (curl + Python Hybrid)
     🔗 智能合并: True
     ✂️ 跨天节目拆分: 75 个
     🔗 智能合并更新: 43 个节目
-    ⚠ 未找到频道: 愛爾達娛樂
     ⚠ 未找到频道: 现代教育
     ⚠ 未找到频道: 揭阳生活
+    ⚠ 未找到频道: 愛爾達娛樂
     📺 新增频道: 212/215
     📅 新增节目: 39291/44119
    ✓ 处理成功
 
 ------------------------------------------------------------
 📡 源 4/14: https://raw.githubusercontent.com/zzq1234567890/epg/refs/heads/main/swepg.xml.gz
-   请求频道: 916 个
-   需要查找: 913 个
+   请求频道: 915 个
+   需要查找: 912 个
     🔗 Referer: https://raw.githubusercontent.com/
     🔧 curl 命令: curl -L --max-time 30 ... https://raw.githubusercontent.com/zzq1234567890/epg/refs/heads/main/swepg.xml.gz
     ✓ curl 下载成功: 4.16 MB
@@ -2096,7 +2096,7 @@ Guide Merger v2.0 (curl + Python Hybrid)
     📝 频道重命名: "HITS" → "HITS_国(swepg)"
     📝 频道重命名: "Lifeime" → "Lifetime娱乐频道_港台_国"
     📝 频道重命名: "罪案侦查频道" → "Crime & Investigation罪案侦缉_香港_国"
-    📝 频道重命名: "History 历史频道有线" → "History历史频道有线"
+    📝 频道重命名: "History 历史频道有线" → "History历史频道有线_国"
     📝 频道重命名: "Discovery Asia" → "Discovery Asia_港台_国_详情"
     📝 频道重命名: "Discovery 科学频道" → "Discovery科学频道_港台_国"
     📝 频道重命名: "DMAX有线" → "Discovery DMAX有线_国"
@@ -2128,10 +2128,10 @@ Guide Merger v2.0 (curl + Python Hybrid)
     📝 频道重命名: "无线新闻台 (免费)" → "TVB-无线新闻台"
     📝 频道重命名: "千禧经典台" → "TVB-千禧经典台"
     📝 频道重命名: "亚洲剧台" → "TVB-亚洲剧台"
-    📝 频道重命名: "华语剧台" → "MyTVsuper华语剧台"
+    📝 频道重命名: "华语剧台" → "myTV SUPER华语剧台"
     📝 频道重命名: "黄金华剧台" → "TVB-黄金华剧台"
     📝 频道重命名: "娱乐新闻台 (免费)" → "TVB-娱乐新闻台_国"
-    📝 频道重命名: "戏曲台" → "MyTVsuper戏曲台"
+    📝 频道重命名: "戏曲台" → "myTV SUPER戏曲台"
     📝 频道重命名: "ZooMoo" → "ZooMoo_香港_国"
     📝 频道重命名: "Nick Jr" → "Nick Jr._新马2"
     📝 频道重命名: "天映经典频道" → "天映经典电影_香港(简中)"
@@ -2184,10 +2184,9 @@ Guide Merger v2.0 (curl + Python Hybrid)
     📝 频道重命名: "now报价" → "NOW报价"
     📝 频道重命名: "Cartoon Network香港" → "Cartoon Network_香港_国"
     📝 频道重命名: "CBeebies香港" → "CBeebies_香港"
-    📝 频道重命名: "Moonbug香港" → "Moonbug香港_繁中"
+    📝 频道重命名: "Moonbug香港" → "Moonbug_香港_繁中"
     📝 频道重命名: "Nick Jr.香港" → "Nick Jr. 儿童频道_香港"
     📝 频道重命名: "Da Vinc香港" → "Da Vinci_香港_国"
-    📝 频道重命名: "Lifetime香港" → "Lifetime娱乐频道_港台_国3"
     📝 频道重命名: "Food Network香港" → "Food Network美食台_香港(回)"
     📝 频道重命名: "亚洲美食台香港" → "亚洲美食台_港台"
     📝 频道重命名: "深圳卫视香港" → "深圳卫视_香港"
@@ -2228,9 +2227,9 @@ Guide Merger v2.0 (curl + Python Hybrid)
     📝 频道重命名: "Discovery HD新加坡" → "Discovery HD_新加坡_英"
     📝 频道重命名: "DreamWorks HD" → "DreamWorks_英"
     📝 频道重命名: "东森亚洲台新加坡" → "东森亚洲台_英"
-    📝 频道重命名: "HGTV HD新加坡" → "HGTV HD_英"
+    📝 频道重命名: "HGTV HD新加坡" → "HGTV_英"
     📝 频道重命名: "HISTORY HD新加坡" → "History HD(新加坡)"
-    📝 频道重命名: "HITS MOVIES HD新加坡" → "HITS MOVIES(EPG3)"
+    📝 频道重命名: "HITS MOVIES HD新加坡" → "HITS MOVIES_英(EPG3)"
     📝 频道重命名: "Hub VV Drama HD" → "Hub-娱家(EPG1)"
     📝 频道重命名: "Kalaignar TV" → "Kalaignar TV(EPG1)"
     📝 频道重命名: "Karisma" → "Karisma(EPG2)"
@@ -2304,6 +2303,7 @@ Guide Merger v2.0 (curl + Python Hybrid)
     📝 频道重命名: "亚洲旅游台有线" → "亚洲旅游台_有线(回看+详情)"
     📝 频道重命名: "LOVE NATURE有线" → "Love Nature有线"
     📝 频道重命名: "CI罪案侦查频道有线" → "Crime & Investigation罪案侦查_有线"
+    📝 频道重命名: "lifetime娱乐频道有线" → "Lifetime娱乐频道_有线"
     📝 频道重命名: "Asian Food Network 亚洲美食频道" → "Asian Food Network_马来_国"
     📝 频道重命名: "HITS有线" → "HITS HD有线"
     📝 频道重命名: "cinemalworld世界电影频道有线" → "cinemaworld_台湾_国+详情"
@@ -2350,7 +2350,7 @@ Guide Merger v2.0 (curl + Python Hybrid)
     📝 频道重命名: "SBS funE" → "SBS FunE"
     📝 频道重命名: "紫金国际台" → "NOW紫金国际台"
     📝 频道重命名: "ROCK Entertainme" → "ROCK Entertainme_新加坡"
-    📝 频道重命名: "历史高清频道" → "History历史频道(预告)"
+    📝 频道重命名: "历史高清频道" → "History历史频道(预告)_英"
     📝 频道重命名: "Global Trekker探索世界频道" → "Global Trekker_英"
     📝 频道重命名: "罪案侦辑频道" → "Crime & Investigation罪案侦缉_英"
     📝 频道重命名: "ABC澳大利亚电视台" → "ABC Australia(澳大利亚)"
@@ -2378,7 +2378,7 @@ Guide Merger v2.0 (curl + Python Hybrid)
     📝 频道重命名: "Celestial Movies" → "天映电影_新加坡_英"
     📝 频道重命名: "DW English" → "DW English Africa"
     📝 频道重命名: "Food Travel HD" → "Food Travel"
-    📝 频道重命名: "HITS MOVIES HD" → "HITS MOVIES(EPG2)"
+    📝 频道重命名: "HITS MOVIES HD" → "HITS MOVIES_英(EPG2)"
     📝 频道重命名: "ONE" → "ONE TV_新马_英"
     📝 频道重命名: "tvN Movies" → "tvN Movies(英)"
     📝 频道重命名: "Zoomoo" → "Zoomoo(英)"
@@ -2386,36 +2386,36 @@ Guide Merger v2.0 (curl + Python Hybrid)
     📝 别名映射: 修改ID=True, 修改DisplayName=True
     ✂️ 跨天拆分: True
     🔗 智能合并: True
-    ✂️ 跨天节目拆分: 2445 个
+    ✂️ 跨天节目拆分: 2444 个
     🔗 智能合并更新: 4462 个节目
-    ⚠ 未找到频道: now直播
-    ⚠ 未找到频道: Hub Sports 1
-    ⚠ 未找到频道: 1905App 热血影院
-    ⚠ 未找到频道: TV5Monde 法国TV5
-    ⚠ 未找到频道: 亚洲综合HD演唱会直击
-    ⚠ 未找到频道: SUPER金曲 (免费)
-    ⚠ 未找到频道: MagellanTV频道 (麦哲伦频道)
-    ⚠ 未找到频道: Nick Jr.
-    ⚠ 未找到频道: SUPER单元剧 (免费)
-    ⚠ 未找到频道: ROCK ACTION Rock Action_香港_国
-    ⚠ 未找到频道: 河北杂技频道
+    ⚠ 未找到频道: Hub Sports 2
     ⚠ 未找到频道: BBC_Brit_HD
+    ⚠ 未找到频道: SPY X FAMILY 间谍家家酒(国)
+    ⚠ 未找到频道: 南京新闻综合
     ⚠ 未找到频道: 睛彩河北
-    ⚠ 未找到频道: SUPER识叹 (免费)
     ⚠ 未找到频道: Hub Sports 3
     ⚠ 未找到频道: FashionTV 时尚频道
-    ⚠ 未找到频道: 南京新闻综合
-    ⚠ 未找到频道: BBC_First_HD
-    ⚠ 未找到频道: Astro_Sports_Plus_3
-    ⚠ 未找到频道: Hub Sports 2
-    ⚠ 未找到频道: 千禧经典台(MY)
-    ⚠ 未找到频道: HITS电影台
     ⚠ 未找到频道: 新哆啦A梦(中文版)2台新年追剧首选-FastTV飞速看
+    ⚠ 未找到频道: HITS电影台
+    ⚠ 未找到频道: ROCK ACTION Rock Action_香港_国
     ⚠ 未找到频道: 茶频道
+    ⚠ 未找到频道: 1905App 热血影院
+    ⚠ 未找到频道: 河北杂技频道
+    ⚠ 未找到频道: SUPER识叹 (免费)
+    ⚠ 未找到频道: Astro_Sports_Plus_3
+    ⚠ 未找到频道: BBC_First_HD
+    ⚠ 未找到频道: TV5Monde 法国TV5
+    ⚠ 未找到频道: Nick Jr.
+    ⚠ 未找到频道: 亚洲综合HD演唱会直击
+    ⚠ 未找到频道: Hub Sports 1
+    ⚠ 未找到频道: 千禧经典台(MY)
+    ⚠ 未找到频道: MagellanTV频道 (麦哲伦频道)
+    ⚠ 未找到频道: now直播
     ⚠ 未找到频道: Hub 如意
-    ⚠ 未找到频道: SPY X FAMILY 间谍家家酒(国)
-    📺 新增频道: 886/912
-    📅 新增节目: 69795/87879
+    ⚠ 未找到频道: SUPER单元剧 (免费)
+    ⚠ 未找到频道: SUPER金曲 (免费)
+    📺 新增频道: 885/911
+    📅 新增节目: 69752/87837
    ✓ 处理成功
 
 ------------------------------------------------------------
@@ -2536,17 +2536,17 @@ Guide Merger v2.0 (curl + Python Hybrid)
     🔗 智能合并: True
     ✂️ 跨天节目拆分: 59 个
     🔗 智能合并更新: 5 个节目
-    ⚠ 未找到频道: 福建旅游
-    ⚠ 未找到频道: IPTV足球
-    ⚠ 未找到频道: 福建乡村振兴
-    ⚠ 未找到频道: 纯享4K
-    ⚠ 未找到频道: 福建经济
-    ⚠ 未找到频道: 星空卫视
     ⚠ 未找到频道: 淘Baby
-    ⚠ 未找到频道: 福建电视剧
+    ⚠ 未找到频道: 福建经济
+    ⚠ 未找到频道: 福建乡村振兴
     ⚠ 未找到频道: 河北影视剧
     ⚠ 未找到频道: 福建文体
+    ⚠ 未找到频道: 福建电视剧
+    ⚠ 未找到频道: 福建旅游
     ⚠ 未找到频道: 内蒙古农牧
+    ⚠ 未找到频道: 纯享4K
+    ⚠ 未找到频道: 星空卫视
+    ⚠ 未找到频道: IPTV足球
     📺 新增频道: 263/274
     📅 新增节目: 10065/10014
    ✓ 处理成功
@@ -2772,21 +2772,21 @@ Guide Merger v2.0 (curl + Python Hybrid)
     🔗 智能合并: True
     ✂️ 跨天节目拆分: 453 个
     🔗 智能合并更新: 74 个节目
-    ⚠ 未找到频道: 411256
+    ⚠ 未找到频道: 510886
+    ⚠ 未找到频道: 491618
+    ⚠ 未找到频道: 478717
     ⚠ 未找到频道: 411308
     ⚠ 未找到频道: 411236
-    ⚠ 未找到频道: 411241
+    ⚠ 未找到频道: 411257
+    ⚠ 未找到频道: 535447
     ⚠ 未找到频道: 411240
     ⚠ 未找到频道: 411253
-    ⚠ 未找到频道: 411231
-    ⚠ 未找到频道: 411251
-    ⚠ 未找到频道: 491618
-    ⚠ 未找到频道: 428785
-    ⚠ 未找到频道: 535447
-    ⚠ 未找到频道: 478717
-    ⚠ 未找到频道: 510886
-    ⚠ 未找到频道: 411257
     ⚠ 未找到频道: 491619
+    ⚠ 未找到频道: 411251
+    ⚠ 未找到频道: 411231
+    ⚠ 未找到频道: 411241
+    ⚠ 未找到频道: 411256
+    ⚠ 未找到频道: 428785
     📺 新增频道: 114/129
     📅 新增节目: 11756/20083
    ✓ 处理成功
@@ -2816,7 +2816,7 @@ Guide Merger v2.0 (curl + Python Hybrid)
     📝 频道重命名: "369748" → "CM+(新加坡)"
     📝 频道重命名: "369757" → "Sky News_新加坡"
     📝 频道重命名: "369758" → "HBO Signature_英 (新加坡)"
-    📝 频道重命名: "369770" → "HITS Movies(EPG1)"
+    📝 频道重命名: "369770" → "HITS Movies_英(EPG1)"
     📝 频道重命名: "369771" → "Bloomberg TV(新加坡)"
     📝 频道重命名: "369773" → "mio Sports HD(新加坡)"
     📝 频道重命名: "369774" → "Jia Le Channel(新加坡)"
@@ -2958,12 +2958,12 @@ Guide Merger v2.0 (curl + Python Hybrid)
     ✂️ 跨天节目拆分: 516 个
     🔗 智能合并更新: 70 个节目
     ⚠ 未找到频道: 520018
+    ⚠ 未找到频道: 535582
+    ⚠ 未找到频道: 535294
+    ⚠ 未找到频道: 535553
     ⚠ 未找到频道: 535531
     ⚠ 未找到频道: 492911
-    ⚠ 未找到频道: 535294
     ⚠ 未找到频道: 523496
-    ⚠ 未找到频道: 535582
-    ⚠ 未找到频道: 535553
     📺 新增频道: 146/153
     📅 新增节目: 15610/22192
    ✓ 处理成功
@@ -3173,7 +3173,7 @@ Guide Merger v2.0 (curl + Python Hybrid)
     📝 频道重命名: "464994" → "CBS Streaming East feed"
     📝 频道重命名: "464995" → "SBS HD"
     📝 频道重命名: "464996" → "MSG SportsZone"
-    📝 频道重命名: "464997" → "MTV - Music Television Pacific"
+    📝 频道重命名: "464997" → "MTV - Music TV Pacific"
     📝 频道重命名: "464998" → "VGN TV"
     📝 频道重命名: "464999" → "NBC Sports-1"
     📝 频道重命名: "465000" → "MSG (Alt. feed) - MSG2 OVERFLOW"
@@ -3224,7 +3224,7 @@ Guide Merger v2.0 (curl + Python Hybrid)
     📝 频道重命名: "465058" → "CHSN Chicago Sports Network"
     📝 频道重命名: "465059" → "NBC East Stream"
     📝 频道重命名: "465060" → "Ve Plus"
-    📝 频道重命名: "465063" → "Hogar HD"
+    📝 频道重命名: "465063" → "Hogar TV HD"
     📝 频道重命名: "465064" → "MSG Zone-1"
     📝 频道重命名: "465065" → "Showtime Showcase"
     📝 频道重命名: "465066" → "凤凰中文台_英(US)"
@@ -3238,7 +3238,7 @@ Guide Merger v2.0 (curl + Python Hybrid)
     📝 频道重命名: "465075" → "The Film Detective"
     📝 频道重命名: "465077" → "Spectrum SportsNet LA Dodgers"
     📝 频道重命名: "465079" → "Hustler Mature"
-    📝 频道重命名: "465080" → "MTV - Music Television"
+    📝 频道重命名: "465080" → "MTV - Music TV"
     📝 频道重命名: "465081" → "IFC HD"
     📝 频道重命名: "465082" → "Pets TV"
     📝 频道重命名: "465083" → "Blossom TV"
@@ -3844,9 +3844,9 @@ Guide Merger v2.0 (curl + Python Hybrid)
 📝 生成最终XML文件...
 🔤 应用智能排序（按display-name，数字-字母-汉字，不区分大小写）...
 ✓ XML文件: guide.xml
-  大小: 61.38 MB
-  频道数: 2508
-  节目数: 204946
+  大小: 61.37 MB
+  频道数: 2507
+  节目数: 204903
 
 📺 频道排序示例（前10个）:
     1. 4K健身 (ID: 4K健身)
@@ -3870,10 +3870,10 @@ Guide Merger v2.0 (curl + Python Hybrid)
 ============================================================
 ✅ EPG合并完成
 ============================================================
-结束时间: 2026-05-10 12:10:01 (北京时间)
-总耗时: 69.91 秒
+结束时间: 2026-05-10 12:29:51 (北京时间)
+总耗时: 69.56 秒
 成功处理: 11/14 个源
-成功处理: 2508 个频道，204946 条节目
+成功处理: 2507 个频道，204903 条节目
 输出文件: guide.xml 和 guide.xml.gz
 配置时间范围: 过去 6 天 + 当天 + 未来 3 天
 实际时间范围: 过去 7 天 + 当天 + 未来 5 天

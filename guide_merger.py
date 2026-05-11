@@ -711,22 +711,38 @@ def download_file(url: str, path: str) -> Optional[str]:
                             "Content-Type", ""
                         ).lower()
 
-                        # 判断是否可能是xml
+                        # 判断是否可能是xml（允许 text/plain）
                         if (
-                        "xml" in content_type
-                        or "gzip" in content_type
-                        or "octet-stream" in content_type
-                        or "text/plain" in content_type
+                            "xml" in content_type
+                            or "gzip" in content_type
+                            or "octet-stream" in content_type
+                            or "text/plain" in content_type
                         ):
+
                             with open(download_path, 'wb') as f:
-                                for chunk in response.iter_content(chunk_size=CHUNK_SIZE):
+
+                                for chunk in response.iter_content(
+                                    chunk_size=CHUNK_SIZE
+                                ):
                                     if chunk:
                                         f.write(chunk)
 
-                print(f'    ✅ requests 下载成功')
-                return download_path
-             else:
-                 print(f'    ⚠ requests 返回非XML内容: {content_type}')
+                            # 检查文件头是否为有效 XML
+                            with open(download_path, 'rb') as f_check:
+                                head = f_check.read(100)
+
+                            if head.startswith(b'<?xml') or head.startswith(b'<tv'):
+                                print(f'    ✅ requests 下载成功')
+                                return download_path
+                            else:
+                                print(f'    ⚠ 下载内容不是有效 XML')
+                                os.remove(download_path)
+                                continue
+
+                        else:
+                            print(
+                                f'    ⚠ requests 返回非XML内容: {content_type}'
+                            )
 
             except Exception as e:
                 print(f'    ⚠ requests失败: {e}')

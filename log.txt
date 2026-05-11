@@ -1,8 +1,8 @@
 ============================================================
 Guide Merger v2.0 (curl + Python Hybrid)
 ============================================================
-当前时间: 2026-05-11 11:18:51 (北京时间)
-当前时间: 2026-05-11 03:18:51 (UTC)
+当前时间: 2026-05-11 11:49:38 (北京时间)
+当前时间: 2026-05-11 03:49:38 (UTC)
 
 ✓ curl 命令可用
 ✓ 已加载pypinyin库，支持中文拼音排序
@@ -779,14 +779,12 @@ Guide Merger v2.0 (curl + Python Hybrid)
   ✓ 映射: "3735" → "Astro Vaanavil"
   ✓ 映射: "3760" → "Astro Vellithirai"
   ✓ 映射: "2058" → "Astro Vinmeen"
-  ✓ 映射: "411257" → "Asyik FM"
   ✓ 映射: "1205" → "AXN_港新马_英"
   ✓ 映射: "854" → "SYOK BAYU_马来"
   ✓ 映射: "4030" → "BBC Earth_新马港台_英(EPG2)"
   ✓ 映射: "3329" → "BBC News_新马台"
   ✓ 映射: "370132" → "Berita RTM"
   ✓ 映射: "1835" → "Bernama TV"
-  ✓ 映射: "411236" → "Bintulu FM"
   ✓ 映射: "400446" → "Blippi & Friends_马来_英"
   ✓ 映射: "2636" → "Astro Boo"
   ✓ 映射: "3518" → "CCTV4_新马_英"
@@ -811,15 +809,11 @@ Guide Merger v2.0 (curl + Python Hybrid)
   ✓ 映射: "601" → "INDIA BEAT"
   ✓ 映射: "643" → "JAZZ(MY)"
   ✓ 映射: "502308" → "JR."
-  ✓ 映射: "491618" → "Keningau FM"
   ✓ 映射: "863" → "KENYALANG(MY)"
-  ✓ 映射: "411251" → "KL FM"
   ✓ 映射: "2652" → "K-Plus"
   ✓ 映射: "4183" → "KTV_新马"
-  ✓ 映射: "411253" → "Labuan FM"
   ✓ 映射: "531" → "LITE FM"
   ✓ 映射: "771" → "MELODY FM"
-  ✓ 映射: "491619" → "Miri FM"
   ✓ 映射: "495" → "MIX FM"
   ✓ 映射: "492" → "MY FM"
   ✓ 映射: "1029" → "NTV7"
@@ -827,14 +821,10 @@ Guide Merger v2.0 (curl + Python Hybrid)
   ✓ 映射: "1242" → "ONE HD_新加坡"
   ✓ 映射: "493" → "OPUS"
   ✓ 映射: "733" → "OSAI"
-  ✓ 映射: "428785" → "Perak FM"
   ✓ 映射: "3478" → "凤凰中文台_新马_英"
   ✓ 映射: "3625" → "Premier Sports_新马"
   ✓ 映射: "399506" → "Premier Sports Rugby"
-  ✓ 映射: "411240" → "Red FM"
   ✓ 映射: "521957" → "ROLL"
-  ✓ 映射: "510886" → "Sandakan FM"
-  ✓ 映射: "411256" → "Selangor FM"
   ✓ 映射: "4057" → "SHOWCASE MOVIES"
   ✓ 映射: "702" → "SINAR FM"
   ✓ 映射: "3308" → "Star Vijay"
@@ -846,7 +836,6 @@ Guide Merger v2.0 (curl + Python Hybrid)
   ✓ 映射: "556" → "THR GEGAR"
   ✓ 映射: "848" → "THR RAAGA"
   ✓ 映射: "3234" → "TLC HD_马来"
-  ✓ 映射: "411308" → "TRAXXfm"
   ✓ 映射: "3683" → "TV1 HD"
   ✓ 映射: "3711" → "TV2 HD"
   ✓ 映射: "1072" → "TV3"
@@ -859,8 +848,6 @@ Guide Merger v2.0 (curl + Python Hybrid)
   ✓ 映射: "2323" → "tvN_马来_英"
   ✓ 映射: "2726" → "tvN Movies_马来_英"
   ✓ 映射: "3942" → "TVS"
-  ✓ 映射: "411231" → "Wai FM Iban"
-  ✓ 映射: "411241" → "Wai FM"
   ✓ 映射: "48630" → "W-Sport_马来"
   ✓ 映射: "2801" → "ZAYAN"
   ✓ 映射: "4221" → "Zee Cinema_马来"
@@ -878,8 +865,6 @@ Guide Merger v2.0 (curl + Python Hybrid)
   ✓ 映射: "492901" → "Channel Suria"
   ✓ 映射: "492817" → "Channel Vasantham"
   ✓ 映射: "492905" → "meWATCH Live 1"
-  ✓ 映射: "535294" → "LIVE 2(新加坡)-"
-  ✓ 映射: "520018" → "LIVE 5(新加坡)-"
   ✓ 映射: "535445" → "That's 70s_新加坡"
   ✓ 映射: "535443" → "That's 80s_新加坡"
   ✓ 映射: "535444" → "That's Rock_新加坡"
@@ -951,7 +936,6 @@ Guide Merger v2.0 (curl + Python Hybrid)
   ✓ 映射: "412096" → "Cinemax HD_香港_英"
   ✓ 映射: "369742" → "Citra Drama"
   ✓ 映射: "369748" → "CM+(新加坡)"
-  ✓ 映射: "523496" → "CricBuzz(MY)"
   ✓ 映射: "492866" → "Crime & Investigation_新马"
   ✓ 映射: "369824" → "Drama Channel(新加坡)"
   ✓ 映射: "412178" → "DW English(新加坡)"
@@ -1010,7 +994,6 @@ Guide Merger v2.0 (curl + Python Hybrid)
   ✓ 映射: "491163" → "TVBS-亚洲台_新加坡_中英"
   ✓ 映射: "492453" → "TVBS-新闻台"
   ✓ 映射: "369818" → "tvN_港新_国"
-  ✓ 映射: "535582" → "tvN Movies On Demand(新加坡)-"
   ✓ 映射: "530390" → "Vijay Takkar_新加坡"
   ✓ 映射: "501126" → "WION(新加坡)"
   ✓ 映射: "492880" → "W-Sport_新加坡"
@@ -1833,7 +1816,7 @@ Guide Merger v2.0 (curl + Python Hybrid)
     别名映射: 117 个
   - https://raw.githubusercontent.com/zzq1234567890/epg/refs/heads/main/swepg.xml.gz
     时区处理: 强制转换为北京时间 (+0800)
-    频道数量: 852
+    频道数量: 851
     别名映射: 371 个
   - http://epg.51zmt.top:8000/e.xml.gz
     时区: 保持原XML时区（可能是未指定或+8时区）
@@ -1849,16 +1832,16 @@ Guide Merger v2.0 (curl + Python Hybrid)
     别名映射: 71 个
   - https://epg.pw/xmltv/epg_MY.xml
     时区处理: 强制转换为北京时间 (+0800)
-    频道数量: 125
-    别名映射: 125 个
+    频道数量: 112
+    别名映射: 112 个
   - https://epg.pw/xmltv/epg_HK.xml
     时区处理: 强制转换为北京时间 (+0800)
     频道数量: 2
     别名映射: 2 个
   - https://epg.pw/xmltv/epg_SG.xml
     时区处理: 强制转换为北京时间 (+0800)
-    频道数量: 148
-    别名映射: 148 个
+    频道数量: 144
+    别名映射: 144 个
   - https://epg.pw/xmltv/epg_US.xml
     时区: 保持原XML时区（可能是未指定或+8时区）
     频道数量: 648
@@ -2089,17 +2072,17 @@ Guide Merger v2.0 (curl + Python Hybrid)
     🔗 智能合并: True
     ✂️ 跨天节目拆分: 75 个
     🔗 智能合并更新: 48 个节目
-    ⚠ 未找到频道: 现代教育
-    ⚠ 未找到频道: 愛爾達娛樂
     ⚠ 未找到频道: 揭阳生活
+    ⚠ 未找到频道: 愛爾達娛樂
+    ⚠ 未找到频道: 现代教育
     📺 新增频道: 204/207
     📅 新增节目: 38739/43387
    ✓ 处理成功
 
 ------------------------------------------------------------
 📡 源 4/14: https://raw.githubusercontent.com/zzq1234567890/epg/refs/heads/main/swepg.xml.gz
-   请求频道: 852 个
-   需要查找: 849 个
+   请求频道: 851 个
+   需要查找: 848 个
     🔗 Referer: https://raw.githubusercontent.com/
     🔧 curl 命令: curl -L --max-time 30 ... https://raw.githubusercontent.com/zzq1234567890/epg/refs/heads/main/swepg.xml.gz
     ✓ curl 下载成功: 3.96 MB
@@ -2458,37 +2441,36 @@ Guide Merger v2.0 (curl + Python Hybrid)
     🔗 智能合并: True
     ✂️ 跨天节目拆分: 2157 个
     🔗 智能合并更新: 4408 个节目
-    ⚠ 未找到频道: HITS电影台
-    ⚠ 未找到频道: 南京新闻综合
-    ⚠ 未找到频道: HOY 国际财经台
-    ⚠ 未找到频道: 河北杂技频道
-    ⚠ 未找到频道: 亚洲综合HD演唱会直击
-    ⚠ 未找到频道: HOY 资讯台
-    ⚠ 未找到频道: FashionTV 时尚频道
-    ⚠ 未找到频道: SUPER单元剧 (免费)
-    ⚠ 未找到频道: 1905App 热血影院
-    ⚠ 未找到频道: ROCK ACTION Rock Action_香港_国
+    ⚠ 未找到频道: 千禧经典台(MY)
     ⚠ 未找到频道: SUPER金曲 (免费)
+    ⚠ 未找到频道: Hub 如意
+    ⚠ 未找到频道: 河北杂技频道
     ⚠ 未找到频道: Hub Sports 2
-    ⚠ 未找到频道: HOY TV
-    ⚠ 未找到频道: Hub Sports 1
+    ⚠ 未找到频道: FashionTV 时尚频道
+    ⚠ 未找到频道: BBC_First_HD
+    ⚠ 未找到频道: SUPER单元剧 (免费)
+    ⚠ 未找到频道: ROCK ACTION Rock Action_香港_国
+    ⚠ 未找到频道: Astro_Sports_Plus_3
+    ⚠ 未找到频道: 1905App 热血影院
+    ⚠ 未找到频道: Nick Jr.
     ⚠ 未找到频道: 睛彩河北
-    ⚠ 未找到频道: now直播
+    ⚠ 未找到频道: HOY 资讯台
+    ⚠ 未找到频道: HITS电影台
+    ⚠ 未找到频道: SPY X FAMILY 间谍家家酒(国)
+    ⚠ 未找到频道: 南京新闻综合
     ⚠ 未找到频道: 茶频道
     ⚠ 未找到频道: BBC_Brit_HD
-    ⚠ 未找到频道: 千禧经典台(MY)
-    ⚠ 未找到频道: TV5Monde 法国TV5
-    ⚠ 未找到频道: Nick Jr.
-    ⚠ 未找到频道: Astro_Sports_Plus_3
-    ⚠ 未找到频道: Astro_Premier_League_3
-    ⚠ 未找到频道: SPY X FAMILY 间谍家家酒(国)
+    ⚠ 未找到频道: HOY 国际财经台
     ⚠ 未找到频道: MagellanTV频道 (麦哲伦频道)
-    ⚠ 未找到频道: BBC_First_HD
-    ⚠ 未找到频道: 新哆啦A梦(中文版)2台新年追剧首选-FastTV飞速看
-    ⚠ 未找到频道: Hub 如意
     ⚠ 未找到频道: Hub Sports 3
+    ⚠ 未找到频道: Astro_Premier_League_3
+    ⚠ 未找到频道: now直播
+    ⚠ 未找到频道: Hub Sports 1
+    ⚠ 未找到频道: TV5Monde 法国TV5
+    ⚠ 未找到频道: HOY TV
     ⚠ 未找到频道: SUPER识叹 (免费)
-    📺 新增频道: 818/848
+    ⚠ 未找到频道: 亚洲综合HD演唱会直击
+    📺 新增频道: 818/847
     📅 新增节目: 60599/77297
    ✓ 处理成功
 
@@ -2610,17 +2592,17 @@ Guide Merger v2.0 (curl + Python Hybrid)
     🔗 智能合并: True
     ✂️ 跨天节目拆分: 61 个
     🔗 智能合并更新: 8 个节目
+    ⚠ 未找到频道: 福建旅游
     ⚠ 未找到频道: 星空卫视
-    ⚠ 未找到频道: 淘Baby
     ⚠ 未找到频道: 河北影视剧
+    ⚠ 未找到频道: 内蒙古农牧
+    ⚠ 未找到频道: 淘Baby
+    ⚠ 未找到频道: IPTV足球
+    ⚠ 未找到频道: 福建电视剧
     ⚠ 未找到频道: 福建经济
+    ⚠ 未找到频道: 福建乡村振兴
     ⚠ 未找到频道: 纯享4K
     ⚠ 未找到频道: 福建文体
-    ⚠ 未找到频道: 福建乡村振兴
-    ⚠ 未找到频道: IPTV足球
-    ⚠ 未找到频道: 内蒙古农牧
-    ⚠ 未找到频道: 福建旅游
-    ⚠ 未找到频道: 福建电视剧
     📺 新增频道: 262/273
     📅 新增节目: 10003/9954
    ✓ 处理成功
@@ -2714,8 +2696,8 @@ Guide Merger v2.0 (curl + Python Hybrid)
 
 ------------------------------------------------------------
 📡 源 8/14: https://epg.pw/xmltv/epg_MY.xml
-   请求频道: 125 个
-   需要查找: 125 个
+   请求频道: 112 个
+   需要查找: 112 个
     🔗 Referer: https://epg.pw/
     🔧 curl 命令: curl -L --max-time 30 ... https://epg.pw/xmltv/epg_MY.xml
     ✓ curl 下载成功: 14.13 MB
@@ -2838,21 +2820,8 @@ Guide Merger v2.0 (curl + Python Hybrid)
     🔗 智能合并: True
     ✂️ 跨天节目拆分: 441 个
     🔗 智能合并更新: 87 个节目
-    ⚠ 未找到频道: 411240
-    ⚠ 未找到频道: 411251
-    ⚠ 未找到频道: 411231
-    ⚠ 未找到频道: 510886
-    ⚠ 未找到频道: 411236
-    ⚠ 未找到频道: 411256
     ⚠ 未找到频道: 535447
-    ⚠ 未找到频道: 491618
-    ⚠ 未找到频道: 411241
-    ⚠ 未找到频道: 411253
-    ⚠ 未找到频道: 428785
-    ⚠ 未找到频道: 411308
-    ⚠ 未找到频道: 411257
-    ⚠ 未找到频道: 491619
-    📺 新增频道: 111/125
+    📺 新增频道: 111/112
     📅 新增节目: 11655/19656
    ✓ 处理成功
 
@@ -2878,8 +2847,8 @@ Guide Merger v2.0 (curl + Python Hybrid)
 
 ------------------------------------------------------------
 📡 源 10/14: https://epg.pw/xmltv/epg_SG.xml
-   请求频道: 148 个
-   需要查找: 147 个
+   请求频道: 144 个
+   需要查找: 143 个
     🔗 Referer: https://epg.pw/
     🔧 curl 命令: curl -L --max-time 30 ... https://epg.pw/xmltv/epg_SG.xml
     ✓ curl 下载成功: 20.69 MB
@@ -3031,14 +3000,10 @@ Guide Merger v2.0 (curl + Python Hybrid)
     🔗 智能合并: True
     ✂️ 跨天节目拆分: 495 个
     🔗 智能合并更新: 73 个节目
-    ⚠ 未找到频道: 520018
-    ⚠ 未找到频道: 535582
-    ⚠ 未找到频道: 535553
     ⚠ 未找到频道: 492911
-    ⚠ 未找到频道: 535294
     ⚠ 未找到频道: 535531
-    ⚠ 未找到频道: 523496
-    📺 新增频道: 140/147
+    ⚠ 未找到频道: 535553
+    📺 新增频道: 140/143
     📅 新增节目: 15140/21379
    ✓ 处理成功
 
@@ -3941,8 +3906,8 @@ Guide Merger v2.0 (curl + Python Hybrid)
 ============================================================
 ✅ EPG合并完成
 ============================================================
-结束时间: 2026-05-11 11:19:54 (北京时间)
-总耗时: 62.83 秒
+结束时间: 2026-05-11 11:50:46 (北京时间)
+总耗时: 67.79 秒
 成功处理: 12/14 个源
 成功处理: 2467 个频道，203574 条节目
 输出文件: guide.xml 和 guide.xml.gz

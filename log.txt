@@ -3,8 +3,8 @@
 ============================================================
 Guide Merger v2.0 (curl_cffi Browser Impersonation)
 ============================================================
-当前时间: 2026-05-11 22:42:37 (北京时间)
-当前时间: 2026-05-11 14:42:37 (UTC)
+当前时间: 2026-05-11 22:51:05 (北京时间)
+当前时间: 2026-05-11 14:51:05 (UTC)
 
 ⚠ 未安装 curl_cffi 库，将使用普通 requests
   安装方法: pip install curl-cffi
@@ -1894,18 +1894,18 @@ Guide Merger v2.0 (curl_cffi Browser Impersonation)
     🔗 Referer: https://epg.mb6.top/
     🔧 使用普通 requests
     ⚠ 未识别为XML/GZIP
-    内容预览: b'\x8b\xff\x07\x00d\xca\xcd\xaa\xda}^\x1cv\x97\x10C^\xc4\xab\x8b\xb0\xa7p0\xb0\xc9g\xbe:U\xa9\xfa\x0b\x12\xaa\xf7\xf9\xae&\xb8*k\r\xf6\x86\x96\xac\xcb\x8e\xd3\x02+-\x9d\xff\xf7\xa0\xae\x13\xec\xa2\xc28\x8fz\x81\x04\x96\xc8.`\x86\x8bC\x16`\x8e\r`\xb6A,\x95\xc118,1\x9a\x07IqP\xda\xf6H\x8fr\xba\x06'
+    内容预览: b'\x0b-\x0b\x00d\xd2\xa9M\xab\x9e/\xd5 \tpi_J\x9f\xe2\x82R!p\x06\xfb}?\xa5\xd62\xed1\x120\xc5\xff\xff\xab\t\xa62\xf8\xb1\xf3i\xc8\xdalY-\x90\xcd6\xfd\xef\xceB\xad\xdb\xf1\x8d\n\xe3<\xea\x04\x12X"3\x80\x19~\xfc:B\x01\xe68\x03\x98M\x10s\x89\x10\x1e{|\x9c\x9b\'E\xb1\xc9f\xdb\x8e\xe8'
     ⏳ 第 1 次重试，等待 3 秒...
     🔧 使用普通 requests
-    ⚠ 未识别为XML/GZIP
-    内容预览: b'\x8b\xff\x07\x00d\xca\xcd\xaa\xda}^\x1cv\x97\x10C^\xc4\xab\x8b\xb0\xa7p0\xb0\xc9g\xbe:U\xa9\xfa\x0b\x12\xaa\xf7\xf9\xae&\xb8*k\r\xf6\x86\x96\xac\xcb\x8e\xd3\x02+-\x9d\xff\xf7\xa0\xae\x13\xec\xa2\xc28\x8fz\x81\x04\x96\xc8.`\x86\x8bC\x16`\x8e\r`\xb6A,\x95\xc118,1\x9a\x07IqP\xda\xf6H\x8fr\xba\x06'
+    ❌ HTTP错误: 502
     ⏳ 第 2 次重试，等待 6 秒...
     🔧 使用普通 requests
     ⚠ 未识别为XML/GZIP
-    内容预览: b'\x0b5\x0b\x00d\xd2\xa9M\xab\x9e/\xd5 \tpi_J\x9f\xe2\x82R!p\x06\xfb}?\xa5\xd62\xed1\x120\xc5\xff\xff\xab\t\xa62\xf8\xb1\xf3i\xc8\xdalY-\xb0\xb2M\xff\xbb\xb3P\xebv|\xa3\xc28\x8f:\x81\x04\x96\xc8\x0c`\x86\x1f\xbf\x8eP\x809\xce\x07\xcc&\x88\xb9D\x08\x8f=>\xce\xcd\x93\xa2\xd8d\xb3mG\xf4'
+    内容预览: b'\x0b4\x0b\x00d\xd2\xa9M\xab\x9e/\xd5 \tpi_J\x9f\xe2\x82R!p\x06\xfb}?\xa5\xd62\xed1\x120\xc5\xff\xff\xab\t\xa62\xf8\xb1\xf3i\xc8\xdalY-\xb0\xb2M\xff\xbb\xb3P\xebv|\xa3\xc28\x8f:\x81\x04\x96\xc8\x0c`\x86\x1f\xbf\x8eP\x809\xce\x07\xcc&\x88\xb9D\x08\x8f=>\xce\xcd\x93\xa2\xd8d\xb3mG\xf4'
     ⏳ 第 3 次重试，等待 9 秒...
     🔧 使用普通 requests
-    ❌ HTTP错误: 400
+    ⚠ 未识别为XML/GZIP
+    内容预览: b'\x0b3\x0b\x00d\xd2\xa9M\xab\x9e/\xd5 \tpi_J\x9f\xe2\x82R!p\x06\xfb}?\xa5\xd62\xed1\x120\xc5\xff\xff\xab\t\xa62\xf8\xb1\xf3i\xc8\xdalY-\xb0\xb2M\xff\xbb\xb3P\xebv|\xa3\xc28\x8f:\x81\x04\x96\xc8\x0c`\x86\x1f\xbf\x8eP\x809\xce\x07\xcc&\x88\xb9D\x08\x8f=>\xce\xcd\x93\xa2\xd8d\xb3mG\xf4'
    ❌ 下载失败，跳过此源
 
 ------------------------------------------------------------
@@ -1923,9 +1923,9 @@ Guide Merger v2.0 (curl_cffi Browser Impersonation)
     🔗 智能合并: True
     ✂️ 跨天节目拆分: 83 个
     🔗 智能合并更新: 46 个节目
+    ⚠ 未找到频道: 愛爾達娛樂
     ⚠ 未找到频道: 现代教育
     ⚠ 未找到频道: 揭阳生活
-    ⚠ 未找到频道: 愛爾達娛樂
     📺 新增频道: 197/200
     📅 新增节目: 41713/42677
    ✅ 处理成功
@@ -1945,34 +1945,34 @@ Guide Merger v2.0 (curl_cffi Browser Impersonation)
     🔗 智能合并: True
     ✂️ 跨天节目拆分: 2146 个
     🔗 智能合并更新: 4329 个节目
-    ⚠ 未找到频道: BBC_Brit_HD
-    ⚠ 未找到频道: HOY TV
-    ⚠ 未找到频道: Hub Sports 1
-    ⚠ 未找到频道: MagellanTV频道 (麦哲伦频道)
-    ⚠ 未找到频道: FashionTV 时尚频道
-    ⚠ 未找到频道: HITS电影台
-    ⚠ 未找到频道: Nick Jr.
-    ⚠ 未找到频道: BBC_First_HD
-    ⚠ 未找到频道: 南京新闻综合
-    ⚠ 未找到频道: 千禧经典台(MY)
-    ⚠ 未找到频道: SUPER识叹 (免费)
-    ⚠ 未找到频道: Astro_Sports_Plus_3
-    ⚠ 未找到频道: 亚洲综合HD演唱会直击
-    ⚠ 未找到频道: TV5Monde 法国TV5
-    ⚠ 未找到频道: Hub 如意
-    ⚠ 未找到频道: Hub Sports 2
-    ⚠ 未找到频道: 茶频道
-    ⚠ 未找到频道: 睛彩河北
-    ⚠ 未找到频道: Hub Sports 3
-    ⚠ 未找到频道: SUPER金曲 (免费)
-    ⚠ 未找到频道: HOY 资讯台
-    ⚠ 未找到频道: 1905App 热血影院
-    ⚠ 未找到频道: HOY 国际财经台
-    ⚠ 未找到频道: ROCK ACTION Rock Action_香港_国
-    ⚠ 未找到频道: SUPER单元剧 (免费)
-    ⚠ 未找到频道: 河北杂技频道
-    ⚠ 未找到频道: SPY X FAMILY 间谍家家酒(国)
     ⚠ 未找到频道: now直播
+    ⚠ 未找到频道: TV5Monde 法国TV5
+    ⚠ 未找到频道: Astro_Sports_Plus_3
+    ⚠ 未找到频道: Hub 如意
+    ⚠ 未找到频道: Hub Sports 3
+    ⚠ 未找到频道: BBC_First_HD
+    ⚠ 未找到频道: 千禧经典台(MY)
+    ⚠ 未找到频道: 1905App 热血影院
+    ⚠ 未找到频道: FashionTV 时尚频道
+    ⚠ 未找到频道: MagellanTV频道 (麦哲伦频道)
+    ⚠ 未找到频道: SUPER单元剧 (免费)
+    ⚠ 未找到频道: HOY TV
+    ⚠ 未找到频道: BBC_Brit_HD
+    ⚠ 未找到频道: HOY 资讯台
+    ⚠ 未找到频道: 南京新闻综合
+    ⚠ 未找到频道: Nick Jr.
+    ⚠ 未找到频道: 茶频道
+    ⚠ 未找到频道: 亚洲综合HD演唱会直击
+    ⚠ 未找到频道: Hub Sports 1
+    ⚠ 未找到频道: SUPER金曲 (免费)
+    ⚠ 未找到频道: 河北杂技频道
+    ⚠ 未找到频道: ROCK ACTION Rock Action_香港_国
+    ⚠ 未找到频道: HITS电影台
+    ⚠ 未找到频道: HOY 国际财经台
+    ⚠ 未找到频道: Hub Sports 2
+    ⚠ 未找到频道: 睛彩河北
+    ⚠ 未找到频道: SUPER识叹 (免费)
+    ⚠ 未找到频道: SPY X FAMILY 间谍家家酒(国)
     📺 新增频道: 811/839
     📅 新增节目: 58115/74691
    ✅ 处理成功
@@ -2010,17 +2010,17 @@ Guide Merger v2.0 (curl_cffi Browser Impersonation)
     🔗 智能合并: True
     ✂️ 跨天节目拆分: 72 个
     🔗 智能合并更新: 9 个节目
-    ⚠ 未找到频道: 福建旅游
-    ⚠ 未找到频道: 星空卫视
     ⚠ 未找到频道: 福建乡村振兴
-    ⚠ 未找到频道: 河北影视剧
-    ⚠ 未找到频道: IPTV足球
     ⚠ 未找到频道: 福建文体
-    ⚠ 未找到频道: 福建经济
     ⚠ 未找到频道: 淘Baby
-    ⚠ 未找到频道: 福建电视剧
     ⚠ 未找到频道: 纯享4K
     ⚠ 未找到频道: 内蒙古农牧
+    ⚠ 未找到频道: IPTV足球
+    ⚠ 未找到频道: 福建旅游
+    ⚠ 未找到频道: 福建经济
+    ⚠ 未找到频道: 河北影视剧
+    ⚠ 未找到频道: 星空卫视
+    ⚠ 未找到频道: 福建电视剧
     📺 新增频道: 259/270
     📅 新增节目: 10645/10587
    ✅ 处理成功
@@ -2097,9 +2097,9 @@ Guide Merger v2.0 (curl_cffi Browser Impersonation)
     🔗 智能合并: True
     ✂️ 跨天节目拆分: 495 个
     🔗 智能合并更新: 73 个节目
-    ⚠ 未找到频道: 535553
-    ⚠ 未找到频道: 535531
     ⚠ 未找到频道: 492911
+    ⚠ 未找到频道: 535531
+    ⚠ 未找到频道: 535553
     📺 新增频道: 140/143
     📅 新增节目: 15140/21379
    ✅ 处理成功
@@ -2208,8 +2208,8 @@ Guide Merger v2.0 (curl_cffi Browser Impersonation)
 ============================================================
 ✅ EPG合并完成
 ============================================================
-结束时间: 2026-05-11 22:44:08 (北京时间)
-总耗时: 91.51 秒
+结束时间: 2026-05-11 22:52:45 (北京时间)
+总耗时: 100.35 秒
 成功处理: 11/14 个源
 成功处理: 2387 个频道，194400 条节目
 输出文件: guide.xml 和 guide.xml.gz

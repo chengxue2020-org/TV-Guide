@@ -683,7 +683,6 @@ def download_file(url: str, path: str) -> Optional[str]:
     for attempt in range(MAX_RETRIES + 1):
 
         try:
-
             if attempt > 0:
                 wait_time = attempt * 2
                 print(f'    🔄 重试 {attempt}/{MAX_RETRIES}')
@@ -711,7 +710,6 @@ def download_file(url: str, path: str) -> Optional[str]:
                             "Content-Type", ""
                         ).lower()
 
-                        # 判断是否可能是xml（允许 text/plain）
                         if (
                             "xml" in content_type
                             or "gzip" in content_type
@@ -720,33 +718,30 @@ def download_file(url: str, path: str) -> Optional[str]:
                         ):
 
                             with open(download_path, 'wb') as f:
-
                                 for chunk in response.iter_content(
                                     chunk_size=CHUNK_SIZE
                                 ):
                                     if chunk:
                                         f.write(chunk)
 
-                            # 检查文件头是否为有效 XML
+                            # 检查文件头是否为有效 XML 或gz
                             with open(download_path, 'rb') as f_check:
                                 head = f_check.read(100)
 
                             if (
-                                    head.startswith(b'<?xml')
-                                    or head.startswith(b'<tv')
-                                    or head.startswith(b'\x1f\x8b')      # gzip 文件头
-                             ):
-                                    print(f'    ✅ requests 下载成功')
-                                    return download_path
-                             else:
-                                    print(f'    ⚠ 下载内容不是有效 XML/GZIP')
-                                    os.remove(download_path)
-                                    continue
+                                head.startswith(b'<?xml')
+                                or head.startswith(b'<tv')
+                                or head.startswith(b'\x1f\x8b')       # gzip 文件头
+                            ):
+                                print(f'    ✅ requests 下载成功')
+                                return download_path
+                            else:
+                                print(f'    ⚠ 下载内容不是有效 XML/GZIP')
+                                os.remove(download_path)
+                                continue
 
                         else:
-                            print(
-                                f'    ⚠ requests 返回非XML内容: {content_type}'
-                            )
+                            print(f'    ⚠ requests 返回非XML内容: {content_type}')
 
             except Exception as e:
                 print(f'    ⚠ requests失败: {e}')
@@ -756,24 +751,16 @@ def download_file(url: str, path: str) -> Optional[str]:
             # ==========================================
 
             if HAS_CURL_CFFI:
-
                 print(f'    🔧 尝试 curl_cffi...')
                 session = curl_requests.Session()
                 session.impersonate = BROWSER_IMPERSONATE
                 parsed = urlparse(url)
                 base_url = f"{parsed.scheme}://{parsed.netloc}/"
 
-                # 特殊站预热
                 if 'yang-1989.eu.org' in url:
-
                     try:
-                        session.get(
-                            base_url,
-                            timeout=10
-                        )
-
+                        session.get(base_url, timeout=10)
                         print(f'    🔥 已预热主页')
-
                     except Exception:
                         pass
 
@@ -789,18 +776,14 @@ def download_file(url: str, path: str) -> Optional[str]:
                 )
 
                 if response.status_code == 200:
-
                     with open(download_path, 'wb') as f:
-
                         for chunk in response.iter_content(
                             chunk_size=CHUNK_SIZE
                         ):
                             if chunk:
                                 f.write(chunk)
 
-                    # 检查文件头
                     with open(download_path, 'rb') as f:
-
                         head = f.read(100)
 
                     is_valid = (
@@ -810,29 +793,20 @@ def download_file(url: str, path: str) -> Optional[str]:
                     )
 
                     if not is_valid:
-                        print(f'    ❌ 下载内容不是XML')
-                        with open(download_path, 'rb') as f:
-                            print(f'    内容前200字节: {f.read(200)}')
-                         os.remove(download_path)
-                         continue
+                        print(f'    ❌ 下载内容不是XML/GZIP')
+                        os.remove(download_path)
+                        continue
 
                     print(f'    ✅ curl_cffi 下载成功')
-
                     return download_path
 
                 else:
-
-                    print(
-                        f'    ❌ curl_cffi HTTP错误: '
-                        f'{response.status_code}'
-                    )
+                    print(f'    ❌ curl_cffi HTTP错误: {response.status_code}')
 
         except Exception as e:
-
             print(f'    ❌ 下载异常: {e}')
 
     print(f'    ❌ 下载失败')
-
     return None
 
 
@@ -926,8 +900,6 @@ def process_epg_source(
                     new_channel = apply_alias_to_channel(channel, original_id, final_id)
                     channel_dict[final_id] = new_channel
                     channels_found += 1
-                   # if original_id != final_id:
-                        # print(f'    📝 频道重命名: "{original_id}" → "{final_id}"')
                 else:
                     new_channel = copy.deepcopy(channel)
                     channel_dict[final_id] = new_channel

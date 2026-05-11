@@ -814,7 +814,6 @@ def process_epg_source(
     # 解析XML
     try:
         tree = ET.parse(xml_file)
-        root = tree.getroot()
     except ET.ParseError:
         print(f'    ❌ XML格式错误，跳过此源')
         return
@@ -824,7 +823,7 @@ def process_epg_source(
     
     # 自动创建缺失的频道定义
     programme_channels = set()
-    for programme in root.findall('programme'):
+    for programme in tree.findall('programme'):
         channel_attr = programme.attrib.get('channel', '')
         if channel_attr:
             programme_channels.add(channel_attr)
@@ -1073,10 +1072,8 @@ def main() -> None:
     
     print('🧹 清理临时目录...')
     for temp_file in os.listdir(temp_dir):
-    file_path = os.path.join(temp_dir, temp_file)
-    if os.path.isfile(file_path):
         try:
-            os.remove(file_path)
+            os.remove(os.path.join(temp_dir, temp_file))
         except Exception:
             pass
     print('✅ 清理完成')

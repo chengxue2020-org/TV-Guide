@@ -1,8 +1,8 @@
 ============================================================
 Guide Merger v2.0 (curl + Python Hybrid)
 ============================================================
-当前时间: 2026-05-11 11:49:38 (北京时间)
-当前时间: 2026-05-11 03:49:38 (UTC)
+当前时间: 2026-05-11 11:55:12 (北京时间)
+当前时间: 2026-05-11 03:55:12 (UTC)
 
 ✓ curl 命令可用
 ✓ 已加载pypinyin库，支持中文拼音排序
@@ -854,7 +854,7 @@ Guide Merger v2.0 (curl + Python Hybrid)
   ✓ 映射: "2885" → "Zee Tamil_马来"
   ✓ 映射: "3575" → "HITS Movies_马来"
   ✓ 时区转换开关: ChangeTimezone=Y
-  ✓ 映射: "368369" → "TVB-明珠台"
+  ✓ 映射: "368369" → "TVB-明珠台(B)"
   ✓ 映射: "368350" → "KIX_香港"
   ✓ 时区转换开关: ChangeTimezone=Y
   ✓ 映射: "492816" → "Channel 5"
@@ -1846,7 +1846,7 @@ Guide Merger v2.0 (curl + Python Hybrid)
     时区: 保持原XML时区（可能是未指定或+8时区）
     频道数量: 648
     别名映射: 648 个
-  - https://epg.yang-1989.eu.org/epg.xml.gz
+  - https://epg.yang-1989.eu.org/epg.xml
     时区: 保持原XML时区（可能是未指定或+8时区）
     频道数量: 7
     别名映射: 7 个
@@ -2441,35 +2441,35 @@ Guide Merger v2.0 (curl + Python Hybrid)
     🔗 智能合并: True
     ✂️ 跨天节目拆分: 2157 个
     🔗 智能合并更新: 4408 个节目
-    ⚠ 未找到频道: 千禧经典台(MY)
-    ⚠ 未找到频道: SUPER金曲 (免费)
-    ⚠ 未找到频道: Hub 如意
-    ⚠ 未找到频道: 河北杂技频道
-    ⚠ 未找到频道: Hub Sports 2
-    ⚠ 未找到频道: FashionTV 时尚频道
-    ⚠ 未找到频道: BBC_First_HD
-    ⚠ 未找到频道: SUPER单元剧 (免费)
-    ⚠ 未找到频道: ROCK ACTION Rock Action_香港_国
-    ⚠ 未找到频道: Astro_Sports_Plus_3
-    ⚠ 未找到频道: 1905App 热血影院
-    ⚠ 未找到频道: Nick Jr.
-    ⚠ 未找到频道: 睛彩河北
-    ⚠ 未找到频道: HOY 资讯台
-    ⚠ 未找到频道: HITS电影台
-    ⚠ 未找到频道: SPY X FAMILY 间谍家家酒(国)
-    ⚠ 未找到频道: 南京新闻综合
     ⚠ 未找到频道: 茶频道
-    ⚠ 未找到频道: BBC_Brit_HD
-    ⚠ 未找到频道: HOY 国际财经台
-    ⚠ 未找到频道: MagellanTV频道 (麦哲伦频道)
-    ⚠ 未找到频道: Hub Sports 3
     ⚠ 未找到频道: Astro_Premier_League_3
+    ⚠ 未找到频道: ROCK ACTION Rock Action_香港_国
+    ⚠ 未找到频道: 南京新闻综合
+    ⚠ 未找到频道: Hub 如意
     ⚠ 未找到频道: now直播
-    ⚠ 未找到频道: Hub Sports 1
-    ⚠ 未找到频道: TV5Monde 法国TV5
-    ⚠ 未找到频道: HOY TV
-    ⚠ 未找到频道: SUPER识叹 (免费)
     ⚠ 未找到频道: 亚洲综合HD演唱会直击
+    ⚠ 未找到频道: SUPER金曲 (免费)
+    ⚠ 未找到频道: Astro_Sports_Plus_3
+    ⚠ 未找到频道: HITS电影台
+    ⚠ 未找到频道: 1905App 热血影院
+    ⚠ 未找到频道: FashionTV 时尚频道
+    ⚠ 未找到频道: Hub Sports 1
+    ⚠ 未找到频道: Nick Jr.
+    ⚠ 未找到频道: Hub Sports 2
+    ⚠ 未找到频道: TV5Monde 法国TV5
+    ⚠ 未找到频道: SPY X FAMILY 间谍家家酒(国)
+    ⚠ 未找到频道: BBC_First_HD
+    ⚠ 未找到频道: 睛彩河北
+    ⚠ 未找到频道: SUPER单元剧 (免费)
+    ⚠ 未找到频道: SUPER识叹 (免费)
+    ⚠ 未找到频道: 河北杂技频道
+    ⚠ 未找到频道: 千禧经典台(MY)
+    ⚠ 未找到频道: MagellanTV频道 (麦哲伦频道)
+    ⚠ 未找到频道: HOY 资讯台
+    ⚠ 未找到频道: BBC_Brit_HD
+    ⚠ 未找到频道: HOY TV
+    ⚠ 未找到频道: Hub Sports 3
+    ⚠ 未找到频道: HOY 国际财经台
     📺 新增频道: 818/847
     📅 新增节目: 60599/77297
    ✓ 处理成功
@@ -2592,17 +2592,17 @@ Guide Merger v2.0 (curl + Python Hybrid)
     🔗 智能合并: True
     ✂️ 跨天节目拆分: 61 个
     🔗 智能合并更新: 8 个节目
-    ⚠ 未找到频道: 福建旅游
+    ⚠ 未找到频道: 福建经济
     ⚠ 未找到频道: 星空卫视
-    ⚠ 未找到频道: 河北影视剧
+    ⚠ 未找到频道: 福建电视剧
+    ⚠ 未找到频道: 福建文体
     ⚠ 未找到频道: 内蒙古农牧
     ⚠ 未找到频道: 淘Baby
-    ⚠ 未找到频道: IPTV足球
-    ⚠ 未找到频道: 福建电视剧
-    ⚠ 未找到频道: 福建经济
     ⚠ 未找到频道: 福建乡村振兴
+    ⚠ 未找到频道: 河北影视剧
+    ⚠ 未找到频道: IPTV足球
+    ⚠ 未找到频道: 福建旅游
     ⚠ 未找到频道: 纯享4K
-    ⚠ 未找到频道: 福建文体
     📺 新增频道: 262/273
     📅 新增节目: 10003/9954
    ✓ 处理成功
@@ -2835,7 +2835,7 @@ Guide Merger v2.0 (curl + Python Hybrid)
     🕐 时间范围: 2026-05-05 00:00 到 2026-05-15 00:00 (UTC)
     📊 包含过去 6 天 + 当天 + 未来 3 天
     📝 频道重命名: "368350" → "KIX_香港"
-    📝 频道重命名: "368369" → "TVB-明珠台"
+    📝 频道重命名: "368369" → "TVB-明珠台(B)"
     🕐 时区处理: ChangeTimezone=Y → 强制将时区改为 +0800（时间数值不变）
     📝 别名映射: 修改ID=True, 修改DisplayName=True
     ✂️ 跨天拆分: True
@@ -3000,8 +3000,8 @@ Guide Merger v2.0 (curl + Python Hybrid)
     🔗 智能合并: True
     ✂️ 跨天节目拆分: 495 个
     🔗 智能合并更新: 73 个节目
-    ⚠ 未找到频道: 492911
     ⚠ 未找到频道: 535531
+    ⚠ 未找到频道: 492911
     ⚠ 未找到频道: 535553
     📺 新增频道: 140/143
     📅 新增节目: 15140/21379
@@ -3674,23 +3674,23 @@ Guide Merger v2.0 (curl + Python Hybrid)
    ✓ 处理成功
 
 ------------------------------------------------------------
-📡 源 12/14: https://epg.yang-1989.eu.org/epg.xml.gz
+📡 源 12/14: https://epg.yang-1989.eu.org/epg.xml
    请求频道: 7 个
-   需要查找: 5 个
+   需要查找: 6 个
     🔗 Referer: https://epg.yang-1989.eu.org/
-    🔧 curl 命令: curl -L --max-time 30 ... https://epg.yang-1989.eu.org/epg.xml.gz
+    🔧 curl 命令: curl -L --max-time 30 ... https://epg.yang-1989.eu.org/epg.xml
     ⚠ curl 下载的内容不是有效 XML
     ✗ HTTP错误: 403
     ⏳ 第 1 次重试，等待 3 秒...
-    🔧 curl 命令: curl -L --max-time 30 ... https://epg.yang-1989.eu.org/epg.xml.gz
+    🔧 curl 命令: curl -L --max-time 30 ... https://epg.yang-1989.eu.org/epg.xml
     ⚠ curl 下载的内容不是有效 XML
     ✗ HTTP错误: 403
     ⏳ 第 2 次重试，等待 6 秒...
-    🔧 curl 命令: curl -L --max-time 30 ... https://epg.yang-1989.eu.org/epg.xml.gz
+    🔧 curl 命令: curl -L --max-time 30 ... https://epg.yang-1989.eu.org/epg.xml
     ⚠ curl 下载的内容不是有效 XML
     ✗ HTTP错误: 403
     ⏳ 第 3 次重试，等待 9 秒...
-    🔧 curl 命令: curl -L --max-time 30 ... https://epg.yang-1989.eu.org/epg.xml.gz
+    🔧 curl 命令: curl -L --max-time 30 ... https://epg.yang-1989.eu.org/epg.xml
     ⚠ curl 下载的内容不是有效 XML
     ✗ HTTP错误: 403
     ✗ 下载失败，已重试 3 次
@@ -3906,8 +3906,8 @@ Guide Merger v2.0 (curl + Python Hybrid)
 ============================================================
 ✅ EPG合并完成
 ============================================================
-结束时间: 2026-05-11 11:50:46 (北京时间)
-总耗时: 67.79 秒
+结束时间: 2026-05-11 11:56:21 (北京时间)
+总耗时: 68.62 秒
 成功处理: 12/14 个源
 成功处理: 2467 个频道，203574 条节目
 输出文件: guide.xml 和 guide.xml.gz

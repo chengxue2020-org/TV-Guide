@@ -658,116 +658,169 @@ def analyze_epg_time_range(program_dict: Dict[Tuple[str, str], ET.Element]) -> T
 
 # ==================== 文件下载（使用 curl_cffi 模拟真实浏览器）====================
 def download_file(url: str, path: str) -> Optional[str]:
-    """下载EPG文件，使用 curl_cffi 模拟真实浏览器指纹"""
+    """下载EPG文件（增强版）"""
+
     filename = os.path.basename(url.split('?')[0])
+
     if not filename:
         url_hash = hashlib.md5(url.encode()).hexdigest()[:8]
         filename = f'epg_{url_hash}.xml'
-    
+
     download_path = os.path.join(path, filename)
+
     name, ext = os.path.splitext(filename)
     counter = 1
+
     while os.path.exists(download_path):
-        download_path = os.path.join(path, f"{name}({counter}){ext}")
+        download_path = os.path.join(
+            path,
+            f"{name}({counter}){ext}"
+        )
         counter += 1
-    
-    # 获取 Referer
-    parsed = urlparse(url)
-    referer = f"{parsed.scheme}://{parsed.netloc}/"
-    
-    # 完整的浏览器请求头
-    headers = {
-        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
-        'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8',
-        'Accept-Encoding': 'gzip, deflate',
-        'Connection': 'keep-alive',
-        'Upgrade-Insecure-Requests': '1',
-        'Sec-Fetch-Dest': 'document',
-        'Sec-Fetch-Mode': 'navigate',
-        'Sec-Fetch-Site': 'none',
-        'Sec-Fetch-User': '?1',
-        'Cache-Control': 'max-age=0',
-        'Referer': referer,
-    }
-    
-    # 为特定域名添加额外处理
-    if 'yang-1989.eu.org' in url:
-        headers['Origin'] = 'https://yang-1989.eu.org/'
-        print(f'    🔧 检测到 yang-1989.eu.org，启用特殊处理')
-    
-    print(f'    🔗 Referer: {referer}')
-    
+
+    print(f'    🌐 开始下载: {url}')
+
     for attempt in range(MAX_RETRIES + 1):
+
         try:
+
             if attempt > 0:
-                wait_time = attempt * 3
-                print(f'    ⏳ 第 {attempt} 次重试，等待 {wait_time} 秒...')
+                wait_time = attempt * 2
+                print(f'    🔄 重试 {attempt}/{MAX_RETRIES}')
                 time.sleep(wait_time)
-            
-            # 使用 curl_cffi 模拟真实浏览器
-            if HAS_CURL_CFFI:
-                # 对于特定域名，可以尝试先访问主页
-                if 'yang-1989.eu.org' in url and attempt == 0:
-                    try:
-                        session = curl_requests.Session()
-                        session.impersonate = BROWSER_IMPERSONATE
-                        session.get(f"{parsed.scheme}://{parsed.netloc}/", timeout=10)
-                        print(f'    🔧 已预热访问主页')
-                    except:
-                        pass
-                
-                response = curl_requests.get(
-                    url,
-                    headers=headers,
-                    impersonate=BROWSER_IMPERSONATE,
-                    timeout=DOWNLOAD_TIMEOUT,
-                    allow_redirects=True
-                )
-                print(f'    🔧 使用 curl_cffi ({BROWSER_IMPERSONATE} 指纹)')
-            else:
+
+            # ==========================================
+            # 第一阶段：普通 requests
+            # ==========================================
+
+            try:
                 import requests
-                response = requests.get(url, headers=headers, timeout=DOWNLOAD_TIMEOUT, allow_redirects=True)
-                print(f'    🔧 使用普通 requests')
-            
-            if response.status_code == 200:
-                content = response.content
-                
-                # 检查内容是否为有效的 XML 或 GZIP
-                is_valid = (content.startswith(b'<?xml') or 
-                           content.startswith(b'<tv') or 
-                           content.startswith(b'\x1f\x8b'))
-                
-                if not is_valid:
-                    content_preview = content[:100]
-                    print(f'    ⚠ 未识别为XML/GZIP')
-                    print(f'    内容预览: {content_preview}')
-                    if attempt == MAX_RETRIES:
-                        return None
-                    continue
-                
-                with open(download_path, 'wb') as f:
-                    f.write(content)
-                
-                print(f'    ✅ 下载成功: {format_size(len(content))}')
-                return download_path
-                
-            elif response.status_code == 403:
-                print(f'    ❌ 访问被拒绝 (403)')
-                if attempt == MAX_RETRIES:
-                    return None
-            elif response.status_code == 404:
-                print(f'    ❌ 文件不存在 (404)')
-                return None
-            else:
-                print(f'    ❌ HTTP错误: {response.status_code}')
-                if attempt == MAX_RETRIES:
-                    return None
-                    
+
+                with requests.get(
+                    url,
+                    timeout=20,
+                    stream=True,
+                    headers={
+                        "User-Agent": "Mozilla/5.0"
+                    }
+                ) as response:
+
+                    if response.status_code == 200:
+
+                        content_type = response.headers.get(
+                            "Content-Type", ""
+                        ).lower()
+
+                        # 判断是否可能是xml
+                        if (
+                            "xml" in content_type
+                            or "gzip" in content_type
+                            or "octet-stream" in content_type
+                        ):
+
+                            with open(download_path, 'wb') as f:
+
+                                for chunk in response.iter_content(
+                                    chunk_size=CHUNK_SIZE
+                                ):
+                                    if chunk:
+                                        f.write(chunk)
+
+                            print(f'    ✅ requests 下载成功')
+
+                            return download_path
+
+                        else:
+                            print(
+                                f'    ⚠ requests 返回非XML内容: {content_type}'
+                            )
+
+            except Exception as e:
+                print(f'    ⚠ requests失败: {e}')
+
+            # ==========================================
+            # 第二阶段：curl_cffi
+            # ==========================================
+
+            if HAS_CURL_CFFI:
+
+                print(f'    🔧 尝试 curl_cffi...')
+                session = curl_requests.Session()
+                session.impersonate = BROWSER_IMPERSONATE
+                parsed = urlparse(url)
+                base_url = f"{parsed.scheme}://{parsed.netloc}/"
+
+                # 特殊站预热
+                if 'yang-1989.eu.org' in url:
+
+                    try:
+                        session.get(
+                            base_url,
+                            timeout=10
+                        )
+
+                        print(f'    🔥 已预热主页')
+
+                    except Exception:
+                        pass
+
+                response = session.get(
+                    url,
+                    timeout=DOWNLOAD_TIMEOUT,
+                    stream=True,
+                    allow_redirects=True,
+                    headers={
+                        "User-Agent": "Mozilla/5.0",
+                        "Referer": base_url
+                    }
+                )
+
+                if response.status_code == 200:
+
+                    with open(download_path, 'wb') as f:
+
+                        for chunk in response.iter_content(
+                            chunk_size=CHUNK_SIZE
+                        ):
+                            if chunk:
+                                f.write(chunk)
+
+                    # 检查文件头
+                    with open(download_path, 'rb') as f:
+
+                        head = f.read(100)
+
+                    is_valid = (
+                        head.startswith(b'<?xml')
+                        or head.startswith(b'<tv')
+                        or head.startswith(b'\x1f\x8b')
+                    )
+
+                    if not is_valid:
+
+                        print(f'    ❌ 下载内容不是XML')
+
+                        os.remove(download_path)
+
+                        continue
+
+                    print(f'    ✅ curl_cffi 下载成功')
+
+                    return download_path
+
+                else:
+
+                    print(
+                        f'    ❌ curl_cffi HTTP错误: '
+                        f'{response.status_code}'
+                    )
+
         except Exception as e:
-            print(f'    ❌ 错误: {e}')
-            if attempt == MAX_RETRIES:
-                return None
-    
+
+            print(f'    ❌ 下载异常: {e}')
+
+    print(f'    ❌ 下载失败')
+
     return None
 
 

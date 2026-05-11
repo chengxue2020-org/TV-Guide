@@ -713,27 +713,20 @@ def download_file(url: str, path: str) -> Optional[str]:
 
                         # 判断是否可能是xml
                         if (
-                            "xml" in content_type
-                            or "gzip" in content_type
-                            or "octet-stream" in content_type
+                        "xml" in content_type
+                        or "gzip" in content_type
+                        or "octet-stream" in content_type
+                        or "text/plain" in content_type
                         ):
-
                             with open(download_path, 'wb') as f:
-
-                                for chunk in response.iter_content(
-                                    chunk_size=CHUNK_SIZE
-                                ):
+                                for chunk in response.iter_content(chunk_size=CHUNK_SIZE):
                                     if chunk:
                                         f.write(chunk)
 
-                            print(f'    ✅ requests 下载成功')
-
-                            return download_path
-
-                        else:
-                            print(
-                                f'    ⚠ requests 返回非XML内容: {content_type}'
-                            )
+                print(f'    ✅ requests 下载成功')
+                return download_path
+             else:
+                 print(f'    ⚠ requests 返回非XML内容: {content_type}')
 
             except Exception as e:
                 print(f'    ⚠ requests失败: {e}')

@@ -131,10 +131,10 @@ def compress_gzip(input_file: str, output_file: str) -> bool:
         compressed_size = os.path.getsize(output_file)
         compression_ratio = (1 - compressed_size / original_size) * 100
         
-        print(f'  ✓ 压缩完成: {format_size(compressed_size)} ({compression_ratio:.1f}% 压缩率)')
+        print(f'  ✅ 压缩完成: {format_size(compressed_size)} ({compression_ratio:.1f}% 压缩率)')
         return True
     except Exception as e:
-        print(f'  ✗ 压缩失败: {e}')
+        print(f'  ❌ 压缩失败: {e}')
         return False
 
 
@@ -174,7 +174,7 @@ def parse_timezone(timezone_str: str) -> Optional[timezone]:
         return None
     
     if is_beijing_timezone(timezone_str):
-        print(f'    ✓ 检测到北京时间 (+8时区)，将保持原样不转换')
+        print(f'    ✅ 检测到北京时间 (+8时区)，将保持原样不转换')
         return None
     
     tz_upper = timezone_str.strip().upper()
@@ -506,7 +506,7 @@ def parse_source(source_file: str) -> Tuple[Dict[str, Dict], Tuple[int, int]]:
             lines = source.readlines()
             
             if not lines:
-                print(f'✗ 错误: 配置文件为空')
+                print(f'❌ 错误: 配置文件为空')
                 sys.exit(1)
             
             past_days = DEFAULT_PAST_DAYS
@@ -520,19 +520,19 @@ def parse_source(source_file: str) -> Tuple[Dict[str, Dict], Tuple[int, int]]:
                 if line.upper().startswith('PAST_DAYS='):
                     try:
                         past_days = int(line.split('=', 1)[1].strip())
-                        print(f'✓ 过去天数: {past_days} 天')
+                        print(f'✅ 过去天数: {past_days} 天')
                     except ValueError:
                         print(f'⚠ 过去天数格式错误，使用默认值: {DEFAULT_PAST_DAYS} 天')
                 
                 elif line.upper().startswith('FUTURE_DAYS='):
                     try:
                         future_days = int(line.split('=', 1)[1].strip())
-                        print(f'✓ 未来天数: {future_days} 天')
+                        print(f'✅ 未来天数: {future_days} 天')
                     except ValueError:
                         print(f'⚠ 未来天数格式错误，使用默认值: {DEFAULT_FUTURE_DAYS} 天')
             
             total_days = past_days + future_days + 1
-            print(f'✓ 总时间范围: 过去 {past_days} 天 + 当天 + 未来 {future_days} 天 = 共 {total_days} 天')
+            print(f'✅ 总时间范围: 过去 {past_days} 天 + 当天 + 未来 {future_days} 天 = 共 {total_days} 天')
             print()
             
             print(f'📝 配置:')
@@ -572,9 +572,9 @@ def parse_source(source_file: str) -> Tuple[Dict[str, Dict], Tuple[int, int]]:
                         current_timezone = parse_timezone(tz_str)
                         data_source[current_source]['timezone'] = current_timezone
                         if current_timezone is not None:
-                            print(f'  ✓ 时区设置: {tz_str} → 将转换为北京时间')
+                            print(f'  ✅ 时区设置: {tz_str} → 将转换为北京时间')
                         else:
-                            print(f'  ✓ 时区设置: {tz_str} → 北京时间，保持原样不转换')
+                            print(f'  ✅ 时区设置: {tz_str} → 北京时间，保持原样不转换')
                     
                     elif line.lower().startswith('changetimezone='):
                         change_tz_str = line.split('=', 1)[1].strip().upper()
@@ -583,7 +583,7 @@ def parse_source(source_file: str) -> Tuple[Dict[str, Dict], Tuple[int, int]]:
                         else:
                             current_change_tz = 'N'
                         data_source[current_source]['change_timezone'] = current_change_tz
-                        print(f'  ✓ 时区转换开关: ChangeTimezone={current_change_tz}')
+                        print(f'  ✅ 时区转换开关: ChangeTimezone={current_change_tz}')
                     
                     elif '\t' in line:
                         parts = line.split('\t')
@@ -592,23 +592,23 @@ def parse_source(source_file: str) -> Tuple[Dict[str, Dict], Tuple[int, int]]:
                             new_id = parts[1].strip()
                             if old_id and new_id:
                                 data_source[current_source]['channels'].append((old_id, new_id))
-                                print(f'  ✓ 映射: "{old_id}" → "{new_id}"')
+                                print(f'  ✅ 映射: "{old_id}" → "{new_id}"')
                     else:
                         channel_id = line
                         if channel_id:
                             data_source[current_source]['channels'].append((channel_id, None))
             
             if not data_source:
-                print(f'✗ 错误: 配置文件中没有找到有效的EPG源')
+                print(f'❌ 错误: 配置文件中没有找到有效的EPG源')
                 sys.exit(1)
             
             return data_source, (past_days, future_days)
             
     except FileNotFoundError:
-        print(f'✗ 错误: 配置文件 {source_file} 不存在！')
+        print(f'❌ 错误: 配置文件 {source_file} 不存在！')
         sys.exit(1)
     except Exception as e:
-        print(f'✗ 错误: 解析配置文件失败 - {e}')
+        print(f'❌ 错误: 解析配置文件失败 - {e}')
         sys.exit(1)
 
 
@@ -748,23 +748,23 @@ def download_file(url: str, path: str) -> Optional[str]:
                 with open(download_path, 'wb') as f:
                     f.write(content)
                 
-                print(f'    ✓ 下载成功: {format_size(len(content))}')
+                print(f'    ✅ 下载成功: {format_size(len(content))}')
                 return download_path
                 
             elif response.status_code == 403:
-                print(f'    ✗ 访问被拒绝 (403)')
+                print(f'    ❌ 访问被拒绝 (403)')
                 if attempt == MAX_RETRIES:
                     return None
             elif response.status_code == 404:
-                print(f'    ✗ 文件不存在 (404)')
+                print(f'    ❌ 文件不存在 (404)')
                 return None
             else:
-                print(f'    ✗ HTTP错误: {response.status_code}')
+                print(f'    ❌ HTTP错误: {response.status_code}')
                 if attempt == MAX_RETRIES:
                     return None
                     
         except Exception as e:
-            print(f'    ✗ 错误: {e}')
+            print(f'    ❌ 错误: {e}')
             if attempt == MAX_RETRIES:
                 return None
     
@@ -815,10 +815,10 @@ def process_epg_source(
     try:
         tree = ET.parse(xml_file)
     except ET.ParseError:
-        print(f'    ✗ XML格式错误，跳过此源')
+        print(f'    ❌ XML格式错误，跳过此源')
         return
     except Exception as e:
-        print(f'    ✗ 解析失败: {e}')
+        print(f'    ❌ 解析失败: {e}')
         return
     
     # 自动创建缺失的频道定义
@@ -1024,23 +1024,23 @@ def main() -> None:
     print()
     
     if HAS_CURL_CFFI:
-        print(f'✓ 已加载 curl_cffi 库，浏览器指纹模拟: {BROWSER_IMPERSONATE}')
+        print(f'✅ 已加载 curl_cffi 库，浏览器指纹模拟: {BROWSER_IMPERSONATE}')
     else:
         print('⚠ 未安装 curl_cffi 库，将使用普通 requests')
         print('  安装方法: pip install curl-cffi')
     
     if HAS_PYPINYIN:
-        print('✓ 已加载pypinyin库，支持中文拼音排序')
+        print('✅ 已加载pypinyin库，支持中文拼音排序')
     else:
         print('⚠ 未安装pypinyin库')
     
-    print('✓ 支持每个EPG源独立设置时区（可选，不设置则保持原时区）')
-    print('✓ +8时区（北京时间）将被识别并保持原样不转换')
-    print('✓ ChangeTimezone=Y 可强制将时区改为 +0800（时间数值不变）')
-    print('✓ 支持前后双向时间范围（过去天数 + 当天 + 未来天数）')
-    print(f'✓ 别名映射: 修改ID={MODIFY_CHANNEL_ID}, 修改DisplayName={MODIFY_DISPLAY_NAME}')
-    print(f'✓ 跨天拆分: {SPLIT_OVERNIGHT_PROGRAMS}')
-    print(f'✓ 智能合并: {SMART_MERGE}')
+    print('✅ 支持每个EPG源独立设置时区（可选，不设置则保持原时区）')
+    print('✅ +8时区（北京时间）将被识别并保持原样不转换')
+    print('✅ ChangeTimezone=Y 可强制将时区改为 +0800（时间数值不变）')
+    print('✅ 支持前后双向时间范围（过去天数 + 当天 + 未来天数）')
+    print(f'✅ 别名映射: 修改ID={MODIFY_CHANNEL_ID}, 修改DisplayName={MODIFY_DISPLAY_NAME}')
+    print(f'✅ 跨天拆分: {SPLIT_OVERNIGHT_PROGRAMS}')
+    print(f'✅ 智能合并: {SMART_MERGE}')
     print()
     
     print('📖 读取配置文件...')
@@ -1049,8 +1049,8 @@ def main() -> None:
     past_days, future_days = days_range
     total_days = past_days + future_days + 1
     
-    print(f'✓ 找到 {len(sources)} 个EPG源')
-    print(f'✓ 配置时间范围: 过去 {past_days} 天 + 当天 + 未来 {future_days} 天 = 共 {total_days} 天')
+    print(f'✅ 找到 {len(sources)} 个EPG源')
+    print(f'✅ 配置时间范围: 过去 {past_days} 天 + 当天 + 未来 {future_days} 天 = 共 {total_days} 天')
     print()
     
     for url, info in sources.items():
@@ -1076,7 +1076,7 @@ def main() -> None:
             os.remove(os.path.join(temp_dir, temp_file))
         except Exception:
             pass
-    print('✓ 清理完成')
+    print('✅ 清理完成')
     print()
     
     channel_dict: Dict[str, ET.Element] = {}
@@ -1118,14 +1118,14 @@ def main() -> None:
                 start_utc, days_range
             )
             success_count += 1
-            print(f'   ✓ 处理成功')
+            print(f'   ✅ 处理成功')
         else:
-            print(f'   ✗ 下载失败，跳过此源')
+            print(f'   ❌ 下载失败，跳过此源')
         
         print()
     
     if success_count == 0:
-        print('✗ 错误: 所有EPG源都下载失败！')
+        print('❌ 错误: 所有EPG源都下载失败！')
         sys.exit(1)
     
     actual_past_days, actual_future_days = analyze_epg_time_range(program_dict)
@@ -1158,7 +1158,7 @@ def main() -> None:
     tree.write(OUTPUT_XML, encoding='UTF-8', xml_declaration=True)
     
     xml_size = os.path.getsize(OUTPUT_XML)
-    print(f'✓ XML文件: {OUTPUT_XML}')
+    print(f'✅ XML文件: {OUTPUT_XML}')
     print(f'  大小: {format_size(xml_size)}')
     print(f'  频道数: {len(channels_sorted)}')
     print(f'  节目数: {len(programmes_sorted)}')
@@ -1176,7 +1176,7 @@ def main() -> None:
     if compress_gzip(OUTPUT_XML, OUTPUT_GZ):
         gz_size = os.path.getsize(OUTPUT_GZ)
         compression_ratio = (1 - gz_size / xml_size) * 100
-        print(f'  ✓ 压缩率: {compression_ratio:.1f}%')
+        print(f'  ✅ 压缩率: {compression_ratio:.1f}%')
     else:
         print(f'  ⚠ GZIP压缩失败')
     
@@ -1188,7 +1188,7 @@ def main() -> None:
             os.remove(os.path.join(temp_dir, temp_file))
         except Exception:
             pass
-    print('✓ 清理完成')
+    print('✅ 清理完成')
     print()
     
     end_utc = datetime.now(UTC)
@@ -1215,7 +1215,7 @@ if __name__ == "__main__":
         print('\n\n⚠ 用户中断')
         sys.exit(1)
     except Exception as e:
-        print(f'\n\n✗ 程序异常: {e}')
+        print(f'\n\n❌ 程序异常: {e}')
         import traceback
         traceback.print_exc()
         sys.exit(1)

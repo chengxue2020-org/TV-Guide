@@ -819,7 +819,13 @@ def process_epg_source(
     start_utc: datetime,
     days_range: Tuple[int, int]
 ) -> None:
-    """处理EPG源文件，提取频道和节目信息"""
+    """处理EPG源文件，提取频道和节目信息
+    
+    处理顺序：
+    1. 先检测跨天节目并拆分
+    2. 再按时间范围筛选
+    3. 最后进行智能合并
+    """
     channels_to_process = source_info['channels']
     specified_tz = source_info['timezone']
     change_timezone = source_info.get('change_timezone', 'N')
@@ -860,7 +866,7 @@ def process_epg_source(
         print(f'    ❌ 解析失败: {e}')
         return
     
-    # 自动创建缺失的频道定义
+    # ==================== 第一步：自动创建缺失的频道定义 ====================
     programme_channels = set()
     for programme in tree.findall('programme'):
         channel_attr = programme.attrib.get('channel', '')
@@ -881,11 +887,11 @@ def process_epg_source(
         root.append(temp_channel)
         print(f'    📝 自动创建频道定义: "{missing_channel}"')
     
-    # 创建原ID到新ID的映射
+    # ==================== 第二步：创建原ID到新ID的映射 ====================
     id_mapping = {old_id: new_id for old_id, new_id in channels_to_process if new_id}
     target_ids = {old_id for old_id, _ in channels_to_process}
     
-    # 提取频道
+    # ==================== 第三步：提取频道 ====================
     channels_found = 0
     for channel in tree.findall('channel'):
         original_id = channel.attrib.get('id', '')
@@ -905,7 +911,7 @@ def process_epg_source(
                     channel_dict[final_id] = new_channel
                     channels_found += 1
     
-    # 显示时区处理方式
+    # ==================== 第四步：显示时区处理方式 ====================
     if change_timezone == 'Y':
         print(f'    🕐 时区处理: ChangeTimezone=Y → 强制将时区改为 +0800（时间数值不变）')
     elif specified_tz is not None:
@@ -917,16 +923,15 @@ def process_epg_source(
     print(f'    ✂️ 跨天拆分: {SPLIT_OVERNIGHT_PROGRAMS}')
     print(f'    🔗 智能合并: {SMART_MERGE}')
     
-    # 提取节目
-    programs_found = 0
-    programs_total = 0
+    # ==================== 第五步：预处理所有节目（先拆分跨天节目）====================
+    all_programmes = []
+    programme_count = 0
     overnight_split_count = 0
-    merged_count = 0
     
     for programme in tree.findall('programme'):
         original_channel = programme.attrib.get('channel', '')
         if original_channel in target_ids:
-            programs_total += 1
+            programme_count += 1
             
             if MODIFY_CHANNEL_ID and original_channel in id_mapping:
                 final_channel = id_mapping[original_channel]
@@ -936,83 +941,104 @@ def process_epg_source(
             original_start = programme.attrib.get('start', '')
             original_stop = programme.attrib.get('stop', '')
             
-            # 时间处理
+            # 时间转换
             if change_timezone == 'Y':
                 final_start = change_timezone_only(original_start, '+0800')
                 final_stop = change_timezone_only(original_stop, '+0800')
-                source_tz_from_str = extract_timezone_from_time_str(original_start)
-                filter_start = convert_date_for_filter(original_start, source_tz_from_str)
-                filter_stop = convert_date_for_filter(original_stop, source_tz_from_str)
             elif specified_tz is not None:
                 source_tz = specified_tz
                 final_start = convert_timezone(original_start, source_tz, BEIJING_TZ)
                 final_stop = convert_timezone(original_stop, source_tz, BEIJING_TZ)
-                filter_start = convert_date_for_filter(original_start, source_tz)
-                filter_stop = convert_date_for_filter(original_stop, source_tz)
             else:
                 final_start = original_start
                 final_stop = original_stop
-                source_tz_from_str = extract_timezone_from_time_str(original_start)
-                filter_start = convert_date_for_filter(original_start, source_tz_from_str)
-                filter_stop = convert_date_for_filter(original_stop, source_tz_from_str)
             
-            if filter_start and filter_stop:
-                if filter_start < end_boundary and filter_stop > start_boundary:
-                    key = (final_channel, final_start)
+            # 先检查是否需要拆分跨天节目
+            if SPLIT_OVERNIGHT_PROGRAMS:
+                start_dt = parse_datetime_from_str(final_start)
+                stop_dt = parse_datetime_from_str(final_stop)
+                
+                if start_dt and stop_dt and is_overnight_program(start_dt, stop_dt):
+                    # 拆分跨天节目
+                    split_programmes = split_overnight_program(
+                        programme, start_dt, stop_dt, final_channel
+                    )
+                    overnight_split_count += 1
                     
-                    if SPLIT_OVERNIGHT_PROGRAMS:
-                        start_dt = parse_datetime_from_str(final_start)
-                        stop_dt = parse_datetime_from_str(final_stop)
+                    for split_prog in split_programmes:
+                        # 获取拆分后的时间
+                        split_start = split_prog.attrib.get('start', '')
+                        split_stop = split_prog.attrib.get('stop', '')
                         
-                        if start_dt and stop_dt and is_overnight_program(start_dt, stop_dt):
-                            split_programmes = split_overnight_program(
-                                programme, start_dt, stop_dt, final_channel
-                            )
-                            overnight_split_count += 1
-                            
-                            for split_prog in split_programmes:
-                                split_start = split_prog.attrib.get('start', '')
-                                split_stop = split_prog.attrib.get('stop', '')
-                                split_key = (final_channel, split_start)
-                                
-                                if SMART_MERGE and split_key in program_dict:
-                                    existing = program_dict[split_key]
-                                    if is_programme_more_complete(split_prog, existing):
-                                        program_dict[split_key] = apply_alias_to_programme(split_prog, final_channel)
-                                        merged_count += 1
-                                elif split_key not in program_dict:
-                                    program_dict[split_key] = apply_alias_to_programme(split_prog, final_channel)
-                                    programs_found += 1
-                            continue
-                    
-                    # 非跨天节目处理
-                    if SMART_MERGE and key in program_dict:
-                        existing = program_dict[key]
-                        new_programme = apply_alias_to_programme(programme, final_channel)
+                        # 创建 UTC 时间用于过滤
+                        source_tz_from_str = extract_timezone_from_time_str(split_start)
+                        filter_start = convert_date_for_filter(split_start, source_tz_from_str)
+                        filter_stop = convert_date_for_filter(split_stop, source_tz_from_str)
                         
-                        for key_attr, value in new_programme.attrib.items():
-                            if key_attr == 'start':
-                                new_programme.set('start', final_start)
-                            elif key_attr == 'stop':
-                                new_programme.set('stop', final_stop)
-                        
-                        if is_programme_more_complete(new_programme, existing):
-                            program_dict[key] = new_programme
-                            merged_count += 1
-                    elif key not in program_dict:
-                        new_programme = apply_alias_to_programme(programme, final_channel)
-                        
-                        for key_attr, value in new_programme.attrib.items():
-                            if key_attr == 'start':
-                                new_programme.set('start', final_start)
-                            elif key_attr == 'stop':
-                                new_programme.set('stop', final_stop)
-                        
-                        program_dict[key] = new_programme
-                        programs_found += 1
-            else:
+                        all_programmes.append({
+                            'programme': split_prog,
+                            'final_channel': final_channel,
+                            'final_start': split_start,
+                            'final_stop': split_stop,
+                            'filter_start': filter_start,
+                            'filter_stop': filter_stop,
+                            'is_split': True
+                        })
+                    continue
+            
+            # 非跨天节目，直接添加
+            source_tz_from_str = extract_timezone_from_time_str(final_start)
+            filter_start = convert_date_for_filter(final_start, source_tz_from_str)
+            filter_stop = convert_date_for_filter(final_stop, source_tz_from_str)
+            
+            all_programmes.append({
+                'programme': programme,
+                'final_channel': final_channel,
+                'final_start': final_start,
+                'final_stop': final_stop,
+                'filter_start': filter_start,
+                'filter_stop': filter_stop,
+                'is_split': False
+            })
+    
+    if overnight_split_count > 0:
+        print(f'    ✂️ 跨天节目拆分: {overnight_split_count} 个')
+    
+    # ==================== 第六步：按时间范围筛选并添加节目 ====================
+    programs_found = 0
+    merged_count = 0
+    total_programmes = len(all_programmes)
+    
+    for prog_info in all_programmes:
+        filter_start = prog_info['filter_start']
+        filter_stop = prog_info['filter_stop']
+        final_channel = prog_info['final_channel']
+        final_start = prog_info['final_start']
+        final_stop = prog_info['final_stop']
+        programme = prog_info['programme']
+        
+        if filter_start and filter_stop:
+            # 检查是否在时间范围内（包含过去和未来）
+            if filter_start < end_boundary and filter_stop > start_boundary:
                 key = (final_channel, final_start)
-                if key not in program_dict:
+                
+                if SMART_MERGE and key in program_dict:
+                    existing = program_dict[key]
+                    new_programme = apply_alias_to_programme(programme, final_channel)
+                    
+                    # 更新时间和频道
+                    for key_attr, value in new_programme.attrib.items():
+                        if key_attr == 'start':
+                            new_programme.set('start', final_start)
+                        elif key_attr == 'stop':
+                            new_programme.set('stop', final_stop)
+                        elif key_attr == 'channel':
+                            new_programme.set('channel', final_channel)
+                    
+                    if is_programme_more_complete(new_programme, existing):
+                        program_dict[key] = new_programme
+                        merged_count += 1
+                elif key not in program_dict:
                     new_programme = apply_alias_to_programme(programme, final_channel)
                     
                     for key_attr, value in new_programme.attrib.items():
@@ -1020,15 +1046,32 @@ def process_epg_source(
                             new_programme.set('start', final_start)
                         elif key_attr == 'stop':
                             new_programme.set('stop', final_stop)
+                        elif key_attr == 'channel':
+                            new_programme.set('channel', final_channel)
                     
                     program_dict[key] = new_programme
                     programs_found += 1
+        else:
+            # 时间格式异常，仍然添加
+            key = (final_channel, final_start)
+            if key not in program_dict:
+                new_programme = apply_alias_to_programme(programme, final_channel)
+                
+                for key_attr, value in new_programme.attrib.items():
+                    if key_attr == 'start':
+                        new_programme.set('start', final_start)
+                    elif key_attr == 'stop':
+                        new_programme.set('stop', final_stop)
+                    elif key_attr == 'channel':
+                        new_programme.set('channel', final_channel)
+                
+                program_dict[key] = new_programme
+                programs_found += 1
     
-    if overnight_split_count > 0:
-        print(f'    ✂️ 跨天节目拆分: {overnight_split_count} 个')
     if merged_count > 0:
         print(f'    🔗 智能合并更新: {merged_count} 个节目')
     
+    # ==================== 第七步：输出未找到的频道 ====================
     found_ids = set()
     for old_id, _ in channels_to_process:
         if MODIFY_CHANNEL_ID and old_id in id_mapping:
@@ -1044,7 +1087,7 @@ def process_epg_source(
             print(f'    ⚠ 未找到频道: {channel}')
     
     print(f'    📺 新增频道: {channels_found}/{len(target_ids)}')
-    print(f'    📅 新增节目: {programs_found}/{programs_total}')
+    print(f'    📅 新增节目: {programs_found}/{total_programmes}')
 
 
 # ==================== 主函数 ====================

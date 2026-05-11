@@ -813,7 +813,7 @@ def process_epg_source(
     
     # 解析XML
     try:
-        tree = ET.parse(xml_file)
+        tree = ET.iterparse(xml_file)
     except ET.ParseError:
         print(f'    ❌ XML格式错误，跳过此源')
         return

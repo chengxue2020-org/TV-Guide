@@ -882,7 +882,6 @@ elta体育max 8	爱尔达体育MAX8台
 纬来综合HD	纬来综合台
 小公视	公视小公视
 新哆啦A梦(中文版)
-新哆啦A梦(中文版)2台新年追剧首选-FastTV飞速看
 新唐人亚太台
 新天地民俗台 HD	新天地民俗台
 信大电视台
@@ -1581,14 +1580,12 @@ ChangeTimezone=Y
 3735	Astro Vaanavil
 3760	Astro Vellithirai
 2058	Astro Vinmeen
-411257	Asyik FM
 1205	AXN_港新马_英
 854	SYOK BAYU_马来
 4030	BBC Earth_新马港台_英(EPG2)
 3329	BBC News_新马台
 370132	Berita RTM
 1835	Bernama TV
-411236	Bintulu FM
 400446	Blippi & Friends_马来_英
 2636	Astro Boo
 3518	CCTV4_新马_英
@@ -1613,15 +1610,11 @@ ChangeTimezone=Y
 601	INDIA BEAT
 643	JAZZ(MY)
 502308	JR.
-491618	Keningau FM
 863	KENYALANG(MY)
-411251	KL FM
 2652	K-Plus
 4183	KTV_新马
-411253	Labuan FM
 531	LITE FM
 771	MELODY FM
-491619	Miri FM
 495	MIX FM
 492	MY FM
 1029	NTV7
@@ -1629,14 +1622,10 @@ ChangeTimezone=Y
 1242	ONE HD_新加坡
 493	OPUS
 733	OSAI
-428785	Perak FM
 3478	凤凰中文台_新马_英
 3625	Premier Sports_新马
 399506	Premier Sports Rugby
-411240	Red FM
 521957	ROLL
-510886	Sandakan FM
-411256	Selangor FM
 4057	SHOWCASE MOVIES
 702	SINAR FM
 3308	Star Vijay
@@ -1648,7 +1637,6 @@ ChangeTimezone=Y
 556	THR GEGAR
 848	THR RAAGA
 3234	TLC HD_马来
-411308	TRAXXfm
 3683	TV1 HD
 3711	TV2 HD
 1072	TV3
@@ -1661,8 +1649,6 @@ ChangeTimezone=Y
 2323	tvN_马来_英
 2726	tvN Movies_马来_英
 3942	TVS
-411231	Wai FM Iban
-411241	Wai FM
 48630	W-Sport_马来
 2801	ZAYAN
 4221	Zee Cinema_马来
@@ -1685,8 +1671,6 @@ ChangeTimezone=Y
 492901	Channel Suria
 492817	Channel Vasantham
 492905	meWATCH Live 1
-535294	LIVE 2(新加坡)-
-520018	LIVE 5(新加坡)-
 535445	That's 70s_新加坡
 535443	That's 80s_新加坡
 535444	That's Rock_新加坡
@@ -1758,7 +1742,6 @@ ChangeTimezone=Y
 412096	Cinemax HD_香港_英
 369742	Citra Drama
 369748	CM+(新加坡)
-523496	CricBuzz(MY)
 492866	Crime & Investigation_新马
 369824	Drama Channel(新加坡)
 412178	DW English(新加坡)
@@ -1817,7 +1800,6 @@ ChangeTimezone=Y
 491163	TVBS-亚洲台_新加坡_中英
 492453	TVBS-新闻台
 369818	tvN_港新_国
-535582	tvN Movies On Demand(新加坡)-
 530390	Vijay Takkar_新加坡
 501126	WION(新加坡)
 492880	W-Sport_新加坡

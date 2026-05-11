@@ -824,7 +824,7 @@ def process_epg_source(
     
     # 自动创建缺失的频道定义
     programme_channels = set()
-    for programme in tree.findall('programme'):
+    for programme in root.findall('programme'):
         channel_attr = programme.attrib.get('channel', '')
         if channel_attr:
             programme_channels.add(channel_attr)
@@ -1073,8 +1073,10 @@ def main() -> None:
     
     print('🧹 清理临时目录...')
     for temp_file in os.listdir(temp_dir):
+    file_path = os.path.join(temp_dir, temp_file)
+    if os.path.isfile(file_path):
         try:
-            os.remove(os.path.join(temp_dir, temp_file))
+            os.remove(file_path)
         except Exception:
             pass
     print('✅ 清理完成')

@@ -592,7 +592,7 @@ def parse_source(source_file: str) -> Tuple[Dict[str, Dict], Tuple[int, int]]:
                             new_id = parts[1].strip()
                             if old_id and new_id:
                                 data_source[current_source]['channels'].append((old_id, new_id))
-                                print(f'  ✅ 映射: "{old_id}" → "{new_id}"')
+                                print(f'  映射: "{old_id}" → "{new_id}"')
                     else:
                         channel_id = line
                         if channel_id:

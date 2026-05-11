@@ -930,8 +930,8 @@ def process_epg_source(
                     new_channel = apply_alias_to_channel(channel, original_id, final_id)
                     channel_dict[final_id] = new_channel
                     channels_found += 1
-                    if original_id != final_id:
-                        print(f'    📝 频道重命名: "{original_id}" → "{final_id}"')
+                   # if original_id != final_id:
+                        # print(f'    📝 频道重命名: "{original_id}" → "{final_id}"')
                 else:
                     new_channel = copy.deepcopy(channel)
                     channel_dict[final_id] = new_channel

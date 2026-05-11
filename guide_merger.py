@@ -731,13 +731,17 @@ def download_file(url: str, path: str) -> Optional[str]:
                             with open(download_path, 'rb') as f_check:
                                 head = f_check.read(100)
 
-                            if head.startswith(b'<?xml') or head.startswith(b'<tv'):
-                                print(f'    ✅ requests 下载成功')
-                                return download_path
-                            else:
-                                print(f'    ⚠ 下载内容不是有效 XML')
-                                os.remove(download_path)
-                                continue
+                            if (
+                                    head.startswith(b'<?xml')
+                                    or head.startswith(b'<tv')
+                                    or head.startswith(b'\x1f\x8b')      # gzip 文件头
+                             ):
+                                    print(f'    ✅ requests 下载成功')
+                                    return download_path
+                             else:
+                                    print(f'    ⚠ 下载内容不是有效 XML/GZIP')
+                                    os.remove(download_path)
+                                    continue
 
                         else:
                             print(
@@ -806,12 +810,11 @@ def download_file(url: str, path: str) -> Optional[str]:
                     )
 
                     if not is_valid:
-
                         print(f'    ❌ 下载内容不是XML')
-
-                        os.remove(download_path)
-
-                        continue
+                        with open(download_path, 'rb') as f:
+                            print(f'    内容前200字节: {f.read(200)}')
+                         os.remove(download_path)
+                         continue
 
                     print(f'    ✅ curl_cffi 下载成功')
 
